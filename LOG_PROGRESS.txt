@@ -1,0 +1,45 @@
+========================================================================
+MATADATA MAJALENGKA - DEVELOPMENT LOG & ROADMAP
+Status Per: 21 April 2026 (Update: 00:20 WIB)
+========================================================================
+
+1. PROGRESS TERBARU (COMPLETED TODAY):
+---------------------------------------------------------
+- [V] LAYER 4: AUDIT INFRASTRUKTUR JALAN
+    * Integrasi data rill dari OpenStreetMap (OSM) - 14.252 ruas geometri jalan.
+    * Visualisasi Ganda: Heatmap Kecamatan (Kondisi) + Polyline Jalur (Audit Lapangan).
+    * Penambahan data SP4N-LAPOR! untuk indikasi keluhan masyarakat.
+- [V] AI ENGINE UPGRADE (MULTI-KEY ROTATION)
+    * Implementasi rotasi API Key Groq untuk bypass limit kuota Free Tier.
+    * Penambahan 1 Akun Groq baru (Total 2 Keys aktif).
+    * Switch provider utama ke Groq untuk mempercepat audit Prioritas 1.
+- [V] RESET & RESUME AUDIT (PRIORITY 1 FOCUS)
+    * Fokus pada Layer 1 & 4 (Audit Pengadaan vs Infrastruktur Gap).
+    * Progress terbaru: 1.135 / 7.645 paket terproses.
+- [V] TRANSPARANSI MODAL 5W+1H
+    * Implementasi modal info dinamis yang berganti konten otomatis sesuai layer aktif.
+    * Penjelasan audit menggunakan kerangka terstruktur: Who, What, Where, When, Why, How.
+- [V] UI/UX BUG FIXES
+    * Perbaikan floating "Help Icon" yang hilang.
+    * Optimasi render Leaflet untuk menangani 14k+ polylines jalan dengan lancar.
+
+2. DATABASE & DATA STATUS:
+---------------------------------------------------------
+- Total SIRUP Packages : 7,645 Paket.
+- Audit Progress       : ~1.135 / 7.645 Paket Selesai (AI sedang running di background).
+- Road Dataset         : 14,252 Segmen Jalan Rill (GeoJSON OSM).
+- Active Providers     : Groq (Primary - Dual Key), Gemini (Failover).
+
+3. PENDING TASKS & PR KEDEPAN (ROADMAP BESOK):
+---------------------------------------------------------
+[ ] ANOMALY RADAR: Membuat section "Top 5 Temuan AI" di sidebar untuk akses cepat temuan paling krusial.
+[ ] IMPACT CORRELATION: Analisis hubungan antara kenaikan budget desa vs penurunan angka kemiskinan (Real-Impact Audit).
+[ ] EXPORT REPORT: Tombol generate PDF Audit Report per kecamatan/wilayah.
+[ ] MONITORING BACKGROUND AUDIT: Memastikan proses 6.500 paket yang tersisa selesai tanpa hambatan kuota.
+
+========================================================================
+CATATAN TEKNIS AKHIR SESI:
+- Audit background AKTIF: Jalankan 'node audit_engine.js' jika sempat terhenti.
+- Dashboard sudah mendukung Audit Infrastruktur Rill standar industri.
+- Ikon "?" sekarang dinamis menjelaskan algoritma masing-masing layer.
+========================================================================

@@ -1,0 +1,10 @@
+config.json
+database.sqlite
+node_modules/
+.antigravity/
+progress.json
+*.log
+.env
+.DS_Store
+auth.json
+*.session
