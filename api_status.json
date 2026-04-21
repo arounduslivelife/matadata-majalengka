@@ -1,0 +1,47 @@
+[
+  {
+    "provider": "GROQ",
+    "key_name": "gsk_k34fej...8sG1",
+    "status": "DAILY_LIMIT_HIT",
+    "is_active": false,
+    "last_used": "2026-04-21T04:02:31.591Z",
+    "error_count": 1,
+    "last_error": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kg1r6kzpeb9902ktcw0c8py2` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 98521, Requested 1717. Please try again in 3m25.632s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+  },
+  {
+    "provider": "GROQ",
+    "key_name": "gsk_ieicsl...F809",
+    "status": "DAILY_LIMIT_HIT",
+    "is_active": false,
+    "last_used": "2026-04-21T04:04:58.529Z",
+    "error_count": 1,
+    "last_error": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kppysky4e59as4c0wcbq857f` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99378, Requested 1717. Please try again in 15m46.079999999s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+  },
+  {
+    "provider": "GROQ",
+    "key_name": "gsk_h2ejiU...6vx0",
+    "status": "DAILY_LIMIT_HIT",
+    "is_active": false,
+    "last_used": "2026-04-21T04:05:03.938Z",
+    "error_count": 1,
+    "last_error": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kpq0g7twe2t9vvpapehv9wtx` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99387, Requested 1717. Please try again in 15m53.856s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+  },
+  {
+    "provider": "GROQ",
+    "key_name": "gsk_QKaiXY...TMYN",
+    "status": "DAILY_LIMIT_HIT",
+    "is_active": false,
+    "last_used": "2026-04-21T04:05:09.518Z",
+    "error_count": 1,
+    "last_error": "Rate limit reached for model `llama-3.3-70b-versatile` in organization `org_01kpq146v6ev7swm04y2skwths` service tier `on_demand` on tokens per day (TPD): Limit 100000, Used 99396, Requested 1717. Please try again in 16m1.632s. Need more tokens? Upgrade to Dev Tier today at https://console.groq.com/settings/billing"
+  },
+  {
+    "provider": "GEMINI",
+    "key_name": "AIzaSyDgZL...wVoY",
+    "status": "ACTIVE",
+    "is_active": true,
+    "last_used": "2026-04-21T04:19:06.847Z",
+    "error_count": 0,
+    "last_error": null
+  }
+]

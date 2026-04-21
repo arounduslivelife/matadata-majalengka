@@ -1,45 +1,70 @@
 ========================================================================
 MATADATA MAJALENGKA - DEVELOPMENT LOG & ROADMAP
-Status Per: 21 April 2026 (Update: 00:20 WIB)
+Status Per: 21 April 2026 (Update: 14:45 WIB - SENSOR READY)
 ========================================================================
 
 1. PROGRESS TERBARU (COMPLETED TODAY):
 ---------------------------------------------------------
-- [V] LAYER 4: AUDIT INFRASTRUKTUR JALAN
-    * Integrasi data rill dari OpenStreetMap (OSM) - 14.252 ruas geometri jalan.
-    * Visualisasi Ganda: Heatmap Kecamatan (Kondisi) + Polyline Jalur (Audit Lapangan).
-    * Penambahan data SP4N-LAPOR! untuk indikasi keluhan masyarakat.
-- [V] AI ENGINE UPGRADE (MULTI-KEY ROTATION)
-    * Implementasi rotasi API Key Groq untuk bypass limit kuota Free Tier.
-    * Penambahan 1 Akun Groq baru (Total 2 Keys aktif).
-    * Switch provider utama ke Groq untuk mempercepat audit Prioritas 1.
-- [V] RESET & RESUME AUDIT (PRIORITY 1 FOCUS)
-    * Fokus pada Layer 1 & 4 (Audit Pengadaan vs Infrastruktur Gap).
-    * Progress terbaru: 1.135 / 7.645 paket terproses.
-- [V] TRANSPARANSI MODAL 5W+1H
-    * Implementasi modal info dinamis yang berganti konten otomatis sesuai layer aktif.
-    * Penjelasan audit menggunakan kerangka terstruktur: Who, What, Where, When, Why, How.
-- [V] UI/UX BUG FIXES
-    * Perbaikan floating "Help Icon" yang hilang.
-    * Optimasi render Leaflet untuk menangani 14k+ polylines jalan dengan lancar.
+- [V] PREMIUM UI OVERHAUL (Sesi Terakhir)
+    * Futuristic Search Bar: Efek neon glow + expansion saat fokus.
+    * Dynamic Map Legend: Panel kanan yang otomatis berubah sesuai mode aktif.
+    * Leaflet Control Theming: Tombol zoom senada tema gelap dashboard.
+    * Sidebar Glassmorphism: Blur dan depth ditingkatkan untuk kesan premium.
+    * Code Cleanup: Pembersihan duplikat CSS/HTML dari iterasi sebelumnya.
+- [V] AI ENGINE v3.0: UNIVERSAL HYBRID ROTATION
+    * Integrasi 4 Groq Keys + 1 Gemini 2.5 Flash (Total 5 Failover Nodes).
+    * Implementasi "Memory Persistence": Mesin mengingat status harian API meskipun direstart.
+    * Fitur "Auto-Skip": Melewati API yang sudah limit secara instan tanpa jeda error.
+- [V] GEMINI 2.5 FLASH DEPLOYMENT
+    * Berhasil bypass 404 error dengan penyesuaian model ID terbaru.
+    * Implementasi "Relaxed JSON Parser": Mesin tetap stabil meskipun AI memberikan respon bercerita.
+- [V] UI RESTORASI & POLISHING
+    * Pengembalian SIRUP ID dan Link Eksternal Detil di modal paket.
+    * Penghalusan animasi (Smooth Movement) pada Sidebar & Mode Switcher.
+    * Pembersihan Dashboard dari floating progress bar yang mengganggu peta.
+- [V] LEGAL & TRANSPARENCY SHIELD
+    * Implementasi `legal.php`: Terms of Service, Privacy Policy, & AI Disclaimer.
+    * Integrasi link legal ke footer landing & sidebar dashboard.
+    * Independensi Platform: Pernyataan tegas bukan milik Pemkab Majalengka.
+- [V] VISITOR INSIGHTS 2.0
+    * Merombak `visitors.php` dengan fitur "User Engagement Tracking".
+    * Statistik Keaktifan: Status Baru, Aktif, & Rutin berdasarkan frekuensi kunjungan.
+    * Real-time Monitor: Auto-refresh 60 detik + Indikator LIVE untuk admin.
+- [V] SECURITY HARDENING (LOCKED MODE)
+    * OAuth State Protection: Mencegah serangan CSRF saat login Google.
+    * Apache Locked Doors: Proteksi `.htaccess` untuk mengunci database & config.
+    * Global XSS Protection: Implementasi `htmlspecialchars()` & `escapeHTML()` menyeluruh.
+    * Git Privacy: Pembersihan `.gitignore` dari sisa file discovery sensitif.
+- [V] BRAND REFINEMENT & VIRALITY
+    * Minimalist Monochrome Eye: Logo baru yang simpel, elegan, & futuristik.
+    * "Bantu Share" Feature: Tombol berkedip + popup ajakan bantu pengawasan.
+    * Web Share API Integration: Memudahkan sebaran dashboard dari HP/Mobile.
 
 2. DATABASE & DATA STATUS:
 ---------------------------------------------------------
 - Total SIRUP Packages : 7,645 Paket.
-- Audit Progress       : ~1.135 / 7.645 Paket Selesai (AI sedang running di background).
-- Road Dataset         : 14,252 Segmen Jalan Rill (GeoJSON OSM).
-- Active Providers     : Groq (Primary - Dual Key), Gemini (Failover).
+- Audit Progress       : 3,609 / 7,645 Paket Selesai (Tenaga Gemini 2.5 Flash).
+- Active Provider      : Gemini 2.5 Flash (Primary failover), Groq Quad (Wait for reset).
 
 3. PENDING TASKS & PR KEDEPAN (ROADMAP BESOK):
 ---------------------------------------------------------
-[ ] ANOMALY RADAR: Membuat section "Top 5 Temuan AI" di sidebar untuk akses cepat temuan paling krusial.
-[ ] IMPACT CORRELATION: Analisis hubungan antara kenaikan budget desa vs penurunan angka kemiskinan (Real-Impact Audit).
-[ ] EXPORT REPORT: Tombol generate PDF Audit Report per kecamatan/wilayah.
-[ ] MONITORING BACKGROUND AUDIT: Memastikan proses 6.500 paket yang tersisa selesai tanpa hambatan kuota.
+[ ] GOOGLE CONSOLE SETUP: Buat OAuth 2.0 credentials di console.cloud.google.com.
+[ ] DEPLOY KE VPS: Upload semua file ke matadata.agungds.web.id.
+[ ] PRODUKSI BREADCRUMB: Navigasi filter per desa yang lebih intuitif.
+[ ] ANOMALY RADAR: Membuat section "Top 5 Temuan AI" di sidebar.
+[ ] IMPACT CORRELATION: Analisis hubungan budget desa vs kemiskinan.
 
 ========================================================================
 CATATAN TEKNIS AKHIR SESI:
-- Audit background AKTIF: Jalankan 'node audit_engine.js' jika sempat terhenti.
-- Dashboard sudah mendukung Audit Infrastruktur Rill standar industri.
-- Ikon "?" sekarang dinamis menjelaskan algoritma masing-masing layer.
+- AUTH SYSTEM AKTIF: Google OAuth 2.0 + GPS Tracking sudah terintegrasi.
+- File baru: login.php, callback.php, auth.php, log_visit.php, visitors.php.
+- Tabel baru: `visitors` (email, GPS, IP, waktu).
+- Admin panel: visitors.php hanya bisa diakses aroundusplay@gmail.com.
+- GPS blur: User tanpa GPS melihat dashboard blur + floating button.
+- Dashboard sudah "Premium": Peta lebih luas, legenda dinamis, search futuristik.
+- Paket Detil: Klik paket di sidebar/peta untuk melihat ID SIRUP & Link LKPP.
+- Legend otomatis berubah: SIRUP=Merah, Dana Desa=Hijau, Kemiskinan=Oranye, Infra=Ungu.
+- Semua popup memiliki koordinat + tombol "Buka di Google Maps".
 ========================================================================
+
+

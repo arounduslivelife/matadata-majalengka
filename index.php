@@ -1,4 +1,15 @@
 <?php
+require_once 'auth.php';
+requireAuth();
+$user = getCurrentUser();
+
+// Handle logout
+if (isset($_GET['logout'])) {
+    session_destroy();
+    header('Location: login.php');
+    exit;
+}
+
 $db = new SQLite3('database.sqlite');
 
 // Get audit stats per kecamatan
@@ -7,6 +18,10 @@ function formatPagu($p) {
     if ($p >= 1000000000) return "Rp" . number_format($p/1000000000, 1) . " Miliar";
     if ($p >= 1000000) return "Rp" . number_format($p/1000000, 0) . " Juta";
     return "Rp" . number_format($p, 0, ',', '.');
+}
+
+function e($str) {
+    return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
 $results = $db->query("
@@ -95,6 +110,7 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Matadata Majalengka - AI Audit Dashboard</title>
+    <link rel="icon" type="image/png" href="favicon.png?v=3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -159,14 +175,16 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
         /* Sidebar */
         .sidebar {
             width: 350px;
-            background: var(--primary);
+            background: rgba(15, 23, 42, 0.7);
             padding: 2rem;
             display: flex;
             flex-direction: column;
             gap: 1.5rem;
-            box-shadow: 4px 0 20px rgba(0,0,0,0.5);
+            box-shadow: 10px 0 30px rgba(0,0,0,0.5);
             z-index: 1000;
             overflow-y: auto;
+            backdrop-filter: blur(20px);
+            border-right: 1px solid rgba(255,255,255,0.05);
         }
 
         h1 { font-size: 1.5rem; margin: 0; color: var(--accent); letter-spacing: -0.05em; }
@@ -254,23 +272,193 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
 
         .info-btn {
             position: fixed;
-            bottom: 30px;
+            bottom: 305px; /* Di atas Legenda */
             right: 30px;
-            width: 50px;
-            height: 50px;
-            background: var(--accent);
-            border-radius: 50%;
+            width: 45px;
+            height: 45px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
             display: flex;
             align-items: center;
             justify-content: center;
             cursor: pointer;
-            box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.5);
-            z-index: 1500;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            z-index: 6500;
             transition: 0.3s;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             font-weight: bold;
+            border: 1px solid rgba(255,255,255,0.1);
+            color: var(--accent);
         }
-        .info-btn:hover { transform: scale(1.1); background: #2563eb; }
+        .info-btn:hover { transform: scale(1.1) rotate(15deg); background: var(--accent); color: white; }
+
+        /* Futuristic Search Bar */
+        .search-container {
+            position: fixed;
+            top: 25px;
+            right: 30px;
+            width: 300px;
+            z-index: 7000;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .search-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            opacity: 0.6;
+            font-size: 1rem;
+            pointer-events: none;
+            color: var(--accent);
+        }
+        #searchInput {
+            width: 100%;
+            padding: 14px 20px 14px 45px;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+            background: rgba(15, 23, 42, 0.7);
+            backdrop-filter: blur(15px);
+            color: white;
+            font-family: 'Outfit';
+            font-size: 0.9rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            outline: none;
+            transition: all 0.3s;
+        }
+        #searchInput:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 25px rgba(59, 130, 246, 0.4);
+            width: 380px;
+            transform: translateX(-80px);
+            background: rgba(15, 23, 42, 0.9);
+        }
+        .search-results {
+            position: absolute;
+            top: calc(100% + 12px);
+            left: -80px;
+            width: 380px;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(25px);
+            border-radius: 16px;
+            border: 1px solid rgba(255,255,255,0.08);
+            max-height: 450px;
+            overflow-y: auto;
+            display: none;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.7);
+            padding: 8px;
+        }
+        .search-results.show { display: block; animation: slideDown 0.3s ease; }
+        @keyframes slideDown { from { opacity: 0; transform: translateY(-10px); } to { opacity: 1; transform: translateY(0); } }
+        .result-item {
+            padding: 12px 16px;
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-bottom: 1px solid rgba(255,255,255,0.04);
+        }
+        .result-item:last-child { border-bottom: none; }
+        .result-item:hover {
+            background: rgba(59, 130, 246, 0.15);
+            transform: translateX(4px);
+        }
+        .result-item .type {
+            font-size: 0.6rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--accent);
+            opacity: 0.8;
+            margin-bottom: 4px;
+        }
+        .result-item .name {
+            font-size: 0.85rem;
+            font-weight: 500;
+            line-height: 1.3;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .sidebar-meta {
+            font-size: 0.75rem;
+            opacity: 0.7;
+            margin-top: 1.5rem;
+            padding: 12px;
+            background: rgba(0,0,0,0.25);
+            border-radius: 10px;
+            border-left: 3px solid var(--accent);
+            line-height: 1.6;
+        }
+        .sidebar-meta b { opacity: 1; color: rgba(255,255,255,0.9); }
+        .sidebar-why {
+            font-size: 0.75rem;
+            margin-top: 12px;
+            padding: 12px;
+            background: rgba(59,130,246,0.08);
+            border-radius: 10px;
+            line-height: 1.6;
+            opacity: 0.8;
+            font-style: italic;
+        }
+
+        /* Map Legend transformed into Popup Modal */
+        .map-legend {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(20px);
+            padding: 2.5rem;
+            border-radius: 28px;
+            border: 1px solid rgba(255,255,255,0.15);
+            z-index: 11000; /* Di atas segalanya */
+            width: 320px;
+            box-shadow: 0 40px 100px rgba(0,0,0,0.7);
+            display: none; /* Hidden by default */
+            animation: modalIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .legend-title { 
+            font-size: 0.65rem; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            letter-spacing: 1.5px; 
+            margin-bottom: 15px; 
+            opacity: 0.6;
+            color: var(--accent);
+        }
+        .legend-item { display: flex; align-items: center; gap: 12px; font-size: 0.75rem; margin-bottom: 12px; }
+        .legend-color { width: 14px; height: 14px; border-radius: 4px; box-shadow: 0 0 10px rgba(0,0,0,0.3); flex-shrink: 0; }
+        .close-legend {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0.4;
+            transition: 0.3s;
+        }
+        .close-legend:hover { opacity: 1; color: var(--danger); }
+
+        /* Custom Zoom Controls */
+        .leaflet-control-zoom { border: none !important; margin-left: 20px !important; margin-top: 20px !important; }
+        .leaflet-control-zoom-in, .leaflet-control-zoom-out { 
+            background: rgba(15, 23, 42, 0.8) !important; 
+            color: white !important; 
+            border: 1px solid rgba(255,255,255,0.1) !important;
+            backdrop-filter: blur(8px);
+            width: 35px !important;
+            height: 35px !important;
+            line-height: 35px !important;
+            border-radius: 10px !important;
+            margin-bottom: 5px !important;
+        }
+        .leaflet-control-zoom-in:hover, .leaflet-control-zoom-out:hover { background: var(--accent) !important; color: white !important; }
+
+
 
         .logic-grid {
             margin-top: 1.5rem;
@@ -304,122 +492,22 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
             backdrop-filter: blur(8px);
         }
 
-        /* Progress Bar */
-        #progress-overlay {
-            position: fixed;
-            top: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            z-index: 10000;
-            background: rgba(15, 23, 42, 0.9);
-            backdrop-filter: blur(10px);
-            padding: 12px 20px;
-            border-radius: 15px;
-            border: 1px solid rgba(255,255,255,0.1);
-            display: none;
-            width: 350px;
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-        .progress-text {
-            font-size: 0.8rem;
-            margin-bottom: 8px;
-            display: flex;
-            justify-content: space-between;
-            font-weight: 600;
-        }
-        .progress-bar-container {
-            height: 6px;
-            background: rgba(255,255,255,0.1);
-            border-radius: 3px;
-            overflow: hidden;
-        }
-        .progress-bar-fill {
-            height: 100%;
-            background: linear-gradient(90deg, #3b82f6, #60a5fa);
-            width: 0%;
-            transition: width 0.5s ease;
-            position: relative;
-        }
-        .progress-bar-fill::after {
-            content: '';
-            position: absolute;
-            top: 0; left: 0; bottom: 0; right: 0;
-            background-image: linear-gradient(-45deg, rgba(255,255,255,0.2) 25%, transparent 25%, transparent 50%, rgba(255,255,255,0.2) 50%, rgba(255,255,255,0.2) 75%, transparent 75%, transparent);
-            background-size: 50px 50px;
-            animation: move-stripes 2s linear infinite;
-        }
-        @keyframes move-stripes {
-            0% { background-position: 0 0; }
-            100% { background-position: 50px 0; }
-        }
-
-        /* Search Box */
-        .search-container {
-            position: fixed;
-            top: 20px;
-            right: 20px;
-            width: 300px;
-            z-index: 5000;
-        }
-        @media (max-width: 768px) {
-            .search-container { left: unset; right: 20px; top: 20px; width: 220px; }
-        }
-        #searchInput {
-            width: 100%;
-            padding: 12px 18px;
-            border-radius: 10px;
-            border: 1px solid rgba(255,255,255,0.1);
-            background: rgba(15, 23, 42, 0.85);
-            backdrop-filter: blur(8px);
-            color: white;
-            font-family: 'Outfit';
-            font-size: 0.9rem;
-            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
-            outline: none;
-            transition: 0.3s;
-        }
-        #searchInput:focus { border-color: var(--accent); box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.3); }
-
-        .search-results {
-            position: absolute;
-            top: 100%;
-            left: 0;
-            width: 100%;
-            background: var(--primary);
-            border-radius: 10px;
-            margin-top: 8px;
-            max-height: 300px;
-            overflow-y: auto;
-            display: none;
-            box-shadow: 0 20px 25px -5px rgba(0,0,0,0.5);
-            border: 1px solid rgba(255,255,255,0.1);
-        }
-        .search-results.show { display: block; }
-        .result-item {
-            padding: 10px 15px;
-            cursor: pointer;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            transition: 0.2s;
-        }
-        .result-item:hover { background: rgba(255,255,255,0.05); }
-        .result-item .type { font-size: 0.7rem; color: var(--accent); font-weight: bold; margin-bottom: 3px; }
-        .result-item .name { font-size: 0.85rem; }
-
         /* Mode Switcher - Bottom Right */
         .mode-switcher {
             position: fixed;
-            bottom: 100px;
+            bottom: 30px;
             right: 30px;
             z-index: 6000;
             display: flex;
             flex-direction: column;
             background: rgba(15, 23, 42, 0.8);
             backdrop-filter: blur(12px);
-            padding: 5px;
-            border-radius: 15px;
+            padding: 8px;
+            border-radius: 18px;
             border: 1px solid rgba(255,255,255,0.1);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
-            gap: 5px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+            gap: 6px;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
         }
         .mode-btn {
             padding: 10px 20px;
@@ -441,6 +529,39 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
         }
         .mode-btn.active.green { background: var(--success); box-shadow: 0 4px 10px rgba(16, 185, 129, 0.3); }
 
+        /* Smooth Interactions */
+        .stat-card, .packet-item, .mode-btn, .info-btn, .legend-btn {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .legend-btn {
+            position: fixed;
+            bottom: 250px; /* Tepat di atas panel mode switcher */
+            right: 30px;
+            width: 45px;
+            height: 45px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(8px);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+            z-index: 6500;
+            font-size: 1.1rem;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .legend-btn:hover { transform: scale(1.1); background: var(--accent); }
+        .stat-card:hover, .packet-item:hover {
+            transform: translateY(-3px);
+            background: rgba(255,255,255,0.08);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+        .mode-btn:hover {
+            background: rgba(255,255,255,0.1);
+            transform: translateX(-5px);
+        }
+
         /* Scrollbar Styling */
         ::-webkit-scrollbar { width: 5px; }
         ::-webkit-scrollbar-track { background: rgba(0,0,0,0.1); }
@@ -455,17 +576,268 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
             padding: 8px 0;
             border-bottom: 1px solid rgba(255,255,255,0.05);
         }
+
+        /* GPS Blur Overlay */
+        .gps-blur-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            backdrop-filter: blur(25px);
+            background: rgba(2,6,23,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
+        }
+        .gps-blur-overlay.minimized { 
+            background: rgba(2,6,23,0.3);
+            pointer-events: none; /* Tetap blur tapi biarkan user lihat dashboard di baliknya */
+        }
+        .gps-blur-overlay.minimized .gps-prompt { display: none; }
+        .gps-blur-overlay.minimized .gps-blur-msg { display: block; }
+        .gps-blur-overlay.hidden { opacity: 0; pointer-events: none; backdrop-filter: blur(0); }
+        
+        .gps-blur-msg {
+            display: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            max-width: 300px;
+            opacity: 0.8;
+            text-shadow: 0 0 20px rgba(59,130,246,0.5);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 0.8; } }
+        .gps-prompt {
+            text-align: center;
+            max-width: 400px;
+            padding: 2.5rem;
+            background: rgba(15,23,42,0.9);
+            border-radius: 24px;
+            border: 1px solid rgba(255,255,255,0.08);
+            box-shadow: 0 25px 60px rgba(0,0,0,0.5);
+            animation: cardIn 0.5s ease;
+        }
+        @keyframes cardIn { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
+        .gps-prompt h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
+        .gps-prompt p { font-size: 0.85rem; opacity: 0.6; margin-bottom: 1.5rem; line-height: 1.5; }
+        .gps-btn {
+            display: inline-block; padding: 12px 28px; background: var(--accent); color: white;
+            border: none; border-radius: 14px; font-family: 'Outfit'; font-size: 0.95rem;
+            font-weight: 600; cursor: pointer; transition: 0.3s;
+        }
+        .gps-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 25px rgba(59,130,246,0.4); }
+        .gps-float-btn {
+            position: fixed; bottom: 30px; left: 30px; z-index: 100001; /* Di atas kaca buram */
+            padding: 10px 20px; background: rgba(59,130,246,0.9); color: white;
+            border-radius: 14px; font-family: 'Outfit'; font-size: 0.8rem;
+            font-weight: 600; cursor: pointer; border: none;
+            box-shadow: 0 8px 25px rgba(59,130,246,0.3);
+            display: none; transition: 0.3s; backdrop-filter: blur(8px);
+        }
+        .gps-float-btn:hover { transform: translateY(-2px); }
+
+        /* User Profile */
+        .user-bar {
+            display: flex; align-items: center; gap: 10px;
+            padding: 10px 12px; background: rgba(255,255,255,0.04);
+            border-radius: 12px; margin-bottom: 1rem;
+            border: 1px solid rgba(255,255,255,0.05);
+        }
+        .user-bar img { width: 32px; height: 32px; border-radius: 50%; }
+        .user-bar .uname { font-size: 0.8rem; font-weight: 600; flex: 1; }
+        .user-bar .uemail { font-size: 0.65rem; opacity: 0.4; }
+        .user-bar a { font-size: 0.7rem; color: #ef4444; text-decoration: none; opacity: 0.6; }
+        .user-bar a:hover { opacity: 1; }
+
+        /* Sawer Saya Button */
+        .sawer-btn {
+            position: fixed;
+            bottom: 360px; /* Posisi paling atas */
+            right: 30px;
+            z-index: 6000; /* Balik ke bawah kaca buram */
+            background: #f59e0b;
+            color: white;
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-family: 'Outfit';
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 10px 25px rgba(217, 119, 6, 0.3);
+            transition: all 0.3s;
+            animation: sawerBlink 1.5s infinite;
+        }
+        @keyframes sawerBlink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.5; transform: scale(0.95); }
+        }
+        .sawer-btn:hover { animation: none; opacity: 1; transform: scale(1.05); }
+        .sawer-btn:hover { transform: translateY(-3px) scale(1.05); box-shadow: 0 15px 30px rgba(217, 119, 6, 0.4); }
+
+        /* Share Button */
+        .share-btn {
+            position: fixed;
+            bottom: 410px; /* Di atas sawer-btn */
+            right: 30px;
+            z-index: 6000;
+            background: var(--accent);
+            color: white;
+            padding: 10px 18px;
+            border-radius: 12px;
+            font-family: 'Outfit';
+            font-size: 0.8rem;
+            font-weight: 700;
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 10px 25px rgba(59, 130, 246, 0.3);
+            transition: all 0.3s;
+            animation: shareBlink 1.5s infinite;
+        }
+        @keyframes shareBlink {
+            0%, 100% { opacity: 1; transform: scale(1); }
+            50% { opacity: 0.7; transform: scale(0.98); }
+        }
+        .share-btn:hover { animation: none; transform: scale(1.05); }
+        
+        /* Share Modal (reusing sawer modal styles) */
+        .share-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            background: rgba(2,6,23,0.8);
+            padding: 20px;
+        }
+        #share-options { display: flex; gap: 10px; flex-direction: column; margin-top: 1rem; }
+        .share-option-btn {
+            background: var(--accent);
+            color: white;
+            padding: 12px;
+            border-radius: 12px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: 0.2s;
+        }
+        .share-option-btn:hover { opacity: 0.9; transform: translateY(-2px); }
+        
+        /* Sawer Modal */
+        .sawer-modal {
+            position: fixed;
+            inset: 0;
+            z-index: 10000;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            backdrop-filter: blur(12px);
+            background: rgba(2,6,23,0.8);
+            padding: 20px;
+        }
+        .sawer-content {
+            background: rgba(15,23,42,0.95);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 28px;
+            padding: 2.5rem;
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+            animation: modalIn 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        @keyframes modalIn { from { opacity: 0; transform: scale(0.9) translateY(20px); } }
+        .sawer-content img { width: 100%; max-width: 300px; border-radius: 16px; margin-bottom: 1.5rem; border: 4px solid white; }
+        .sawer-content h2 { font-size: 1.3rem; margin-bottom: 1rem; color: #f59e0b; }
+        .sawer-content p { font-size: 0.95rem; opacity: 0.8; line-height: 1.6; margin-bottom: 1.8rem; }
+        .close-sawer {
+            background: rgba(255,255,255,0.05);
+            border: none;
+            color: white;
+            padding: 10px 24px;
+            border-radius: 12px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.2s;
+        }
+        .close-sawer:hover { background: rgba(255,255,255,0.1); }
     </style>
 </head>
 <body>
 
+
 <!-- Hamburger Menu (Mobile Only) -->
 <div class="hamburger" onclick="toggleSidebar()">☰</div>
 
-<!-- Info Button -->
-<div class="info-btn" onclick="toggleModal()" style="z-index: 9999; border: 2px solid white;">?</div>
+<!-- GPS Blur Overlay -->
+<div class="gps-blur-overlay" id="gpsOverlay">
+    <div class="gps-prompt">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📍</div>
+        <h2>Izinkan Akses Lokasi</h2>
+        <p>Dashboard ini memerlukan lokasi GPS Anda untuk keamanan dan transparansi. Data lokasi akan dicatat bersama email Anda.</p>
+        <button class="gps-btn" onclick="requestGPS()">Izinkan Lokasi GPS</button>
+        <div style="margin-top: 1rem;">
+            <a href="#" onclick="skipGPS()" style="color: #94a3b8; font-size: 0.75rem; text-decoration: none;">Lewati tanpa GPS →</a>
+        </div>
+    </div>
+    <div class="gps-blur-msg">
+        <div style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;">🔒</div>
+        Mohon ijinkan akses lokasi untuk membuka dashboard
+    </div>
+</div>
+
+<!-- Floating GPS Button (shown when GPS was skipped) -->
+<button class="gps-float-btn" id="gpsFloatBtn" onclick="requestGPS()">📍 Berikan Akses Lokasi</button>
+
+<!-- Share Button -->
+<button class="share-btn" onclick="toggleShare(true)">Bantu Share</button>
+
+<!-- Sawer Saya Button -->
+<button class="sawer-btn" onclick="toggleSawer(true)">Sawer Saya</button>
+
+<!-- Share Modal -->
+<div class="share-modal" id="shareModal">
+    <div class="sawer-content" style="border-top: 5px solid var(--accent);">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📢</div>
+        <h2>Ayo Bantu Share!</h2>
+        <p>Merasa project ini bermanfaat? Yuk bantu share website ini ke teman-teman agar Majalengka lebih terbuka!</p>
+        
+        <div id="share-options">
+            <button onclick="shareWeb()" class="share-option-btn">🔗 Salin Link / Share Website</button>
+            <a href="https://wa.me/?text=Cek website Matadata Majalengka: AI Audit Pengadaan dan Dana Desa! Transparansi untuk Majalengka: <?= urlencode('http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI']) ?>" target="_blank" class="share-option-btn" style="background: #10b981;">📱 Share ke WhatsApp</a>
+        </div>
+        
+        <button class="close-sawer" style="margin-top: 1.5rem;" onclick="toggleShare(false)">Nanti Saja</button>
+    </div>
+</div>
+
+<!-- Sawer Modal -->
+<div class="sawer-modal" id="sawerModal">
+    <div class="sawer-content">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">☕</div>
+        <img src="qrsumbangan.jpeg" alt="QR Sumbangan">
+        <h2>Dukungan Kopi</h2>
+        <p>Bantu saya untuk mengembangkan project ini, untuk Majalengka yang lebih transparan</p>
+        <button class="close-sawer" onclick="toggleSawer(false)">Tutup</button>
+    </div>
+</div>
+
 
 <div class="sidebar" id="sidebar">
+    <!-- User Profile Bar -->
+    <div class="user-bar">
+        <?php if ($user['photo']): ?><img src="<?= htmlspecialchars($user['photo']) ?>" alt=""><?php else: ?><div style="width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;">👤</div><?php endif; ?>
+        <div style="flex:1; min-width:0;">
+            <div class="uname"><?= htmlspecialchars($user['name']) ?></div>
+            <div class="uemail"><?= htmlspecialchars($user['email']) ?></div>
+        </div>
+        <a href="?logout=1" title="Logout">✕</a>
+    </div>
+
     <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
         <h1 id="sidebar-title">MATADATA MAJALENGKA</h1>
         <div class="close-sidebar" onclick="toggleSidebar()" style="cursor:pointer; font-size: 1.5rem; opacity: 0.5; display: none;">&times;</div>
@@ -488,9 +860,19 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
             ?></div>
         </div>
 
-        <div style="font-size: 0.8rem; opacity: 0.5; margin-top: 1.5rem; padding: 0.5rem; background: rgba(0,0,0,0.2); border-radius: 8px;">
+        <div class="sidebar-meta">
             <div>📅 <b>Tahun Anggaran:</b> 2025</div>
             <div>🕒 <b>Data Diambil:</b> 19 April 2026</div>
+            <div>📡 <b>Sumber:</b> SiRUP LKPP RI (sirup.lkpp.go.id)</div>
+            <?php if (isAdmin()): ?>
+            <div style="margin-top: 8px; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 5px;">
+                <a href="api_monitor.php" style="color: var(--accent); text-decoration: none; font-weight: 600;">📊 API Health Monitor →</a>
+            </div>
+            <?php endif; ?>
+        </div>
+        <div class="sidebar-why">
+            💡 <b>Kenapa data ini penting?</b><br>
+            Rencana pengadaan barang/jasa adalah tahap paling awal di mana potensi pemborosan bisa dideteksi. Dengan memahami data ini, masyarakat dapat mengawasi APBD sejak tahap perencanaan — sebelum uang dibelanjakan.
         </div>
 
         <div style="margin-top: 1.5rem;">
@@ -500,13 +882,13 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
                 // We reused high_risk_packets from before
                 $high_risk_packets->reset(); 
                 while($p = $high_risk_packets->fetchArray(SQLITE3_ASSOC)): ?>
-                    <div class="packet-item" onclick="selectPackage('<?= $p['id'] ?>', '<?= $p['kecamatan'] ?>')">
+                    <div class="packet-item" onclick="selectPackage('<?= e($p['id']) ?>', '<?= e($p['kecamatan']) ?>')">
                         <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
-                            <span class="tag"><?= $p['risk_score'] ?></span>
+                            <span class="tag"><?= e($p['risk_score']) ?></span>
                             <b style="color: var(--accent)"><?= formatPagu($p['pagu']) ?></b>
                         </div>
-                        <div><?= $p['nama_paket'] ?></div>
-                        <div style="font-size: 0.75rem; opacity: 0.5; margin-top: 5px;"><?= $p['satker'] ?></div>
+                        <div><?= e($p['nama_paket']) ?></div>
+                        <div style="font-size: 0.75rem; opacity: 0.5; margin-top: 5px;"><?= e($p['satker']) ?></div>
                     </div>
                 <?php endwhile; ?>
             </div>
@@ -525,9 +907,19 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
             <div class="value">343</div>
         </div>
 
+        <div class="sidebar-meta" style="border-left-color: var(--success);">
+            <div>📅 <b>Tahun Anggaran:</b> 2025</div>
+            <div>🕒 <b>Data Diambil:</b> 19 April 2026</div>
+            <div>📡 <b>Sumber:</b> Portal TKD Kemenkeu RI</div>
+        </div>
+        <div class="sidebar-why" style="background: rgba(16,185,129,0.08);">
+            💡 <b>Kenapa data ini penting?</b><br>
+            Dana Desa adalah hak setiap desa. Dengan melihat transparansi alokasi ini, warga dapat memastikan desa mereka mendapat bagian yang adil dan proporsional sesuai kebutuhan.
+        </div>
+
         <div style="margin-top: 1.5rem;">
             <h3 style="font-size: 0.9rem; margin-bottom: 1rem;">Ranking Alokasi Kecamatan</h3>
-            <div style="max-height: 250px; overflow-y: auto; padding-right: 5px;">
+            <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
                 <?php foreach($kec_dd_stats as $k): ?>
                     <div class="kec-list-item">
                         <span style="font-weight: 500;"><?= $k['nm_kecamatan'] ?></span>
@@ -550,9 +942,19 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
             <div style="font-size: 0.85rem; opacity: 0.8; margin-top: 5px;">Keluarga Penerima Manfaat (BPNT/PKH)</div>
         </div>
 
+        <div class="sidebar-meta" style="border-left-color: var(--warning);">
+            <div>📅 <b>Periode Data:</b> 2024/2025</div>
+            <div>🕒 <b>Data Diambil:</b> 19 April 2026</div>
+            <div>📡 <b>Sumber:</b> DTKS Kemensos RI via Dinsos Majalengka</div>
+        </div>
+        <div class="sidebar-why" style="background: rgba(245,158,11,0.08);">
+            💡 <b>Kenapa data ini penting?</b><br>
+            Mengetahui sebaran kemiskinan membantu warga mengawasi apakah bantuan sosial (PKH, BPNT) sudah tepat sasaran. Area dengan KPM tinggi seharusnya diprioritaskan pemerintah.
+        </div>
+
         <div style="margin-top: 1.5rem;">
             <h3 style="font-size: 0.9rem; margin-bottom: 1rem;">Kecamatan Terpadat (KPM)</h3>
-            <div style="max-height: 250px; overflow-y: auto; padding-right: 5px;">
+            <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
                 <?php foreach($poverty_stats as $name => $p): ?>
                     <div class="kec-list-item">
                         <span style="font-weight: 500;"><?= $name ?></span>
@@ -568,12 +970,30 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
         <div class="stat-card" style="border-left-color: #06b6d4;">
             <h3>Indeks Kemantapan Jalan Desa</h3>
             <div class="value">74.5%</div>
-            <div style="font-size: 0.75rem; opacity: 0.7; margin-top: 5px;">Kondisi Baik & Sedang</div>
+            <div style="font-size: 0.75rem; opacity: 0.7; margin-top: 5px;">Kondisi Baik & Sedang (Baseline 2024)</div>
+        </div>
+
+        <div class="sidebar-meta" style="border-left-color: #06b6d4;">
+            <div>📅 <b>Baseline Data:</b> 2024</div>
+            <div>🕒 <b>Data Diambil:</b> 19 April 2026</div>
+            <div>📡 <b>Sumber:</b></div>
+            <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 4px;">
+                <a href="https://majalengkakab.go.id" target="_blank" style="color: #22d3ee; text-decoration: none; font-size: 0.7rem;">🔗 Open Data Kab. Majalengka ↗</a>
+                <a href="https://overpass-turbo.eu/" target="_blank" style="color: #22d3ee; text-decoration: none; font-size: 0.7rem;">🔗 OpenStreetMap via Overpass ↗</a>
+                <a href="https://www.lapor.go.id/" target="_blank" style="color: #22d3ee; text-decoration: none; font-size: 0.7rem;">🔗 SP4N-LAPOR! ↗</a>
+            </div>
+        </div>
+        <div class="sidebar-why" style="background: rgba(6,182,212,0.08);">
+            💡 <b>Kenapa data ini penting?</b><br>
+            Jalan adalah urat nadi ekonomi desa. Peta ini menunjukkan kecamatan mana yang jalannya paling rusak agar warga bisa menuntut prioritas perbaikan dari pemerintah.
+        </div>
+        <div style="margin-top: 8px; font-size: 0.65rem; opacity: 0.5; padding: 8px; background: rgba(255,255,255,0.02); border-radius: 8px; line-height: 1.5;">
+            ⚠️ <b>Catatan:</b> Data per kecamatan menggunakan baseline 2024. Data resmi DPUTR Majalengka menyebutkan kemantapan jalan kabupaten naik ke ~88,9% di tahun 2025 (<a href="https://rri.co.id/majalengka" target="_blank" style="color: #22d3ee;">sumber</a>). Geometri jalan dari OpenStreetMap (kontribusi komunitas, bukan data resmi pemerintah).
         </div>
 
         <div style="margin-top: 1.5rem;">
             <h3 style="font-size: 0.9rem; margin-bottom: 1rem;">Kecamatan (Jalan Desa Rusak)</h3>
-            <div style="max-height: 250px; overflow-y: auto; padding-right: 5px;">
+            <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
                 <?php 
                 $road_ranking = $poverty_stats;
                 uasort($road_ranking, function($a, $b) { return $a['road_pct'] <=> $b['road_pct']; });
@@ -586,44 +1006,16 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
             </div>
         </div>
     </div>
+    
+    <!-- Legal Links -->
+    <div style="padding: 1rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.05); text-align: center;">
+        <a href="legal.php" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 0.7rem; opacity: 0.6;">Kebijakan Privasi</a>
+        <span style="opacity: 0.2; margin: 0 5px;">•</span>
+        <a href="legal.php" target="_blank" style="color: var(--accent); text-decoration: none; font-size: 0.7rem; opacity: 0.6;">Syarat & Ketentuan</a>
+    </div>
 </div>
 
-<div id="map">
-    <!-- Progress Indicator -->
-    <div id="progress-overlay">
-        <div class="progress-text">
-            <span>💡 AI Sedang Mengaudit...</span>
-            <span id="progress-percent">0%</span>
-        </div>
-        <div class="progress-bar-container">
-            <div id="progress-fill" class="progress-bar-fill"></div>
-        </div>
-        <div id="progress-kecamatan" style="font-size: 0.65rem; opacity: 0.6; margin-top: 5px; font-style: italic;">Memproses: -</div>
-    </div>
-
-    <!-- Mode Switcher -->
-    <div class="mode-switcher">
-        <div class="mode-btn active" id="btn-sirup" onclick="switchMode('sirup')">
-            <span>🛡️ Audit Pengadaan</span>
-        </div>
-        <div class="mode-btn" id="btn-danadesa" onclick="switchMode('danadesa')">
-            <span>🌾 Dana Desa</span>
-        </div>
-        <div class="mode-btn" id="btn-kemiskinan" onclick="switchMode('kemiskinan')">
-            <span>🏘️ Kemiskinan</span>
-        </div>
-        <div class="mode-btn" id="btn-infrastruktur" onclick="switchMode('infrastruktur')">
-            <span>🛣️ Infrastruktur</span>
-        </div>
-    </div>
-
-    <!-- Search Bar -->
-    <div class="search-container">
-        <input type="text" id="searchInput" placeholder="Cari..." oninput="handleSearch()">
-        <div id="searchResults" class="search-results"></div>
-    </div>
-    <div class="info-btn" onclick="toggleModal()" title="Transparansi Algoritma">?</div>
-</div>
+<div id="map"></div>
 
 <!-- Modal Logic (Dynamic) -->
 <div id="logicModal" class="modal" onclick="if(event.target == this) toggleModal()">
@@ -641,6 +1033,66 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
             <!-- Filled by JS -->
         </ul>
     </div>
+</div>
+
+<!-- Packet Detail Modal -->
+<div id="packetModal" class="modal" onclick="if(event.target == this) togglePacketModal()">
+    <div class="modal-content" style="max-width: 500px; border-top: 5px solid var(--accent);">
+        <span class="close-modal" onclick="togglePacketModal()">&times;</span>
+        <h2 id="p-title" style="margin: 0; font-size: 1.2rem;">Nama Paket</h2>
+        <p id="p-satker" style="opacity: 0.6; font-size: 0.8rem; margin-bottom: 1rem;">Satuan Kerja</p>
+        
+        <div style="background: rgba(255,255,255,0.03); padding: 1.5rem; border-radius: 15px; margin-bottom: 1.5rem;">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+                <span id="p-risk" class="tag" style="font-size: 0.8rem; padding: 4px 10px;">LOW</span>
+                <b id="p-pagu" style="font-size: 1.4rem; color: var(--accent);">Rp 0</b>
+            </div>
+            <div style="font-size: 0.9rem; line-height: 1.6; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 1rem;">
+                <b style="display: block; font-size: 0.75rem; opacity: 0.5; margin-bottom: 4px;">CATATAN AUDIT AI:</b>
+                <span id="p-note">...</span>
+            </div>
+        </div>
+
+        <div style="display: flex; gap: 10px; flex-direction: column;">
+            <div style="font-size: 0.8rem; opacity: 0.7;">
+                <b>ID SIRUP:</b> <span id="p-sirup-id">000000</span>
+            </div>
+            <a id="p-sirup-link" href="#" target="_blank" style="display: block; background: var(--accent); color: white; text-align: center; padding: 12px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: 0.3s;">
+                🔍 Lihat Detil di SIRUP LKPP ↗
+            </a>
+        </div>
+    </div>
+</div>
+
+    <!-- Map Legend -->
+    <div id="map-legend" class="map-legend"></div>
+
+    <!-- Mode Switcher -->
+    <div class="mode-switcher">
+        <div class="mode-btn active" id="btn-sirup" onclick="switchMode('sirup')">
+            <span>Audit Pengadaan</span>
+        </div>
+        <div class="mode-btn" id="btn-danadesa" onclick="switchMode('danadesa')">
+            <span>Dana Desa</span>
+        </div>
+        <div class="mode-btn" id="btn-kemiskinan" onclick="switchMode('kemiskinan')">
+            <span>Kemiskinan</span>
+        </div>
+        <div class="mode-btn" id="btn-infrastruktur" onclick="switchMode('infrastruktur')">
+            <span>Infrastruktur</span>
+        </div>
+    </div>
+
+    <!-- Futuristic Search Bar -->
+    <div class="search-container">
+        <div class="search-wrapper">
+            <span class="search-icon">🔍</span>
+            <input type="text" id="searchInput" placeholder="Cari Kecamatan atau Paket..." oninput="handleSearch()">
+        </div>
+        <div id="searchResults" class="search-results"></div>
+    </div>
+    <div class="legend-btn" onclick="toggleLegend()" title="Legenda Peta">🗺️</div>
+    <div class="info-btn" onclick="toggleModal()" title="Transparansi Algoritma">?</div>
 </div>
 
 
@@ -760,15 +1212,64 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
     let activeLayer = null;
 
     // Mode Switcher Logic
+    function updateLegend(mode) {
+        const legend = document.getElementById('map-legend');
+        if (!legend) return;
+        let html = '';
+        if (mode === 'sirup') {
+            html = `
+                <div class="legend-title">Risiko Pengadaan</div>
+                <div class="legend-item"><div class="legend-color" style="background:#800026"></div><span>Kritis (>5 Temuan)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#BD0026"></div><span>Tinggi (3-5 Temuan)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#E31A1C"></div><span>Sedang (1-2 Temuan)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#3b82f6"></div><span>Aman (0 Temuan)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#1e293b"></div><span>Belum Diaudit</span></div>
+            `;
+        } else if (mode === 'danadesa') {
+            html = `
+                <div class="legend-title">Alokasi Dana Desa</div>
+                <div class="legend-item"><div class="legend-color" style="background:#064e3b"></div><span>> Rp1,2 Miliar</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#065f46"></div><span>> Rp1 Miliar</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#059669"></div><span>> Rp800 Juta</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#10b981"></div><span>≤ Rp800 Juta</span></div>
+            `;
+        } else if (mode === 'kemiskinan') {
+            html = `
+                <div class="legend-title">Sebaran KPM Bansos</div>
+                <div class="legend-item"><div class="legend-color" style="background:#7c2d12"></div><span>> 8.000 KPM</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#9a3412"></div><span>> 6.000 KPM</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#c2410c"></div><span>> 4.000 KPM</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#ea580c"></div><span>> 2.000 KPM</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#f97316"></div><span>≤ 2.000 KPM</span></div>
+            `;
+        } else if (mode === 'infrastruktur') {
+            html = `
+                <div class="legend-title">Kemantapan Jalan</div>
+                <div class="legend-item"><div class="legend-color" style="background:#d946ef"></div><span>Mantap (≥90%)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#c026d3"></div><span>Baik (80-89%)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#a21caf"></div><span>Sedang (70-79%)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#701a75"></div><span>Rusak (60-69%)</span></div>
+                <div class="legend-item"><div class="legend-color" style="background:#4a044e"></div><span>Kritis (<60%)</span></div>
+            `;
+        }
+        legend.innerHTML = html + '<div class="close-legend" onclick="toggleLegend()">&times;</div>';
+    }
+
+    // Mode Switcher Logic
     function switchMode(mode) {
         if (mode === currentMode) return;
         currentMode = mode;
 
-        // Update UI
+        // Update Buttons
         document.querySelectorAll('.mode-btn').forEach(btn => btn.classList.remove('active', 'green'));
         const activeBtn = document.getElementById(`btn-${mode}`);
-        activeBtn.classList.add('active');
-        if (mode === 'danadesa') activeBtn.classList.add('green');
+        if (activeBtn) {
+            activeBtn.classList.add('active');
+            if (mode === 'danadesa') activeBtn.classList.add('green');
+        }
+
+        // Update Legend
+        updateLegend(mode);
 
         // Update Theme
         let accentColor = '#3b82f6';
@@ -778,26 +1279,32 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
         document.documentElement.style.setProperty('--accent', accentColor);
 
         // Update Sidebar
-        document.getElementById('sidebar-sirup').style.display = mode === 'sirup' ? 'block' : 'none';
-        document.getElementById('sidebar-danadesa').style.display = mode === 'danadesa' ? 'block' : 'none';
-        document.getElementById('sidebar-kemiskinan').style.display = mode === 'kemiskinan' ? 'block' : 'none';
-        document.getElementById('sidebar-infrastruktur').style.display = mode === 'infrastruktur' ? 'block' : 'none';
+        const sections = ['sirup', 'danadesa', 'kemiskinan', 'infrastruktur'];
+        sections.forEach(s => {
+            const el = document.getElementById(`sidebar-${s}`);
+            if (el) el.style.display = (s === mode) ? 'block' : 'none';
+        });
         
-        document.getElementById('sidebar-title').innerText = 
-            mode === 'sirup' ? 'MATADATA MAJALENGKA' : 
-            (mode === 'danadesa' ? 'TRANSPARANSI DESA' : 
-            (mode === 'kemiskinan' ? 'AUDIT KEMISKINAN' : 'AUDIT INFRASTRUKTUR'));
-        
-        document.getElementById('sidebar-subtitle').innerText = 
-            mode === 'sirup' ? 'Operasi Ratu Boko • AI Audit Pengadaan' : 
-            (mode === 'danadesa' ? 'Alokasi Alur Dana Desa 2025' : 
-            (mode === 'kemiskinan' ? 'Profil KPM Bansos Per Kecamatan' : 'Kondisi & Anggaran Jalan Desa'));
+        const titleEl = document.getElementById('sidebar-title');
+        const subtitleEl = document.getElementById('sidebar-subtitle');
+        if (titleEl) {
+            titleEl.innerText = mode === 'sirup' ? 'MATADATA MAJALENGKA' : 
+                               (mode === 'danadesa' ? 'TRANSPARANSI DESA' : 
+                               (mode === 'kemiskinan' ? 'AUDIT KEMISKINAN' : 'AUDIT INFRASTRUKTUR'));
+        }
+        if (subtitleEl) {
+            subtitleEl.innerText = mode === 'sirup' ? 'Operasi Ratu Boko • AI Audit Pengadaan' : 
+                                  (mode === 'danadesa' ? 'Alokasi Alur Dana Desa 2025' : 
+                                  (mode === 'kemiskinan' ? 'Profil KPM Bansos Per Kecamatan' : 'Kondisi & Anggaran Jalan Desa'));
+        }
 
         // Update Placeholder
-        document.getElementById('searchInput').placeholder = mode === 'sirup' ? 'Cari Kecamatan atau Paket...' : (mode === 'danadesa' ? 'Cari Desa...' : 'Cari Kecamatan...');
+        const searchInput = document.getElementById('searchInput');
+        if (searchInput) {
+            searchInput.placeholder = mode === 'sirup' ? 'Cari Kecamatan atau Paket...' : (mode === 'danadesa' ? 'Cari Desa...' : 'Cari Kecamatan...');
+        }
 
-        // Update Modal Content
-        updateModalContent(mode);
+        if (window.updateModalContent) updateModalContent(mode);
 
         // Clear Map and Load New Data
         if (geoLayer) map.removeLayer(geoLayer);
@@ -885,7 +1392,25 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
         layer.setStyle({ weight: 1, color: 'rgba(255,255,255,0.1)' });
     }
 
+    function togglePacketModal() {
+        const modal = document.getElementById('packetModal');
+        modal.classList.toggle('show');
+    }
+
     function selectPackage(id, kecamatanName) {
+        const p = allAudits.find(x => x.id === id);
+        if (p) {
+            document.getElementById('p-title').innerText = p.nama;
+            document.getElementById('p-satker').innerText = p.satker;
+            document.getElementById('p-pagu').innerText = formatPaguJS(p.pagu);
+            document.getElementById('p-risk').innerText = p.risk;
+            document.getElementById('p-risk').style.background = p.risk === 'High' || p.risk === 'ABSURD' ? 'var(--danger)' : (p.risk === 'Medium' ? 'var(--warning)' : 'var(--success)');
+            document.getElementById('p-note').innerText = p.note;
+            document.getElementById('p-sirup-id').innerText = p.id;
+            document.getElementById('p-sirup-link').href = `https://sirup.lkpp.go.id/sirup/rekap/detailPaketAnggaran?idPaket=${p.id}`;
+            
+            togglePacketModal();
+        }
         selectDistrict(kecamatanName);
     }
 
@@ -919,7 +1444,14 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
     // Create a specific pane for roads to keep them on top of polygons
     map.createPane('roadPane');
     map.getPane('roadPane').style.zIndex = 650;
-    map.getPane('roadPane').style.pointerEvents = 'none'; // Allow clicking polygons through lines
+    map.getPane('roadPane').style.pointerEvents = 'auto';
+
+    function escapeHTML(str) {
+        if (!str) return '';
+        const div = document.createElement('div');
+        div.textContent = str;
+        return div.innerHTML;
+    }
 
     function formatPaguJS(p) {
         if (!p || p === 0) return "Rp0";
@@ -982,25 +1514,38 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
                                 let packetHtml = packets.length > 0 ? '<div style="margin-top:10px; max-height:200px; overflow-y:auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top:10px;">' : '';
                                 packets.forEach(p => {
                                     const color = p.risk === 'High' || p.risk === 'ABSURD' ? '#ef4444' : (p.risk === 'Medium' ? '#f59e0b' : '#10b981');
-                                    packetHtml += `<div style="margin-bottom:10px; font-size: 0.8rem;"><div style="display:flex; justify-content:space-between;"><b style="color: ${color}">${p.risk}</b><span style="opacity:0.6;">${formatPaguJS(p.pagu)}</span></div><div style="font-weight:600;">${p.nama}</div><div style="font-size:0.75rem; opacity:0.8; font-style:italic;">"${p.note}"</div></div>`;
+                                    packetHtml += `<div style="margin-bottom:10px; font-size: 0.8rem;"><div style="display:flex; justify-content:space-between;"><b style="color: ${color}">${escapeHTML(p.risk)}</b><span style="opacity:0.6;">${formatPaguJS(p.pagu)}</span></div><div style="font-weight:600;">${escapeHTML(p.nama)}</div><div style="font-size:0.75rem; opacity:0.8; font-style:italic;">"${escapeHTML(p.note)}"</div></div>`;
                                 });
                                 if (packetHtml) packetHtml += '</div>';
 
-                                layer.bindPopup(`<div class="info-box" style="width:250px;"><b style="font-size:1.1rem; color:#3b82f6;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Sumber: SiRUP LKPP T.A 2025</span><hr style="opacity:0.2; margin:8px 0;"><b>Anggaran Audit:</b> <span style="color:var(--accent)">${formatPaguJS(d.total_pagu)}</span><br>Temuan High Risk: <span style="color:${d.high_risk > 0 ? '#ef4444':'#10b981'}">${d.high_risk}</span>${packetHtml}</div>`);
+                                const center = layer.getBounds().getCenter();
+                                const lat = center.lat.toFixed(5);
+                                const lng = center.lng.toFixed(5);
+
+                                layer.bindPopup(`<div class="info-box" style="width:250px;"><b style="font-size:1.1rem; color:#3b82f6;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Sumber: SiRUP LKPP T.A 2025</span><hr style="opacity:0.2; margin:8px 0;"><b>Anggaran Audit:</b> <span style="color:var(--accent)">${formatPaguJS(d.total_pagu)}</span><br>Temuan High Risk: <span style="color:${d.high_risk > 0 ? '#ef4444':'#10b981'}">${d.high_risk}</span>${packetHtml}<hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(59,130,246,0.2); border-radius:8px; color:#60a5fa; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
                             } else {
                                 // Kemiskinan Popup
                                 const p = povertyStats[name] || { count: 0, pkh: 0, bpnt: 0, road_pct: 75 };
                                 if (currentMode === 'kemiskinan') {
-                                    layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#f59e0b;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">T.A 2024/2025 | Sumber: Dinsos/DTKS</span><hr style="opacity:0.2; margin:8px 0;"><b>Jumlah KPM Miskin:</b><br><span style="font-size:1.8rem; font-weight:600; color:#f59e0b;">${p.count.toLocaleString('id-ID')}</span><div style="margin-top:10px; display:grid; grid-template-columns: 1fr 1fr; gap:5px;"><div style="background:rgba(255,255,255,0.05); padding:5px; border-radius:5px; text-align:center;"><div style="font-size:0.6rem; opacity:0.6;">KPM BPNT</div><div style="font-weight:bold;">${p.bpnt.toLocaleString('id-ID')}</div></div><div style="background:rgba(255,255,255,0.05); padding:5px; border-radius:5px; text-align:center;"><div style="font-size:0.6rem; opacity:0.6;">KPM PKH</div><div style="font-weight:bold;">${p.pkh.toLocaleString('id-ID')}</div></div></div></div>`);
+                                    const center = layer.getBounds().getCenter();
+                                    const lat = center.lat.toFixed(5);
+                                    const lng = center.lng.toFixed(5);
+                                    layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#f59e0b;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">T.A 2024/2025 | Sumber: Dinsos/DTKS</span><hr style="opacity:0.2; margin:8px 0;"><b>Jumlah KPM Miskin:</b><br><span style="font-size:1.8rem; font-weight:600; color:#f59e0b;">${p.count.toLocaleString('id-ID')}</span><div style="margin-top:10px; display:grid; grid-template-columns: 1fr 1fr; gap:5px;"><div style="background:rgba(255,255,255,0.05); padding:5px; border-radius:5px; text-align:center;"><div style="font-size:0.6rem; opacity:0.6;">KPM BPNT</div><div style="font-weight:bold;">${p.bpnt.toLocaleString('id-ID')}</div></div><div style="background:rgba(255,255,255,0.05); padding:5px; border-radius:5px; text-align:center;"><div style="font-size:0.6rem; opacity:0.6;">KPM PKH</div><div style="font-weight:bold;">${p.pkh.toLocaleString('id-ID')}</div></div></div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(245,158,11,0.2); border-radius:8px; color:#fbbf24; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
                                 } else {
                                     // Infrastruktur Heatmap Popup
-                                    layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#06b6d4;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Data 2024 | Sumber: DPUTR Majalengka</span><hr style="opacity:0.2; margin:8px 0;"><b>Level Kemantapan:</b><br><span style="font-size:1.8rem; font-weight:600; color:#06b6d4;">${p.road_pct}%</span><br><div style="font-size:0.7rem; opacity:0.6; margin-top:5px;">Indeks berdasarkan integrasi SP4N-LAPOR! & Statistik Jalan Kabupaten.</div></div>`);
+                                    const center = layer.getBounds().getCenter();
+                                    const lat = center.lat.toFixed(5);
+                                    const lng = center.lng.toFixed(5);
+                                    layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#06b6d4;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Data 2024 | Sumber: DPUTR Majalengka</span><hr style="opacity:0.2; margin:8px 0;"><b>Level Kemantapan:</b><br><span style="font-size:1.8rem; font-weight:600; color:#06b6d4;">${p.road_pct}%</span><br><div style="font-size:0.7rem; opacity:0.6; margin-top:5px;">Indeks berdasarkan integrasi SP4N-LAPOR! & Statistik Jalan Kabupaten.</div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(6,182,212,0.2); border-radius:8px; color:#22d3ee; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
                                 }
                             }
                         } else {
                             villageLayers[name] = layer;
                             const v = villageStats[name] || { budget: 0, risk: 0, kecamatan: 'Unknown' };
-                            layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#10b981;">Desa ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Kecamatan ${v.kecamatan}</span><hr style="opacity:0.2; margin:8px 0;"><b>Alokasi Dana Desa T.A 2025:</b><br><span style="font-size:1.4rem; font-weight:600; color:#10b981;">${formatPaguJS(v.budget)}</span><br><div style="margin-top:10px; font-size:0.75rem; opacity:0.7; line-height:1.4;">Sumber: Alokasi TKD Kemenkeu RI T.A 2025</div></div>`);
+                            const center = layer.getBounds().getCenter();
+                            const lat = center.lat.toFixed(5);
+                            const lng = center.lng.toFixed(5);
+                            layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#10b981;">Desa ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Kecamatan ${v.kecamatan}</span><hr style="opacity:0.2; margin:8px 0;"><b>Alokasi Dana Desa T.A 2025:</b><br><span style="font-size:1.4rem; font-weight:600; color:#10b981;">${formatPaguJS(v.budget)}</span><br><div style="margin-top:10px; font-size:0.75rem; opacity:0.7; line-height:1.4;">Sumber: Alokasi TKD Kemenkeu RI T.A 2025</div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(16,185,129,0.2); border-radius:8px; color:#34d399; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
                         }
 
                         layer.on('mouseover', function() { this.setStyle({ fillOpacity: 0.9, weight: 2 }); });
@@ -1020,14 +1565,21 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
                                     if (f.properties.status === 'Perbaikan') color = '#f59e0b';
                                     return { 
                                         color: color, 
-                                        weight: 2, 
-                                        opacity: 0.8, 
+                                        weight: 4, 
+                                        opacity: 0.9, 
                                         pane: 'roadPane',
-                                        smoothFactor: 1.5 // Added for performance with 14k+ segments
+                                        smoothFactor: 1.5
                                     };
                                 },
-                                onEachFeature: function(f, roadLayer) {
-                                    roadLayer.bindPopup(`<div class="info-box" style="width:200px;"><b style="color:var(--accent)">${f.properties.name}</b><br><span style="font-size:0.75rem; opacity:0.6;">Klasifikasi: ${f.properties.highway}</span><hr style="opacity:0.2; margin:5px 0;">Status Audit: <b style="color:${f.properties.status === 'Rusak' ? '#ef4444' : '#22d3ee'}">${f.properties.status}</b><br><span style="font-size:0.7rem; opacity:0.5;">Data: OpenStreetMap 2024</span><br><span style="font-size:0.7rem; opacity:0.5;">Audit: Matadata AI Engine</span></div>`);
+                                onEachFeature: function(f, layer) {
+                                    const coords = layer.getLatLngs ? layer.getLatLngs() : [];
+                                    let lat = 0, lng = 0;
+                                    if (coords.length > 0) {
+                                        const mid = Array.isArray(coords[0]) ? coords[0][Math.floor(coords[0].length/2)] : coords[Math.floor(coords.length/2)];
+                                        if (mid) { lat = mid.lat.toFixed(5); lng = mid.lng.toFixed(5); }
+                                    }
+                                    const statusColor = f.properties.status === 'Rusak' ? '#ef4444' : (f.properties.status === 'Perbaikan' ? '#f59e0b' : '#22d3ee');
+                                    layer.bindPopup(`<div class="info-box" style="width:230px;"><b style="color:var(--accent)">${f.properties.name || 'Jalan Tanpa Nama'}</b><br><span style="font-size:0.75rem; opacity:0.6;">Klasifikasi: ${f.properties.highway}</span><hr style="opacity:0.2; margin:5px 0;">Status: <b style="color:${statusColor}">${f.properties.status}</b><br><span style="font-size:0.7rem; opacity:0.5;">Data: OpenStreetMap 2024</span><hr style="opacity:0.1; margin:6px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(6,182,212,0.2); border-radius:8px; color:#22d3ee; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
                                 }
                             }).addTo(map);
                         });
@@ -1036,10 +1588,106 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
     }
 
     window.onload = () => {
-        updateModalContent(currentMode);
+        if (window.updateModalContent) updateModalContent(currentMode);
+        updateLegend(currentMode);
         loadMapData();
+
+        // Check if GPS was already granted in this session
+        <?php if ($user['gps_granted']): ?>
+            document.getElementById('gpsOverlay').classList.add('hidden');
+        <?php endif; ?>
     };
+
+    // GPS Capture Logic
+    function requestGPS() {
+        if (!navigator.geolocation) {
+            alert('Browser Anda tidak mendukung GPS.');
+            skipGPS();
+            return;
+        }
+
+        // Update button state
+        const btn = document.querySelector('.gps-btn');
+        if (btn) { btn.textContent = 'Meminta akses...'; btn.disabled = true; }
+
+        navigator.geolocation.getCurrentPosition(
+            function(pos) {
+                // Success - send to server
+                fetch('log_visit.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({
+                        latitude: pos.coords.latitude,
+                        longitude: pos.coords.longitude,
+                        accuracy: pos.coords.accuracy
+                    })
+                }).then(() => {
+                    document.getElementById('gpsOverlay').classList.add('hidden');
+                    document.getElementById('gpsFloatBtn').style.display = 'none';
+                }).catch(() => {
+                    document.getElementById('gpsOverlay').classList.add('hidden');
+                });
+            },
+            function(err) {
+                // Denied or error - log visit without GPS
+                fetch('log_visit.php', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ latitude: null, longitude: null, accuracy: null })
+                });
+                skipGPS();
+            },
+            { enableHighAccuracy: true, timeout: 15000, maximumAge: 0 }
+        );
+    }
+
+    function skipGPS() {
+        // Sembunyikan box prompt saja, tapi dashboard tetap blur (minimized)
+        document.getElementById('gpsOverlay').classList.add('minimized');
+        document.getElementById('gpsFloatBtn').style.display = 'block';
+        
+        // Log visit tanpa GPS
+        fetch('log_visit.php', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ latitude: null, longitude: null, accuracy: null })
+        });
+    }
+
+    function toggleShare(show) {
+        document.getElementById('shareModal').style.display = show ? 'flex' : 'none';
+    }
+
+    async function shareWeb() {
+        const shareData = {
+            title: 'Matadata Majalengka',
+            text: 'Cek website Matadata Majalengka: AI Audit Pengadaan dan Dana Desa!',
+            url: window.location.href
+        };
+        
+        try {
+            if (navigator.share) {
+                await navigator.share(shareData);
+            } else {
+                await navigator.clipboard.writeText(window.location.href);
+                alert('Link dashboard telah disalin ke clipboard!');
+            }
+        } catch (err) {
+            console.error('Error sharing:', err);
+        }
+    }
+
+    function toggleLegend() {
+        const leg = document.getElementById('map-legend');
+        const isHidden = window.getComputedStyle(leg).display === 'none';
+        leg.style.display = isHidden ? 'block' : 'none';
+    }
+
 </script>
+
+<?php if (isAdmin()): ?>
+<a href="visitors.php" style="position:fixed; top:15px; left:50%; transform:translateX(-50%); z-index:9000; padding:6px 16px; background:rgba(139,92,246,0.2); border:1px solid rgba(139,92,246,0.3); border-radius:10px; color:#a78bfa; text-decoration:none; font-family:'Outfit'; font-size:0.75rem; font-weight:600; backdrop-filter:blur(8px);">👁️ Admin: Visitor Log</a>
+<?php endif; ?>
 
 </body>
 </html>

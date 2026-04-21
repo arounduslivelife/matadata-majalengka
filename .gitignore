@@ -1,10 +1,28 @@
+# --- Matadata Majalengka Git Ignore ---
+
+# Sensitive Data (MUST NEVER BE COMMITTED)
 config.json
 database.sqlite
-node_modules/
-.antigravity/
-progress.json
-*.log
-.env
-.DS_Store
 auth.json
+.env
 *.session
+*.log
+
+# Dependencies
+node_modules/
+
+# Local Progress & Meta
+progress.json
+.antigravity/
+.gemini/
+
+# OS / Editor Files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# GeoJSON Large Files (Optional: backup locally instead of GitHub)
+# villages.geojson
+# districts.geojson
+# roads_desa.geojson
