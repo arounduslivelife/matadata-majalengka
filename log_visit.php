@@ -15,7 +15,7 @@ $latitude = $input['latitude'] ?? null;
 $longitude = $input['longitude'] ?? null;
 $accuracy = $input['accuracy'] ?? null;
 
-$db = new SQLite3('database.sqlite');
+$db = new SQLite3('audit_trail.sqlite');
 
 $stmt = $db->prepare('INSERT INTO visitors (email, name, photo_url, latitude, longitude, accuracy, ip_address, user_agent) VALUES (:email, :name, :photo, :lat, :lng, :acc, :ip, :ua)');
 $stmt->bindValue(':email', $_SESSION['user_email'], SQLITE3_TEXT);

@@ -1,5 +1,5 @@
 <?php
-$db = new SQLite3('database.sqlite');
+$db = new SQLite3('audit_trail.sqlite');
 $db->exec('CREATE TABLE IF NOT EXISTS visitors (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
     email TEXT NOT NULL,

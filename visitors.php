@@ -3,7 +3,15 @@ require_once 'auth.php';
 requireAuth();
 if (!isAdmin()) { header('Location: index.php'); exit; }
 
-$db = new SQLite3('database.sqlite');
+$db = new SQLite3('audit_trail.sqlite');
+
+// Handle Clear Logs
+if (isset($_GET['clear_logs'])) {
+    $db->exec('DELETE FROM visitors');
+    $db->exec('VACUUM');
+    header('Location: visitors.php?cleared=1');
+    exit;
+}
 
 // Query 1: Aggregated User Insights
 // Note: We use MAX(visited_at) to find the "Last Login"
@@ -176,7 +184,10 @@ $gpsGranted = $db->querySingle('SELECT COUNT(*) FROM visitors WHERE latitude IS 
 
         <div class="section-header" id="raw-logs">
             <h2>Raw Visit Logs (100 Terakhir)</h2>
-            <a href="#" style="font-size: 0.8rem; color: var(--accent); text-decoration: none;">Kembali ke Atas ↑</a>
+            <div style="display: flex; gap: 15px; align-items: center;">
+                <a href="?clear_logs=1" onclick="return confirm('Apakah Anda yakin ingin mengosongkan semua log kunjungan? Tindakan ini tidak dapat dibatalkan.')" style="font-size: 0.8rem; color: #ef4444; text-decoration: none; font-weight: 600; padding: 6px 12px; background: rgba(239,68,68,0.1); border-radius: 8px; border: 1px solid rgba(239,68,68,0.2);">🗑️ Kosongkan Raw Visit</a>
+                <a href="#" style="font-size: 0.8rem; color: var(--accent); text-decoration: none;">Kembali ke Atas ↑</a>
+            </div>
         </div>
 
         <table style="margin-bottom: 5rem;">

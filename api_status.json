@@ -38,10 +38,10 @@
   {
     "provider": "GEMINI",
     "key_name": "AIzaSyDgZL...wVoY",
-    "status": "ACTIVE",
+    "status": "RATE_LIMITED",
     "is_active": true,
-    "last_used": "2026-04-21T04:19:06.847Z",
-    "error_count": 0,
-    "last_error": null
+    "last_used": "2026-04-22T09:34:31.193Z",
+    "error_count": 2,
+    "last_error": "[GoogleGenerativeAI Error]: Error fetching from https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash:generateContent: [503 Service Unavailable] This model is currently experiencing high demand. Spikes in demand are usually temporary. Please try again later."
   }
 ]
