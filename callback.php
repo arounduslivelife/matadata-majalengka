@@ -7,12 +7,12 @@ $state = $_GET['state'] ?? null;
 
 // Verify state to prevent CSRF
 if (!$state || !isset($_SESSION['oauth_state']) || $state !== $_SESSION['oauth_state']) {
-    header('Location: login.php?error=invalid_state');
+    header('Location: login?error=invalid_state');
     exit;
 }
 
 if (!$code) {
-    header('Location: login.php');
+    header('Location: login');
     exit;
 }
 
@@ -36,7 +36,7 @@ curl_close($ch);
 
 if (!isset($tokenResponse['access_token'])) {
     // Token exchange failed
-    header('Location: login.php?error=token_failed');
+    header('Location: login?error=token_failed');
     exit;
 }
 
@@ -49,7 +49,7 @@ $userInfo = json_decode(curl_exec($ch), true);
 curl_close($ch);
 
 if (!isset($userInfo['email'])) {
-    header('Location: login.php?error=no_email');
+    header('Location: login?error=no_email');
     exit;
 }
 
@@ -60,5 +60,5 @@ $_SESSION['user_photo'] = $userInfo['picture'] ?? '';
 $_SESSION['gps_granted'] = false;
 
 // Redirect to dashboard (GPS will be captured there)
-header('Location: index.php');
+header('Location: ./');
 exit;

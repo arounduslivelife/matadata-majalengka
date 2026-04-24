@@ -1,10 +1,14 @@
 ========================================================================
 MATADATA MAJALENGKA - DEVELOPMENT LOG & ROADMAP
-Status Per: 21 April 2026 (Update: 14:45 WIB - SENSOR READY)
+Status Per: 24 April 2026 (Update: 16:15 WIB - ROUTING FIX)
 ========================================================================
 
 1. PROGRESS TERBARU (COMPLETED TODAY):
 ---------------------------------------------------------
+- [V] VPS ROUTING & 404 FIX (Sesi Hari Ini)
+    * Implementasi Apache RewriteEngine: Menghilangkan .php dari URL (landing, login, index).
+    * Fixing 404 Error: Masalah routing pada deployment VPS teratasi sepenuhnya.
+    * Unified Auth Redirect: Redirect otomatis ke /landing saat tidak login kini berfungsi stabil.
 - [V] PREMIUM UI OVERHAUL (Sesi Terakhir)
     * Futuristic Search Bar: Efek neon glow + expansion saat fokus.
     * Dynamic Map Legend: Panel kanan yang otomatis berubah sesuai mode aktif.
@@ -42,14 +46,15 @@ Status Per: 21 April 2026 (Update: 14:45 WIB - SENSOR READY)
 
 2. DATABASE & DATA STATUS:
 ---------------------------------------------------------
-- Total SIRUP Packages : 7,645 Paket.
-- Audit Progress       : 3,609 / 7,645 Paket Selesai (Tenaga Gemini 2.5 Flash).
+- Total Realisasi Packages : 15,471 Paket (Upgrade from SIRUP).
+- Audit Progress       : 0 / 15,471 Paket (Dataset Baru - Siap Audit Vendor).
+- Source               : Inaproc Realisasi T.A 2025 (Manual CSV).
 - Active Provider      : Gemini 2.5 Flash (Primary failover), Groq Quad (Wait for reset).
 
 3. PENDING TASKS & PR KEDEPAN (ROADMAP BESOK):
 ---------------------------------------------------------
 [ ] GOOGLE CONSOLE SETUP: Buat OAuth 2.0 credentials di console.cloud.google.com.
-[ ] DEPLOY KE VPS: Upload semua file ke matadata.agungds.web.id.
+[V] DEPLOY KE VPS: Upload semua file ke matadata.agungds.web.id.
 [ ] PRODUKSI BREADCRUMB: Navigasi filter per desa yang lebih intuitif.
 [ ] ANOMALY RADAR: Membuat section "Top 5 Temuan AI" di sidebar.
 [ ] IMPACT CORRELATION: Analisis hubungan budget desa vs kemiskinan.

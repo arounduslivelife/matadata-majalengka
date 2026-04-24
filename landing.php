@@ -2,7 +2,7 @@
 require_once 'auth.php';
 // If already logged in, go straight to dashboard
 if (isset($_SESSION['user_email'])) {
-    header('Location: index.php');
+    header('Location: ./');
     exit;
 }
 
@@ -17,9 +17,9 @@ $totalBudgetFormatted = $totalBudget >= 1000000000000 ? 'Rp' . number_format($to
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matadata Majalengka — AI Public Audit Dashboard</title>
+    <title>Matadata Majalengka — Public Monitoring Dashboard</title>
     <link rel="icon" type="image/png" href="favicon.png?v=3">
-    <meta name="description" content="Platform transparansi anggaran publik Kabupaten Majalengka berbasis Kecerdasan Buatan. Audit pengadaan, dana desa, kemiskinan, dan infrastruktur secara real-time.">
+    <meta name="description" content="Platform transparansi anggaran publik Kabupaten Majalengka. Pengawasan pengadaan, dana desa, kemiskinan, dan infrastruktur dalam bentuk peta grafis.">
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root { --bg: #020617; --accent: #3b82f6; --success: #10b981; --warning: #f59e0b; }
@@ -89,11 +89,11 @@ $totalBudgetFormatted = $totalBudget >= 1000000000000 ? 'Rp' . number_format($to
 
     <section class="hero">
         <div class="hero-content">
-            <div class="hero-badge"><span class="dot"></span> Operasi Ratu Boko — Sistem Aktif</div>
+            <div class="hero-badge"><span class="dot"></span> Platform Digital — Sistem Aktif</div>
             <h1>Transparansi Anggaran<br><span>Kabupaten Majalengka</span></h1>
-            <p>Platform audit publik berbasis Kecerdasan Buatan yang menganalisis pengadaan barang/jasa, dana desa, sebaran kemiskinan, dan infrastruktur jalan secara real-time.</p>
+            <p>Platform monitoring publik yang menyajikan data pengadaan barang/jasa, dana desa, sebaran kemiskinan, dan infrastruktur jalan dalam bentuk peta grafis.</p>
             <div class="cta-group">
-                <a href="login.php" class="btn-primary">Masuk ke Dashboard</a>
+                <a href="login" class="btn-primary">Masuk ke Dashboard</a>
                 <a href="#fitur" class="btn-secondary">Pelajari Lebih Lanjut ↓</a>
             </div>
         </div>
@@ -101,10 +101,10 @@ $totalBudgetFormatted = $totalBudget >= 1000000000000 ? 'Rp' . number_format($to
     </section>
 
     <section class="stats-bar">
-        <div class="stat"><div class="num"><?= number_format($totalPackets, 0, ',', '.') ?></div><div class="lbl">Paket Diaudit</div></div>
-        <div class="stat"><div class="num"><?= number_format($totalAnomalies, 0, ',', '.') ?></div><div class="lbl">Anomali Terdeteksi</div></div>
-        <div class="stat"><div class="num">Rp<?= $totalBudgetFormatted ?></div><div class="lbl">Total Anggaran Diawasi</div></div>
-        <div class="stat"><div class="num">4</div><div class="lbl">Layer Analisis</div></div>
+        <div class="stat"><div class="num"><?= number_format($totalPackets, 0, ',', '.') ?></div><div class="lbl">Paket Terdaftar</div></div>
+        <div class="stat"><div class="num"><?= number_format($totalAnomalies, 0, ',', '.') ?></div><div class="lbl">Catatan Khusus</div></div>
+        <div class="stat"><div class="num">Rp<?= $totalBudgetFormatted ?></div><div class="lbl">Total Anggaran Terpetakan</div></div>
+        <div class="stat"><div class="num">4</div><div class="lbl">Layer Informasi</div></div>
     </section>
 
     <section class="features" id="fitur">
@@ -114,7 +114,7 @@ $totalBudgetFormatted = $totalBudget >= 1000000000000 ? 'Rp' . number_format($to
             <div class="feature-card">
                 <div class="icon">🔴</div>
                 <h3>Audit Pengadaan</h3>
-                <p>Analisis risiko 7.645 paket pengadaan dari SiRUP LKPP tahun anggaran 2025. AI mendeteksi pemborosan, penggelembungan pagu, dan pola mencurigakan.</p>
+                <p>Monitoring daftar paket pengadaan dari SiRUP LKPP tahun anggaran 2025. Sistem memetakan sebaran paket untuk kemudahan pengawasan publik.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">🟢</div>
@@ -136,10 +136,10 @@ $totalBudgetFormatted = $totalBudget >= 1000000000000 ? 'Rp' . number_format($to
 
     <section style="position:relative; z-index:1; max-width:700px; margin:4rem auto; padding:0 2rem; text-align:center;">
         <div style="background:rgba(15,23,42,0.6); backdrop-filter:blur(20px); border:1px solid rgba(255,255,255,0.05); border-radius:24px; padding:3rem;">
-            <div style="font-size:2.5rem; margin-bottom:1rem;">🤖</div>
-            <h2 style="font-size:1.4rem; margin-bottom:0.5rem;">Ditenagai Kecerdasan Buatan</h2>
-            <p style="opacity:0.5; font-size:0.85rem; line-height:1.6; margin-bottom:1.5rem;">Setiap paket pengadaan dianalisis oleh AI menggunakan kerangka 5W1H untuk mendeteksi potensi korupsi, pemborosan, dan inefisiensi anggaran. Algoritma transparan — Anda bisa melihat logikanya langsung di dashboard.</p>
-            <a href="login.php" class="btn-primary" style="font-size:0.9rem; padding:12px 28px;">Mulai Mengawasi →</a>
+            <div style="font-size:2.5rem; margin-bottom:1rem;">📊</div>
+            <h2 style="font-size:1.4rem; margin-bottom:0.5rem;">Sistem Pengawasan Terintegrasi</h2>
+            <p style="opacity:0.5; font-size:0.85rem; line-height:1.6; margin-bottom:1.5rem;">Sistem ini merangkum data dari berbagai sumber resmi menggunakan algoritma pemetaan berbasis wilayah (kecamatan/desa) untuk memudahkan pemantauan distribusi anggaran dan realisasi pembangunan.</p>
+            <a href="login" class="btn-primary" style="font-size:0.9rem; padding:12px 28px;">Mulai Mengawasi →</a>
         </div>
     </section>
 

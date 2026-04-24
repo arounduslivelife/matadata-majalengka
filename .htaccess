@@ -1,27 +1,35 @@
-# Disable directory listing
-Options -Indexes
-
-# Protect sensitive files
-<FilesMatch "\.(sqlite|json|log|php\.old|bak)$">
-    <IfModule mod_authz_core.c>
-        Require all denied
-    </IfModule>
-    <IfModule !mod_authz_core.c>
-        Order deny,allow
-        Deny from all
-    </IfModule>
+# PROTEKSI DATABASE & CONFIG
+<FilesMatch "\.(sqlite|sqlite3|db|env|json|js|log|md|sh|py)$">
+    Order deny,allow
+    Deny from all
 </FilesMatch>
 
-# Allow access to index.php and other entry points (implicit)
-# But strictly block config.json and database.sqlite
-<Files "config.json">
-    Require all denied
-</Files>
-<Files "database.sqlite">
-    Require all denied
-</Files>
+# PROTEKSI DIRECTORY LISTING
+Options -Indexes
 
-# Protect .htaccess itself
-<Files ".htaccess">
-    Require all denied
-</Files>
+# PREVENT ACCESS TO HIDDEN FILES (.git, .htaccess, etc)
+RedirectMatch 404 /\..*$
+
+# DISABLE SERVER SIGNATURE
+ServerSignature Off
+
+# URL REWRITING ENGINE
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Map pretty URLs to .php files
+    # Example: /landing -> landing.php
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.php -f
+    RewriteRule ^([^\.]+)$ $1.php [NC,L]
+</IfModule>
+
+# SECURITY HEADERS (Fallback if not set by PHP)
+<IfModule mod_headers.c>
+    Header set X-XSS-Protection "1; mode=block"
+    Header set X-Frame-Options "SAMEORIGIN"
+    Header set X-Content-Type-Options "nosniff"
+    Header set Referrer-Policy "strict-origin-when-cross-origin"
+    Header set Content-Security-Policy "default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' unpkg.com fonts.googleapis.com; style-src 'self' 'unsafe-inline' unpkg.com fonts.googleapis.com; img-src 'self' data: https: tile.openstreetmap.org *.basemaps.cartocdn.com; font-src 'self' fonts.gstatic.com; connect-src 'self' https:;"
+</IfModule>

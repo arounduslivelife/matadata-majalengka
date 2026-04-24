@@ -252,7 +252,7 @@ Tugas: Analisis paket & tentukan:
 3. kecamatan: Lokasi berdasarkan Satker/Paket.
 
 Daftar Paket:
-${packages.map(p => `- ID:${p.id}, S:${p.satker}, P:${p.nama_paket}, Rp:${p.pagu.toLocaleString('id-ID')}`).join('\n')}
+${packages.map(p => `- ID:${p.id}, S:${p.satker}, P:${p.nama_paket}, Rp:${p.pagu.toLocaleString('id-ID')}, V:${p.pemenang || 'N/A'}`).join('\n')}
 
 Output JSON: { "results": [ { "id", "risk_score", "audit_note", "kecamatan" } ] }`;
 

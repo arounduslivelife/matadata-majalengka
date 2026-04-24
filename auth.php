@@ -12,7 +12,7 @@ function getConfig() {
 
 function requireAuth() {
     if (!isset($_SESSION['user_email'])) {
-        header('Location: landing.php');
+        header('Location: landing');
         exit;
     }
 }
