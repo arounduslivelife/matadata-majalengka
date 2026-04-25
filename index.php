@@ -748,7 +748,39 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
             font-size: 0.8rem;
         }
 
-        /* GPS Blur Overlays Removed for Stability */
+        /* GPS Blur Overlay */
+        .gps-blur-overlay {
+            position: fixed;
+            inset: 0;
+            z-index: 99999;
+            backdrop-filter: blur(25px);
+            background: rgba(2,6,23,0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.5s ease, backdrop-filter 0.5s ease;
+        }
+        .gps-blur-overlay.minimized { 
+            background: rgba(2,6,23,0.3);
+            pointer-events: none; /* Keep blur but allow interaction */
+        }
+        .gps-blur-overlay.minimized .gps-prompt { display: none; }
+        .gps-blur-overlay.minimized .gps-blur-msg { display: block; }
+        .gps-blur-overlay.hidden { opacity: 0; pointer-events: none; backdrop-filter: blur(0); }
+        
+        .gps-blur-msg {
+            display: none;
+            color: white;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-align: center;
+            max-width: 300px;
+            opacity: 0.8;
+            text-shadow: 0 0 20px rgba(59,130,246,0.5);
+            animation: fadeIn 1s ease;
+        }
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 0.8; } }
+
         .gps-prompt {
             text-align: center;
             max-width: 400px;
@@ -762,6 +794,12 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
         @keyframes cardIn { from { opacity:0; transform: translateY(20px); } to { opacity:1; transform: translateY(0); } }
         .gps-prompt h2 { font-size: 1.3rem; margin-bottom: 0.5rem; }
         .gps-prompt p { font-size: 0.85rem; opacity: 0.6; margin-bottom: 1.5rem; line-height: 1.5; }
+        .gps-btn {
+            display: inline-block; padding: 12px 28px; background: var(--accent); color: white;
+            border: none; border-radius: 14px; font-family: 'Outfit'; font-size: 0.95rem;
+            font-weight: 600; cursor: pointer; transition: 0.3s;
+        }
+        .gps-btn:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(59,130,246,0.4); }
         /* Removed float btn */
 
         /* User Profile */
@@ -776,6 +814,30 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
         .user-bar .uemail { font-size: 0.65rem; opacity: 0.4; }
         .user-bar a { font-size: 0.7rem; color: #ef4444; text-decoration: none; opacity: 0.6; }
         .user-bar a:hover { opacity: 1; }
+        
+        /* Floating GPS Button */
+        .gps-float-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 20px;
+            z-index: 100001;
+            padding: 12px 20px;
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(20px);
+            color: white;
+            border-radius: 14px;
+            border: 1px solid rgba(255,255,255,0.1);
+            font-family: 'Outfit';
+            font-size: 0.85rem;
+            font-weight: 600;
+            cursor: pointer;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+            display: none;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+        }
+        .gps-float-btn:hover { background: var(--accent); transform: translateY(-3px); }
 
         /* Share Modal (reusing sawer modal styles) */
         .share-modal {
@@ -937,7 +999,22 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
 <body>
 
 
-<!-- GPS Overlays Removed -->
+<!-- GPS Blur Overlay -->
+<div class="gps-blur-overlay" id="gpsOverlay">
+    <div class="gps-prompt">
+        <div style="font-size: 2.5rem; margin-bottom: 1rem;">📍</div>
+        <h2>Izinkan Akses Lokasi</h2>
+        <p>Dashboard ini memerlukan lokasi GPS Anda untuk keamanan dan transparansi. Data lokasi akan dicatat bersama email Anda.</p>
+        <button class="gps-btn" onclick="requestGPS()">Izinkan Lokasi GPS</button>
+        <div style="margin-top: 1rem;">
+            <a href="#" onclick="skipGPS()" style="color: #94a3b8; font-size: 0.75rem; text-decoration: none;">Lewati tanpa GPS →</a>
+        </div>
+    </div>
+    <div class="gps-blur-msg">
+        <div style="font-size: 2rem; margin-bottom: 1rem; opacity: 0.5;">🔒</div>
+        Mohon ijinkan akses lokasi untuk membuka dashboard
+    </div>
+</div>
 
 <!-- Floating GPS Button (shown when GPS was skipped) -->
 <!-- Pull Indicator Tab -->
@@ -2815,7 +2892,8 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
 
         // Check if GPS was already granted in this session
         <?php if ($user['gps_granted']): ?>
-            document.getElementById('gpsOverlay').classList.add('hidden');
+            const overlay = document.getElementById('gpsOverlay');
+            if (overlay) overlay.classList.add('hidden');
         <?php endif; ?>
     };
 
@@ -2844,11 +2922,13 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
                     })
                 }).then(() => {
                     sessionStorage.setItem('gps_choice', 'granted');
-                    document.getElementById('gpsOverlay').classList.add('hidden');
+                    const overlay = document.getElementById('gpsOverlay');
+                    if (overlay) overlay.classList.add('hidden');
                     document.getElementById('gpsFloatBtn').style.display = 'none';
                 }).catch(() => {
                     sessionStorage.setItem('gps_choice', 'granted');
-                    document.getElementById('gpsOverlay').classList.add('hidden');
+                    const overlay = document.getElementById('gpsOverlay');
+                    if (overlay) overlay.classList.add('hidden');
                 });
             },
             function(err) {
@@ -2867,7 +2947,8 @@ $total_kpm_majalengka = $db->querySingle("SELECT SUM(poverty_count) FROM distric
     function skipGPS() {
         sessionStorage.setItem('gps_choice', 'skipped');
         // Sembunyikan box prompt saja, tapi dashboard tetap blur (minimized)
-        document.getElementById('gpsOverlay').classList.add('minimized');
+        const overlay = document.getElementById('gpsOverlay');
+        if (overlay) overlay.classList.add('minimized');
         document.getElementById('gpsFloatBtn').style.display = 'block';
         
         // Log visit tanpa GPS
