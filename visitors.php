@@ -202,6 +202,9 @@ $gpsGranted = $db->querySingle('SELECT COUNT(*) FROM visitors WHERE latitude IS 
                     <td>
                         <?php if ($v['latitude']): ?>
                             <a href="https://www.google.com/maps?q=<?= $v['latitude'] ?>,<?= $v['longitude'] ?>" target="_blank" style="color:var(--success); text-decoration:none; font-size:0.7rem;">📍 View Map</a>
+                            <?php if ($v['accuracy']): ?>
+                                <div style="font-size:0.6rem; opacity:0.4;">± <?= round($v['accuracy']) ?>m</div>
+                            <?php endif; ?>
                         <?php else: ?>
                             <span style="opacity:0.3; font-size:0.7rem;">No GPS</span>
                         <?php endif; ?>

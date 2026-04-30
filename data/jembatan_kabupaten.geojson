@@ -1,0 +1,3741 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3057861,
+          -6.8937363
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cilongkrang",
+        "kecamatan": "Maja",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Maja Selatan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3188137,
+          -6.8445684
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Gantung Cicalung",
+        "kecamatan": "Sindang",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Pasirayu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3189396,
+          -6.9027912
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cilongktang",
+        "kecamatan": "Argapura",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sadasari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3221752,
+          -6.8614851
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cipari",
+        "kecamatan": "Sindang",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Garawastu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3497791,
+          -6.7830204
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Ciwaringin",
+        "kecamatan": "Rajagaluh",
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Barang untuk Dijual/Diserahkan kepada Masyarakat ( Rehabilitasi Jembatan Ciwaringin (DAU))",
+            "penyedia": "CV. PILAR TUNGGAL PERKASA",
+            "nilai": 394868357,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung"
+          }
+        ],
+        "is_project": true,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Rajagaluh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2948514,
+          -6.8001375
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cikeruh",
+        "kecamatan": "Sukahaji",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Palabuan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3461142,
+          -6.9177756
+        ]
+      },
+      "properties": {
+        "nama": "Terasering Panyaweuyan",
+        "kecamatan": "Argapura",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukasari Kidul"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.35879,
+          -6.8253863
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cikadongdong",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Teja"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2466793,
+          -6.9638487
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cijurey",
+        "kecamatan": "Bantarujeg",
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Modal Jembatan pada Jalan Kabupaten (DED Perencanaan Jembatan Cijurey (DAU P))",
+            "penyedia": "PT. MULUS RAHAYU BERKAH SALAMET",
+            "nilai": 99789000,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung"
+          },
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Modal Jembatan pada Jalan Kabupaten (Kajian Hidrologi dan Tanah Jembatan Cijurey (DAU P))",
+            "penyedia": "PT. SURADE ENJINIRING DESAIN",
+            "nilai": 99844500,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung"
+          },
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jasa Konsultansi Berorientasi Layanan-Jasa Studi Penelitian dan Bantuan Teknik (Penyusunan Kajian Lingkungan (UPL/UKL) Jembatan Cijurey (DAU P))",
+            "penyedia": "Baruna Medika",
+            "nilai": 49617000,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung"
+          }
+        ],
+        "is_project": true,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Bantarujeg"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2550203,
+          -6.8367476
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Ciawi 1 Simpeureum",
+        "kecamatan": "Cigasong",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Simpeureum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2006133,
+          -6.8214233
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan",
+        "kecamatan": "Panyingkiran",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Jatipamor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3479544,
+          -6.7833348
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Ciputri Rajagaluh",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Rajagaluh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.35338,
+          -6.9115386
+        ]
+      },
+      "properties": {
+        "nama": "Wisata Alam Curug Muara Jaya",
+        "kecamatan": "Argapura",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Argamukti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3501167,
+          -6.9169355
+        ]
+      },
+      "properties": {
+        "nama": "Lembah Panyaweuyan",
+        "kecamatan": "Argapura",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Tejamulya"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3189925,
+          -6.8445106
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan lalu-lintas",
+        "kecamatan": "Sindang",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sindang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.315487,
+          -6.9661828
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cipamintar",
+        "kecamatan": "Banjaran",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sindangpala"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3309799,
+          -6.7977773
+        ]
+      },
+      "properties": {
+        "nama": "JEMBATAN CIHERANG",
+        "kecamatan": "Sukahaji",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Tanjungsari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2372571,
+          -6.9983181
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cigaleuh",
+        "kecamatan": "Lemahsugih",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mekarmulya"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.351421,
+          -6.7855221
+        ]
+      },
+      "properties": {
+        "nama": "JEMBATAN ATOG WETAN",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Rajagaluh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1850532,
+          -6.8234643
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cikamarang",
+        "kecamatan": "Panyingkiran",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Pasirmuncang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2290535,
+          -6.95923
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cicamay",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Babakansari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1985116,
+          -6.9586935
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Citerus",
+        "kecamatan": "Lemahsugih",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Kepuh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2406578,
+          -6.8336139
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cideres Girang",
+        "kecamatan": "Majalengka",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majalengka Wetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3638409,
+          -7.0173103
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cihagir",
+        "kecamatan": "Cikijing",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukamukti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3414961,
+          -6.7669183
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cipacar",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mindi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2550411,
+          -7.0175493
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Tonjong Cilangkap",
+        "kecamatan": "Malausma",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Lebakwangi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2298646,
+          -7.0193273
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Dusun Pangkalan Cipeundeuy",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cipeundeuy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3489307,
+          -6.7862651
+        ]
+      },
+      "properties": {
+        "nama": "JEMBATAN ATOG KULON",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Rajagaluh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3044203,
+          -7.019261
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cibeureum",
+        "kecamatan": "Talaga",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cibeureum"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2113976,
+          -6.9942614
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cisampora",
+        "kecamatan": "Lemahsugih",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukamaju"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3756644,
+          -6.8040424
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cikarikil",
+        "kecamatan": "Sindangwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sindangwangi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2643353,
+          -6.9689325
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Senangrasa",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Silihwangi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2822389,
+          -6.9560775
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cinambo",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Haurgeulis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2910358,
+          -6.8125948
+        ]
+      },
+      "properties": {
+        "nama": "CIBUTUL BRIDGE",
+        "kecamatan": "Sukahaji",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Palabuan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1613506,
+          -6.827999
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Gantung Blok Kepuh Desa Cijurey",
+        "kecamatan": "Panyingkiran",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cijurey"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2379342,
+          -6.834262
+        ]
+      },
+      "properties": {
+        "nama": "JEMBATAN CILULUK",
+        "kecamatan": "Majalengka",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majalengka Wetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2425685,
+          -6.8719259
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Kalapa Dua",
+        "kecamatan": "Majalengka",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cibodas"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2362298,
+          -7.0141042
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Desa Cipeundeuy",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cipeundeuy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3490209,
+          -6.7949664
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Sarongge",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Rajagaluh Kidul"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2203913,
+          -6.9955714
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cihideung",
+        "kecamatan": "Lemahsugih",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukamaju"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2053354,
+          -6.9424679
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Bantar Merak",
+        "kecamatan": "Lemahsugih",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mekar Wangi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2270315,
+          -6.9831435
+        ]
+      },
+      "properties": {
+        "nama": "jembatan Cihideung",
+        "kecamatan": "Lemahsugih",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sinargalih"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.336927,
+          -6.787467
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cikamangi Cipinang - Rajagaluh",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cipinang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3440544,
+          -6.7843802
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cilandak",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Rajagaluh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2156777,
+          -6.873766
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cileutik",
+        "kecamatan": "Majalengka",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Babakan Jawa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2032611,
+          -6.9592467
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cilengkrang",
+        "kecamatan": "Lemahsugih",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukajadi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2280182,
+          -7.0144829
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Cihieum",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cipeundeuy"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1975691,
+          -6.8177423
+        ]
+      },
+      "properties": {
+        "nama": "Sasak beusi SILIWANGI",
+        "kecamatan": "Panyingkiran",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Jatipamor"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3494645,
+          -6.7948828
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Singawada",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Rajagaluh Kidul"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.340032,
+          -6.7856306
+        ]
+      },
+      "properties": {
+        "nama": "JEMBATAN CIKADONGDONG PERBATASAN CIPINANG RAJAGALUH",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cipinang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2834031,
+          -6.9522054
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cibarengkok",
+        "kecamatan": "Bantarujeg",
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Modal Jembatan pada Jalan Kabupaten (Rehabilitasi Jembatan Cibarengkok)",
+            "penyedia": "CV.PRATAMA KASIH",
+            "nilai": 299416570,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung"
+          },
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Modal Jembatan pada Jalan Kabupaten (Rehabilitasi Jembatan Cibarengkok)",
+            "penyedia": "CV. ADIDAYA GLOBAL ABADI",
+            "nilai": 298680132,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung"
+          }
+        ],
+        "is_project": true,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Haurgeulis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3292062,
+          -6.9057737
+        ]
+      },
+      "properties": {
+        "nama": "Air Terjun IBUN PELANGI",
+        "kecamatan": "Argapura",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukasari Kaler"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3004959,
+          -6.9915474
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Gantung PT. Telkom kerjasama KODAM III Siliwangi",
+        "kecamatan": "Talaga",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Talagakulon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2482652,
+          -6.9624223
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cimanuk Cidomas",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cikidang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.4004895,
+          -6.8057724
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Biru",
+        "kecamatan": "Sindangwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Padaherang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2603204,
+          -6.7798602
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cisambeng",
+        "kecamatan": "Kasokandel",
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Modal Jembatan pada Jalan Kabupaten (Rehabilitasi Sayap Jembatan Kali Cisambeng (Pajak Rokok))",
+            "penyedia": "ARKASHA UTAMA CONSTRUCTION",
+            "nilai": 99474765,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung"
+          },
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Barang untuk Dijual/Diserahkan kepada Masyarakat (Rehabilitasi Jembatan Cisambeng (DAU))",
+            "penyedia": "Glagahwangi",
+            "nilai": 199523700,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung"
+          }
+        ],
+        "is_project": true,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Wanajaya"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26265,
+          -6.8527045
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Talang",
+        "kecamatan": "Cigasong",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Kawunghilir"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2843486,
+          -6.6926426
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Gantung",
+        "kecamatan": "Ligung",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Leuwiliang Baru"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2206612,
+          -6.9552084
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan cipondoh",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Babakansari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3357782,
+          -6.7656418
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Desa Mindi",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Lame"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3448534,
+          -6.9140554
+        ]
+      },
+      "properties": {
+        "nama": "Lawang Saketeng",
+        "kecamatan": "Argapura",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukasari Kaler"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2849153,
+          -6.8537806
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Ciasem",
+        "kecamatan": "Cigasong",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Tenjolayar"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.208826,
+          -6.8258482
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan sukajaya hilir",
+        "kecamatan": "Majalengka",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cijati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2594478,
+          -6.9639139
+        ]
+      },
+      "properties": {
+        "nama": "Cimanuk Cikidang",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Wadowetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.32223,
+          -6.86155
+        ]
+      },
+      "properties": {
+        "nama": "Permohonan Bronjong",
+        "kecamatan": "Sindang",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Garawastu"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3276015,
+          -6.8232097
+        ]
+      },
+      "properties": {
+        "nama": "Wisata Situ Cipanten",
+        "kecamatan": "Sindang",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Gunung Kuning"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2445832,
+          -6.7631747
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Leuwi jurig",
+        "kecamatan": "Kasokandel",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Ranjiwetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.196294,
+          -6.7613978
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan kereta api cideres majalengka (prujakan kadipaten tanjung sari jatinangor rancaekek)",
+        "kecamatan": "Kasokandel",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Gandasari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.198178,
+          -6.7011504
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cimanuk Tol Cipali KM161-400",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukawana"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3589107,
+          -6.8257143
+        ]
+      },
+      "properties": {
+        "nama": "Cikadongdong River Tubing",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Teja"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2023709,
+          -6.7323722
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cidangdung",
+        "kecamatan": "Dawuan",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Balida"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2416696,
+          -6.6614856
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Beber Randegan",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Randegan Wetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1671086,
+          -6.7318252
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Monjot",
+        "kecamatan": "Kadipaten",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Karangsambung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2527978,
+          -6.6573239
+        ]
+      },
+      "properties": {
+        "nama": "Spot mancing jembatan wanasalam sindupraja",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Randegan Wetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2593451,
+          -6.9638676
+        ]
+      },
+      "properties": {
+        "nama": "Sungai Cilutung",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Wadowetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3632451,
+          -6.8268831
+        ]
+      },
+      "properties": {
+        "nama": "SITU JANAWI",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Teja"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3286292,
+          -6.9783463
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cirungking",
+        "kecamatan": "Banjaran",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Genteng"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.237031,
+          -6.9533053
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Gantung Kali Merah",
+        "kecamatan": "Bantarujeg",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Babakansari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1250791,
+          -6.698176
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan perbatasan majalengka sumedang palasah kertajati kabupaten majalengka",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Palasah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2343631,
+          -6.7535659
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Gantung",
+        "kecamatan": "Kasokandel",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Gunungsari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2495392,
+          -6.8310144
+        ]
+      },
+      "properties": {
+        "nama": "Bunderan Tonjong",
+        "kecamatan": "Cigasong",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cicenang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3608326,
+          -7.0193981
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cikijing I",
+        "kecamatan": "Cikijing",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukamukti"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3510677,
+          -7.0257407
+        ]
+      },
+      "properties": {
+        "nama": "Simpang Cikijing-Panjalu",
+        "kecamatan": "Cingambul",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cimanggugirang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3771645,
+          -7.0139137
+        ]
+      },
+      "properties": {
+        "nama": "jembatan sindang panji",
+        "kecamatan": "Cikijing",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Cidulang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3257841,
+          -7.038149
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan ciburang",
+        "kecamatan": "Cingambul",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Maniis"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3363257,
+          -7.0424837
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cisuminta",
+        "kecamatan": "Cingambul",
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Modal Jembatan pada Jalan Kabupaten (Rehabilitasi Jembatan Cisuminta (DAU))",
+            "penyedia": "CV. Rizky Nugraha",
+            "nilai": 198804208,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung"
+          }
+        ],
+        "is_project": true,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Wangkelang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.333296,
+          -6.7628306
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Nanggereng",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Nanggerang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3294872,
+          -6.7170835
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cibugang",
+        "kecamatan": "Sumberjaya",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Garawangi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2930044,
+          -6.7217541
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cisambeng I",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Palasah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1714999,
+          -7.0358535
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cingaraja",
+        "kecamatan": "Lemahsugih",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Borogojol"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.116988,
+          -6.688921
+        ]
+      },
+      "properties": {
+        "nama": "Dawuan Interchange",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Palasah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2229243,
+          -6.7225938
+        ]
+      },
+      "properties": {
+        "nama": "Eks jembatan lori jatiwangi",
+        "kecamatan": "Dawuan",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mandapa"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2984453,
+          -6.6976025
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan TOL Majasuka",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.172925,
+          -6.7660244
+        ]
+      },
+      "properties": {
+        "nama": "Eks jembatan kereta kadipaten",
+        "kecamatan": "Dawuan",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Dawuan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1695071,
+          -6.7674153
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan anjun tdk BS dilewati mobil",
+        "kecamatan": "Kadipaten",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Kadipaten"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2202361,
+          -6.7359182
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Pa Bono",
+        "kecamatan": "Dawuan",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sinarjati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2852659,
+          -6.6959262
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Kesejahteraan",
+        "kecamatan": "Ligung",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Leuwiliang Baru"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3491116,
+          -6.7320056
+        ]
+      },
+      "properties": {
+        "nama": "JEMBATAN MEKAR BUDI",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mirat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2965312,
+          -6.6987463
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Tol Ciseureuh",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1053226,
+          -6.6752248
+        ]
+      },
+      "properties": {
+        "nama": "Pancang Kertajaya",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mekarjaya"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3393218,
+          -6.7037327
+        ]
+      },
+      "properties": {
+        "nama": "Bekas Fondasi Jembatan Kereta Cirebon-Kadipaten",
+        "kecamatan": "Sumberjaya",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Garawangi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2582317,
+          -6.7349268
+        ]
+      },
+      "properties": {
+        "nama": "Bawah jembatan",
+        "kecamatan": "Jatiwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mekarsari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2172216,
+          -6.6583509
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Ci JAGO",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Panyingkiran"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3484658,
+          -6.7333434
+        ]
+      },
+      "properties": {
+        "nama": "JEMBATAN PAKUWON",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mirat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2729348,
+          -6.6191505
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan blok pulo",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sumber Wetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3479458,
+          -6.7407192
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan careuy tarikolot~mirat",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Leuwimunding"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2841149,
+          -6.6337898
+        ]
+      },
+      "properties": {
+        "nama": "Sebrangan Ampel",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Pangkalanpari"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2498073,
+          -6.6383571
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Putridalem",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Putridalem"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2183559,
+          -6.6832794
+        ]
+      },
+      "properties": {
+        "nama": "Sasak kidul",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Panongan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2213779,
+          -6.6514869
+        ]
+      },
+      "properties": {
+        "nama": "TB. Besi Jembatan Merah",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Jatitujuh"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2132553,
+          -6.649506
+        ]
+      },
+      "properties": {
+        "nama": "Wahangan Panyingkiran",
+        "kecamatan": "Jatitujuh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Panyingkiran"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3216495,
+          -6.7055048
+        ]
+      },
+      "properties": {
+        "nama": "JBT CIKEMANGI BONGAS",
+        "kecamatan": "Sumberjaya",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sumberjaya"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3012,
+          -6.7283
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan singlar",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Palasah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3884338,
+          -6.8459542
+        ]
+      },
+      "properties": {
+        "nama": "Stone Garden Majalengka",
+        "kecamatan": "Sindangwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Bantar Agung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3020489,
+          -6.7139159
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Leuwinagara",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.302301,
+          -6.7084374
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Misbo",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.298902,
+          -6.6986301
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Ledeng",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.30237,
+          -6.7122587
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Desa",
+        "kecamatan": "Palasah",
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jalan-Jalan Desa",
+            "penyedia": "CV ANDROMEDA ATALA MIDAS",
+            "nilai": 79975633,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung"
+          },
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jalan-Jalan Desa",
+            "penyedia": "CV. AUDI JAYA",
+            "nilai": 127011975,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung"
+          }
+        ],
+        "is_project": true,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3029618,
+          -6.7103884
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Pa Acil",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3032535,
+          -6.705654
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Pa ilah",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2605001,
+          -6.6551913
+        ]
+      },
+      "properties": {
+        "nama": "Spot mancing jembatan baru wanasalam",
+        "kecamatan": "Ligung",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Wanasalam"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.293117,
+          -6.72241
+        ]
+      },
+      "properties": {
+        "nama": "Eks Jembatan Kereta Api Cisambeng",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Palasah"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3030788,
+          -6.7146139
+        ]
+      },
+      "properties": {
+        "nama": "Sasak Pa Akun",
+        "kecamatan": "Palasah",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Majasuka"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3913835,
+          -6.8019823
+        ]
+      },
+      "properties": {
+        "nama": "River Side Camp Legok Leles",
+        "kecamatan": "Sindangwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Padaherang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3402222,
+          -6.8268958
+        ]
+      },
+      "properties": {
+        "nama": "Obyek Wisata Alam Prabu Siliwangi (Situ Cipadung)",
+        "kecamatan": "Sindang",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Indrakila"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2393364,
+          -6.7132863
+        ]
+      },
+      "properties": {
+        "nama": "Kuliner Jembatan Tol Surawangi (KJTS)",
+        "kecamatan": "Jatiwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Jatiwangi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2399204,
+          -6.7419152
+        ]
+      },
+      "properties": {
+        "nama": "JBT CINANCANG",
+        "kecamatan": "Jatiwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Burujul Kulon"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1435819,
+          -6.6428465
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan ciduet (padasuka)",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukamulya"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1397685,
+          -6.6425628
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan cikutu",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukamulya"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1676022,
+          -6.7686264
+        ]
+      },
+      "properties": {
+        "nama": "Kadipaten Kota",
+        "kecamatan": "Kadipaten",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Kadipaten"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2089876,
+          -6.7627709
+        ]
+      },
+      "properties": {
+        "nama": "Alun-alun Desa Kasokandel",
+        "kecamatan": "Kasokandel",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Kasokandel"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.157686,
+          -6.6519467
+        ]
+      },
+      "properties": {
+        "nama": "Bandar Udara Internasional Jawa Barat Kertajati",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Kertajati"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1817571,
+          -6.7020515
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Tol Kertajati",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Kertawinangun"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1694461,
+          -6.7082696
+        ]
+      },
+      "properties": {
+        "nama": "Gerbang Tol Kertajati",
+        "kecamatan": "Kertajati",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Kertawinangun"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3462451,
+          -6.7375875
+        ]
+      },
+      "properties": {
+        "nama": "Wisata Majalengka",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Leuwimunding"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.360678,
+          -6.7378462
+        ]
+      },
+      "properties": {
+        "nama": "Taman Wisata Alam Cadas Gantung",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mirat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3542212,
+          -6.7425575
+        ]
+      },
+      "properties": {
+        "nama": "Sanghyangdora Campground (Situ Cibaringkeng)",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Leuwikujang"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3449613,
+          -6.737421
+        ]
+      },
+      "properties": {
+        "nama": "Jl belakang pasar leuwimunding",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Leuwimunding"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3476407,
+          -6.7349213
+        ]
+      },
+      "properties": {
+        "nama": "JEMBATAN KERAMAT",
+        "kecamatan": "Leuwimunding",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Mirat"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.2845833,
+          -6.6528528
+        ]
+      },
+      "properties": {
+        "nama": "Samping jembatan pelangi",
+        "kecamatan": "Ligung",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sukawera"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3606058,
+          -6.8101227
+        ]
+      },
+      "properties": {
+        "nama": "Bendungan Sindangpano",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sindangpano"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3607865,
+          -6.810694
+        ]
+      },
+      "properties": {
+        "nama": "Waduk Sindangpano.",
+        "kecamatan": "Rajagaluh",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sindangpano"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3739505,
+          -6.7799947
+        ]
+      },
+      "properties": {
+        "nama": "KANDAGA WATERPARK SINDANGWANGI",
+        "kecamatan": "Sindangwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Sindangwangi"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3755898,
+          -6.8097415
+        ]
+      },
+      "properties": {
+        "nama": "Ciboer Pas & Villa Ciboer Pas",
+        "kecamatan": "Sindangwangi",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Bantar Agung"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3111701,
+          -6.9851409
+        ]
+      },
+      "properties": {
+        "nama": "Museum Talaga Manggung",
+        "kecamatan": "Talaga",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Talagawetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.3111701,
+          -6.9851409
+        ]
+      },
+      "properties": {
+        "nama": "Makam sunan parung telaga manggung",
+        "kecamatan": "Talaga",
+        "paket": [],
+        "is_project": false,
+        "catatan": "Lokasi Terverifikasi (Jembatan)",
+        "desa_geo": "Talagawetan"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Lainnya",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jembatan-Jembatan Lainnya (Perbaikan Gorong-gorong RT.002 RW. 001 Kelurahan Cicenang)",
+            "penyedia": "CV Berkah Jaya Cipta Karya",
+            "nilai": 24894173,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10574513000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Plester Bahu Jalan Pembuatan Sanitasi Lingkungan Arah Lamejajar Kelurahan Cicenang. P.200m)",
+            "penyedia": "CV.NURRIZKY AMALIA MAKMURJAYA",
+            "nilai": 99806480,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10486584000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang Anggrek Lingk Mekarjaya Rt 011 Rw 003 Kelurahan Simepureum 120m3)",
+            "penyedia": "Glagahwangi",
+            "nilai": 14307256,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10573756000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Lainnya",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jembatan-Jembatan Lainnya (Drainase Sawah Sangraja RT 05 RW 01 Lingkungan Sangraja)",
+            "penyedia": "CV. Rizky Nugraha",
+            "nilai": 79916916,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10503578000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Lainnya",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jembatan-Jembatan Lainnya (Perbaikan Gorong-gorong RT 14 RW 04 Lingkungan Puspa)",
+            "penyedia": "CV.FAJAR UTAMA NUSANTARA",
+            "nilai": 29890280,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10524226000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Jalan Lingkungan Lamejajar RT. 016 RW. 006 Kelurahan Cicenang)",
+            "penyedia": "CV. AUDI JAYA",
+            "nilai": 55797569,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10503417000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.33768226250008,
+          -6.98666925520831
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Sungai",
+        "kecamatan": "Talaga",
+        "desa_geo": "Argasari",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Perbaikan Jembatan Sungai Ciranca Lingk. Margasari RT. 009 RW. 003 Kelurahan Babakanjawa",
+            "penyedia": "CV. AUDI JAYA",
+            "nilai": 29965150,
+            "status": "SELESAI",
+            "satker": "KECAMATAN MAJALENGKA - 7.01.0.00.0.00.17.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10295443000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.22576407260277,
+          -6.824924050684891
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Penghubung",
+        "kecamatan": "Majalengka",
+        "desa_geo": "Tarikolot",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Pembangunan Jembatan Penghubung Lingk. RT. 014 RW. 005 Kelurahan Tarikolot",
+            "penyedia": "CV. APPOT",
+            "nilai": 39887198,
+            "status": "SELESAI",
+            "satker": "KECAMATAN MAJALENGKA - 7.01.0.00.0.00.17.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10295454000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Perbaikan Jalan Lingk Sungkawiluya Kelurahan Simepureum)",
+            "penyedia": "CV.NURRIZKY AMALIA MAKMURJAYA",
+            "nilai": 46297345,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10486769000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Lainnya",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jembatan-Jembatan Lainnya (Perbaikan Gorong-gorong RT 01 RW 01 Lingkungan Sangraja P 3m L 1m T 60cm)",
+            "penyedia": "CV.FAJAR UTAMA NUSANTARA",
+            "nilai": 29892802,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10485161000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang RT 05 Lingk Sungkawiluya Rt 5 Rw 4 Kelurahan Simepureum 300m3)",
+            "penyedia": "CV. AUDI JAYA",
+            "nilai": 35939919,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10549621000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Pengerasan Jalan Pertanian Blok Jatidogdog Lingkungan Lamejajar Kelurahan Cicenang. P.150m)",
+            "penyedia": "MARGAHAYU",
+            "nilai": 119869345,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10502946000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya  (Plester Bahu Jalan Arah Kantor Kelurahan Cicenang. P.150m)",
+            "penyedia": "CV . BADUL",
+            "nilai": 74896917,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10535979000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang Monyet Lingk Girimulya Rt 008 Rw 002 Kelurahan Simepureum 100m3)",
+            "penyedia": "MARGAHAYU",
+            "nilai": 11983078,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10549245000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.33768226250008,
+          -6.98666925520831
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Argasari",
+        "kecamatan": "Talaga",
+        "desa_geo": "Argasari",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Barang untuk Dijual/Diserahkan kepada Masyarakat (Rehabilitasi Jembatan Argasari (Pajak Rokok))",
+            "penyedia": "ARKASHA UTAMA CONSTRUCTION",
+            "nilai": 199264211,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10472450000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.34258752429909,
+          -6.806536788785018
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Pasir Kumbung",
+        "kecamatan": "Rajagaluh",
+        "desa_geo": "Kumbung",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Modal Jembatan pada Jalan Kabupaten ( Rehabilitasi Jembatan Pasir Kumbung)",
+            "penyedia": "CV. HASBI KARYA",
+            "nilai": 199365941,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10148280000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang RT 04 Lingk Sungkawiluya Rt 4 Rw 4 Kelurahan Simepureum 300m3)",
+            "penyedia": "Glagahwangi",
+            "nilai": 35759211,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10573885000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Lainnya",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jembatan-Jembatan Lainnya (Drainase RT 11 RW 03 Lingkungan Puspa)",
+            "penyedia": "CV.FAJAR UTAMA NUSANTARA",
+            "nilai": 59894790,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10479689000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Lainnya",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jembatan-Jembatan Lainnya (Perbaikan Gorong-gorong RT.004 RW. 002 Kelurahan Cicenang)",
+            "penyedia": "CV . BADUL",
+            "nilai": 44888807,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10543003000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan jalan arah Lamejajar Kelurahan Cicenang",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Jembatan jalan arah Lamejajar Kelurahan Cicenang)",
+            "penyedia": "cv wibisana putra",
+            "nilai": 24930225,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10503314000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang Melati Lingk Mekarjaya Rt 011 Rw 003 Kelurahan Simepureum 180m3)",
+            "penyedia": "CV. AUDI JAYA",
+            "nilai": 21564875,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10549022000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya ( Jalan Gang Sawah Pasar RT 20 RW 05 Lingkungan Puspa)",
+            "penyedia": "CV . BADUL",
+            "nilai": 99883018,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10491883000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang Lingkungan Sirah Dayeuh RT.005 RW. 002 Kelurahan Cicenang. P. 150m)",
+            "penyedia": "CV. KENCANA",
+            "nilai": 79901617,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10503105000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.29828937746485,
+          -6.866665177464772
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Cicalung",
+        "kecamatan": "Maja",
+        "desa_geo": "Cicalung",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Barang untuk Dijual/Diserahkan kepada Masyarakat ( Rehabilitasi Jembatan Cicalung (DAU))",
+            "penyedia": "Glagahwangi",
+            "nilai": 198082800,
+            "status": "SELESAI",
+            "satker": "DINAS PEKERJAAN UMUM DAN TATA RUANG - 1.03.0.00.0.00.01.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10205443000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.24587101250006,
+          -6.821563107499979
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cicenang",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Plester Bahu Jalan Blok Rangkasbitung Tonggoh Lingkungan Mekarlapian RT.009 RW. 003 Kelurahan Cicenang P.150m)",
+            "penyedia": "CV. PRIMADISA MANDIRI",
+            "nilai": 59847776,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10536124000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang Pasir Lingk Girimulya Rt 008 Rw 002 Kelurahan Simepureum 150m3)",
+            "penyedia": "cv wibisana putra",
+            "nilai": 17983992,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10549564000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Lainnya",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jembatan-Jembatan Lainnya (Drainase RT 20 RW 05 Lingkungan Puspa)",
+            "penyedia": "POETRA KOEJANG",
+            "nilai": 79705548,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10573628000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang RT 14 RW 04 Lingkungan Puspa)",
+            "penyedia": "CV. NADYA KARYA",
+            "nilai": 79914599,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10638360000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Hotmik Gang Jl H Samsuri)",
+            "penyedia": "CV. Fighter Constructions",
+            "nilai": 106657167,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10573009000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.1622322047809,
+          -6.683161933067716
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan RT",
+        "kecamatan": "Kertajati",
+        "desa_geo": "Babakan",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Perbaikan Jembatan RT. 04 RW. 02 Kelurahan Babakanjawa",
+            "penyedia": "CV. PILAR TUNGGAL PERKASA",
+            "nilai": 39955424,
+            "status": "SELESAI",
+            "satker": "KECAMATAN MAJALENGKA - 7.01.0.00.0.00.17.0000",
+            "sumber_dana": "APBD",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10453098000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jala",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Jalan, Jaringan, dan Irigasi-Jalan dan Jembatan-Jalan-Jalan Lainnya (Rabat Beton Gang Stoberi Lingk Girimulya Rt 009 Rw 002 Kelurahan Simepureum 120m3)",
+            "penyedia": "CV. PILAR TUNGGAL PERKASA",
+            "nilai": 17933800,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10551660000"
+          }
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          108.26045781212125,
+          -6.842754440151499
+        ]
+      },
+      "properties": {
+        "nama": "Jembatan Lainnya",
+        "kecamatan": "Cigasong",
+        "desa_geo": "Cigasong",
+        "catatan": "Lokasi Belum Terverifikasi (Estimasi Centroid Desa)",
+        "is_project": true,
+        "verified": false,
+        "paket": [
+          {
+            "tahun": 2025,
+            "nama_paket": "Belanja Pemeliharaan Jalan dan Jembatan-Jembatan-Jembatan Lainnya (Drainase RT 17 RW 05 Lingkungan Sangraja Kaler)",
+            "penyedia": "CV. PERDANA JAYA",
+            "nilai": 99862027,
+            "status": "SELESAI",
+            "satker": "KECAMATAN CIGASONG - 7.01.0.00.0.00.04.0000",
+            "sumber_dana": "APBDP",
+            "metode": "Pengadaan Langsung",
+            "kode_paket": "10482394000"
+          }
+        ]
+      }
+    }
+  ]
+}

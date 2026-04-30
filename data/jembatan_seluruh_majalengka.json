@@ -1,0 +1,4837 @@
+[
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7665298, 108.1651457",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7612222, 108.1962558",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.739618, 108.2290095",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7243121, 108.2807897",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7217584, 108.2930338",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.7660678, 108.1636347",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8349863, 108.2210199",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5963517, 108.2490052",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5872538, 108.2518502",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Simpang Susun Kertajati",
+    "korrdinat": "-6.7008801, 108.1721241",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Simpang Susun Kertajati",
+    "korrdinat": "-6.7008535, 108.1720657",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6940188, 108.3104439",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6940169, 108.3105264",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7056786, 108.1304402",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Bantar Waru",
+    "korrdinat": "-6.6451653, 108.2880541",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7157167, 108.2532805",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7159067, 108.2532916",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7335348, 108.2226343",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6521015, 108.1599042",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8554057, 108.2597319",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.9073652, 108.2171094",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.94249, 108.2053303",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.947979, 108.2090634",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9592261, 108.2033961",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6428795, 108.2301351",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6516648, 108.2207509",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6609744, 108.2297123",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6634484, 108.2255972",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6573047, 108.2251718",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6581981, 108.2244532",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6633175, 108.2208076",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6625613, 108.2209512",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.658215, 108.2247593",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6614468, 108.241632",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8182348, 108.1673479",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6554536, 108.2035205",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.652636, 108.2079344",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6495171, 108.2132849",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.825634, 108.1798187",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8317367, 108.1771687",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.74649, 108.250662",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6752812, 108.1052389",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6000749, 108.2632489",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6161537, 108.2653859",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6210645, 108.2776525",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5993648, 108.2448753",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6196657, 108.2580047",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6243785, 108.2710439",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7636337, 108.1664637",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5954176, 108.2661337",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6344394, 108.28659",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.7146205, 108.2620729",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.7121805, 108.2689178",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7269089, 108.1754327",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.595499, 108.1954389",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.594403, 108.1962675",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6071671, 108.1775303",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8024138, 108.1698472",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8114828, 108.1907602",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8214418, 108.1772262",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6906958, 108.1207351",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.694607, 108.1271013",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6849028, 108.1142608",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.69714, 108.1334839",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7049994, 108.1712816",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6362203, 108.3445888",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6365225, 108.2149299",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7659845, 108.1726193",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7612477, 108.1737476",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7476759, 108.1990406",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7496833, 108.1892723",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7595916, 108.1756094",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7447622, 108.2085614",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7434991, 108.2104398",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7553583, 108.1873299",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7592548, 108.1725794",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7633003, 108.1732377",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.677363, 108.2290146",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6706116, 108.2314387",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7012393, 108.1977726",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7010576, 108.1977134",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7624667, 108.1669837",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7676846, 108.1649264",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7569376, 108.1701786",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.634393, 108.2571892",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6383782, 108.2497886",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.693697, 108.3212491",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7490544, 108.168836",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7318098, 108.1672534",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7323595, 108.2023823",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.691956, 108.1855749",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6550984, 108.2600379",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7135975, 108.2399444",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6506041, 108.3252266",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jalan Jatiwangi - Wanasalam",
+    "korrdinat": "-6.6522564, 108.3155963",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6500602, 108.3243181",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.657159, 108.3177879",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jalan Jatiwangi - Wanasalam",
+    "korrdinat": "-6.6539283, 108.3042058",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jalan Lanud Sukani",
+    "korrdinat": "-6.6935019, 108.2567963",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6957507, 108.2487065",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6935466, 108.2646706",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6392994, 108.3000134",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7041923, 108.2850927",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7043253, 108.2852352",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7201192, 108.200789",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.699048, 108.1473678",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6988699, 108.1473248",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.697773, 108.2985381",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jalan Jatiwangi - Wanasalam",
+    "korrdinat": "-6.6526869, 108.2843558",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6549293, 108.2825273",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6920332, 108.2779637",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6967959, 108.2759417",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6424172, 108.3147545",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6153022, 108.1737952",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6119731, 108.1868658",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6101156, 108.1842427",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5969735, 108.2376588",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5897767, 108.2415179",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5894824, 108.2513701",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5844304, 108.2184213",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5834025, 108.2235463",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5768821, 108.205355",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5797648, 108.2053773",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5819684, 108.206081",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5898893, 108.2056223",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6002457, 108.2146192",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5995904, 108.214326",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7019936, 108.1817409",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7018118, 108.1817579",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Talaga-Bantarujeg",
+    "korrdinat": "-6.9762445, 108.2797494",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7530368, 108.1879618",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9213923, 108.2181595",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9210965, 108.2196554",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9117435, 108.3149067",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9213544, 108.328853",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-7.0074139, 108.3085125",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9688325, 108.264439",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9727148, 108.2808184",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9660851, 108.2803165",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7358929, 108.2202607",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8764108, 108.2362312",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8800683, 108.2618485",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8798272, 108.2603261",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7388749, 108.2631852",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7491446, 108.2678009",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9983077, 108.2372751",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9896047, 108.3097883",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8719862, 108.2425698",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.9530224, 108.1884254",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9532985, 108.2370614",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jalan Talaga-Bantarujeg",
+    "korrdinat": "-6.959219, 108.2291086",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.9102776, 108.245929",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.9005899, 108.305298",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8929205, 108.2971997",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8886157, 108.2916234",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0599696, 108.3718151",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jalan Dukuh Dawuan",
+    "korrdinat": "-6.8278235, 108.2319115",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Kiai Haji Abdul Halim",
+    "korrdinat": "-6.8336375, 108.2406948",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Kiai Haji Abdul Halim",
+    "korrdinat": "-6.8335573, 108.2406662",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8176621, 108.197514",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8176054, 108.1976026",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8001605, 108.2951037",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.6062203, 108.1485345",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.5732573, 108.210104",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5916094, 108.2414452",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5917379, 108.2505326",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0143117, 108.2280678",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-7.0140459, 108.2364072",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8526642, 108.263358",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8526945, 108.2626452",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8445532, 108.3189058",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5859668, 108.2325528",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.586673, 108.1399356",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.584957, 108.1423156",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5850062, 108.145834",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.586826, 108.1448422",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.58628, 108.1997994",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6643399, 108.2261304",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.659573, 108.1978951",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6512495, 108.3138953",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6414248, 108.3213645",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6872112, 108.3515689",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.687036, 108.3515963",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6903833, 108.3615089",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6905154, 108.361375",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6869778, 108.3465116",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6912544, 108.3626301",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6914159, 108.3625732",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6888928, 108.3576299",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7365305, 108.2184615",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5905532, 108.1421983",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.616776, 108.2985681",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6257418, 108.3221471",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6989158, 108.3548847",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6984519, 108.3551543",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7545484, 108.1877114",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Jatiwangi - Wanasalam",
+    "korrdinat": "-6.6535528, 108.295125",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6281029, 108.0497955",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6282078, 108.0496507",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8705568, 108.2196611",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8688159, 108.2212265",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8452968, 108.2284346",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8473101, 108.2270245",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8445777, 108.2285231",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6869345, 108.104417",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8493836, 108.211864",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8460058, 108.2109151",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8430624, 108.2103438",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8362914, 108.208715",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8592487, 108.2495454",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8611828, 108.2496335",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8657551, 108.2496304",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8124858, 108.2442124",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jalan Tarikolot",
+    "korrdinat": "-6.8165538, 108.2240835",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8170796, 108.2242841",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Sukajaya",
+    "korrdinat": "-6.8261905, 108.2142292",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Sukajaya",
+    "korrdinat": "-6.8250654, 108.213937",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8323917, 108.2116516",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8348693, 108.2187324",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8338205, 108.2153795",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Pramuka",
+    "korrdinat": "-6.8369047, 108.2260842",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Bhayangkara",
+    "korrdinat": "-6.8369832, 108.2292253",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Suha",
+    "korrdinat": "-6.8364674, 108.2325869",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8511129, 108.2350134",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7065458, 108.3294527",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7080623, 108.3262628",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.7103651, 108.3608586",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6908088, 108.3610518",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7036111, 108.3665023",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7173855, 108.3568454",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8446806, 108.2765451",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8382705, 108.2493898",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8374243, 108.2487211",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8367162, 108.2550308",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8312327, 108.2413333",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8328988, 108.2376824",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8334702, 108.2377384",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8256954, 108.2532665",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8188885, 108.2490848",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7864445, 108.2337317",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.7955597, 108.2360139",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8367022, 108.2518151",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7477493, 108.3431157",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7823605, 108.2220302",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8085427, 108.2573181",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8076852, 108.2404402",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7842485, 108.271816",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.7954616, 108.2679719",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0169396, 108.367325",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7798715, 108.2603703",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7710208, 108.2430218",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9775632, 108.342295",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7622518, 108.2399601",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8814746, 108.3114887",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8884506, 108.3059894",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.7862464, 108.3490135",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.709707, 108.2321185",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7098794, 108.2320572",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7076317, 108.2333151",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7138197, 108.229654",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7538512, 108.1879725",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8206899, 108.2235315",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Cibasale",
+    "korrdinat": "-6.8265666, 108.215089",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8470132, 108.2331727",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7250892, 108.2669686",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8280729, 108.2015784",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8278495, 108.2017644",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.7015343, 108.2667743",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.7009716, 108.2658729",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.7016795, 108.2508609",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6157032, 108.1908716",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6195439, 108.1970273",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6273669, 108.1787145",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6272943, 108.1783303",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6005818, 108.1360751",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5868775, 108.2276528",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jalan Mayor Dasuki",
+    "korrdinat": "-6.6815562, 108.2598856",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5900501, 108.1266329",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6074694, 108.1145662",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7591876, 108.1743251",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7602182, 108.1692365",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7599888, 108.1666496",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7596581, 108.1663575",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7553798, 108.1623427",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7648935, 108.165927",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.75703, 108.1638061",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7605958, 108.1711936",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.594761, 108.1972861",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.591553, 108.2370688",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5890817, 108.2259428",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5881544, 108.2257108",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5886622, 108.2234532",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6045368, 108.2029201",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6539941, 108.0806855",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6476643, 108.0705222",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7547094, 108.1876119",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7531989, 108.1858243",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7006711, 108.2371338",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7141976, 108.2296382",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.650563, 108.0984206",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5776045, 108.1346631",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7028073, 108.2197249",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7030143, 108.2197757",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7013032, 108.2132776",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7011242, 108.213297",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7010292, 108.211382",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7008554, 108.2114479",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.700823, 108.2056644",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7006373, 108.2056351",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7092257, 108.2133399",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7160983, 108.2138007",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.716506, 108.214007",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7168658, 108.2152188",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7153797, 108.2192106",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.6997126, 108.2191284",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7051739, 108.208424",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7023723, 108.218454",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7025319, 108.2183759",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.553181, 108.1104476",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0651838, 108.3820527",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5534308, 108.1233973",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5537392, 108.1253151",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.582058, 108.2121294",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5753074, 108.2125707",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7015157, 108.1922811",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7013352, 108.1922871",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7015637, 108.1880345",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.7017445, 108.1879799",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7153929, 108.1855981",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6995897, 108.1929966",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7138008, 108.1871134",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7097501, 108.178467",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7545754, 108.1875752",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7486556, 108.1858553",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7496597, 108.1833822",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7481488, 108.1836109",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7570565, 108.1967993",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6881908, 108.1695085",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0098703, 108.3547456",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0111723, 108.3587809",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jalan Raya Talaga - Cikijing",
+    "korrdinat": "-7.012036, 108.3556626",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jalan Raya Talaga - Cikijing",
+    "korrdinat": "-7.0102963, 108.3507568",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0261179, 108.3496229",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.622015, 108.2110633",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.0229514, 108.3548867",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.025311, 108.3515031",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.0220847, 108.388206",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6626588, 108.0932846",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6661088, 108.0964899",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6659517, 108.0966313",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6324953, 108.1474182",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0492268, 108.3471928",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6413312, 108.0626917",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8943115, 108.3588929",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7354081, 108.2215354",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7264077, 108.2201624",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5551115, 108.1172638",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8252263, 108.2068378",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.7861505, 108.2249662",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.0263077, 108.3887533",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.0264454, 108.3886446",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.0229708, 108.3884597",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.0205161, 108.3886545",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jalan Cibasale",
+    "korrdinat": "-6.8313743, 108.2232238",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8218796, 108.2212",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Kiai Haji Abdul Halim",
+    "korrdinat": "-6.8329658, 108.2128",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Kiai Haji Abdul Halim",
+    "korrdinat": "-6.8330324, 108.2127826",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Pemuda",
+    "korrdinat": "-6.8303839, 108.2083569",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8295929, 108.2069656",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Kelurahan Cijati",
+    "korrdinat": "-6.8280128, 108.2063719",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Cijati Girang",
+    "korrdinat": "-6.8341922, 108.215843",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8279631, 108.2016725",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8260758, 108.2067678",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.66258, 108.1278483",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6598481, 108.128119",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6753683, 108.1231145",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6728261, 108.11516",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6564894, 108.1234429",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6653849, 108.1314955",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Raya Talaga - Cikijing",
+    "korrdinat": "-6.9920099, 108.3238159",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8116221, 108.2892866",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.819324, 108.280298",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8258518, 108.2705715",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.020305, 108.3822088",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "14",
+    "korrdinat": "-7.0195603, 108.3604262",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0195083, 108.3602455",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8505367, 108.2824373",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8484398, 108.2684817",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7688694, 108.169422",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8685207, 108.2859153",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.87592, 108.2796353",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8592631, 108.2791002",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.858166, 108.2782771",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.7874317, 108.3369595",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jalan Raya Imam Bonjol",
+    "korrdinat": "-6.7834916, 108.3476845",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jalan Raya Imam Bonjol",
+    "korrdinat": "-6.783029, 108.3498869",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8771323, 108.290586",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8793169, 108.2737374",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.876655, 108.2758564",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.786864, 108.3520144",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7579471, 108.3324688",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jalan KH Abdul Chalim",
+    "korrdinat": "-6.7628155, 108.3333421",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7099589, 108.1693305",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7055371, 108.1721241",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7042914, 108.1696319",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Simpang Susun Kertajati",
+    "korrdinat": "-6.7102559, 108.1681862",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Simpang Susun Kertajati",
+    "korrdinat": "-6.7102329, 108.1681456",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7128959, 108.1733631",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7127792, 108.160208",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7089538, 108.1767883",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6926936, 108.3270836",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jalan Tol Cikopo–Palimanan",
+    "korrdinat": "-6.6928747, 108.3271198",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8435485, 108.3344911",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.843948, 108.3354561",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6956602, 108.3273349",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6953145, 108.3273072",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.695067, 108.3273076",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7750792, 108.1696406",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6891505, 108.3386714",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6905947, 108.3431865",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.681775, 108.3556991",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6904312, 108.352914",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6828768, 108.1883768",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6965057, 108.1926131",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6785926, 108.1889843",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6822583, 108.1881386",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6785402, 108.1881009",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6894303, 108.341468",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8054269, 108.3254302",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8021306, 108.3175412",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6443208, 108.3291741",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6486599, 108.3262314",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6465616, 108.3275583",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6454463, 108.3283563",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.644086, 108.3293427",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.7938307, 108.3303004",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6609915, 108.1894636",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6688455, 108.1929631",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6669649, 108.1931536",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6625502, 108.1990671",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6628362, 108.1988392",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6655197, 108.1963731",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6669526, 108.1951333",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6700823, 108.1924669",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.669633, 108.192536",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6705481, 108.1924154",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6720319, 108.1918168",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6750187, 108.1903198",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6787524, 108.189047",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6732444, 108.1911506",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7731876, 108.1697628",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.767308, 108.1693777",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.780045, 108.177184",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7793543, 108.1753862",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Tidak Diketahui",
+    "korrdinat": "-6.6171206, 108.3207948",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6082706, 108.3156865",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.6933961, 108.2259757",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.630235, 108.3318398",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6859584, 108.2263472",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8615047, 108.3221765",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.620443, 108.228729",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6209709, 108.2280927",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6207771, 108.2272095",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.869272, 108.3340781",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8731279, 108.3290758",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8732667, 108.3282772",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6693422, 108.3342072",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6694095, 108.3344194",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6581569, 108.3275704",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6688621, 108.3328748",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6685781, 108.3254252",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6638896, 108.2253716",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.705365, 108.3283496",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7103767, 108.3203926",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7200415, 108.3175314",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.705506, 108.3216642",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7363261, 108.3291332",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7241841, 108.3292877",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6443314, 108.2269844",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7357508, 108.313073",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6408704, 108.2309244",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.7759908, 108.3083372",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.7813856, 108.3202372",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7208988, 108.2488584",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.719463, 108.2485563",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7746694, 108.3182457",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9183785, 108.3183267",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9142877, 108.316795",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9113469, 108.3147754",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9037593, 108.3323223",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6382919, 108.2199351",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.635382, 108.2109768",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.7977096, 108.3064458",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9557412, 108.246282",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.7997043, 108.3006453",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8190077, 108.3063327",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.854446, 108.2629572",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8405571, 108.2513186",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8400314, 108.2510387",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8353487, 108.2532733",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jalan Babakankoda",
+    "korrdinat": "-6.8437376, 108.24674",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.852037, 108.2639",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8563198, 108.2531552",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Laswi",
+    "korrdinat": "-6.8323472, 108.2464581",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7700493, 108.2980211",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8167968, 108.2623029",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8127674, 108.2668513",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8183076, 108.2619323",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.814308, 108.2643728",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7516417, 108.2943546",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7506371, 108.292323",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9650827, 108.2486598",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jalan Talaga-Bantarujeg",
+    "korrdinat": "-6.9638677, 108.2466803",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.669934, 108.3356264",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Pintas Rajagaluh - Majalengka",
+    "korrdinat": "-6.8862329, 108.3044632",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7712406, 108.2516197",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7701085, 108.2476312",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8845787, 108.303995",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7780137, 108.2492948",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8941076, 108.3060161",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8951171, 108.3110262",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.892425, 108.3086136",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7611058, 108.2420233",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8725241, 108.3068771",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.862838, 108.2997824",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8615201, 108.2958426",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7621203, 108.2359249",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9639751, 108.2594577",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9600993, 108.2553291",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9612851, 108.2575098",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.859134, 108.2923889",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7604359, 108.2715203",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7542571, 108.2758775",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7552413, 108.2784123",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7867032, 108.2727308",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7853662, 108.2683587",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7757651, 108.2700417",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7870253, 108.2705324",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7852054, 108.2707116",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8473858, 108.2446057",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8408947, 108.2271673",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8434088, 108.2439314",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Imam Bonjol",
+    "korrdinat": "-6.8383422, 108.2249217",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Babakan",
+    "korrdinat": "-6.8371229, 108.2302732",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7740178, 108.2846068",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7681861, 108.2848743",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jalan Jatiwangi - Wanasalam",
+    "korrdinat": "-6.6524802, 108.2781682",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8499015, 108.2460966",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8433467, 108.2455331",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Olahraga",
+    "korrdinat": "-6.8365991, 108.2351542",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Imam Bonjol",
+    "korrdinat": "-6.8362945, 108.2249852",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-7.0192335, 108.3044253",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0295966, 108.3076289",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.632427, 108.2876853",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6372463, 108.2882985",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0293707, 108.305222",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-7.0193835, 108.3064352",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8411819, 108.2244988",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.852555, 108.2340022",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Babakankoda",
+    "korrdinat": "-6.8455736, 108.238046",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6845859, 108.2817491",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6787682, 108.2889718",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6861284, 108.2806478",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6815402, 108.283957",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6420229, 108.2331547",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.731964, 108.2199388",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.741826, 108.2126526",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.983151, 108.1858491",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.988333, 108.2014234",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9028497, 108.3189717",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6249318, 108.2703428",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9601013, 108.179723",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6179289, 108.2740906",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.619774, 108.2729227",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9586405, 108.1986193",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9757948, 108.2942322",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.62436, 108.2709275",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9768877, 108.3128015",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9870531, 108.3033359",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9885587, 108.3014266",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jalan Jendral Ahmad Yani",
+    "korrdinat": "-6.9760222, 108.3114889",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8856577, 108.3267193",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8207471, 108.3203009",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8982953, 108.3338904",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8298459, 108.3250726",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8139797, 108.3257351",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8159805, 108.3242837",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8165152, 108.3241199",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-7.0500213, 108.1910903",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8413277, 108.3371251",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8686625, 108.3506941",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8628433, 108.3508744",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8039315, 108.1635316",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7680589, 108.212102",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6651141, 108.2898535",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6645586, 108.2899833",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8096466, 108.1742738",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6593007, 108.2644359",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.657535, 108.2524068",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8017088, 108.1848163",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.7971212, 108.1821619",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.7941127, 108.1803245",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.8020134, 108.1985998",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6722832, 108.2632864",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9705396, 108.1711219",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7057245, 108.351569",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7037174, 108.3393037",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.978316, 108.2344032",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8453808, 108.212873",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8438334, 108.2224243",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7328246, 108.2708329",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0564306, 108.2696146",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7295513, 108.3501566",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7323665, 108.3528328",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jalan Raya Imam Bonjol",
+    "korrdinat": "-6.7781589, 108.4001925",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7754675, 108.3948336",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jalan Raya Imam Bonjol",
+    "korrdinat": "-6.7775737, 108.3865652",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jalan Emen Slamet",
+    "korrdinat": "-6.8365019, 108.2208278",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Siti Armilah",
+    "korrdinat": "-6.8355704, 108.2217579",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Pahlawan",
+    "korrdinat": "-6.8361663, 108.2230841",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Pahlawan",
+    "korrdinat": "-6.8375924, 108.223009",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8412395, 108.2136482",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-7.0191227, 108.2300083",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7406999, 108.3480297",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7440677, 108.3489343",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7656609, 108.3358073",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.8087834, 108.384133",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7901663, 108.3854343",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7898627, 108.3822147",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8639028, 108.2011404",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8643235, 108.2032507",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jalan Kavling Azhar",
+    "korrdinat": "-6.7423535, 108.293093",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7316379, 108.2965702",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7674791, 108.2098687",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7361129, 108.3115786",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7330454, 108.3120052",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7436878, 108.2933604",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-6.9886973, 108.3520034",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7847864, 108.3742409",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7907909, 108.1840877",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jalan Raya Imam Bonjol",
+    "korrdinat": "-6.7815352, 108.3717578",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.7978028, 108.3309722",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7856079, 108.377018",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7863684, 108.3741467",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7863079, 108.3736971",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9625264, 108.2190026",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7610563, 108.2054168",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7560929, 108.2177628",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0316137, 108.2711126",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.028988, 108.2758151",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9847932, 108.2726685",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9821725, 108.2837813",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6390977, 108.2496848",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6388871, 108.2472822",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.9060462, 108.2910647",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.732079, 108.1661362",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7307496, 108.1682696",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7252567, 108.1678692",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7263518, 108.1677772",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7292755, 108.1678009",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7315419, 108.167205",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9534801, 108.286017",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9612901, 108.2795079",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7140778, 108.3583085",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9558613, 108.2202516",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.8263804, 108.3406191",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.8251207, 108.3390849",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7397149, 108.2290294",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.9096272, 108.2427352",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-7.003523, 108.3015147",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-7.0045507, 108.3109896",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-7.0120902, 108.308447",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.995171, 108.296212",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.9324034, 108.3016784",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9129889, 108.3128813",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6598482, 108.2022046",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6620387, 108.2205905",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6681454, 108.2027418",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6692686, 108.2101114",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8646742, 108.1966716",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.657449, 108.2076093",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.658693, 108.204395",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6604532, 108.2011622",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6607884, 108.200547",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6611389, 108.1999972",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6572812, 108.2080104",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6576376, 108.2070863",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6583223, 108.2052318",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6569919, 108.2087177",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6566154, 108.2096034",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6565165, 108.2098206",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6562697, 108.210386",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6558305, 108.2114007",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6658858, 108.20379",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7368143, 108.3333204",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.6912257, 108.2142015",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6775748, 108.2190751",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.8093437, 108.3605783",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.8071182, 108.2222254",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8898908, 108.2095405",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8551326, 108.3003834",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6227158, 108.3422768",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8557965, 108.2957339",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jalan Talaga-Bantarujeg",
+    "korrdinat": "-6.9621833, 108.254159",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9623381, 108.2483022",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9852674, 108.2208681",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Banjaran",
+    "korrdinat": "-6.953473, 108.3217662",
+    "kecamatan": "Banjaran"
+  },
+  {
+    "nama": "Jembatan Banjaran",
+    "korrdinat": "-6.959856, 108.324977",
+    "kecamatan": "Banjaran"
+  },
+  {
+    "nama": "Jembatan Banjaran",
+    "korrdinat": "-6.9580731, 108.3327648",
+    "kecamatan": "Banjaran"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0609584, 108.2443361",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9942013, 108.2114904",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6251412, 108.3028538",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0123019, 108.2165296",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6281069, 108.2893979",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6211677, 108.2937887",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7546333, 108.3580775",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7640261, 108.3641048",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0164751, 108.219073",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0166976, 108.2197044",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0164728, 108.2214136",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0212846, 108.2224224",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9443328, 108.2173305",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7308691, 108.2244783",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7554626, 108.2034414",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7470027, 108.2496995",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7319323, 108.2540258",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7285967, 108.2653847",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7274266, 108.2643468",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7256896, 108.2652862",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7266691, 108.2643159",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7208465, 108.2668269",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7298906, 108.265888",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7366218, 108.2627207",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7366016, 108.2629668",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7431333, 108.265381",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7435211, 108.2655302",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7417989, 108.2648855",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7414331, 108.2647564",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7412118, 108.2646661",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7394666, 108.263638",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7384337, 108.262164",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7367436, 108.2570456",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7264695, 108.2520795",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7260835, 108.2519377",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7254373, 108.2501544",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7236107, 108.2499257",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7250432, 108.2512368",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7277417, 108.2526912",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7285201, 108.2529849",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7280706, 108.24616",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7253742, 108.2662055",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7252839, 108.2664526",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7251851, 108.2667218",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7334023, 108.2603879",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0403604, 108.3762428",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jalan Talaga-Bantarujeg",
+    "korrdinat": "-6.9593957, 108.2317053",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8108764, 108.2557026",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8417625, 108.2402836",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6455186, 108.1910874",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9522174, 108.2834246",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9491372, 108.2819057",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.736629, 108.3505281",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7376726, 108.3407193",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7242065, 108.3568195",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8127298, 108.166985",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0391272, 108.3752444",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7124314, 108.1745594",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7121437, 108.1749765",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7371123, 108.3410921",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8271156, 108.1950482",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.815907, 108.1982728",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7649014, 108.239309",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7376959, 108.3126205",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8385959, 108.2745084",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-7.0035581, 108.1682917",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.823495, 108.1850461",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7613325, 108.3122577",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-7.046532, 108.1811283",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7471653, 108.3273135",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7540451, 108.3375802",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.804305, 108.3424648",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6735145, 108.2002269",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7311937, 108.3562658",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7291255, 108.3503808",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6260867, 108.2438345",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6475364, 108.2839163",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7289309, 108.2531387",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9797377, 108.1818052",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8143133, 108.291654",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5644583, 108.0959276",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5627683, 108.0962297",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5707307, 108.0921079",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5982773, 108.1131103",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.592126, 108.1087985",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6225794, 108.1439245",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6238838, 108.1481851",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5964626, 108.1196046",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5872185, 108.1080856",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6725927, 108.1915561",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6637601, 108.1807262",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.66063, 108.1737107",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6549738, 108.1566092",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6943111, 108.1847494",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6797706, 108.1882475",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.7073697, 108.1781642",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7591144, 108.17272",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7591139, 108.1725684",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9635324, 108.2410407",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Lemahsugih",
+    "korrdinat": "-6.9922913, 108.2466807",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-7.0032613, 108.2520129",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Malausma",
+    "korrdinat": "-7.0390454, 108.2247084",
+    "kecamatan": "Malausma"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6489053, 108.3260978",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0064243, 108.337666",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0109323, 108.3372418",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0112213, 108.3439811",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0133171, 108.343291",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-7.0079886, 108.3304048",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0261228, 108.3407369",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0139826, 108.3551016",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0228872, 108.3821138",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6629296, 108.3161219",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7184279, 108.251233",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7573984, 108.319272",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7740943, 108.2067656",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8478427, 108.2428331",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8288925, 108.1946402",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8284558, 108.1984375",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7503549, 108.2508539",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7506066, 108.1576662",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7369321, 108.1873499",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.821394, 108.1685781",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7489515, 108.1936615",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.6981845, 108.2417149",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7457544, 108.2663932",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Panyingkiran",
+    "korrdinat": "-6.8225448, 108.1779394",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.726295, 108.2220723",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0306787, 108.3420771",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7288027, 108.35448",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6412996, 108.2353796",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6218884, 108.0970168",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6517748, 108.2191767",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6460678, 108.2258808",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6458164, 108.2254666",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6528824, 108.2247707",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jalan Talaga-Bantarujeg",
+    "korrdinat": "-6.9699088, 108.2621713",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jalan Talaga-Bantarujeg",
+    "korrdinat": "-6.9717243, 108.2699505",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.9026888, 108.358563",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7042275, 108.3376602",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.7898703, 108.3398971",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.7948465, 108.34949",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6852923, 108.2812537",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7375075, 108.3124484",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7369607, 108.3364136",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6780675, 108.1891141",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6737094, 108.1908255",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8468484, 108.2644503",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.8149741, 108.37481",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.815475, 108.3769558",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0412143, 108.3353964",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jembatan Bantarujeg",
+    "korrdinat": "-6.9528664, 108.2418355",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5887025, 108.1451036",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8940793, 108.2879069",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8805581, 108.2887172",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Pintas Rajagaluh - Majalengka",
+    "korrdinat": "-6.8812458, 108.3039549",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6428449, 108.1433938",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9780292, 108.36041",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Cikijing",
+    "korrdinat": "-7.0300398, 108.368826",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8774797, 108.3183383",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6662648, 108.2895208",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6671638, 108.2893916",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6638371, 108.2901608",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6641386, 108.2900801",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6895889, 108.1156242",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6882237, 108.115527",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.689502, 108.1178271",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Simpang Susun Akses Kertajati",
+    "korrdinat": "-6.7009117, 108.171621",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Simpang Susun Akses Kertajati",
+    "korrdinat": "-6.7008966, 108.1715474",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.7906138, 108.3487457",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7682374, 108.2396395",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7506463, 108.1831971",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7502177, 108.1832696",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7613299, 108.167056",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7044567, 108.3391596",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6478342, 108.2838235",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.647694, 108.2837592",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.787178, 108.2653318",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7510006, 108.2513407",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7260196, 108.2645447",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6908079, 108.3431819",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.6684551, 108.3180466",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7599072, 108.1766193",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.668997, 108.3332252",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.6379627, 108.2073807",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7621086, 108.3328115",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7619945, 108.3194584",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Sukahaji",
+    "korrdinat": "-6.8430587, 108.2930909",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8543708, 108.2809652",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Talaga",
+    "korrdinat": "-6.9913421, 108.3432435",
+    "kecamatan": "Talaga"
+  },
+  {
+    "nama": "Jembatan Dawuan",
+    "korrdinat": "-6.7373726, 108.2179639",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "nama": "Jembatan Maja",
+    "korrdinat": "-6.8840122, 108.3035114",
+    "kecamatan": "Maja"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7896509, 108.3806855",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7580754, 108.3259349",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Sindang",
+    "korrdinat": "-6.8468273, 108.3114677",
+    "kecamatan": "Sindang"
+  },
+  {
+    "nama": "Jembatan Rajagaluh",
+    "korrdinat": "-6.7873262, 108.3224474",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7469177, 108.266813",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7042898, 108.3374205",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7223855, 108.2785014",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7442245, 108.2935342",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.6885661, 108.2788786",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Ligung",
+    "korrdinat": "-6.665572, 108.237475",
+    "kecamatan": "Ligung"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.734058, 108.3103262",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7313789, 108.3101417",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7314089, 108.3105035",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7287558, 108.3125658",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7289347, 108.3123667",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7368778, 108.3122624",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7372175, 108.3123324",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Cingambul",
+    "korrdinat": "-7.0388763, 108.3091571",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.786803, 108.2703322",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7912031, 108.2734324",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7905599, 108.2729439",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Simpang Susun Akses Kertajati",
+    "korrdinat": "-6.6799791, 108.1776316",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Simpang Susun Akses Kertajati",
+    "korrdinat": "-6.6799435, 108.1775313",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jalan Tol Cileunyi–Sumedang–Dawuan",
+    "korrdinat": "-6.6930943, 108.1088953",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jalan Tol Cileunyi–Sumedang–Dawuan",
+    "korrdinat": "-6.6929795, 108.1088383",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kasokandel",
+    "korrdinat": "-6.7870211, 108.23299",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7565525, 108.3407129",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7572329, 108.3314574",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7605999, 108.3313348",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.749133, 108.3462751",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Argapura",
+    "korrdinat": "-6.8988566, 108.3168525",
+    "kecamatan": "Argapura"
+  },
+  {
+    "nama": "Jembatan Jatitujuh",
+    "korrdinat": "-6.5926542, 108.2379334",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6746422, 108.1904226",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6769398, 108.1895151",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6816421, 108.1888321",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.676613, 108.1896786",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6766942, 108.1906704",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7690535, 108.3278554",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7716184, 108.329907",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7464467, 108.1681206",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7698996, 108.3287849",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Jembatan Leuwimunding",
+    "korrdinat": "-6.7732821, 108.3302278",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "nama": "Ciluntung",
+    "korrdinat": "-6.9195938, 108.2173729",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "nama": "Jembatan Majalengka",
+    "korrdinat": "-6.8258492, 108.2088759",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7088187, 108.3590086",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.5886861, 108.1436504",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Sumberjaya",
+    "korrdinat": "-6.7127918, 108.3570579",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7641863, 108.1791476",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Jatiwangi",
+    "korrdinat": "-6.7241768, 108.2807725",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.652275, 108.159073",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6532659, 108.1578775",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6527781, 108.1584658",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6540748, 108.157557",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8053447, 108.2626214",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.804926, 108.2627743",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Cigasong",
+    "korrdinat": "-6.8039439, 108.2634143",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "nama": "Jembatan Kadipaten",
+    "korrdinat": "-6.7497687, 108.1645843",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6785884, 108.1889145",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7604161, 108.322755",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Palasah",
+    "korrdinat": "-6.7567869, 108.3140267",
+    "kecamatan": "Palasah"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7867319, 108.39139",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7960501, 108.3916028",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Sindangwangi",
+    "korrdinat": "-6.7861466, 108.3924008",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6517549, 108.1561596",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6513389, 108.1566988",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6508919, 108.1572072",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "nama": "Jembatan Kertajati",
+    "korrdinat": "-6.6504701, 108.1577432",
+    "kecamatan": "Kertajati"
+  }
+]

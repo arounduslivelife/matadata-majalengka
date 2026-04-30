@@ -14,6 +14,16 @@
     "@google/generative-ai": "^0.24.1",
     "axios": "^1.15.0",
     "better-sqlite3": "^12.9.0",
-    "jsdom": "^29.0.2"
-  }
+    "jsdom": "^29.0.2",
+    "playwright": "^1.59.1",
+    "puppeteer-core": "^24.42.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arounduslivelife/matadata-majalengka.git"
+  },
+  "bugs": {
+    "url": "https://github.com/arounduslivelife/matadata-majalengka/issues"
+  },
+  "homepage": "https://github.com/arounduslivelife/matadata-majalengka#readme"
 }

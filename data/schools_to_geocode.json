@@ -1,0 +1,644 @@
+[
+  {
+    "nama": "SD Negeri Sukaperna II",
+    "kecamatan": "Talaga",
+    "paket": [
+      {
+        "nama": "Belanja Modal Pagar (Pembangunan Pagar Sekolah (DAU)) Lokasi : SD Negeri Sukaperna II Kecamatan Talaga Kabupaten Majalengka",
+        "pagu": 195000000,
+        "vendor": "CV. MURAI INDAH",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Leuweunggede IV",
+    "kecamatan": "Jatiwangi",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Leuweunggede IV Kecamatan Jatiwangi",
+        "pagu": 198502000,
+        "vendor": "CV.Safari",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Wanasalam I",
+    "kecamatan": "Ligung",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi :  SD Negeri Wanasalam I Kecamatan Ligung Kabupaten Majalengka",
+        "pagu": 197000000,
+        "vendor": "CV TRIANA AL MANDIRI",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Palabuan I",
+    "kecamatan": "Sukahaji",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi :  SD Negeri Palabuan I Kecamatan Sukahaji Kabupaten Majalengka",
+        "pagu": 198613000,
+        "vendor": "BARRAH",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sindanghaji I",
+    "kecamatan": "Palasah",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi :  SD Negeri Sindanghaji I Kecamatan Palasah",
+        "pagu": 198779000,
+        "vendor": "CV. ASTHA PILAR ANGKASA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sukasari IV",
+    "kecamatan": "Cikijing",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Sukasari IV Kecamatan Cikijing Kabupaten Majalengka",
+        "pagu": 198279000,
+        "vendor": "PT. JAVA BANGUN PERSADA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Wangkelang I",
+    "kecamatan": "Cingambul",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Wangkelang I Kecamatan Cingambul Kabupaten Majalengka",
+        "pagu": 198834000,
+        "vendor": "CV. AURA MULIA ABADI",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Argalingga III",
+    "kecamatan": "Argapura",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Argalingga III Kecamatan Argapura Kabupaten Majalengka",
+        "pagu": 198279000,
+        "vendor": "RAHAYU",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Mekerjaya IV",
+    "kecamatan": "Kertajati",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Mekerjaya IV Kecamatan Kertajati Kabupaten Majalengka",
+        "pagu": 99167000,
+        "vendor": "CV. DWISAKA PERMANA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sumberjaya II",
+    "kecamatan": "Sumberjaya",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Sumberjaya II Kecamatan Sumberjaya Kabupaten Majalengka",
+        "pagu": 198612000,
+        "vendor": "CV. ESA PRATAMA MANUNGGAL",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Rajagaluh Kidul III",
+    "kecamatan": "Rajagaluh",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Rajagaluh Kidul III Kecamatan Rajagaluh Kabupaten Majalengka",
+        "pagu": 198898000,
+        "vendor": "CV. INTI RAYA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Tenjolayar I",
+    "kecamatan": "Cigasong",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Tenjolayar I Kecamatan Cigasong Kabupaten Majalengka",
+        "pagu": 198612000,
+        "vendor": "CV. DWISAKA PERMANA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Gandawesi III",
+    "kecamatan": "Ligung",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Pembangunan Ruang Kelas Baru (Dana Alokasi Umum)) Lokasi : SD Negeri Gandawesi III Kecamatan Ligung Kabupaten Majalengka",
+        "pagu": 195000000,
+        "vendor": "CV. ANDIS KARYA TEKNIK",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Ligung Lor III",
+    "kecamatan": "Ligung",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Ligung Lor III Kecamatan Ligung",
+        "pagu": 198781000,
+        "vendor": "CV. BIMA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Talaga Kulon V",
+    "kecamatan": "Talaga",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Talaga Kulon V Kecamatan Talaga",
+        "pagu": 198834000,
+        "vendor": "RAHAYU",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Teja II",
+    "kecamatan": "Rajagaluh",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum))  Lokasi :  SD Negeri Teja II Kecamatan Rajagaluh Kabupaten Majalengka",
+        "pagu": 196000000,
+        "vendor": "CV. KAHARINGAN GROUP",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sunia III",
+    "kecamatan": "Banjaran",
+    "paket": [
+      {
+        "nama": "Belanja Modal Pagar (Pembangunan Senderan SD (DAU)) Lokasi : SD Negeri Sunia III Kecamatan Banjaran Kabupaten Majalengka",
+        "pagu": 98783000,
+        "vendor": "CV. ANDIS KARYA TEKNIK",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sukadana I",
+    "kecamatan": "Malausma",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Sukadana I Kecamatan Malausma",
+        "pagu": 198779000,
+        "vendor": "CV. BIMA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Leuwikujang III",
+    "kecamatan": "Leuwimunding",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Leuwikujang III Kecamatan Leuwimunding",
+        "pagu": 197946000,
+        "vendor": "Cv Rama Putera Jaya",
+        "tahun": 2025
+      },
+      {
+        "nama": "Belanja Modal Pagar (Pembangunan Pagar dan Senderan (BTT)) Lokasi : SD Negeri Leuwikujang III Kecamatan Leuwimunding Kabupaten Majalengka",
+        "pagu": 198770000,
+        "vendor": "CV. Fighter Constructions",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Simpeureum II",
+    "kecamatan": "Cigasong",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Simpeureum II Kecamatan Cigasong Kabupaten Majalengka",
+        "pagu": 198000000,
+        "vendor": "CV. ESA PRATAMA MANUNGGAL",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sukawera III",
+    "kecamatan": "Ligung",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Sukawera III Kecamatan Ligung",
+        "pagu": 198211000,
+        "vendor": "TRILOKA UTAMA KARYA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Haurseah I",
+    "kecamatan": "Argapura",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (DAU)) Lokasi : SD Negeri Haurseah I Kecamatan Argapura Kabupaten Majalengka",
+        "pagu": 397868000,
+        "vendor": "POETRA KOEJANG",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Karamat I",
+    "kecamatan": "Palasah",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Karamat I Kecamatan Palasah",
+        "pagu": 198834000,
+        "vendor": "CV.GARDU JAYA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Cimuncang I",
+    "kecamatan": "Malausma",
+    "paket": [
+      {
+        "nama": "Belanja Modal Pagar (Pembangunan Senderan (BTT)) Lokasi : SD Negeri Cimuncang I Kecamatan Malausma",
+        "pagu": 198207000,
+        "vendor": "CV. CIPTA KANAKA ASRI",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sinargalih I",
+    "kecamatan": "Lemahsugih",
+    "paket": [
+      {
+        "nama": "Belanja Modal Pagar (Pembangunan Senderan SD (Dana Alokasi Umum)) Lokasi : SD Negeri Sinargalih I Kecamatan Lemahsugih Kabupaten Majalengka",
+        "pagu": 146000000,
+        "vendor": "CV. MAKMUR MULYA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sukawana",
+    "kecamatan": "Kertajati",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Sukawana Kecamatan Kertajati Kabupaten Majalengka",
+        "pagu": 198612000,
+        "vendor": "CV. AL -MAHRI",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sindang III",
+    "kecamatan": "Sindang",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Sindang III Kecamatan Sindang Kabupaten Majalengka",
+        "pagu": 198501000,
+        "vendor": "PT. JAVA BANGUN PERSADA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sadasari I",
+    "kecamatan": "Argapura",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (DAU)) Lokasi : SD Negeri Sadasari I Kecamatan Argapura",
+        "pagu": 194000000,
+        "vendor": "MATADOR",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Loji I",
+    "kecamatan": "Jatiwangi",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Loji I Kecamatan Jatiwangi",
+        "pagu": 198779000,
+        "vendor": "CV. HASBI KARYA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Jatitujuh IV",
+    "kecamatan": "Jatitujuh",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Jatitujuh IV Kecamatan Jatitujuh Kabupaten Majalengka",
+        "pagu": 198612000,
+        "vendor": "CV. ESA PRATAMA MANUNGGAL",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sukamulya III",
+    "kecamatan": "Kertajati",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Sukamulya III Kecamatan Kertajati Kabupaten Majalengka",
+        "pagu": 198890000,
+        "vendor": "CV ANDROMEDA ATALA MIDAS",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Lampuyang I",
+    "kecamatan": "Talaga",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Lampuyang I Kecamatan Talaga Kabupaten Majalengka",
+        "pagu": 198612000,
+        "vendor": "CV. KAHARINGAN GROUP",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Cipasung II",
+    "kecamatan": "Lemahsugih",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi :  SD Negeri Cipasung II Kecamatan Lemahsugih Kabupaten Majalengka",
+        "pagu": 198779000,
+        "vendor": "CV. BIMA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Mekarjaya III",
+    "kecamatan": "Kertajati",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Mekarjaya III Kecamatan Kertajati Kabupaten Majalengka",
+        "pagu": 198612000,
+        "vendor": "CV. ESA PRATAMA MANUNGGAL",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sumber Kulon II",
+    "kecamatan": "Jatitujuh",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Sumber Kulon II Kecamatan Jatitujuh",
+        "pagu": 198073000,
+        "vendor": "CV. Fighter Constructions",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Tarikolot I",
+    "kecamatan": "Palasah",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Tarikolot I Kecamatan Palasah Kabupaten Majalengka",
+        "pagu": 198612000,
+        "vendor": "BARRAH",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Cigasong I",
+    "kecamatan": "Cigasong",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Cigasong I Kecamatan Cigasong Kabupaten Majalengka",
+        "pagu": 197000000,
+        "vendor": "Haidar Putra Pradana",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Salawangi II",
+    "kecamatan": "Bantarujeg",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Salawangi II Kecamatan Bantarujeg",
+        "pagu": 198834000,
+        "vendor": "CV. KAHARINGAN GROUP",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Kutamanggu II",
+    "kecamatan": "Cigasong",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Kutamanggu II Kecamatan Cigasong",
+        "pagu": 198834000,
+        "vendor": "RAHAYU",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Salawana II",
+    "kecamatan": "Dawuan",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (DAU)) Lokasi : SD Negeri Salawana II Kecamatan Dawuan Kabupaten Majalengka",
+        "pagu": 198737000,
+        "vendor": "CV. Fighter Constructions",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Babakan Manjeti I",
+    "kecamatan": "Sukahaji",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Babakan Manjeti I Kecamatan Sukahaji Kabupaten Majalengka",
+        "pagu": 198779000,
+        "vendor": "VIRGO",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Sindang I",
+    "kecamatan": "Cikijing",
+    "paket": [
+      {
+        "nama": "Belanja Modal Pagar (Pembangunan Pagar dan Senderan (BTT)) Lokasi : SD Negeri Sindang I Kecamatan Cikijing Kabupaten Majalengka",
+        "pagu": 79334000,
+        "vendor": "Haidar Putra Pradana",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Cikeusal II",
+    "kecamatan": "Talaga",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (DAU)) Lokasi : SD Negeri Cikeusal II Kecamatan Talaga Kabupaten Majalengka",
+        "pagu": 198834000,
+        "vendor": "RAHAYU",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Babakan III",
+    "kecamatan": "Kertajati",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Alokasi Umum)) Lokasi : SD Negeri Babakan III Kecamatan Kertajati Kabupaten Majalengka",
+        "pagu": 157000000,
+        "vendor": "VIRGO",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Padarek III",
+    "kecamatan": "Lemahsugih",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Padarek III Kecamatan Lemahsugih",
+        "pagu": 198835000,
+        "vendor": "CV SR",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Cinta Asih II",
+    "kecamatan": "Cingambul",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Cinta Asih II Kecamatan Cingambul",
+        "pagu": 198491000,
+        "vendor": "CV. Fighter Constructions",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Malompong II",
+    "kecamatan": "Maja",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (DAU)) Lokasi : SD Negeri Malompong II Kecamatan Maja Kabupaten Majalengka",
+        "pagu": 198834000,
+        "vendor": "RAHAYU",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Pilangsari I",
+    "kecamatan": "Jatitujuh",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Pilangsari I Kecamatan Jatitujuh Kabupaten Majalengka",
+        "pagu": 198834000,
+        "vendor": "CV. GELORA NUSA PERSADA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Beber IV",
+    "kecamatan": "Ligung",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi :  SD Negeri Beber IV Kecamatan Ligung",
+        "pagu": 198945000,
+        "vendor": "CV.JAYA MAKMUR SENTOSA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Tejamulya I",
+    "kecamatan": "Argapura",
+    "paket": [
+      {
+        "nama": "Belanja Modal Pagar (Pembangunan Pagar Sekolah (DAU)) Lokasi : SD Negeri Tejamulya I Kecamatan Argapura Kabupaten Majalengka",
+        "pagu": 128000000,
+        "vendor": "CV MEKARGUNA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Bongas Wetan I",
+    "kecamatan": "Sumberjaya",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Bongas Wetan I Kecamatan Sumberjaya",
+        "pagu": 198834000,
+        "vendor": "CV.GARDU JAYA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Majalengka Kulon V",
+    "kecamatan": "Majalengka",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Rehabilitasi Ruang Kelas SD (Dana Insentif Fiskal)) Lokasi : SD Negeri Majalengka Kulon V Kecamatan Majalengka",
+        "pagu": 198842000,
+        "vendor": "CV. HASBI KARYA",
+        "tahun": 2025
+      }
+    ]
+  },
+  {
+    "nama": "SD Negeri Nagarakembang II",
+    "kecamatan": "Cingambul",
+    "paket": [
+      {
+        "nama": "Belanja Modal Bangunan Gedung Tempat Pendidikan (Pembangunan Ruang Kelas Baru (Dana Alokasi Umum)) Lokasi : SD Negeri Nagarakembang II Kecamatan Cingambul Kabupaten Majalengka",
+        "pagu": 197959000,
+        "vendor": "CV MUKTI KENCANA",
+        "tahun": 2025
+      }
+    ]
+  }
+]

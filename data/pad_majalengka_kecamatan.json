@@ -1,0 +1,942 @@
+{
+  "2018": {
+    "Argapura": {
+      "total": 25474650,
+      "detail": {
+        "bphtb": 25474650,
+        "hotel": 0
+      }
+    },
+    "Banjaran": {
+      "total": 10728000,
+      "detail": {
+        "bphtb": 10728000,
+        "hotel": 0
+      }
+    },
+    "Bantarujeg": {
+      "total": 20865500,
+      "detail": {
+        "bphtb": 20865500,
+        "hotel": 0
+      }
+    },
+    "Cigasong": {
+      "total": 1317204350,
+      "detail": {
+        "bphtb": 1317204350,
+        "hotel": 0
+      }
+    },
+    "Cikijing": {
+      "total": 146977050,
+      "detail": {
+        "bphtb": 146977050,
+        "hotel": 0
+      }
+    },
+    "Cingambul": {
+      "total": 16765500,
+      "detail": {
+        "bphtb": 16765500,
+        "hotel": 0
+      }
+    },
+    "Dawuan": {
+      "total": 614799200,
+      "detail": {
+        "bphtb": 614799200,
+        "hotel": 0
+      }
+    },
+    "Jatitujuh": {
+      "total": 461614850,
+      "detail": {
+        "bphtb": 461614850,
+        "hotel": 0
+      }
+    },
+    "Jatiwangi": {
+      "total": 2327753025,
+      "detail": {
+        "bphtb": 2327753025,
+        "hotel": 0
+      }
+    },
+    "Kadipaten": {
+      "total": 845942500,
+      "detail": {
+        "bphtb": 845942500,
+        "hotel": 0
+      }
+    },
+    "Kasokandel": {
+      "total": 979125500,
+      "detail": {
+        "bphtb": 979125500,
+        "hotel": 0
+      }
+    },
+    "Kertajati": {
+      "total": 7625195141,
+      "detail": {
+        "bphtb": 7625195141,
+        "hotel": 0
+      }
+    },
+    "Lemahsugih": {
+      "total": 19217125,
+      "detail": {
+        "bphtb": 19217125,
+        "hotel": 0
+      }
+    },
+    "Leuwimunding": {
+      "total": 4130288121,
+      "detail": {
+        "bphtb": 4130288121,
+        "hotel": 0
+      }
+    },
+    "Ligung": {
+      "total": 7138147500,
+      "detail": {
+        "bphtb": 7138147500,
+        "hotel": 0
+      }
+    },
+    "Maja": {
+      "total": 83239600,
+      "detail": {
+        "bphtb": 83239600,
+        "hotel": 0
+      }
+    },
+    "Majalengka": {
+      "total": 1435367638,
+      "detail": {
+        "bphtb": 1435367638,
+        "hotel": 0
+      }
+    },
+    "Malausma": {
+      "total": 12500000,
+      "detail": {
+        "bphtb": 12500000,
+        "hotel": 0
+      }
+    },
+    "Palasah": {
+      "total": 1561799833,
+      "detail": {
+        "bphtb": 1561799833,
+        "hotel": 0
+      }
+    },
+    "Panyingkiran": {
+      "total": 135865650,
+      "detail": {
+        "bphtb": 135865650,
+        "hotel": 0
+      }
+    },
+    "Rajagaluh": {
+      "total": 59405000,
+      "detail": {
+        "bphtb": 59405000,
+        "hotel": 0
+      }
+    },
+    "Sindang": {
+      "total": 3457800,
+      "detail": {
+        "bphtb": 3457800,
+        "hotel": 0
+      }
+    },
+    "Sindangwangi": {
+      "total": 49206900,
+      "detail": {
+        "bphtb": 49206900,
+        "hotel": 0
+      }
+    },
+    "Sukahaji": {
+      "total": 446167596,
+      "detail": {
+        "bphtb": 446167596,
+        "hotel": 0
+      }
+    },
+    "Sumberjaya": {
+      "total": 2295074070,
+      "detail": {
+        "bphtb": 2295074070,
+        "hotel": 0
+      }
+    },
+    "Talaga": {
+      "total": 57496750,
+      "detail": {
+        "bphtb": 57496750,
+        "hotel": 0
+      }
+    }
+  },
+  "2019": {
+    "Argapura": {
+      "total": 2583588850,
+      "detail": {
+        "bphtb": 64378850,
+        "hotel": 0,
+        "bagi_hasil": 503842000
+      }
+    },
+    "Banjaran": {
+      "total": 2151882000,
+      "detail": {
+        "bphtb": 8500000,
+        "hotel": 0,
+        "bagi_hasil": 428676400
+      }
+    },
+    "Bantarujeg": {
+      "total": 2657007500,
+      "detail": {
+        "bphtb": 57196000,
+        "hotel": 0,
+        "bagi_hasil": 519962300
+      }
+    },
+    "Cigasong": {
+      "total": 1739104925,
+      "detail": {
+        "bphtb": 425103925,
+        "hotel": 0,
+        "bagi_hasil": 262800200
+      }
+    },
+    "Cikijing": {
+      "total": 3119652250,
+      "detail": {
+        "bphtb": 84244750,
+        "hotel": 0,
+        "bagi_hasil": 607081500
+      }
+    },
+    "Cingambul": {
+      "total": 2567093000,
+      "detail": {
+        "bphtb": 38680000,
+        "hotel": 0,
+        "bagi_hasil": 505682600
+      }
+    },
+    "Dawuan": {
+      "total": 3247288265,
+      "detail": {
+        "bphtb": 826830265,
+        "hotel": 0,
+        "bagi_hasil": 484091600
+      }
+    },
+    "Jatitujuh": {
+      "total": 3556718800,
+      "detail": {
+        "bphtb": 528151300,
+        "hotel": 0,
+        "bagi_hasil": 605713500
+      }
+    },
+    "Jatiwangi": {
+      "total": 5650921463,
+      "detail": {
+        "bphtb": 1837501463,
+        "hotel": 0,
+        "bagi_hasil": 762684000
+      }
+    },
+    "Kadipaten": {
+      "total": 2968485975,
+      "detail": {
+        "bphtb": 1149001475,
+        "hotel": 0,
+        "bagi_hasil": 363896900
+      }
+    },
+    "Kasokandel": {
+      "total": 3338414244,
+      "detail": {
+        "bphtb": 1003725744,
+        "hotel": 0,
+        "bagi_hasil": 466937700
+      }
+    },
+    "Kertajati": {
+      "total": 11181687011,
+      "detail": {
+        "bphtb": 7369560511,
+        "hotel": 0,
+        "bagi_hasil": 762425300
+      }
+    },
+    "Lemahsugih": {
+      "total": 3821592500,
+      "detail": {
+        "bphtb": 56313500,
+        "hotel": 0,
+        "bagi_hasil": 753055800
+      }
+    },
+    "Leuwimunding": {
+      "total": 4605272375,
+      "detail": {
+        "bphtb": 1884340875,
+        "hotel": 0,
+        "bagi_hasil": 544186300
+      }
+    },
+    "Ligung": {
+      "total": 5809045417,
+      "detail": {
+        "bphtb": 1852410917,
+        "hotel": 0,
+        "bagi_hasil": 791326900
+      }
+    },
+    "Maja": {
+      "total": 3468753163,
+      "detail": {
+        "bphtb": 149561663,
+        "hotel": 0,
+        "bagi_hasil": 663838300
+      }
+    },
+    "Majalengka": {
+      "total": 2935763453,
+      "detail": {
+        "bphtb": 2158515453,
+        "hotel": 0,
+        "bagi_hasil": 155449600
+      }
+    },
+    "Malausma": {
+      "total": 2477909500,
+      "detail": {
+        "bphtb": 21350000,
+        "hotel": 0,
+        "bagi_hasil": 491311900
+      }
+    },
+    "Palasah": {
+      "total": 3745688160,
+      "detail": {
+        "bphtb": 1075032160,
+        "hotel": 0,
+        "bagi_hasil": 534131200
+      }
+    },
+    "Panyingkiran": {
+      "total": 1830943750,
+      "detail": {
+        "bphtb": 170711750,
+        "hotel": 0,
+        "bagi_hasil": 332046400
+      }
+    },
+    "Rajagaluh": {
+      "total": 2507060900,
+      "detail": {
+        "bphtb": 84738400,
+        "hotel": 0,
+        "bagi_hasil": 484464500
+      }
+    },
+    "Sindang": {
+      "total": 1266084500,
+      "detail": {
+        "bphtb": 2000000,
+        "hotel": 0,
+        "bagi_hasil": 252816900
+      }
+    },
+    "Sindangwangi": {
+      "total": 2048817200,
+      "detail": {
+        "bphtb": 170546200,
+        "hotel": 0,
+        "bagi_hasil": 375654200
+      }
+    },
+    "Sukahaji": {
+      "total": 3328882134,
+      "detail": {
+        "bphtb": 1010083134,
+        "hotel": 0,
+        "bagi_hasil": 463759800
+      }
+    },
+    "Sumberjaya": {
+      "total": 4782784933,
+      "detail": {
+        "bphtb": 1545764433,
+        "hotel": 0,
+        "bagi_hasil": 647404100
+      }
+    },
+    "Talaga": {
+      "total": 3107842300,
+      "detail": {
+        "bphtb": 67654300,
+        "hotel": 0,
+        "bagi_hasil": 608037600
+      }
+    }
+  },
+  "2020": {
+    "Argapura": {
+      "total": 2315844750,
+      "detail": {
+        "bphtb": 18486250,
+        "hotel": 0,
+        "bagi_hasil": 459471700
+      }
+    },
+    "Banjaran": {
+      "total": 1998310300,
+      "detail": {
+        "bphtb": 17821800,
+        "hotel": 0,
+        "bagi_hasil": 396097700
+      }
+    },
+    "Bantarujeg": {
+      "total": 2431500467,
+      "detail": {
+        "bphtb": 68245967,
+        "hotel": 0,
+        "bagi_hasil": 472650900
+      }
+    },
+    "Cigasong": {
+      "total": 2788774134,
+      "detail": {
+        "bphtb": 1578725134,
+        "hotel": 0,
+        "bagi_hasil": 242009800
+      }
+    },
+    "Cikijing": {
+      "total": 2915029150,
+      "detail": {
+        "bphtb": 152159150,
+        "hotel": 0,
+        "bagi_hasil": 552574000
+      }
+    },
+    "Cingambul": {
+      "total": 2343258250,
+      "detail": {
+        "bphtb": 16217750,
+        "hotel": 0,
+        "bagi_hasil": 465408100
+      }
+    },
+    "Dawuan": {
+      "total": 2469485675,
+      "detail": {
+        "bphtb": 399115675,
+        "hotel": 0,
+        "bagi_hasil": 414074000
+      }
+    },
+    "Jatitujuh": {
+      "total": 2704842100,
+      "detail": {
+        "bphtb": 225947100,
+        "hotel": 0,
+        "bagi_hasil": 495779000
+      }
+    },
+    "Jatiwangi": {
+      "total": 5387757040,
+      "detail": {
+        "bphtb": 2100022040,
+        "hotel": 0,
+        "bagi_hasil": 657547000
+      }
+    },
+    "Kadipaten": {
+      "total": 2545675764,
+      "detail": {
+        "bphtb": 976182264,
+        "hotel": 0,
+        "bagi_hasil": 313898700
+      }
+    },
+    "Kasokandel": {
+      "total": 4021001350,
+      "detail": {
+        "bphtb": 1960406350,
+        "hotel": 0,
+        "bagi_hasil": 412119000
+      }
+    },
+    "Kertajati": {
+      "total": 6890914139,
+      "detail": {
+        "bphtb": 3935074139,
+        "hotel": 0,
+        "bagi_hasil": 591168000
+      }
+    },
+    "Lemahsugih": {
+      "total": 3464184150,
+      "detail": {
+        "bphtb": 41033650,
+        "hotel": 0,
+        "bagi_hasil": 684630100
+      }
+    },
+    "Leuwimunding": {
+      "total": 4887409782,
+      "detail": {
+        "bphtb": 2389255782,
+        "hotel": 0,
+        "bagi_hasil": 499630800
+      }
+    },
+    "Ligung": {
+      "total": 4861227259,
+      "detail": {
+        "bphtb": 1459720759,
+        "hotel": 0,
+        "bagi_hasil": 680301300
+      }
+    },
+    "Maja": {
+      "total": 3164391550,
+      "detail": {
+        "bphtb": 151602550,
+        "hotel": 0,
+        "bagi_hasil": 602557800
+      }
+    },
+    "Majalengka": {
+      "total": 8493677359,
+      "detail": {
+        "bphtb": 7292849149,
+        "hotel": 512689210,
+        "bagi_hasil": 137627800
+      }
+    },
+    "Malausma": {
+      "total": 2320964700,
+      "detail": {
+        "bphtb": 43187200,
+        "hotel": 0,
+        "bagi_hasil": 455555500
+      }
+    },
+    "Palasah": {
+      "total": 3248950450,
+      "detail": {
+        "bphtb": 915774450,
+        "hotel": 0,
+        "bagi_hasil": 466635200
+      }
+    },
+    "Panyingkiran": {
+      "total": 2016249850,
+      "detail": {
+        "bphtb": 489956850,
+        "hotel": 0,
+        "bagi_hasil": 305258600
+      }
+    },
+    "Rajagaluh": {
+      "total": 2291424788,
+      "detail": {
+        "bphtb": 134522788,
+        "hotel": 0,
+        "bagi_hasil": 431380400
+      }
+    },
+    "Sindang": {
+      "total": 1373568200,
+      "detail": {
+        "bphtb": 185618200,
+        "hotel": 0,
+        "bagi_hasil": 237590000
+      }
+    },
+    "Sindangwangi": {
+      "total": 1934386650,
+      "detail": {
+        "bphtb": 185844650,
+        "hotel": 0,
+        "bagi_hasil": 349708400
+      }
+    },
+    "Sukahaji": {
+      "total": 3426799464,
+      "detail": {
+        "bphtb": 1290973964,
+        "hotel": 0,
+        "bagi_hasil": 427165100
+      }
+    },
+    "Sumberjaya": {
+      "total": 4213070304,
+      "detail": {
+        "bphtb": 1425746304,
+        "hotel": 0,
+        "bagi_hasil": 557464800
+      }
+    },
+    "Talaga": {
+      "total": 2840176600,
+      "detail": {
+        "bphtb": 39185100,
+        "hotel": 0,
+        "bagi_hasil": 560198300
+      }
+    }
+  },
+  "2021": {
+    "Argapura": {
+      "total": 2766468273,
+      "detail": {
+        "bphtb": 22223273,
+        "hotel": 0,
+        "bagi_hasil": 548849000
+      }
+    },
+    "Banjaran": {
+      "total": 2442275000,
+      "detail": {
+        "bphtb": 9400000,
+        "hotel": 0,
+        "bagi_hasil": 486575000
+      }
+    },
+    "Bantarujeg": {
+      "total": 2932892983,
+      "detail": {
+        "bphtb": 66132983,
+        "hotel": 0,
+        "bagi_hasil": 573352000
+      }
+    },
+    "Cigasong": {
+      "total": 2506511250,
+      "detail": {
+        "bphtb": 1020136250,
+        "hotel": 0,
+        "bagi_hasil": 297275000
+      }
+    },
+    "Cikijing": {
+      "total": 3449500450,
+      "detail": {
+        "bphtb": 208750450,
+        "hotel": 0,
+        "bagi_hasil": 648150000
+      }
+    },
+    "Cingambul": {
+      "total": 2823625000,
+      "detail": {
+        "bphtb": 30955000,
+        "hotel": 0,
+        "bagi_hasil": 558534000
+      }
+    },
+    "Dawuan": {
+      "total": 5735852140,
+      "detail": {
+        "bphtb": 3349377140,
+        "hotel": 0,
+        "bagi_hasil": 477295000
+      }
+    },
+    "Jatitujuh": {
+      "total": 5854256923,
+      "detail": {
+        "bphtb": 2775321923,
+        "hotel": 0,
+        "bagi_hasil": 615787000
+      }
+    },
+    "Jatiwangi": {
+      "total": 6077790092,
+      "detail": {
+        "bphtb": 2299595092,
+        "hotel": 0,
+        "bagi_hasil": 755639000
+      }
+    },
+    "Kadipaten": {
+      "total": 3086482818,
+      "detail": {
+        "bphtb": 1284567492,
+        "hotel": 36530326,
+        "bagi_hasil": 353077000
+      }
+    },
+    "Kasokandel": {
+      "total": 3551513198,
+      "detail": {
+        "bphtb": 1211653198,
+        "hotel": 0,
+        "bagi_hasil": 467972000
+      }
+    },
+    "Kertajati": {
+      "total": 8665096069,
+      "detail": {
+        "bphtb": 5218561069,
+        "hotel": 0,
+        "bagi_hasil": 689307000
+      }
+    },
+    "Lemahsugih": {
+      "total": 4176760000,
+      "detail": {
+        "bphtb": 24000000,
+        "hotel": 0,
+        "bagi_hasil": 830552000
+      }
+    },
+    "Leuwimunding": {
+      "total": 3855706616,
+      "detail": {
+        "bphtb": 847011616,
+        "hotel": 0,
+        "bagi_hasil": 601739000
+      }
+    },
+    "Ligung": {
+      "total": 10989102450,
+      "detail": {
+        "bphtb": 7016387450,
+        "hotel": 0,
+        "bagi_hasil": 794543000
+      }
+    },
+    "Maja": {
+      "total": 4159878900,
+      "detail": {
+        "bphtb": 534918900,
+        "hotel": 0,
+        "bagi_hasil": 724992000
+      }
+    },
+    "Majalengka": {
+      "total": 5431294458,
+      "detail": {
+        "bphtb": 3684189736,
+        "hotel": 899609722,
+        "bagi_hasil": 169499000
+      }
+    },
+    "Malausma": {
+      "total": 2758506400,
+      "detail": {
+        "bphtb": 59981400,
+        "hotel": 0,
+        "bagi_hasil": 539705000
+      }
+    },
+    "Palasah": {
+      "total": 4086963883,
+      "detail": {
+        "bphtb": 1449708883,
+        "hotel": 0,
+        "bagi_hasil": 527451000
+      }
+    },
+    "Panyingkiran": {
+      "total": 2281974200,
+      "detail": {
+        "bphtb": 416869200,
+        "hotel": 0,
+        "bagi_hasil": 373021000
+      }
+    },
+    "Rajagaluh": {
+      "total": 2899182941,
+      "detail": {
+        "bphtb": 253297941,
+        "hotel": 0,
+        "bagi_hasil": 529177000
+      }
+    },
+    "Sindang": {
+      "total": 1543578350,
+      "detail": {
+        "bphtb": 87523350,
+        "hotel": 0,
+        "bagi_hasil": 291211000
+      }
+    },
+    "Sindangwangi": {
+      "total": 2119560000,
+      "detail": {
+        "bagi_hasil": 423912000
+      }
+    },
+    "Sukahaji": {
+      "total": 2595785000,
+      "detail": {
+        "bagi_hasil": 519157000
+      }
+    },
+    "Sumberjaya": {
+      "total": 3119050000,
+      "detail": {
+        "bagi_hasil": 623810000
+      }
+    },
+    "Talaga": {
+      "total": 3404335000,
+      "detail": {
+        "bagi_hasil": 680867000
+      }
+    }
+  },
+  "2022": {
+    "Argapura": {
+      "total": 3109905000,
+      "detail": {
+        "bagi_hasil": 621981000
+      }
+    },
+    "Banjaran": {
+      "total": 2683240000,
+      "detail": {
+        "bagi_hasil": 536648000
+      }
+    },
+    "Bantarujeg": {
+      "total": 3117380000,
+      "detail": {
+        "bagi_hasil": 623476000
+      }
+    },
+    "Cigasong": {
+      "total": 1675215000,
+      "detail": {
+        "bagi_hasil": 335043000
+      }
+    },
+    "Cikijing": {
+      "total": 3602555000,
+      "detail": {
+        "bagi_hasil": 720511000
+      }
+    },
+    "Cingambul": {
+      "total": 2991685000,
+      "detail": {
+        "bagi_hasil": 598337000
+      }
+    },
+    "Dawuan": {
+      "total": 2662550000,
+      "detail": {
+        "bagi_hasil": 532510000
+      }
+    },
+    "Jatitujuh": {
+      "total": 3422675000,
+      "detail": {
+        "bagi_hasil": 684535000
+      }
+    },
+    "Jatiwangi": {
+      "total": 4304220000,
+      "detail": {
+        "bagi_hasil": 860844000
+      }
+    },
+    "Kadipaten": {
+      "total": 2000480000,
+      "detail": {
+        "bagi_hasil": 400096000
+      }
+    },
+    "Kasokandel": {
+      "total": 2660445000,
+      "detail": {
+        "bagi_hasil": 532089000
+      }
+    },
+    "Kertajati": {
+      "total": 4365205000,
+      "detail": {
+        "bagi_hasil": 873041000
+      }
+    },
+    "Lemahsugih": {
+      "total": 4469760000,
+      "detail": {
+        "bagi_hasil": 893952000
+      }
+    },
+    "Leuwimunding": {
+      "total": 3289405000,
+      "detail": {
+        "bagi_hasil": 657881000
+      }
+    },
+    "Ligung": {
+      "total": 4672920000,
+      "detail": {
+        "bagi_hasil": 934584000
+      }
+    },
+    "Maja": {
+      "total": 4008440000,
+      "detail": {
+        "bagi_hasil": 801688000
+      }
+    },
+    "Majalengka": {
+      "total": 969945000,
+      "detail": {
+        "bagi_hasil": 193989000
+      }
+    },
+    "Malausma": {
+      "total": 2795440000,
+      "detail": {
+        "bagi_hasil": 559088000
+      }
+    },
+    "Palasah": {
+      "total": 3237600000,
+      "detail": {
+        "bagi_hasil": 647520000
+      }
+    },
+    "Panyingkiran": {
+      "total": 2067810000,
+      "detail": {
+        "bagi_hasil": 413562000
+      }
+    },
+    "Rajagaluh": {
+      "total": 2946360000,
+      "detail": {
+        "bagi_hasil": 589272000
+      }
+    },
+    "Sindang": {
+      "total": 1613885000,
+      "detail": {
+        "bagi_hasil": 322777000
+      }
+    }
+  }
+}

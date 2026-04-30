@@ -1,0 +1,3374 @@
+[
+  {
+    "nama": "TK Kartini Kober Binamulya",
+    "kecamatan": "Argapura",
+    "lat": -6.9417564,
+    "lng": 108.3189444
+  },
+  {
+    "nama": "MIS PUI CIMEONG",
+    "kecamatan": "Argapura",
+    "lat": -6.9582776,
+    "lng": 108.3114984
+  },
+  {
+    "nama": "Kober At-Taqwa Banjaran",
+    "kecamatan": "Argapura",
+    "lat": -6.9628666,
+    "lng": 108.3153765
+  },
+  {
+    "nama": "MTs PUI Banjaran",
+    "kecamatan": "Argapura",
+    "lat": -6.9613719,
+    "lng": 108.314469
+  },
+  {
+    "nama": "SMA Negeri 1 Talaga",
+    "kecamatan": "Argapura",
+    "lat": -6.985093,
+    "lng": 108.3186165
+  },
+  {
+    "nama": "MI AT-TOHA",
+    "kecamatan": "Argapura",
+    "lat": -6.9638246,
+    "lng": 108.3133834
+  },
+  {
+    "nama": "SEKOLAH TK-AZ-ZAHARA II ARGAPURA",
+    "kecamatan": "Argapura",
+    "lat": -6.9065417,
+    "lng": 108.3292525
+  },
+  {
+    "nama": "SMK PRESIDEN CIREBON (SMK PUSAT KEUNGGULAN)",
+    "kecamatan": "Argapura",
+    "lat": -6.733327,
+    "lng": 108.5475156
+  },
+  {
+    "nama": "SMK NAILUL KHOIR",
+    "kecamatan": "Argapura",
+    "lat": -6.9553935,
+    "lng": 108.3197027
+  },
+  {
+    "nama": "SDN GIRIMULYA II",
+    "kecamatan": "Argapura",
+    "lat": -6.9479272,
+    "lng": 108.3132062
+  },
+  {
+    "nama": "Pesantren Al Abror",
+    "kecamatan": "Argapura",
+    "lat": -6.9464483,
+    "lng": 108.3094988
+  },
+  {
+    "nama": "DTA PUI Girimulya",
+    "kecamatan": "Argapura",
+    "lat": -6.9462617,
+    "lng": 108.3117305
+  },
+  {
+    "nama": "SMP Islam Terpadu Nailul Khoir",
+    "kecamatan": "Argapura",
+    "lat": -6.9554848,
+    "lng": 108.3197126
+  },
+  {
+    "nama": "SDN CIMEONG",
+    "kecamatan": "Argapura",
+    "lat": -6.9588579,
+    "lng": 108.3097035
+  },
+  {
+    "nama": "Mis Sukaresmi",
+    "kecamatan": "Argapura",
+    "lat": -6.9220548,
+    "lng": 108.3020777
+  },
+  {
+    "nama": "Madrasah Ibtidaiah Al Jihad Sukaresmi",
+    "kecamatan": "Argapura",
+    "lat": -6.9234465,
+    "lng": 108.302293
+  },
+  {
+    "nama": "SPP-SPMA Maja-Majalengka - Aegle marmelos (SMKN 1 Maja)",
+    "kecamatan": "Argapura",
+    "lat": -6.8898021,
+    "lng": 108.306068
+  },
+  {
+    "nama": "SMA Negeri 1 Majaa",
+    "kecamatan": "Argapura",
+    "lat": -6.890015,
+    "lng": 108.3039415
+  },
+  {
+    "nama": "Ngampar Samak",
+    "kecamatan": "Argapura",
+    "lat": -6.890885,
+    "lng": 108.3035611
+  },
+  {
+    "nama": "SDN Maja Selatan VI",
+    "kecamatan": "Argapura",
+    "lat": -6.8940767,
+    "lng": 108.3084409
+  },
+  {
+    "nama": "MIS PUI MAJA",
+    "kecamatan": "Argapura",
+    "lat": -6.8893203,
+    "lng": 108.3045866
+  },
+  {
+    "nama": "SDN GIRIMULYA I",
+    "kecamatan": "Argapura",
+    "lat": -6.9361933,
+    "lng": 108.3282751
+  },
+  {
+    "nama": "PP Nurul Huda",
+    "kecamatan": "Argapura",
+    "lat": -6.9363172,
+    "lng": 108.3281439
+  },
+  {
+    "nama": "MI PUI SANGIANG",
+    "kecamatan": "Argapura",
+    "lat": -6.948439,
+    "lng": 108.3444884
+  },
+  {
+    "nama": "Sdn Cihaur 3",
+    "kecamatan": "Argapura",
+    "lat": -6.9432591,
+    "lng": 108.2999665
+  },
+  {
+    "nama": "SD Negeri Cihaur 1",
+    "kecamatan": "Argapura",
+    "lat": -6.9327114,
+    "lng": 108.2982341
+  },
+  {
+    "nama": "Sekolah Menengah Kejuruan Negeri Anjatan",
+    "kecamatan": "Argapura",
+    "lat": -6.95433,
+    "lng": 108.282659
+  },
+  {
+    "nama": "SDN Salado",
+    "kecamatan": "Banjaran",
+    "lat": -6.9848524,
+    "lng": 108.3276452
+  },
+  {
+    "nama": "Pondok Pesantren Miftahul Falah",
+    "kecamatan": "Banjaran",
+    "lat": -6.9852301,
+    "lng": 108.3333141
+  },
+  {
+    "nama": "TK Bina Putra",
+    "kecamatan": "Banjaran",
+    "lat": -2.44565,
+    "lng": 117.8888
+  },
+  {
+    "nama": "SDN Ganeas I",
+    "kecamatan": "Banjaran",
+    "lat": -6.9804989,
+    "lng": 108.3284156
+  },
+  {
+    "nama": "TPQ AL BAROKAH",
+    "kecamatan": "Banjaran",
+    "lat": -6.9808759,
+    "lng": 108.3271671
+  },
+  {
+    "nama": "SMK BINA WIRAUSAHA",
+    "kecamatan": "Banjaran",
+    "lat": -6.9966111,
+    "lng": 108.3296356
+  },
+  {
+    "nama": "Barudak kunans",
+    "kecamatan": "Banjaran",
+    "lat": -6.9992094,
+    "lng": 108.3334453
+  },
+  {
+    "nama": "Pondok Pesantren ALHIDAYATULLAH",
+    "kecamatan": "Banjaran",
+    "lat": -7.0000938,
+    "lng": 108.334696
+  },
+  {
+    "nama": "SDN Cicanir I",
+    "kecamatan": "Banjaran",
+    "lat": -6.9938043,
+    "lng": 108.3242308
+  },
+  {
+    "nama": "Pondok Pesantren AL KAROMAH",
+    "kecamatan": "Banjaran",
+    "lat": -6.9929374,
+    "lng": 108.3232846
+  },
+  {
+    "nama": "SMK SINAR FAJAR CIKIJING",
+    "kecamatan": "Banjaran",
+    "lat": -7.0056687,
+    "lng": 108.3410172
+  },
+  {
+    "nama": "MDA PUI Cicanir",
+    "kecamatan": "Banjaran",
+    "lat": -6.9935727,
+    "lng": 108.3243374
+  },
+  {
+    "nama": "MI PUI 2 Genteng",
+    "kecamatan": "Banjaran",
+    "lat": -6.9783464,
+    "lng": 108.3261897
+  },
+  {
+    "nama": "RA Fitriyah PUI Genteng",
+    "kecamatan": "Banjaran",
+    "lat": -6.9782468,
+    "lng": 108.3262652
+  },
+  {
+    "nama": "Kober As-Syahida",
+    "kecamatan": "Banjaran",
+    "lat": -6.978015,
+    "lng": 108.3268337
+  },
+  {
+    "nama": "Sdn Suniabaru 2",
+    "kecamatan": "Banjaran",
+    "lat": -6.9763358,
+    "lng": 108.3361119
+  },
+  {
+    "nama": "TPQ NURUL FALAH",
+    "kecamatan": "Banjaran",
+    "lat": -6.9789081,
+    "lng": 108.3286721
+  },
+  {
+    "nama": "SDN ARGASRI 1",
+    "kecamatan": "Banjaran",
+    "lat": -6.9885986,
+    "lng": 108.3388176
+  },
+  {
+    "nama": "TPQ Bustanul Ulum",
+    "kecamatan": "Banjaran",
+    "lat": -6.9847615,
+    "lng": 108.3356312
+  },
+  {
+    "nama": "Pondok Pesantren Manbaul Barokah",
+    "kecamatan": "Banjaran",
+    "lat": -6.9893681,
+    "lng": 108.3399062
+  },
+  {
+    "nama": "SMK BANGKIT INDONESIA TALAGA",
+    "kecamatan": "Banjaran",
+    "lat": -6.9853704,
+    "lng": 108.3184778
+  },
+  {
+    "nama": "RA Riyadus Sholihin",
+    "kecamatan": "Banjaran",
+    "lat": -6.9838846,
+    "lng": 108.3423812
+  },
+  {
+    "nama": "SMK Negeri 1 Talaga",
+    "kecamatan": "Banjaran",
+    "lat": -6.9814564,
+    "lng": 108.3104649
+  },
+  {
+    "nama": "MI PUI Talaga Wetan",
+    "kecamatan": "Banjaran",
+    "lat": -6.9843643,
+    "lng": 108.3135124
+  },
+  {
+    "nama": "SMAN 3 Majalengka",
+    "kecamatan": "Banjaran",
+    "lat": -6.985,
+    "lng": 108.3188209
+  },
+  {
+    "nama": "Mia Sri Mulyano",
+    "kecamatan": "Banjaran",
+    "lat": -6.985362,
+    "lng": 108.3186288
+  },
+  {
+    "nama": "SMP Negeri 1 Talaga",
+    "kecamatan": "Banjaran",
+    "lat": -6.9849906,
+    "lng": 108.3175517
+  },
+  {
+    "nama": "SMP Negeri 1 Talaga",
+    "kecamatan": "Banjaran",
+    "lat": -6.9848547,
+    "lng": 108.3176937
+  },
+  {
+    "nama": "SMA IT AL-MANSHUR",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0297852,
+    "lng": 108.2426205
+  },
+  {
+    "nama": "RA Mekarsari",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0269713,
+    "lng": 108.2446826
+  },
+  {
+    "nama": "SMP IT AL-MANSHUR",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0290562,
+    "lng": 108.2428767
+  },
+  {
+    "nama": "PONDOK PESANTREN RIYADHUT THOLIBIN",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0290026,
+    "lng": 108.2426267
+  },
+  {
+    "nama": "SMK Al-Taufiq Bantarujeg",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0136643,
+    "lng": 108.2478354
+  },
+  {
+    "nama": "Yayasan Pendidikan Islam Al Manshur",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0294375,
+    "lng": 108.2428125
+  },
+  {
+    "nama": "SMK NEGERI 1 MALAUSMA",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0396963,
+    "lng": 108.247981
+  },
+  {
+    "nama": "Pondok Putri Al Manshur",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0296252,
+    "lng": 108.2427509
+  },
+  {
+    "nama": "SDN Werasari I",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0359518,
+    "lng": 108.2352681
+  },
+  {
+    "nama": "R.A KARTIKA BUNGURSARI",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0376884,
+    "lng": 108.2427713
+  },
+  {
+    "nama": "SD NEGERI MALAUSMA II",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0360961,
+    "lng": 108.2449768
+  },
+  {
+    "nama": "SMP AR-RIDWAN",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0374462,
+    "lng": 108.2440833
+  },
+  {
+    "nama": "Pondok Pesantren AR-RIDWAN",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0371636,
+    "lng": 108.2440371
+  },
+  {
+    "nama": "SDN Werasari III",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0369423,
+    "lng": 108.234816
+  },
+  {
+    "nama": "MA NURAKHMAN HOWARA",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0376252,
+    "lng": 108.239606
+  },
+  {
+    "nama": "SDN Sindanghurip",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0134223,
+    "lng": 108.2425085
+  },
+  {
+    "nama": "Dta Nurul Huda",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0151185,
+    "lng": 108.2436018
+  },
+  {
+    "nama": "isfia",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0154336,
+    "lng": 108.242075
+  },
+  {
+    "nama": "MTsN 4 Majalengka",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0137866,
+    "lng": 108.2347072
+  },
+  {
+    "nama": "TK AR-ROHMAH SINDANGHURIP",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0170831,
+    "lng": 108.2434409
+  },
+  {
+    "nama": "SDN Cipeundeuy",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0134939,
+    "lng": 108.2339829
+  },
+  {
+    "nama": "Madrasah Ibtida'iyah",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0154113,
+    "lng": 108.2460415
+  },
+  {
+    "nama": "sdn baros",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0140247,
+    "lng": 108.2466473
+  },
+  {
+    "nama": "Majlis Ta'lim Al-Mudzakir",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.028978,
+    "lng": 108.255884
+  },
+  {
+    "nama": "SDN Lebakwangi I",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0291607,
+    "lng": 108.25964
+  },
+  {
+    "nama": "المدرسة السلفيّة المصطفين الاخيار",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0451931,
+    "lng": 108.2583432
+  },
+  {
+    "nama": "SDN Kramat Jaya",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0307931,
+    "lng": 108.2277043
+  },
+  {
+    "nama": "TK AMANAH KERAMAT JAYA",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0302291,
+    "lng": 108.2273433
+  },
+  {
+    "nama": "SMP ISLAM ABATA",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0231671,
+    "lng": 108.2213367
+  },
+  {
+    "nama": "SDN Sukadana III",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0274386,
+    "lng": 108.2213309
+  },
+  {
+    "nama": "MTs Buninagara Yayasan Nurul Muchtar",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.039146,
+    "lng": 108.2275064
+  },
+  {
+    "nama": "Yayasan Al Irfan Sunanul Huda",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0350939,
+    "lng": 108.2341666
+  },
+  {
+    "nama": "SDN BUNINAGARA 1",
+    "kecamatan": "Bantarujeg",
+    "lat": -7.0393113,
+    "lng": 108.2293349
+  },
+  {
+    "nama": "LPK CIS MAJALENGKA",
+    "kecamatan": "Cigasong",
+    "lat": -6.8357598,
+    "lng": 108.208641
+  },
+  {
+    "nama": "sma 2 majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.8410779,
+    "lng": 108.2097536
+  },
+  {
+    "nama": "Sekolah Akhlak Insan Kamil Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.831809,
+    "lng": 108.2092293
+  },
+  {
+    "nama": "SMA PGRI 1 Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.8323319,
+    "lng": 108.2100948
+  },
+  {
+    "nama": "Madrasah Ibtidaiyah Ma'arif Munjul",
+    "kecamatan": "Cigasong",
+    "lat": -6.8374229,
+    "lng": 108.2096219
+  },
+  {
+    "nama": "SMA Negeri 1 Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.8334848,
+    "lng": 108.2178932
+  },
+  {
+    "nama": "SDN SIDAMUKTI I",
+    "kecamatan": "Cigasong",
+    "lat": -6.8531894,
+    "lng": 108.1983013
+  },
+  {
+    "nama": "SMP Negeri 7 Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.8440956,
+    "lng": 108.2108081
+  },
+  {
+    "nama": "SMK PUI Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.8399389,
+    "lng": 108.2277763
+  },
+  {
+    "nama": "SEKOLAH AVSEC MAJALENGKA",
+    "kecamatan": "Cigasong",
+    "lat": -6.8265029,
+    "lng": 108.2015738
+  },
+  {
+    "nama": "PKBM Cinta Damai - Sekolah Kesetaraan/Persamaan Kabupaten Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.8419027,
+    "lng": 108.2303449
+  },
+  {
+    "nama": "SMK MEC Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.8262146,
+    "lng": 108.2009178
+  },
+  {
+    "nama": "Santri Dafa (Santri PP Darul Falah Cijati)",
+    "kecamatan": "Cigasong",
+    "lat": -6.8281982,
+    "lng": 108.2079201
+  },
+  {
+    "nama": "MA Darul Falah Cijati",
+    "kecamatan": "Cigasong",
+    "lat": -6.8282647,
+    "lng": 108.2080116
+  },
+  {
+    "nama": "SDN MUNJUL II KEC/KAB.MAJALENGKA",
+    "kecamatan": "Cigasong",
+    "lat": -6.831344,
+    "lng": 108.2069356
+  },
+  {
+    "nama": "RA & KOBER SITI FATIMAH CIJATI",
+    "kecamatan": "Cigasong",
+    "lat": -6.82753,
+    "lng": 108.2076448
+  },
+  {
+    "nama": "SMKS WAHANA BAKTI MAJALENGKA",
+    "kecamatan": "Cigasong",
+    "lat": -6.8354529,
+    "lng": 108.2199431
+  },
+  {
+    "nama": "MAS Al Ishlah PERSIS MAJALENGKA",
+    "kecamatan": "Cigasong",
+    "lat": -6.8357954,
+    "lng": 108.2174327
+  },
+  {
+    "nama": "SDN Babakanjawa II",
+    "kecamatan": "Cigasong",
+    "lat": -6.8420725,
+    "lng": 108.2132542
+  },
+  {
+    "nama": "Pondok Pesantren Roudlotul Anwar Babakanjawa Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.8421238,
+    "lng": 108.2131447
+  },
+  {
+    "nama": "SDN MAJALENGKA KULON I",
+    "kecamatan": "Cigasong",
+    "lat": -6.8354966,
+    "lng": 108.221453
+  },
+  {
+    "nama": "Munjul",
+    "kecamatan": "Cigasong",
+    "lat": -6.8361955,
+    "lng": 108.1992015
+  },
+  {
+    "nama": "SMA N1 Majalengka",
+    "kecamatan": "Cigasong",
+    "lat": -6.820794,
+    "lng": 108.1996009
+  },
+  {
+    "nama": "SIT Tazkia Insani",
+    "kecamatan": "Cigasong",
+    "lat": -6.8205926,
+    "lng": 108.1985508
+  },
+  {
+    "nama": "SMK PUI CIKIJING",
+    "kecamatan": "Cikijing",
+    "lat": -7.0256677,
+    "lng": 108.3535617
+  },
+  {
+    "nama": "KOPSIS Smk Pui Cikijing",
+    "kecamatan": "Cikijing",
+    "lat": -7.0257027,
+    "lng": 108.3535388
+  },
+  {
+    "nama": "SD IP AN NABAA",
+    "kecamatan": "Cikijing",
+    "lat": -7.0211475,
+    "lng": 108.3572809
+  },
+  {
+    "nama": "SMA Negeri 1 Cikijing",
+    "kecamatan": "Cikijing",
+    "lat": -7.0285019,
+    "lng": 108.3439699
+  },
+  {
+    "nama": "MTss PUI Cikijing",
+    "kecamatan": "Cikijing",
+    "lat": -7.0176382,
+    "lng": 108.366555
+  },
+  {
+    "nama": "SDIT MEDISSINA CIKIJING",
+    "kecamatan": "Cikijing",
+    "lat": -7.0301285,
+    "lng": 108.3690526
+  },
+  {
+    "nama": "Pondok Pesantren Cihagi",
+    "kecamatan": "Cikijing",
+    "lat": -7.0290363,
+    "lng": 108.3588496
+  },
+  {
+    "nama": "RUMAH TAHFIDZH MARI BERIMAN DESA CIRANJENG",
+    "kecamatan": "Cikijing",
+    "lat": -7.0366485,
+    "lng": 108.3549139
+  },
+  {
+    "nama": "MA PERSIS CINGAMBUL",
+    "kecamatan": "Cikijing",
+    "lat": -7.0393979,
+    "lng": 108.3522076
+  },
+  {
+    "nama": "PPI 297 CINGAMBUL",
+    "kecamatan": "Cikijing",
+    "lat": -7.0394875,
+    "lng": 108.3523281
+  },
+  {
+    "nama": "SMP PUI MUKTISARI",
+    "kecamatan": "Cikijing",
+    "lat": -7.0406267,
+    "lng": 108.3621734
+  },
+  {
+    "nama": "SDN Kasturi 1",
+    "kecamatan": "Cikijing",
+    "lat": -7.0118286,
+    "lng": 108.3548039
+  },
+  {
+    "nama": "MTs PUI Kasturi",
+    "kecamatan": "Cikijing",
+    "lat": -7.0122659,
+    "lng": 108.3559812
+  },
+  {
+    "nama": "Pondok Pesantren Al-Azhar Jatisari",
+    "kecamatan": "Cikijing",
+    "lat": -7.0093313,
+    "lng": 108.3606746
+  },
+  {
+    "nama": "DTA PUI",
+    "kecamatan": "Cikijing",
+    "lat": -7.012221,
+    "lng": 108.3559431
+  },
+  {
+    "nama": "Yayasan Pondok Pesantren Al-Barokah",
+    "kecamatan": "Cikijing",
+    "lat": -7.0132933,
+    "lng": 108.3592749
+  },
+  {
+    "nama": "Pengajian Nurul Hikmah",
+    "kecamatan": "Cikijing",
+    "lat": -7.0089922,
+    "lng": 108.3532029
+  },
+  {
+    "nama": "Pondok Pesantren Nurul Iman / Yayasan Nurul Iman",
+    "kecamatan": "Cikijing",
+    "lat": -7.0186791,
+    "lng": 108.3681081
+  },
+  {
+    "nama": "SD Negeri 02 Sukamukti",
+    "kecamatan": "Cikijing",
+    "lat": -7.025822,
+    "lng": 108.3667
+  },
+  {
+    "nama": "SDN Ckijing 3",
+    "kecamatan": "Cikijing",
+    "lat": -7.0200978,
+    "lng": 108.3684433
+  },
+  {
+    "nama": "SD Negeri 03 Cikijing",
+    "kecamatan": "Cikijing",
+    "lat": -7.025466,
+    "lng": 108.366516
+  },
+  {
+    "nama": "SDN CIKIJING II",
+    "kecamatan": "Cikijing",
+    "lat": -7.018286,
+    "lng": 108.3704693
+  },
+  {
+    "nama": "TPQ Al-Kautsar Cikijing Majalengka",
+    "kecamatan": "Cikijing",
+    "lat": -7.020734,
+    "lng": 108.3690139
+  },
+  {
+    "nama": "SDN Cikijing 1",
+    "kecamatan": "Cikijing",
+    "lat": -7.0187377,
+    "lng": 108.3711236
+  },
+  {
+    "nama": "Ma'had Al-Atsary Cikijing",
+    "kecamatan": "Cikijing",
+    "lat": -7.0263855,
+    "lng": 108.3454406
+  },
+  {
+    "nama": "MA MANSYAUL ULUM",
+    "kecamatan": "Cikijing",
+    "lat": -7.0245195,
+    "lng": 108.3387043
+  },
+  {
+    "nama": "Pondok Pesantren Ma'had Tahfidzul Qur'an Roudhotul 'Ilmi",
+    "kecamatan": "Cikijing",
+    "lat": -7.0284173,
+    "lng": 108.3443439
+  },
+  {
+    "nama": "Cibeureum Kec. Sukamantri Kab. Ciamis",
+    "kecamatan": "Cingambul",
+    "lat": -7.0811642,
+    "lng": 108.3029974
+  },
+  {
+    "nama": "MIS SINDANGWANGI",
+    "kecamatan": "Cingambul",
+    "lat": -7.0926116,
+    "lng": 108.3433572
+  },
+  {
+    "nama": "MA MEKARWANGI",
+    "kecamatan": "Cingambul",
+    "lat": -7.0929707,
+    "lng": 108.3432759
+  },
+  {
+    "nama": "Sekolah SD",
+    "kecamatan": "Cingambul",
+    "lat": -7.0214379,
+    "lng": 108.3178328
+  },
+  {
+    "nama": "SDN 2 Sindanglaya",
+    "kecamatan": "Cingambul",
+    "lat": -7.093352,
+    "lng": 108.321069
+  },
+  {
+    "nama": "T",
+    "kecamatan": "Cingambul",
+    "lat": -7.0946997,
+    "lng": 108.3193759
+  },
+  {
+    "nama": "Butik Seragam Sekolah",
+    "kecamatan": "Cingambul",
+    "lat": -7.0494151,
+    "lng": 108.3529959
+  },
+  {
+    "nama": "Madrasah",
+    "kecamatan": "Cingambul",
+    "lat": -7.0786266,
+    "lng": 108.29831
+  },
+  {
+    "nama": "MIS BAETURROHMAH",
+    "kecamatan": "Cingambul",
+    "lat": -7.0252678,
+    "lng": 108.3296691
+  },
+  {
+    "nama": "MI PUI CIRANCA",
+    "kecamatan": "Cingambul",
+    "lat": -7.0336393,
+    "lng": 108.2827373
+  },
+  {
+    "nama": "RA - Kober Daarussyifa PUI",
+    "kecamatan": "Cingambul",
+    "lat": -7.0400874,
+    "lng": 108.3592406
+  },
+  {
+    "nama": "CIKIDUL AHUY",
+    "kecamatan": "Cingambul",
+    "lat": -7.0477561,
+    "lng": 108.268902
+  },
+  {
+    "nama": "SMKS Nasional Cirebon",
+    "kecamatan": "Cingambul",
+    "lat": -6.7345649,
+    "lng": 108.5377401
+  },
+  {
+    "nama": "SDN Sinarjati II",
+    "kecamatan": "Dawuan",
+    "lat": -6.7419957,
+    "lng": 108.2197962
+  },
+  {
+    "nama": "SD Gunungsari IV",
+    "kecamatan": "Dawuan",
+    "lat": -6.7460555,
+    "lng": 108.2194948
+  },
+  {
+    "nama": "SD Negeri Sinarjati 3",
+    "kecamatan": "Dawuan",
+    "lat": -6.7457574,
+    "lng": 108.2104624
+  },
+  {
+    "nama": "UNIVERSITAS SINDANG KASIH MAJALENGKA",
+    "kecamatan": "Dawuan",
+    "lat": -6.7520827,
+    "lng": 108.2113676
+  },
+  {
+    "nama": "PAUD An-Nur Kasokandel",
+    "kecamatan": "Dawuan",
+    "lat": -6.7492756,
+    "lng": 108.2112332
+  },
+  {
+    "nama": "SMAN 1 Kasokandel",
+    "kecamatan": "Dawuan",
+    "lat": -6.7509272,
+    "lng": 108.2117493
+  },
+  {
+    "nama": "Anda Sukanda NP",
+    "kecamatan": "Dawuan",
+    "lat": -6.7474586,
+    "lng": 108.2187301
+  },
+  {
+    "nama": "Tk MELATI Sinarjati",
+    "kecamatan": "Dawuan",
+    "lat": -6.7475338,
+    "lng": 108.208599
+  },
+  {
+    "nama": "RA Al-Badariyah",
+    "kecamatan": "Dawuan",
+    "lat": -6.7562025,
+    "lng": 108.2210066
+  },
+  {
+    "nama": "DTA Al-Ghufron",
+    "kecamatan": "Dawuan",
+    "lat": -6.7555569,
+    "lng": 108.2215631
+  },
+  {
+    "nama": "AKPER YPIB Majalengka",
+    "kecamatan": "Dawuan",
+    "lat": -6.7520744,
+    "lng": 108.2108244
+  },
+  {
+    "nama": "SMA IT AR RAHMAN - MAJALENGKA",
+    "kecamatan": "Dawuan",
+    "lat": -6.7582596,
+    "lng": 108.1995702
+  },
+  {
+    "nama": "Pancong Kenzie",
+    "kecamatan": "Dawuan",
+    "lat": -6.7507028,
+    "lng": 108.2113793
+  },
+  {
+    "nama": "SD Negeri Sinarjati 1",
+    "kecamatan": "Dawuan",
+    "lat": -6.7386658,
+    "lng": 108.2169978
+  },
+  {
+    "nama": "SDN Baturuyuk 2",
+    "kecamatan": "Dawuan",
+    "lat": -6.7369348,
+    "lng": 108.2233458
+  },
+  {
+    "nama": "Mandapa",
+    "kecamatan": "Dawuan",
+    "lat": -6.7303368,
+    "lng": 108.2206209
+  },
+  {
+    "nama": "SD NEGERI BATURUYUK 1",
+    "kecamatan": "Dawuan",
+    "lat": -6.735071,
+    "lng": 108.2241203
+  },
+  {
+    "nama": "RA Miftahul Ulum Sinarjati",
+    "kecamatan": "Dawuan",
+    "lat": -6.7378887,
+    "lng": 108.2179006
+  },
+  {
+    "nama": "Yayasan Bani abidin Mandapa",
+    "kecamatan": "Dawuan",
+    "lat": -6.7308999,
+    "lng": 108.2194016
+  },
+  {
+    "nama": "SDN Mandapa I",
+    "kecamatan": "Dawuan",
+    "lat": -6.7311973,
+    "lng": 108.2240976
+  },
+  {
+    "nama": "Sa'adatullail Arroyan",
+    "kecamatan": "Dawuan",
+    "lat": -6.7445675,
+    "lng": 108.2283802
+  },
+  {
+    "nama": "Bimbel PC ( Pilar Cendekia )",
+    "kecamatan": "Dawuan",
+    "lat": -6.7433928,
+    "lng": 108.230685
+  },
+  {
+    "nama": "SDN Gunungsari 1",
+    "kecamatan": "Dawuan",
+    "lat": -6.7477262,
+    "lng": 108.2294324
+  },
+  {
+    "nama": "Dta Al-Hikmah Gunungsari, Kasokandel, Majalengka",
+    "kecamatan": "Dawuan",
+    "lat": -6.7474045,
+    "lng": 108.2297491
+  },
+  {
+    "nama": "Raudhatul Athfal (RA) Baiturrohmat Gunungsari",
+    "kecamatan": "Dawuan",
+    "lat": -6.7463327,
+    "lng": 108.2295584
+  },
+  {
+    "nama": "MTs Muhammadiyah Babakanloa",
+    "kecamatan": "Dawuan",
+    "lat": -6.7407117,
+    "lng": 108.2278664
+  },
+  {
+    "nama": "SDN GANDU III",
+    "kecamatan": "Dawuan",
+    "lat": -6.7506271,
+    "lng": 108.1988361
+  },
+  {
+    "nama": "MDTA Al Huda Panyingkiran Jatitujuh Majalengka",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6497494,
+    "lng": 108.2135983
+  },
+  {
+    "nama": "SMA Negeri 1 Jatitujuh",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6577174,
+    "lng": 108.2266466
+  },
+  {
+    "nama": "SD Negeri Babajurang",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6355226,
+    "lng": 108.2096657
+  },
+  {
+    "nama": "MA BAGUSRANGIN JATITUJUH",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6534947,
+    "lng": 108.222971
+  },
+  {
+    "nama": "Sma 1 Jatitujuh",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6577036,
+    "lng": 108.2017563
+  },
+  {
+    "nama": "Sekolah Ramah Anak",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6468237,
+    "lng": 108.2275081
+  },
+  {
+    "nama": "RA-KOBER YAMABA",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6454886,
+    "lng": 108.2281143
+  },
+  {
+    "nama": "SMP Negeri 1 Jatitujuh",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6421024,
+    "lng": 108.2303449
+  },
+  {
+    "nama": "Mungunghwa",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6559444,
+    "lng": 108.2110333
+  },
+  {
+    "nama": "konveksi seragam sekolah HjM Collection",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6528455,
+    "lng": 108.2156369
+  },
+  {
+    "nama": "Sekolah Penerbangan",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6726767,
+    "lng": 108.1923432
+  },
+  {
+    "nama": "Madrasah DTA",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6329413,
+    "lng": 108.2067865
+  },
+  {
+    "nama": "RUMAH EMPANG",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6338218,
+    "lng": 108.2068901
+  },
+  {
+    "nama": "MDTA ADDASTIYAH AL ABASI",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6157735,
+    "lng": 108.2111967
+  },
+  {
+    "nama": "Diniyah Takmiliyah Awaliyah",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.646841,
+    "lng": 108.2273869
+  },
+  {
+    "nama": "SD Negeri Jatitujuh 1",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6468201,
+    "lng": 108.2278153
+  },
+  {
+    "nama": "Kober napak",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6442413,
+    "lng": 108.2286483
+  },
+  {
+    "nama": "SDN PASIRIPIS 1",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6464595,
+    "lng": 108.1960171
+  },
+  {
+    "nama": "Raudhatul Athfal (RA) Daarul Barokah Kertajati",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6452306,
+    "lng": 108.1972541
+  },
+  {
+    "nama": "SDN PASIRIPIS 2",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6486631,
+    "lng": 108.1970052
+  },
+  {
+    "nama": "Trinity School",
+    "kecamatan": "Jatitujuh",
+    "lat": -6.6594309,
+    "lng": 108.1871755
+  },
+  {
+    "nama": "SDN ANDIR 1",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7486963,
+    "lng": 108.2695651
+  },
+  {
+    "nama": "MDTA Fadhilah Adawiyah",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7438134,
+    "lng": 108.2651735
+  },
+  {
+    "nama": "MIN 1 MAJALENGKA",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7427493,
+    "lng": 108.2648081
+  },
+  {
+    "nama": "SD Negeri Leuweungede I",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7533278,
+    "lng": 108.275606
+  },
+  {
+    "nama": "Madrasah Diniyah Takmiliyah Awaliyah Islamiyah Pui Jatisura Kecamatan Jatiwangi Kabupaten Majalengka",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7523279,
+    "lng": 108.2660748
+  },
+  {
+    "nama": "Evander Badminton Centre",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.749013,
+    "lng": 108.269423
+  },
+  {
+    "nama": "RA Kartika Andir",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7555844,
+    "lng": 108.2707405
+  },
+  {
+    "nama": "SMK Negeri 1 Palasah (SMK Pusat Keunggulan)",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7232565,
+    "lng": 108.2956203
+  },
+  {
+    "nama": "SMP Negeri 3 Jatiwangi",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.760379,
+    "lng": 108.2691455
+  },
+  {
+    "nama": "SD Negeri Leuweunggede III",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7534777,
+    "lng": 108.2767249
+  },
+  {
+    "nama": "SD Negeri Leuweunggede 2",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7530613,
+    "lng": 108.2756812
+  },
+  {
+    "nama": "PAUD Sri Mulya Sari",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7536514,
+    "lng": 108.2767633
+  },
+  {
+    "nama": "SD Negeri Andir 2",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7555833,
+    "lng": 108.2687693
+  },
+  {
+    "nama": "MI AL FATH",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7630152,
+    "lng": 108.2766889
+  },
+  {
+    "nama": "SDN Leuweunggede IV",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7371282,
+    "lng": 108.2736953
+  },
+  {
+    "nama": "LPK DARMAWANGSA NUSANTARA",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7345601,
+    "lng": 108.2777899
+  },
+  {
+    "nama": "SMP Negeri 2 Jatiwangi",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.732562,
+    "lng": 108.2647146
+  },
+  {
+    "nama": "TK Al Hikmah",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7374262,
+    "lng": 108.2735239
+  },
+  {
+    "nama": "SMK PGRI Jatiwangi",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7242787,
+    "lng": 108.2705482
+  },
+  {
+    "nama": "SMAN 1 Jatiwangi",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7262927,
+    "lng": 108.2743644
+  },
+  {
+    "nama": "SDN Ciborelang 4",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7313475,
+    "lng": 108.268108
+  },
+  {
+    "nama": "YPI Al Ma'sum Nuryaman Jatiwangi",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7311176,
+    "lng": 108.2635498
+  },
+  {
+    "nama": "Pondok Pesantren Modern Nurul Fajri",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7661376,
+    "lng": 108.2953983
+  },
+  {
+    "nama": "Masjib Al Baru lueweunggede majalengka",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7347024,
+    "lng": 108.2730607
+  },
+  {
+    "nama": "SDN Cicadas 1",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.744288,
+    "lng": 108.2579925
+  },
+  {
+    "nama": "SD negeri Kapur Jtw Mjlk",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7425817,
+    "lng": 108.2640155
+  },
+  {
+    "nama": "SDN Cicadas 3",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7446758,
+    "lng": 108.2580104
+  },
+  {
+    "nama": "MI PUI Kapur Desa Sutawangi",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7419865,
+    "lng": 108.264657
+  },
+  {
+    "nama": "MIS Al Manar Burujul Wetan",
+    "kecamatan": "Jatiwangi",
+    "lat": -6.7454643,
+    "lng": 108.2525251
+  },
+  {
+    "nama": "SD Islam Al Hidayah",
+    "kecamatan": "Kadipaten",
+    "lat": -6.761898,
+    "lng": 108.173761
+  },
+  {
+    "nama": "SD Negeri Genteng 1",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7525579,
+    "lng": 108.1876313
+  },
+  {
+    "nama": "Sekolah Luar Biasa Gelora Karya",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7643964,
+    "lng": 108.1994383
+  },
+  {
+    "nama": "SD Negeri Pagandon",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7474338,
+    "lng": 108.1820259
+  },
+  {
+    "nama": "SMP Negeri 2 Dawuan",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7493856,
+    "lng": 108.1980273
+  },
+  {
+    "nama": "SMA Unggulan Al Hidayah",
+    "kecamatan": "Kadipaten",
+    "lat": -6.756286,
+    "lng": 108.186186
+  },
+  {
+    "nama": "MIS PUI Pakubeureum 2",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7247902,
+    "lng": 108.1730551
+  },
+  {
+    "nama": "SDN Sukawana",
+    "kecamatan": "Kadipaten",
+    "lat": -6.6985599,
+    "lng": 108.19346
+  },
+  {
+    "nama": "TK AL MANSHURIYAH",
+    "kecamatan": "Kadipaten",
+    "lat": -6.709145,
+    "lng": 108.1709756
+  },
+  {
+    "nama": "TK Bhudi Dharma 2",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7066067,
+    "lng": 108.1784358
+  },
+  {
+    "nama": "SD Generasi Qur'an",
+    "kecamatan": "Kadipaten",
+    "lat": -6.6969657,
+    "lng": 108.1929547
+  },
+  {
+    "nama": "SD-IT LUHUNG JATMIKA",
+    "kecamatan": "Kadipaten",
+    "lat": -6.6785026,
+    "lng": 108.1880355
+  },
+  {
+    "nama": "DTA/MI PUI Sukawana",
+    "kecamatan": "Kadipaten",
+    "lat": -6.6961655,
+    "lng": 108.1972221
+  },
+  {
+    "nama": "SDN Balida 3",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7313026,
+    "lng": 108.2050083
+  },
+  {
+    "nama": "MTs Badruzaman",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7256074,
+    "lng": 108.2140666
+  },
+  {
+    "nama": "sdn Karangsambung VI",
+    "kecamatan": "Kadipaten",
+    "lat": -6.727187,
+    "lng": 108.1764298
+  },
+  {
+    "nama": "RA PUI AL-ISTIQOMAH",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7248027,
+    "lng": 108.1729983
+  },
+  {
+    "nama": "TK Tunas Harapan",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7221584,
+    "lng": 108.1768382
+  },
+  {
+    "nama": "SKMA Negeri Kadipaten",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7637134,
+    "lng": 108.1838214
+  },
+  {
+    "nama": "SDN Karangsambung III",
+    "kecamatan": "Kadipaten",
+    "lat": -6.7497386,
+    "lng": 108.1720003
+  },
+  {
+    "nama": "SDN Ranjikulon 2",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7622541,
+    "lng": 108.2350644
+  },
+  {
+    "nama": "SDN 1 Ranji Kulon",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7622914,
+    "lng": 108.2350789
+  },
+  {
+    "nama": "MI TQ Asasul Huda",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7679393,
+    "lng": 108.2375093
+  },
+  {
+    "nama": "Pondok Pesantren Asasul Huda Ranji",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7684876,
+    "lng": 108.2379035
+  },
+  {
+    "nama": "TPQ AL - HIKMAH & MDTA NURUL HUDA",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7663104,
+    "lng": 108.2305683
+  },
+  {
+    "nama": "SD Negeri Ranjiwetan I",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7650452,
+    "lng": 108.2378056
+  },
+  {
+    "nama": "SMK Yasika",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7711112,
+    "lng": 108.2258897
+  },
+  {
+    "nama": "Sdn ranjiwetan 3",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7746741,
+    "lng": 108.2354652
+  },
+  {
+    "nama": "Raudhatul Athfal Nurul Hidayah",
+    "kecamatan": "Kasokandel",
+    "lat": -6.771095,
+    "lng": 108.225911
+  },
+  {
+    "nama": "Mejlis Ta'lim Sirojul Huda",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7545554,
+    "lng": 108.2363649
+  },
+  {
+    "nama": "SD IT AL KAUTSAR Gunung Sari Kasokandel",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7569375,
+    "lng": 108.2312561
+  },
+  {
+    "nama": "SDN Gunungsari II",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7553133,
+    "lng": 108.2284096
+  },
+  {
+    "nama": "MTs Swasta Darurrahman",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7567031,
+    "lng": 108.23465
+  },
+  {
+    "nama": "TKIT AL-KAUTSAR",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7567419,
+    "lng": 108.2312067
+  },
+  {
+    "nama": "Madrasah Aliyah Daarurrahman",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7571717,
+    "lng": 108.2342654
+  },
+  {
+    "nama": "Smsnya Majalengka",
+    "kecamatan": "Kasokandel",
+    "lat": -6.763076,
+    "lng": 108.238812
+  },
+  {
+    "nama": "SD N RANJIWETAN 5",
+    "kecamatan": "Kasokandel",
+    "lat": -6.768329,
+    "lng": 108.2416634
+  },
+  {
+    "nama": "Ustadz Dr. Rizki Gumilar, S.S., M.A.",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7655157,
+    "lng": 108.2383464
+  },
+  {
+    "nama": "SMP/SMA/Pondok Pesantren Ummul Barahin",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7974322,
+    "lng": 108.2141177
+  },
+  {
+    "nama": "SDN Kasokandel",
+    "kecamatan": "Kasokandel",
+    "lat": -6.7561859,
+    "lng": 108.2058541
+  },
+  {
+    "nama": "SDN Kertasari II",
+    "kecamatan": "Kertajati",
+    "lat": -6.6667628,
+    "lng": 108.1445131
+  },
+  {
+    "nama": "SDN SUKAKERTA",
+    "kecamatan": "Kertajati",
+    "lat": -6.6390513,
+    "lng": 108.1671981
+  },
+  {
+    "nama": "SDN 1 Kertajati",
+    "kecamatan": "Kertajati",
+    "lat": -6.6719553,
+    "lng": 108.1915437
+  },
+  {
+    "nama": "SMK Negeri 1 Kertajati",
+    "kecamatan": "Kertajati",
+    "lat": -6.6726863,
+    "lng": 108.1920649
+  },
+  {
+    "nama": "SDN 3 Bantarjati",
+    "kecamatan": "Kertajati",
+    "lat": -6.6550437,
+    "lng": 108.1759777
+  },
+  {
+    "nama": "Yayasan Sekolah Impian Indonesia",
+    "kecamatan": "Kertajati",
+    "lat": -6.633903,
+    "lng": 108.1229405
+  },
+  {
+    "nama": "MA NURUSSYAHID KERTAJATI/ MANUSA",
+    "kecamatan": "Kertajati",
+    "lat": -6.6656134,
+    "lng": 108.1959458
+  },
+  {
+    "nama": "MIN 7 MAJALENGKA",
+    "kecamatan": "Kertajati",
+    "lat": -6.6815022,
+    "lng": 108.1044509
+  },
+  {
+    "nama": "SMK Auliya Teladan Mandiri (ATM)",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0188305,
+    "lng": 108.1736625
+  },
+  {
+    "nama": "TK Kampung Wiranyana",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0451125,
+    "lng": 108.1744531
+  },
+  {
+    "nama": "SDN 2 CIPASUNG,Lemahsugih,Majalengka",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0499916,
+    "lng": 108.1857416
+  },
+  {
+    "nama": "MTs PUI Borogojol",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0422048,
+    "lng": 108.1824029
+  },
+  {
+    "nama": "TK Tunas Mekar",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0503627,
+    "lng": 108.1862408
+  },
+  {
+    "nama": "Almuawwanahmuarasukarame",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.053272,
+    "lng": 108.1859989
+  },
+  {
+    "nama": "SLTPN 2 Lemahsugih",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0073523,
+    "lng": 108.1771639
+  },
+  {
+    "nama": "Madrasah Shoutul Hikmah",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0485881,
+    "lng": 108.1852616
+  },
+  {
+    "nama": "SDN LEMAHPUTIH lll",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.021414,
+    "lng": 108.1645695
+  },
+  {
+    "nama": "Tanah Pakde",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.025866,
+    "lng": 108.1742698
+  },
+  {
+    "nama": "Pondokpesantren Nurulbayan",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0191253,
+    "lng": 108.1806903
+  },
+  {
+    "nama": "Rumah Hijau",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0262643,
+    "lng": 108.1843311
+  },
+  {
+    "nama": "SDN BANGBAYANG 1",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0284752,
+    "lng": 108.1913246
+  },
+  {
+    "nama": "SDN Borogojol 1",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0452068,
+    "lng": 108.1826282
+  },
+  {
+    "nama": "Madrasah Amaluddin",
+    "kecamatan": "Lemahsugih",
+    "lat": -7.0502246,
+    "lng": 108.1899701
+  },
+  {
+    "nama": "Sdn Enggalwangi",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.730079,
+    "lng": 108.3155504
+  },
+  {
+    "nama": "DTA Islamiyah Islahiyah",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7313372,
+    "lng": 108.310336
+  },
+  {
+    "nama": "Desa buniwangi",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7245854,
+    "lng": 108.3104787
+  },
+  {
+    "nama": "Sekolah TK Terpadu",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7357531,
+    "lng": 108.3270284
+  },
+  {
+    "nama": "srkolah",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7251072,
+    "lng": 108.3331745
+  },
+  {
+    "nama": "Madrasah Ibtidaiyah Majasuka",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7125291,
+    "lng": 108.3013672
+  },
+  {
+    "nama": "SMP Negeri 1 Sumberjaya",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7074655,
+    "lng": 108.3137537
+  },
+  {
+    "nama": "Baitul Mujahidin",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.732242,
+    "lng": 108.3160688
+  },
+  {
+    "nama": "RA AL-MUHAJIRIN",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7341991,
+    "lng": 108.3131918
+  },
+  {
+    "nama": "SDN SINDANGHAJI 2",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7410704,
+    "lng": 108.3094028
+  },
+  {
+    "nama": "Pondok Pesantren Al-Anshor",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7344415,
+    "lng": 108.3109447
+  },
+  {
+    "nama": "RA, DTA, TPQ/TKQ, PONPES RIJALULLAH",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7340833,
+    "lng": 108.3105207
+  },
+  {
+    "nama": "sdn sumberjaya 2",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7101105,
+    "lng": 108.3189016
+  },
+  {
+    "nama": "SMP Negeri 2 Palasah",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.71063,
+    "lng": 108.3053
+  },
+  {
+    "nama": "Sdn Majasuka 2",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.709635,
+    "lng": 108.3041061
+  },
+  {
+    "nama": "Sekolah Dasar",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7110697,
+    "lng": 108.3266018
+  },
+  {
+    "nama": "MTs Al-Ishlah Garawangi",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7231084,
+    "lng": 108.3310953
+  },
+  {
+    "nama": "Pondok Pesantren Al-Bukhorie Garawangi",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7233092,
+    "lng": 108.3308983
+  },
+  {
+    "nama": "Kober Kasih Ibu",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7224573,
+    "lng": 108.3251418
+  },
+  {
+    "nama": "SD Negeri 1 Garawangi",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7257421,
+    "lng": 108.3338267
+  },
+  {
+    "nama": "Pendidikan",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7308813,
+    "lng": 108.3336438
+  },
+  {
+    "nama": "Sukahaji",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7338408,
+    "lng": 108.3297099
+  },
+  {
+    "nama": "Al Bahjah Saung Balong",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7221818,
+    "lng": 108.3023731
+  },
+  {
+    "nama": "SMK SBN",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.721483,
+    "lng": 108.3025242
+  },
+  {
+    "nama": "MTs Al-Hidayah Palasah",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7270484,
+    "lng": 108.2977382
+  },
+  {
+    "nama": "SDN Majasuka 1",
+    "kecamatan": "Leuwimunding",
+    "lat": -6.7124769,
+    "lng": 108.3016614
+  },
+  {
+    "nama": "Ade ihsan",
+    "kecamatan": "Ligung",
+    "lat": -6.6789783,
+    "lng": 108.2738548
+  },
+  {
+    "nama": "MTs Swasta Assalaam",
+    "kecamatan": "Ligung",
+    "lat": -6.659005,
+    "lng": 108.2665357
+  },
+  {
+    "nama": "SDN WANASALAM 2",
+    "kecamatan": "Ligung",
+    "lat": -6.6589427,
+    "lng": 108.2618187
+  },
+  {
+    "nama": "SMKs Perjuangan Bangsa Ligung (PERBALI)",
+    "kecamatan": "Ligung",
+    "lat": -6.6511087,
+    "lng": 108.2818395
+  },
+  {
+    "nama": "SD Negeri Kertasari",
+    "kecamatan": "Ligung",
+    "lat": -6.6808929,
+    "lng": 108.239717
+  },
+  {
+    "nama": "RA Al-Farisi",
+    "kecamatan": "Ligung",
+    "lat": -6.6800074,
+    "lng": 108.2371491
+  },
+  {
+    "nama": "SD NEGERI BUNTU II",
+    "kecamatan": "Ligung",
+    "lat": -6.6806411,
+    "lng": 108.2749761
+  },
+  {
+    "nama": "Kober Ganda Arum & TK Ganda Asih",
+    "kecamatan": "Ligung",
+    "lat": -6.7002954,
+    "lng": 108.2612474
+  },
+  {
+    "nama": "SDN Gandawesi 1",
+    "kecamatan": "Ligung",
+    "lat": -6.7003242,
+    "lng": 108.2619496
+  },
+  {
+    "nama": "SDN Gandawesi 3",
+    "kecamatan": "Ligung",
+    "lat": -6.7005581,
+    "lng": 108.2669415
+  },
+  {
+    "nama": "Lembaga Pendidikan Qiroatul Qur'an \"PON-PES AT-TAUFIQOH\"",
+    "kecamatan": "Ligung",
+    "lat": -6.6590467,
+    "lng": 108.2625214
+  },
+  {
+    "nama": "SDN WANASALAM III",
+    "kecamatan": "Ligung",
+    "lat": -6.6578676,
+    "lng": 108.2549982
+  },
+  {
+    "nama": "RA danTPQ AT-TAUFIQ",
+    "kecamatan": "Ligung",
+    "lat": -6.6611892,
+    "lng": 108.2500861
+  },
+  {
+    "nama": "SD Randegn Wetan I",
+    "kecamatan": "Ligung",
+    "lat": -6.6556831,
+    "lng": 108.2476811
+  },
+  {
+    "nama": "Warung tsalwa mbot",
+    "kecamatan": "Ligung",
+    "lat": -6.6580365,
+    "lng": 108.2586017
+  },
+  {
+    "nama": "Majlis taklim bahrul ulum",
+    "kecamatan": "Ligung",
+    "lat": -6.6608568,
+    "lng": 108.2498716
+  },
+  {
+    "nama": "SMA Negeri 1 Ligung",
+    "kecamatan": "Ligung",
+    "lat": -6.6521848,
+    "lng": 108.2793492
+  },
+  {
+    "nama": "Sekolah madrasah Al-hidayah",
+    "kecamatan": "Ligung",
+    "lat": -6.6603683,
+    "lng": 108.2854034
+  },
+  {
+    "nama": "Smk Swasta Bina Insani",
+    "kecamatan": "Ligung",
+    "lat": -6.675562,
+    "lng": 108.246635
+  },
+  {
+    "nama": "MDTA AL-HIDAYAH 24 BEBER",
+    "kecamatan": "Ligung",
+    "lat": -6.6671987,
+    "lng": 108.2435922
+  },
+  {
+    "nama": "SMK Bina Insani Ligung",
+    "kecamatan": "Ligung",
+    "lat": -6.6620159,
+    "lng": 108.2364578
+  },
+  {
+    "nama": "SDN Beber 2",
+    "kecamatan": "Ligung",
+    "lat": -6.6678559,
+    "lng": 108.2432429
+  },
+  {
+    "nama": "SD Negeri Beber 1",
+    "kecamatan": "Ligung",
+    "lat": -6.6648038,
+    "lng": 108.2414769
+  },
+  {
+    "nama": "Kober Sakinah",
+    "kecamatan": "Ligung",
+    "lat": -6.6810414,
+    "lng": 108.2350888
+  },
+  {
+    "nama": "Sekolah Alam Majalengka (SATAQU INDONESIA)",
+    "kecamatan": "Maja",
+    "lat": -6.8644033,
+    "lng": 108.2622803
+  },
+  {
+    "nama": "SMPN 1 Maja",
+    "kecamatan": "Maja",
+    "lat": -6.8880682,
+    "lng": 108.3008521
+  },
+  {
+    "nama": "Pesantren Sobarul Yaqin",
+    "kecamatan": "Maja",
+    "lat": -6.8651891,
+    "lng": 108.2771982
+  },
+  {
+    "nama": "Sekolah",
+    "kecamatan": "Maja",
+    "lat": -6.8557759,
+    "lng": 108.2894371
+  },
+  {
+    "nama": "Sekolah Kuttab Bina Quran",
+    "kecamatan": "Maja",
+    "lat": -6.8481463,
+    "lng": 108.2601551
+  },
+  {
+    "nama": "MI Pui Cinangka",
+    "kecamatan": "Maja",
+    "lat": -6.8987654,
+    "lng": 108.2545461
+  },
+  {
+    "nama": "SDN Malongpong II",
+    "kecamatan": "Maja",
+    "lat": -6.8911766,
+    "lng": 108.2947375
+  },
+  {
+    "nama": "SMP, SMA IT Sulthan Haruduni Majalengka",
+    "kecamatan": "Maja",
+    "lat": -6.881106,
+    "lng": 108.3018616
+  },
+  {
+    "nama": "Madrasah Al-Furqon",
+    "kecamatan": "Maja",
+    "lat": -6.87918,
+    "lng": 108.2604039
+  },
+  {
+    "nama": "MA PLUS KETERAMPILAN NU MAJA",
+    "kecamatan": "Maja",
+    "lat": -6.8744263,
+    "lng": 108.290561
+  },
+  {
+    "nama": "SDN CIPICUNG 2",
+    "kecamatan": "Maja",
+    "lat": -6.8972715,
+    "lng": 108.2700512
+  },
+  {
+    "nama": "SDN Cipicung 1",
+    "kecamatan": "Maja",
+    "lat": -6.8898065,
+    "lng": 108.2820451
+  },
+  {
+    "nama": "SDN Malongpong I",
+    "kecamatan": "Maja",
+    "lat": -6.8890654,
+    "lng": 108.2882933
+  },
+  {
+    "nama": "Cipicung",
+    "kecamatan": "Maja",
+    "lat": -6.8947228,
+    "lng": 108.2763069
+  },
+  {
+    "nama": "Sekolah",
+    "kecamatan": "Maja",
+    "lat": -6.835713,
+    "lng": 108.223957
+  },
+  {
+    "nama": "RUMAH BELAJAR CIREBON",
+    "kecamatan": "Maja",
+    "lat": -6.7416449,
+    "lng": 108.5420434
+  },
+  {
+    "nama": "SMA Negeri 2 Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.835831,
+    "lng": 108.229014
+  },
+  {
+    "nama": "SMK Pariwisata PGRI Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8393023,
+    "lng": 108.2272242
+  },
+  {
+    "nama": "GUVILI ACADEMY AHE MAJALENGKA",
+    "kecamatan": "Majalengka",
+    "lat": -6.8350937,
+    "lng": 108.2323178
+  },
+  {
+    "nama": "SPGN MAJALENGKA",
+    "kecamatan": "Majalengka",
+    "lat": -6.835907,
+    "lng": 108.2289704
+  },
+  {
+    "nama": "SD Negeri Majalengka Wetan 3 Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8382281,
+    "lng": 108.232612
+  },
+  {
+    "nama": "SD NEGERI MAJALENGKA WETAN VII",
+    "kecamatan": "Majalengka",
+    "lat": -6.8378444,
+    "lng": 108.2312137
+  },
+  {
+    "nama": "SDN MAJALENGKA WETAN IV",
+    "kecamatan": "Majalengka",
+    "lat": -6.8356688,
+    "lng": 108.2300382
+  },
+  {
+    "nama": "SDN Babakanjawa V",
+    "kecamatan": "Majalengka",
+    "lat": -6.8458414,
+    "lng": 108.2281896
+  },
+  {
+    "nama": "SMK YPIB Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8367263,
+    "lng": 108.240058
+  },
+  {
+    "nama": "jawa barat",
+    "kecamatan": "Majalengka",
+    "lat": -6.84314,
+    "lng": 108.2271981
+  },
+  {
+    "nama": "Pondok Pesantren Darul Mukhlasin",
+    "kecamatan": "Majalengka",
+    "lat": -6.8479032,
+    "lng": 108.2327098
+  },
+  {
+    "nama": "SDN TARIKOLOT I MAJALENGKA",
+    "kecamatan": "Majalengka",
+    "lat": -6.8255506,
+    "lng": 108.2247198
+  },
+  {
+    "nama": "Sekolah Tinggi Alkitab Penyebaran Injil Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8305957,
+    "lng": 108.2303308
+  },
+  {
+    "nama": "Balai Desa Tarikolot (Alun-Alun)",
+    "kecamatan": "Majalengka",
+    "lat": -6.8268099,
+    "lng": 108.2248304
+  },
+  {
+    "nama": "SDN Tarikolot 2",
+    "kecamatan": "Majalengka",
+    "lat": -6.824339,
+    "lng": 108.2245175
+  },
+  {
+    "nama": "Pondok Pesantren Riyadlul Hudaa",
+    "kecamatan": "Majalengka",
+    "lat": -6.82656,
+    "lng": 108.2306566
+  },
+  {
+    "nama": "SDN. 2 CILANDAK LOR",
+    "kecamatan": "Majalengka",
+    "lat": -6.8199214,
+    "lng": 108.22386
+  },
+  {
+    "nama": "Universitas YPIB Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.837405,
+    "lng": 108.240095
+  },
+  {
+    "nama": "SMK Kesenian Nusantara",
+    "kecamatan": "Majalengka",
+    "lat": -6.83471,
+    "lng": 108.24058
+  },
+  {
+    "nama": "SMK YPPT Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8406454,
+    "lng": 108.2387762
+  },
+  {
+    "nama": "SMK KORPRI Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8299581,
+    "lng": 108.2498975
+  },
+  {
+    "nama": "SDIT Al Afiyah Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8367019,
+    "lng": 108.2380492
+  },
+  {
+    "nama": "EBHS KIKHANZA MAJALENGKA",
+    "kecamatan": "Majalengka",
+    "lat": -6.8354076,
+    "lng": 108.2200848
+  },
+  {
+    "nama": "SLB Negeri Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8323323,
+    "lng": 108.2132811
+  },
+  {
+    "nama": "SD Negeri Majalengka Kulon III",
+    "kecamatan": "Majalengka",
+    "lat": -6.8342225,
+    "lng": 108.2195511
+  },
+  {
+    "nama": "Pondok Pesantren Daarul Uluum PUI Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8353621,
+    "lng": 108.2233706
+  },
+  {
+    "nama": "SDN Majalengka Kulon V",
+    "kecamatan": "Majalengka",
+    "lat": -6.8327295,
+    "lng": 108.2206557
+  },
+  {
+    "nama": "SMP Negeri 3 Majalengka",
+    "kecamatan": "Majalengka",
+    "lat": -6.8342024,
+    "lng": 108.218392
+  },
+  {
+    "nama": "SD Negeri 1 Sadapaingan",
+    "kecamatan": "Malausma",
+    "lat": -7.061168,
+    "lng": 108.3704204
+  },
+  {
+    "nama": "Yayasan As Syifa Mekar Buana",
+    "kecamatan": "Malausma",
+    "lat": -7.0643959,
+    "lng": 108.3728692
+  },
+  {
+    "nama": "SD Negeri Kondangmekar",
+    "kecamatan": "Malausma",
+    "lat": -7.0680791,
+    "lng": 108.3833823
+  },
+  {
+    "nama": "SDN 4 Sadapaingan",
+    "kecamatan": "Malausma",
+    "lat": -7.0583888,
+    "lng": 108.3641625
+  },
+  {
+    "nama": "Kober Tunas Mekar",
+    "kecamatan": "Malausma",
+    "lat": -7.0716444,
+    "lng": 108.3848851
+  },
+  {
+    "nama": "Galery Computer",
+    "kecamatan": "Malausma",
+    "lat": -7.0607445,
+    "lng": 108.3703845
+  },
+  {
+    "nama": "SD Negeri 5 Gardujaya",
+    "kecamatan": "Malausma",
+    "lat": -7.0724228,
+    "lng": 108.3837025
+  },
+  {
+    "nama": "Sekolah Menengah Kejuruan Informatika Citra Bangsa",
+    "kecamatan": "Malausma",
+    "lat": -7.084052,
+    "lng": 108.378836
+  },
+  {
+    "nama": "SDN 1 GARDUAYA",
+    "kecamatan": "Malausma",
+    "lat": -7.0786402,
+    "lng": 108.3834631
+  },
+  {
+    "nama": "SMPN 3 PANAWANGAN",
+    "kecamatan": "Malausma",
+    "lat": -7.0787134,
+    "lng": 108.3840392
+  },
+  {
+    "nama": "Smk Darul Ilmi Panawangan",
+    "kecamatan": "Malausma",
+    "lat": -7.0596677,
+    "lng": 108.3652971
+  },
+  {
+    "nama": "Nurul Iman Islamic School",
+    "kecamatan": "Malausma",
+    "lat": -7.0676836,
+    "lng": 108.363678
+  },
+  {
+    "nama": "SMAN 1 PANAWANGAN",
+    "kecamatan": "Malausma",
+    "lat": -7.0910154,
+    "lng": 108.3753307
+  },
+  {
+    "nama": "Kober Girangmekar",
+    "kecamatan": "Malausma",
+    "lat": -7.062311,
+    "lng": 108.3821946
+  },
+  {
+    "nama": "KOBER PLAMBOYAN SADAPAINGAN",
+    "kecamatan": "Malausma",
+    "lat": -7.0598132,
+    "lng": 108.3648323
+  },
+  {
+    "nama": "Rumah dendi",
+    "kecamatan": "Malausma",
+    "lat": -7.059453,
+    "lng": 108.364241
+  },
+  {
+    "nama": "SDN 2 Sadapaingan",
+    "kecamatan": "Malausma",
+    "lat": -7.06247,
+    "lng": 108.358888
+  },
+  {
+    "nama": "MADRASAH DARUSSALAM",
+    "kecamatan": "Malausma",
+    "lat": -7.0594767,
+    "lng": 108.3643178
+  },
+  {
+    "nama": "SDN Tarikolot 3",
+    "kecamatan": "Palasah",
+    "lat": -6.7649723,
+    "lng": 108.3135176
+  },
+  {
+    "nama": "SMP Ar Rahmat Palasah",
+    "kecamatan": "Palasah",
+    "lat": -6.7718525,
+    "lng": 108.3047224
+  },
+  {
+    "nama": "SDN Weragati 2",
+    "kecamatan": "Palasah",
+    "lat": -6.7650782,
+    "lng": 108.3007993
+  },
+  {
+    "nama": "MTsN 13 Majalengka",
+    "kecamatan": "Palasah",
+    "lat": -6.762131,
+    "lng": 108.2996539
+  },
+  {
+    "nama": "SMK Ar-Rahmat",
+    "kecamatan": "Palasah",
+    "lat": -6.7725481,
+    "lng": 108.303627
+  },
+  {
+    "nama": "SDN WARINGIN IV",
+    "kecamatan": "Palasah",
+    "lat": -6.7570963,
+    "lng": 108.3011407
+  },
+  {
+    "nama": "Pondok Pesantren Ar-Rahmat",
+    "kecamatan": "Palasah",
+    "lat": -6.7717239,
+    "lng": 108.3049196
+  },
+  {
+    "nama": "MA Unggulan Ar-Rahmat Weragati, Palasah, Majalengka",
+    "kecamatan": "Palasah",
+    "lat": -6.7726735,
+    "lng": 108.3042107
+  },
+  {
+    "nama": "Sulaimaniyah Ar-Rahmat Majalengka",
+    "kecamatan": "Palasah",
+    "lat": -6.7717449,
+    "lng": 108.3042988
+  },
+  {
+    "nama": "ASRSMA ILEGAL",
+    "kecamatan": "Palasah",
+    "lat": -6.7748296,
+    "lng": 108.3123006
+  },
+  {
+    "nama": "LPK KAZOKU MAJALENGKA",
+    "kecamatan": "Palasah",
+    "lat": -6.7749783,
+    "lng": 108.3088696
+  },
+  {
+    "nama": "TK Islam Ar-Rahmat",
+    "kecamatan": "Palasah",
+    "lat": -6.7719857,
+    "lng": 108.3044679
+  },
+  {
+    "nama": "SDN TARIKOLOT II KEC.PALASAH KAB.MAJALENGKA",
+    "kecamatan": "Palasah",
+    "lat": -6.751247,
+    "lng": 108.3080562
+  },
+  {
+    "nama": "Titik kumpu wong tulus",
+    "kecamatan": "Palasah",
+    "lat": -6.7576647,
+    "lng": 108.3111432
+  },
+  {
+    "nama": "SDN TARIKOLOT 1",
+    "kecamatan": "Palasah",
+    "lat": -6.7567886,
+    "lng": 108.3094334
+  },
+  {
+    "nama": "SMPN 1 Palasah Kab. Majalengka",
+    "kecamatan": "Palasah",
+    "lat": -6.7572735,
+    "lng": 108.3012848
+  },
+  {
+    "nama": "Tk BINA TUNAS",
+    "kecamatan": "Palasah",
+    "lat": -6.7515765,
+    "lng": 108.3083529
+  },
+  {
+    "nama": "SDN Sindanghaji 1 Ciwayang",
+    "kecamatan": "Palasah",
+    "lat": -6.7478404,
+    "lng": 108.3129544
+  },
+  {
+    "nama": "SDN TARIKOLOT II CIKAREO",
+    "kecamatan": "Palasah",
+    "lat": -6.7649987,
+    "lng": 108.3178328
+  },
+  {
+    "nama": "SDN SINDANGHAJI 3",
+    "kecamatan": "Palasah",
+    "lat": -6.7612076,
+    "lng": 108.318717
+  },
+  {
+    "nama": "TK Pratama Bina Warga",
+    "kecamatan": "Palasah",
+    "lat": -6.7653728,
+    "lng": 108.3132022
+  },
+  {
+    "nama": "Sma lewimunding",
+    "kecamatan": "Palasah",
+    "lat": -6.7730229,
+    "lng": 108.3275197
+  },
+  {
+    "nama": "Bhakti Limar Farm",
+    "kecamatan": "Palasah",
+    "lat": -6.7666446,
+    "lng": 108.2986281
+  },
+  {
+    "nama": "MA Unggulan Ar-Rahmat Majalengka Jawa Barat",
+    "kecamatan": "Palasah",
+    "lat": -6.7636889,
+    "lng": 108.2950942
+  },
+  {
+    "nama": "TK Binangkit",
+    "kecamatan": "Palasah",
+    "lat": -6.7639884,
+    "lng": 108.3016132
+  },
+  {
+    "nama": "SDN Jatimulya 1",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7816718,
+    "lng": 108.2177569
+  },
+  {
+    "nama": "SDN Jatimulya 2",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7844436,
+    "lng": 108.2262355
+  },
+  {
+    "nama": "SMP Negeri 3 Kasokandel",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7842535,
+    "lng": 108.2260462
+  },
+  {
+    "nama": "Madrasah Diniyyah Takmiliyah Awwaliyyah (MDTA) At-Thoyyibah",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.784714,
+    "lng": 108.20807
+  },
+  {
+    "nama": "MI Nurul Huda",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7866749,
+    "lng": 108.2338676
+  },
+  {
+    "nama": "SDN NEGERI JATISAWIT",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7974323,
+    "lng": 108.2131611
+  },
+  {
+    "nama": "Yayasan Hidayatul Mubtadi'in Leuwikidang",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7995377,
+    "lng": 108.2193517
+  },
+  {
+    "nama": "PKBM Nurul Akhsawiyah",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7978201,
+    "lng": 108.2163623
+  },
+  {
+    "nama": "TK Darussalam",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.796598,
+    "lng": 108.2138065
+  },
+  {
+    "nama": "TKIT Madania",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.8027593,
+    "lng": 108.2221897
+  },
+  {
+    "nama": "SDIT Madania",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.803045,
+    "lng": 108.2221985
+  },
+  {
+    "nama": "web sekolah",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.8058402,
+    "lng": 108.2236407
+  },
+  {
+    "nama": "KB TUNAS LESTARI Ds. Jatimulya",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7798575,
+    "lng": 108.2196048
+  },
+  {
+    "nama": "Tk Tunas Lestari",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7844992,
+    "lng": 108.226322
+  },
+  {
+    "nama": "SDN Girimukti 1",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7846628,
+    "lng": 108.2075682
+  },
+  {
+    "nama": "Raudhatul Athfal (RA) At-Thoyyibah Girimukti",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7845319,
+    "lng": 108.2081122
+  },
+  {
+    "nama": "SDN Girimukti 2",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7840187,
+    "lng": 108.2084044
+  },
+  {
+    "nama": "Pondok Pesantren Fathurrahman",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7852165,
+    "lng": 108.2084965
+  },
+  {
+    "nama": "TPQ",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7849773,
+    "lng": 108.20833
+  },
+  {
+    "nama": "Kober Risalah Al-Amanah",
+    "kecamatan": "Panyingkiran",
+    "lat": -6.7850799,
+    "lng": 108.2083381
+  },
+  {
+    "nama": "Rorompok PSBB (PADEPOKAN SAUNG BAMBU BALAGAWA)",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8058683,
+    "lng": 108.3249569
+  },
+  {
+    "nama": "TK Budi Asih X Kumbung Barat",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8085169,
+    "lng": 108.337571
+  },
+  {
+    "nama": "SDN Tanjungsari 1",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8031145,
+    "lng": 108.3252252
+  },
+  {
+    "nama": "Basecamp literasi",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.804612,
+    "lng": 108.3258615
+  },
+  {
+    "nama": "SDN GUNUNGKUNING",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.817903,
+    "lng": 108.3233238
+  },
+  {
+    "nama": "Madrasah Ar-Risalah",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8039096,
+    "lng": 108.3356326
+  },
+  {
+    "nama": "SMK KARYA BAKTI",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8298576,
+    "lng": 108.3230151
+  },
+  {
+    "nama": "MAN 2 MAJALENGKA",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7928947,
+    "lng": 108.3344528
+  },
+  {
+    "nama": "SMP Islam Terpadu Nurul Huda",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8228111,
+    "lng": 108.3403018
+  },
+  {
+    "nama": "SDN Indrakila",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8261747,
+    "lng": 108.3367405
+  },
+  {
+    "nama": "MTs Ainul Hayat Gunungkuning",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8203117,
+    "lng": 108.3253368
+  },
+  {
+    "nama": "MDTA AR-ROHMAH",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8204942,
+    "lng": 108.323368
+  },
+  {
+    "nama": "KB SINDANG ASIH",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.834757,
+    "lng": 108.32247
+  },
+  {
+    "nama": "Madrasah ibtidaul huda al amin",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8326001,
+    "lng": 108.3245269
+  },
+  {
+    "nama": "SMK Ibnu Sina Rajagaluh",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7983784,
+    "lng": 108.3295168
+  },
+  {
+    "nama": "SDN Kumbung 2",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7999898,
+    "lng": 108.3369545
+  },
+  {
+    "nama": "Kober Annida",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7970059,
+    "lng": 108.3268627
+  },
+  {
+    "nama": "Majlis ta'lim tarbiyatullsibyan",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7992072,
+    "lng": 108.3356795
+  },
+  {
+    "nama": "MTsN 12 Majalengka",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7987152,
+    "lng": 108.3399567
+  },
+  {
+    "nama": "Garasi IBNU SINA Racing Team #25",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7983114,
+    "lng": 108.3293834
+  },
+  {
+    "nama": "SMA NEGERI 4 MAJALENGKA",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.8196532,
+    "lng": 108.3423732
+  },
+  {
+    "nama": "SMA Daarul Amanah Rajagaluh",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7948152,
+    "lng": 108.3499002
+  },
+  {
+    "nama": "MIS Baiturrahman",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7994968,
+    "lng": 108.3457145
+  },
+  {
+    "nama": "SMA Negeri 1 Rajagaluh",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7767888,
+    "lng": 108.3418265
+  },
+  {
+    "nama": "MTs Swasta Darul Amanah",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7962116,
+    "lng": 108.3505948
+  },
+  {
+    "nama": "Sekolah Agama Alwaritsun",
+    "kecamatan": "Rajagaluh",
+    "lat": -6.7966047,
+    "lng": 108.3223632
+  },
+  {
+    "nama": "SDN Cieurih 1",
+    "kecamatan": "Sindang",
+    "lat": -6.8766446,
+    "lng": 108.2768948
+  },
+  {
+    "nama": "Md PUI Cieurih",
+    "kecamatan": "Sindang",
+    "lat": -6.8754989,
+    "lng": 108.2773377
+  },
+  {
+    "nama": "SDN 1 Kertabasuki",
+    "kecamatan": "Sindang",
+    "lat": -6.8692664,
+    "lng": 108.2833615
+  },
+  {
+    "nama": "RA AL-FIRDAUS",
+    "kecamatan": "Sindang",
+    "lat": -6.8659498,
+    "lng": 108.2790559
+  },
+  {
+    "nama": "MI Ma'arif Cikedung",
+    "kecamatan": "Sindang",
+    "lat": -6.8836747,
+    "lng": 108.2919433
+  },
+  {
+    "nama": "RA Nurul Falah Sindangkerta (Education School)",
+    "kecamatan": "Sindang",
+    "lat": -6.871365,
+    "lng": 108.287637
+  },
+  {
+    "nama": "Pondok Pesantren Annawawiyah",
+    "kecamatan": "Sindang",
+    "lat": -6.8649139,
+    "lng": 108.2761868
+  },
+  {
+    "nama": "Sdn Kawunggirang 1",
+    "kecamatan": "Sindang",
+    "lat": -6.8645365,
+    "lng": 108.2761043
+  },
+  {
+    "nama": "MA An-Nawawiyah",
+    "kecamatan": "Sindang",
+    "lat": -6.8652256,
+    "lng": 108.2761398
+  },
+  {
+    "nama": "MTs Swasta An Nawawiyah",
+    "kecamatan": "Sindang",
+    "lat": -6.8636857,
+    "lng": 108.276071
+  },
+  {
+    "nama": "TK Nur-Faridah",
+    "kecamatan": "Sindang",
+    "lat": -6.8638774,
+    "lng": 108.2751228
+  },
+  {
+    "nama": "SDN PASANGGRAHAN II",
+    "kecamatan": "Sindang",
+    "lat": -6.8798111,
+    "lng": 108.289
+  },
+  {
+    "nama": "SDN Pasanggrahan 1",
+    "kecamatan": "Sindang",
+    "lat": -6.881841,
+    "lng": 108.288562
+  },
+  {
+    "nama": "SMP Model Nahdlatul Ulama Maja",
+    "kecamatan": "Sindang",
+    "lat": -6.8738367,
+    "lng": 108.2904897
+  },
+  {
+    "nama": "Pondok Pesantren Al-Halimiyah",
+    "kecamatan": "Sindang",
+    "lat": -6.8745869,
+    "lng": 108.2893278
+  },
+  {
+    "nama": "Majlis Ta'lim Nurul Falah",
+    "kecamatan": "Sindang",
+    "lat": -6.871692,
+    "lng": 108.2893211
+  },
+  {
+    "nama": "SDN SINDANGPANO",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.818737,
+    "lng": 108.3609913
+  },
+  {
+    "nama": "SD Negeri Babakankareo",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.8011007,
+    "lng": 108.365987
+  },
+  {
+    "nama": "Madrasah",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.8004429,
+    "lng": 108.3641308
+  },
+  {
+    "nama": "SEKOLAH MADRASAH DINIYAH TAKMILIYAH AWALIYAH",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.7843807,
+    "lng": 108.3439357
+  },
+  {
+    "nama": "Raudhatul Athfal Raudlatul Abror",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.822125,
+    "lng": 108.362489
+  },
+  {
+    "nama": "SMPN 3 RAJAGALUH",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.8254288,
+    "lng": 108.3637768
+  },
+  {
+    "nama": "Mishbahul Anshor",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.8268072,
+    "lng": 108.3608774
+  },
+  {
+    "nama": "SD Negeri Sadomas",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.8026186,
+    "lng": 108.3517248
+  },
+  {
+    "nama": "MIS Unggulan Ma'arif Tunas Bangsa Sindangwangi",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.7815748,
+    "lng": 108.3729142
+  },
+  {
+    "nama": "Sekolah Menengah Pertama",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.782797,
+    "lng": 108.3743927
+  },
+  {
+    "nama": "Sdn Teja II",
+    "kecamatan": "Sindangwangi",
+    "lat": -6.8226197,
+    "lng": 108.3462959
+  },
+  {
+    "nama": "MTs As-Sa`adah Padahanten",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8428753,
+    "lng": 108.2860998
+  },
+  {
+    "nama": "SDN PADAHANTEN",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8436377,
+    "lng": 108.2856777
+  },
+  {
+    "nama": "AA Farm",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8396011,
+    "lng": 108.2751721
+  },
+  {
+    "nama": "SDN Tenjolayar 3",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8498353,
+    "lng": 108.2777464
+  },
+  {
+    "nama": "SMP IT HAFIFUDIN ARROHIMAH",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8511965,
+    "lng": 108.2797433
+  },
+  {
+    "nama": "MDTA Roudhotul Muta'allimiin",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8504826,
+    "lng": 108.2843015
+  },
+  {
+    "nama": "Mis Cipancar",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8515102,
+    "lng": 108.2850804
+  },
+  {
+    "nama": "Pondok Pesantren Miftahul Huda Al-Ahyad",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8592133,
+    "lng": 108.2804126
+  },
+  {
+    "nama": "Paket C Setara SMA",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8210334,
+    "lng": 108.2793698
+  },
+  {
+    "nama": "Kober dan MDTA Al-Ikhlas",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8261824,
+    "lng": 108.277326
+  },
+  {
+    "nama": "SMA Negeri 1 Sukahaji",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8189628,
+    "lng": 108.2828245
+  },
+  {
+    "nama": "SMK Negeri 1 Majalengka",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8250898,
+    "lng": 108.2493222
+  },
+  {
+    "nama": "SMAN 14 Pada Suka",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8387815,
+    "lng": 108.2644434
+  },
+  {
+    "nama": "TRESNA",
+    "kecamatan": "Sukahaji",
+    "lat": -6.842189,
+    "lng": 108.2878145
+  },
+  {
+    "nama": "MIS Pui Cicalung",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8464985,
+    "lng": 108.2879448
+  },
+  {
+    "nama": "KOBER Aku Bisa Cerdas ( ABC )",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8434661,
+    "lng": 108.2846702
+  },
+  {
+    "nama": "TK. ABU SALAM PADAHANTEN",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8423156,
+    "lng": 108.2861726
+  },
+  {
+    "nama": "SDN TAJUR I",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8484782,
+    "lng": 108.2672609
+  },
+  {
+    "nama": "SDN Simpeureum 1",
+    "kecamatan": "Sukahaji",
+    "lat": -6.8331386,
+    "lng": 108.2597045
+  },
+  {
+    "nama": "SDN Parungjaya I",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7206487,
+    "lng": 108.3530178
+  },
+  {
+    "nama": "SMKN 1 Leuwimunding",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7178629,
+    "lng": 108.3543442
+  },
+  {
+    "nama": "SMA Negeri 1 Leuwimunding",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7332379,
+    "lng": 108.3481536
+  },
+  {
+    "nama": "SMPN 3 Leuwimunding",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7210863,
+    "lng": 108.3534432
+  },
+  {
+    "nama": "Sekolah Shelly,Shabita& Wahyu",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.731519,
+    "lng": 108.3494995
+  },
+  {
+    "nama": "SMK NU",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7192502,
+    "lng": 108.3541632
+  },
+  {
+    "nama": "Pondok Pesantren At-Tamimiyyah",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7229664,
+    "lng": 108.355749
+  },
+  {
+    "nama": "SDN PARUNGJAYA 2",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7294816,
+    "lng": 108.3516352
+  },
+  {
+    "nama": "SD Mirat lll Shabita",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7320902,
+    "lng": 108.3491578
+  },
+  {
+    "nama": "RA Nurul Huda Mirat",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.734014,
+    "lng": 108.3504939
+  },
+  {
+    "nama": "SDN 4 Leuwimuding Majalengka",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7348621,
+    "lng": 108.3474808
+  },
+  {
+    "nama": "SMP Negeri 1 Leuwimunding",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.734405,
+    "lng": 108.3473219
+  },
+  {
+    "nama": "SDN MIRAT 1",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7329094,
+    "lng": 108.3501148
+  },
+  {
+    "nama": "SDN Mirat 3",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7317546,
+    "lng": 108.3494766
+  },
+  {
+    "nama": "SD Negeri Banjaran I",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7143192,
+    "lng": 108.3502855
+  },
+  {
+    "nama": "KOBER ANNABIIL",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7141805,
+    "lng": 108.3482309
+  },
+  {
+    "nama": "SDN Leuwimunding 3",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.71833,
+    "lng": 108.34708
+  },
+  {
+    "nama": "SDN Paningkiran 3",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7125924,
+    "lng": 108.3567901
+  },
+  {
+    "nama": "Mi'rojul Ihya ISER",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7180115,
+    "lng": 108.3472052
+  },
+  {
+    "nama": "Pondok Pesantren Taman Sondari",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7220709,
+    "lng": 108.3557047
+  },
+  {
+    "nama": "TK Ananda Mulia",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7212094,
+    "lng": 108.3555814
+  },
+  {
+    "nama": "RA NURUL ULUM CIPARAY",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.72704,
+    "lng": 108.3419652
+  },
+  {
+    "nama": "SDN Ciparay II",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7265076,
+    "lng": 108.3421023
+  },
+  {
+    "nama": "Mts unggulan raudlatulmubtadiin",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7282668,
+    "lng": 108.3415642
+  },
+  {
+    "nama": "Madrasah Diniyyah Nurul Ulum II",
+    "kecamatan": "Sumberjaya",
+    "lat": -6.7269188,
+    "lng": 108.3423125
+  },
+  {
+    "nama": "MA Swasta Darul Ulum PUI Talaga",
+    "kecamatan": "Talaga",
+    "lat": -6.9829868,
+    "lng": 108.3130515
+  },
+  {
+    "nama": "SDN TALAGAWETAN 3",
+    "kecamatan": "Talaga",
+    "lat": -6.9804766,
+    "lng": 108.3140486
+  },
+  {
+    "nama": "SDN GENTENG",
+    "kecamatan": "Talaga",
+    "lat": -6.9802,
+    "lng": 108.3209433
+  },
+  {
+    "nama": "SEKOLAH MADRASYAH (MD)",
+    "kecamatan": "Talaga",
+    "lat": -6.9843012,
+    "lng": 108.313403
+  },
+  {
+    "nama": "TPQ AL KAROMAH",
+    "kecamatan": "Talaga",
+    "lat": -6.9929347,
+    "lng": 108.3233995
+  },
+  {
+    "nama": "SDN Cicanir 2",
+    "kecamatan": "Talaga",
+    "lat": -6.9934456,
+    "lng": 108.318058
+  },
+  {
+    "nama": "MTs Darul Karomah Talaga",
+    "kecamatan": "Talaga",
+    "lat": -6.9934708,
+    "lng": 108.323209
+  },
+  {
+    "nama": "SDN HEGARMANAH",
+    "kecamatan": "Talaga",
+    "lat": -6.9729789,
+    "lng": 108.3206466
+  },
+  {
+    "nama": "Pondok Pesantren NURUL HIDAYAH",
+    "kecamatan": "Talaga",
+    "lat": -6.9681931,
+    "lng": 108.3188314
+  },
+  {
+    "nama": "Pondok Pesantren Darul Huda",
+    "kecamatan": "Talaga",
+    "lat": -6.9661651,
+    "lng": 108.324153
+  },
+  {
+    "nama": "RA Al Hidayah Sukamanah",
+    "kecamatan": "Talaga",
+    "lat": -6.969832,
+    "lng": 108.3141455
+  },
+  {
+    "nama": "SD Negeri Majalengka Wetan 04 Majalengka",
+    "kecamatan": "Talaga",
+    "lat": -6.9810899,
+    "lng": 108.3110963
+  },
+  {
+    "nama": "SD Negeri Majalengka Wetan 01",
+    "kecamatan": "Talaga",
+    "lat": -6.9814585,
+    "lng": 108.3109272
+  },
+  {
+    "nama": "Smkn 1 Talaga",
+    "kecamatan": "Talaga",
+    "lat": -6.9796741,
+    "lng": 108.3111714
+  },
+  {
+    "nama": "MIS PUI Pasapen Talaga",
+    "kecamatan": "Talaga",
+    "lat": -6.982057,
+    "lng": 108.3069701
+  },
+  {
+    "nama": "MIS PUI TALAGA II",
+    "kecamatan": "Talaga",
+    "lat": -6.977555,
+    "lng": 108.3102189
+  }
+]

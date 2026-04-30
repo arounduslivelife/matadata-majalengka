@@ -243,16 +243,24 @@ async function auditBatch() {
     const displayDistricts = relevantDistricts.length > 0 ? relevantDistricts : allDistricts.slice(0, 3);
     const roadContext = displayDistricts.map(s => `${s.nm_kecamatan}:${s.road_firmness_pct}%`).join(', ');
 
-    const prompt = `Auditor AI MATADATA Majalengka. TA 2025.
-Konteks Jalan 2024 (% Mantap): ${roadContext}
+    const prompt = `Auditor AI MATADATA Majalengka. TA 2025/2026.
+Landasan Hukum Terbaru (Perpres 46/2025):
+Untuk Tahun Anggaran 2026+, batas nominal PENGADAAN LANGSUNG adalah:
+1. PEKERJAAN KONSTRUKSI: Max Rp 400 Juta (Pasal 38 ayat 3b).
+2. PENGADAAN BARANG / JASA LAINNYA: Max Rp 200 Juta (Pasal 38 ayat 3a).
+3. JASA KONSULTANSI: Max Rp 100 Juta (Pasal 41 ayat 3).
+
+Catatan: Untuk TA 2025, semua kategori (kecuali Konsultansi 100jt) adalah max Rp 200 Juta.
 
 Tugas: Analisis paket & tentukan:
 1. risk_score: Low/Medium/High/ABSURD.
-2. audit_note: Alasan (Deteksi "Neglected Area" jika Jalan <70% & budget kecil).
+   - Tandai HIGH/ABSURD jika nominal melanggar batas di atas sesuai Jenis Pengadaan & TA.
+2. audit_note: Alasan spesifik. Jika melanggar, sebutkan "Melanggar Pasal 38/41 Perpres 46/2025". 
+   Jika wajar karena kenaikan limit, sebutkan "Patuh Perpres 46/2025 (Batas 400jt Konstruksi)".
 3. kecamatan: Lokasi berdasarkan Satker/Paket.
 
 Daftar Paket:
-${packages.map(p => `- ID:${p.id}, S:${p.satker}, P:${p.nama_paket}, Rp:${p.pagu.toLocaleString('id-ID')}, V:${p.pemenang || 'N/A'}`).join('\n')}
+${packages.map(p => `- ID:${p.id}, TA:${p.tahun}, S:${p.satker}, P:${p.nama_paket}, Rp:${p.pagu.toLocaleString('id-ID')}, V:${p.pemenang || 'N/A'}`).join('\n')}
 
 Output JSON: { "results": [ { "id", "risk_score", "audit_note", "kecamatan" } ] }`;
 

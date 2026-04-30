@@ -1,0 +1,1 @@
+window.APP_DATA = { stats: [], year_totals: [], all_audits: [], village_stats: [], poverty_stats: [], pad_kecamatan: {}, pad_global: {}, gps_granted: false};

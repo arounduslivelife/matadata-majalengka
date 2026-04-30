@@ -1,0 +1,5804 @@
+[
+  {
+    "lat": -6.7665298,
+    "lon": 108.1651457,
+    "osm_name": "Jembatan Dawuan",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7612222,
+    "lon": 108.1962558,
+    "osm_name": "11",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.739618,
+    "lon": 108.2290095,
+    "osm_name": "11",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7243121,
+    "lon": 108.2807897,
+    "osm_name": "11",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7217584,
+    "lon": 108.2930338,
+    "osm_name": "11",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7660678,
+    "lon": 108.1636347,
+    "osm_name": "11",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.8349863,
+    "lon": 108.2210199,
+    "osm_name": "way/296398961",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.5963517,
+    "lon": 108.2490052,
+    "osm_name": "way/320734067",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5872538,
+    "lon": 108.2518502,
+    "osm_name": "way/320734068",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7008801,
+    "lon": 108.1721241,
+    "osm_name": "Simpang Susun Kertajati",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7008535,
+    "lon": 108.1720657,
+    "osm_name": "Simpang Susun Kertajati",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6940188,
+    "lon": 108.3104439,
+    "osm_name": "way/350484198",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6940169,
+    "lon": 108.3105264,
+    "osm_name": "way/350484200",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7056786,
+    "lon": 108.1304402,
+    "osm_name": "way/450213602",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6451653,
+    "lon": 108.2880541,
+    "osm_name": "Jalan Bantar Waru",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7157167,
+    "lon": 108.2532805,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7159067,
+    "lon": 108.2532916,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7335348,
+    "lon": 108.2226343,
+    "osm_name": "way/479386185",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.6521015,
+    "lon": 108.1599042,
+    "osm_name": "way/502226817",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8554057,
+    "lon": 108.2597319,
+    "osm_name": "way/516543576",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.9073652,
+    "lon": 108.2171094,
+    "osm_name": "way/528667131",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.94249,
+    "lon": 108.2053303,
+    "osm_name": "way/528953832",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.947979,
+    "lon": 108.2090634,
+    "osm_name": "way/528953839",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.9592261,
+    "lon": 108.2033961,
+    "osm_name": "way/528955007",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.6428795,
+    "lon": 108.2301351,
+    "osm_name": "way/534748878",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6516648,
+    "lon": 108.2207509,
+    "osm_name": "way/534748880",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6609744,
+    "lon": 108.2297123,
+    "osm_name": "way/534775915",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6634484,
+    "lon": 108.2255972,
+    "osm_name": "way/534775923",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6573047,
+    "lon": 108.2251718,
+    "osm_name": "way/534777363",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6581981,
+    "lon": 108.2244532,
+    "osm_name": "way/534789220",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6633175,
+    "lon": 108.2208076,
+    "osm_name": "way/534792688",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6625613,
+    "lon": 108.2209512,
+    "osm_name": "way/534792705",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.658215,
+    "lon": 108.2247593,
+    "osm_name": "way/534792711",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6614468,
+    "lon": 108.241632,
+    "osm_name": "way/534801394",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.8182348,
+    "lon": 108.1673479,
+    "osm_name": "way/534822078",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.6554536,
+    "lon": 108.2035205,
+    "osm_name": "way/535143226",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.652636,
+    "lon": 108.2079344,
+    "osm_name": "way/535144479",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6495171,
+    "lon": 108.2132849,
+    "osm_name": "way/535146992",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.825634,
+    "lon": 108.1798187,
+    "osm_name": "way/535610652",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.8317367,
+    "lon": 108.1771687,
+    "osm_name": "way/535610665",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.74649,
+    "lon": 108.250662,
+    "osm_name": "way/536550788",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.6752812,
+    "lon": 108.1052389,
+    "osm_name": "way/536766874",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6000749,
+    "lon": 108.2632489,
+    "osm_name": "way/537315367",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6161537,
+    "lon": 108.2653859,
+    "osm_name": "way/537315370",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6210645,
+    "lon": 108.2776525,
+    "osm_name": "way/537341531",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5993648,
+    "lon": 108.2448753,
+    "osm_name": "way/537652555",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6196657,
+    "lon": 108.2580047,
+    "osm_name": "way/537652787",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6243785,
+    "lon": 108.2710439,
+    "osm_name": "way/537671368",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7636337,
+    "lon": 108.1664637,
+    "osm_name": "way/537680158",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.5954176,
+    "lon": 108.2661337,
+    "osm_name": "way/537692150",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6344394,
+    "lon": 108.28659,
+    "osm_name": "way/537894920",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7146205,
+    "lon": 108.2620729,
+    "osm_name": "way/538123440",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7121805,
+    "lon": 108.2689178,
+    "osm_name": "way/538417342",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7269089,
+    "lon": 108.1754327,
+    "osm_name": "way/538665098",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.595499,
+    "lon": 108.1954389,
+    "osm_name": "way/539676560",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.594403,
+    "lon": 108.1962675,
+    "osm_name": "way/539676561",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6071671,
+    "lon": 108.1775303,
+    "osm_name": "way/539676566",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8024138,
+    "lon": 108.1698472,
+    "osm_name": "way/539790048",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.8114828,
+    "lon": 108.1907602,
+    "osm_name": "way/539790049",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.8214418,
+    "lon": 108.1772262,
+    "osm_name": "way/539790054",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.6906958,
+    "lon": 108.1207351,
+    "osm_name": "way/539818001",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.694607,
+    "lon": 108.1271013,
+    "osm_name": "way/539818006",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6849028,
+    "lon": 108.1142608,
+    "osm_name": "way/539819156",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.69714,
+    "lon": 108.1334839,
+    "osm_name": "way/539819745",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7049994,
+    "lon": 108.1712816,
+    "osm_name": "way/539939710",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6362203,
+    "lon": 108.3445888,
+    "osm_name": "way/539942242",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6365225,
+    "lon": 108.2149299,
+    "osm_name": "way/539944838",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7659845,
+    "lon": 108.1726193,
+    "osm_name": "11",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7612477,
+    "lon": 108.1737476,
+    "osm_name": "way/539948540",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7476759,
+    "lon": 108.1990406,
+    "osm_name": "way/539948542",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7496833,
+    "lon": 108.1892723,
+    "osm_name": "way/539948545",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7595916,
+    "lon": 108.1756094,
+    "osm_name": "way/539948547",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7447622,
+    "lon": 108.2085614,
+    "osm_name": "way/539948549",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7434991,
+    "lon": 108.2104398,
+    "osm_name": "way/539948550",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7553583,
+    "lon": 108.1873299,
+    "osm_name": "way/539948552",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7592548,
+    "lon": 108.1725794,
+    "osm_name": "way/539948557",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7633003,
+    "lon": 108.1732377,
+    "osm_name": "way/539948558",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.677363,
+    "lon": 108.2290146,
+    "osm_name": "way/539949160",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6706116,
+    "lon": 108.2314387,
+    "osm_name": "way/539949370",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7012393,
+    "lon": 108.1977726,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7010576,
+    "lon": 108.1977134,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7624667,
+    "lon": 108.1669837,
+    "osm_name": "way/539952037",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7676846,
+    "lon": 108.1649264,
+    "osm_name": "way/539952043",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7569376,
+    "lon": 108.1701786,
+    "osm_name": "way/539952599",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.634393,
+    "lon": 108.2571892,
+    "osm_name": "way/539952907",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6383782,
+    "lon": 108.2497886,
+    "osm_name": "way/539952909",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.693697,
+    "lon": 108.3212491,
+    "osm_name": "way/539958010",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7490544,
+    "lon": 108.168836,
+    "osm_name": "way/539972645",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7318098,
+    "lon": 108.1672534,
+    "osm_name": "way/539972872",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7323595,
+    "lon": 108.2023823,
+    "osm_name": "way/539974616",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.691956,
+    "lon": 108.1855749,
+    "osm_name": "way/539983549",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6550984,
+    "lon": 108.2600379,
+    "osm_name": "way/539996013",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7135975,
+    "lon": 108.2399444,
+    "osm_name": "way/540101194",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.6506041,
+    "lon": 108.3252266,
+    "osm_name": "way/540107697",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6522564,
+    "lon": 108.3155963,
+    "osm_name": "Jalan Jatiwangi - Wanasalam",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6500602,
+    "lon": 108.3243181,
+    "osm_name": "way/540107703",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.657159,
+    "lon": 108.3177879,
+    "osm_name": "way/540107918",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6539283,
+    "lon": 108.3042058,
+    "osm_name": "Jalan Jatiwangi - Wanasalam",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6935019,
+    "lon": 108.2567963,
+    "osm_name": "Jalan Lanud Sukani",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6957507,
+    "lon": 108.2487065,
+    "osm_name": "way/540108525",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6935466,
+    "lon": 108.2646706,
+    "osm_name": "way/540109594",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6392994,
+    "lon": 108.3000134,
+    "osm_name": "way/540112564",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7041923,
+    "lon": 108.2850927,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7043253,
+    "lon": 108.2852352,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7201192,
+    "lon": 108.200789,
+    "osm_name": "way/540125901",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.699048,
+    "lon": 108.1473678,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6988699,
+    "lon": 108.1473248,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.697773,
+    "lon": 108.2985381,
+    "osm_name": "way/540136745",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.6526869,
+    "lon": 108.2843558,
+    "osm_name": "Jalan Jatiwangi - Wanasalam",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6549293,
+    "lon": 108.2825273,
+    "osm_name": "way/540145551",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6920332,
+    "lon": 108.2779637,
+    "osm_name": "way/540285212",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6967959,
+    "lon": 108.2759417,
+    "osm_name": "way/540285215",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6424172,
+    "lon": 108.3147545,
+    "osm_name": "way/540292453",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6153022,
+    "lon": 108.1737952,
+    "osm_name": "way/540306412",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6119731,
+    "lon": 108.1868658,
+    "osm_name": "way/540306864",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6101156,
+    "lon": 108.1842427,
+    "osm_name": "way/540306866",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5969735,
+    "lon": 108.2376588,
+    "osm_name": "way/540384197",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5897767,
+    "lon": 108.2415179,
+    "osm_name": "way/540384198",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5894824,
+    "lon": 108.2513701,
+    "osm_name": "way/540401459",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5844304,
+    "lon": 108.2184213,
+    "osm_name": "way/540582138",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5834025,
+    "lon": 108.2235463,
+    "osm_name": "way/540582149",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5768821,
+    "lon": 108.205355,
+    "osm_name": "way/540582325",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5797648,
+    "lon": 108.2053773,
+    "osm_name": "way/540582327",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5819684,
+    "lon": 108.206081,
+    "osm_name": "way/540582330",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5898893,
+    "lon": 108.2056223,
+    "osm_name": "way/540582425",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6002457,
+    "lon": 108.2146192,
+    "osm_name": "way/540582427",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5995904,
+    "lon": 108.214326,
+    "osm_name": "way/540582428",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7019936,
+    "lon": 108.1817409,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7018118,
+    "lon": 108.1817579,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.9762445,
+    "lon": 108.2797494,
+    "osm_name": "Jalan Talaga-Bantarujeg",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.7530368,
+    "lon": 108.1879618,
+    "osm_name": "way/561400141",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.9213923,
+    "lon": 108.2181595,
+    "osm_name": "way/561401954",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9210965,
+    "lon": 108.2196554,
+    "osm_name": "way/561401955",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9117435,
+    "lon": 108.3149067,
+    "osm_name": "way/561404575",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.9213544,
+    "lon": 108.328853,
+    "osm_name": "way/561404578",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -7.0074139,
+    "lon": 108.3085125,
+    "osm_name": "way/561406510",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.9688325,
+    "lon": 108.264439,
+    "osm_name": "way/561406627",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9727148,
+    "lon": 108.2808184,
+    "osm_name": "way/561406949",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.9660851,
+    "lon": 108.2803165,
+    "osm_name": "way/561406951",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.7358929,
+    "lon": 108.2202607,
+    "osm_name": "way/561406955",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.8764108,
+    "lon": 108.2362312,
+    "osm_name": "way/561406976",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8800683,
+    "lon": 108.2618485,
+    "osm_name": "way/561407322",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8798272,
+    "lon": 108.2603261,
+    "osm_name": "way/561407325",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7388749,
+    "lon": 108.2631852,
+    "osm_name": "way/561407579",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7491446,
+    "lon": 108.2678009,
+    "osm_name": "way/561407581",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.9983077,
+    "lon": 108.2372751,
+    "osm_name": "way/561407967",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.9896047,
+    "lon": 108.3097883,
+    "osm_name": "way/561408141",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.8719862,
+    "lon": 108.2425698,
+    "osm_name": "way/561411127",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.9530224,
+    "lon": 108.1884254,
+    "osm_name": "way/561412468",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.9532985,
+    "lon": 108.2370614,
+    "osm_name": "way/561413084",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.959219,
+    "lon": 108.2291086,
+    "osm_name": "Jalan Talaga-Bantarujeg",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9102776,
+    "lon": 108.245929,
+    "osm_name": "way/561414608",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.9005899,
+    "lon": 108.305298,
+    "osm_name": "way/561414651",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8929205,
+    "lon": 108.2971997,
+    "osm_name": "way/561415781",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8886157,
+    "lon": 108.2916234,
+    "osm_name": "way/561415782",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -7.0599696,
+    "lon": 108.3718151,
+    "osm_name": "way/561417742",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -6.8278235,
+    "lon": 108.2319115,
+    "osm_name": "Jalan Dukuh Dawuan",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8336375,
+    "lon": 108.2406948,
+    "osm_name": "Jalan Kiai Haji Abdul Halim",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8335573,
+    "lon": 108.2406662,
+    "osm_name": "Jalan Kiai Haji Abdul Halim",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8176621,
+    "lon": 108.197514,
+    "osm_name": "way/561433771",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.8176054,
+    "lon": 108.1976026,
+    "osm_name": "way/561433773",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.8001605,
+    "lon": 108.2951037,
+    "osm_name": "way/561435595",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.6062203,
+    "lon": 108.1485345,
+    "osm_name": "way/561435597",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.5732573,
+    "lon": 108.210104,
+    "osm_name": "way/561437796",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.5916094,
+    "lon": 108.2414452,
+    "osm_name": "way/562349054",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5917379,
+    "lon": 108.2505326,
+    "osm_name": "way/562349221",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -7.0143117,
+    "lon": 108.2280678,
+    "osm_name": "way/562362512",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -7.0140459,
+    "lon": 108.2364072,
+    "osm_name": "way/562362513",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.8526642,
+    "lon": 108.263358,
+    "osm_name": "way/562363688",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8526945,
+    "lon": 108.2626452,
+    "osm_name": "way/562363690",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8445532,
+    "lon": 108.3189058,
+    "osm_name": "way/562363702",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.5859668,
+    "lon": 108.2325528,
+    "osm_name": "way/562365658",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.586673,
+    "lon": 108.1399356,
+    "osm_name": "way/562367881",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.584957,
+    "lon": 108.1423156,
+    "osm_name": "way/562367883",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5850062,
+    "lon": 108.145834,
+    "osm_name": "way/562367885",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.586826,
+    "lon": 108.1448422,
+    "osm_name": "way/562367887",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.58628,
+    "lon": 108.1997994,
+    "osm_name": "way/562367999",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6643399,
+    "lon": 108.2261304,
+    "osm_name": "way/562394983",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.659573,
+    "lon": 108.1978951,
+    "osm_name": "way/562396897",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6512495,
+    "lon": 108.3138953,
+    "osm_name": "way/562413521",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6414248,
+    "lon": 108.3213645,
+    "osm_name": "way/562413523",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6872112,
+    "lon": 108.3515689,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.687036,
+    "lon": 108.3515963,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6903833,
+    "lon": 108.3615089,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.6905154,
+    "lon": 108.361375,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.6869778,
+    "lon": 108.3465116,
+    "osm_name": "way/564481775",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6912544,
+    "lon": 108.3626301,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.6914159,
+    "lon": 108.3625732,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.6888928,
+    "lon": 108.3576299,
+    "osm_name": "way/564481804",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7365305,
+    "lon": 108.2184615,
+    "osm_name": "way/564511120",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.5905532,
+    "lon": 108.1421983,
+    "osm_name": "way/564575601",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.616776,
+    "lon": 108.2985681,
+    "osm_name": "way/566540916",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6257418,
+    "lon": 108.3221471,
+    "osm_name": "way/566559074",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6989158,
+    "lon": 108.3548847,
+    "osm_name": "way/574248759",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6984519,
+    "lon": 108.3551543,
+    "osm_name": "way/574248761",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7545484,
+    "lon": 108.1877114,
+    "osm_name": "way/577041780",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.6535528,
+    "lon": 108.295125,
+    "osm_name": "Jalan Jatiwangi - Wanasalam",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6281029,
+    "lon": 108.0497955,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6282078,
+    "lon": 108.0496507,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8705568,
+    "lon": 108.2196611,
+    "osm_name": "way/619042175",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8688159,
+    "lon": 108.2212265,
+    "osm_name": "way/619042180",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8452968,
+    "lon": 108.2284346,
+    "osm_name": "way/619042194",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8473101,
+    "lon": 108.2270245,
+    "osm_name": "way/619042197",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8445777,
+    "lon": 108.2285231,
+    "osm_name": "way/619042201",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.6869345,
+    "lon": 108.104417,
+    "osm_name": "way/619061898",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8493836,
+    "lon": 108.211864,
+    "osm_name": "way/619070105",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8460058,
+    "lon": 108.2109151,
+    "osm_name": "way/619070109",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8430624,
+    "lon": 108.2103438,
+    "osm_name": "way/619070113",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8362914,
+    "lon": 108.208715,
+    "osm_name": "way/619070118",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8592487,
+    "lon": 108.2495454,
+    "osm_name": "way/619081702",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8611828,
+    "lon": 108.2496335,
+    "osm_name": "way/619081706",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8657551,
+    "lon": 108.2496304,
+    "osm_name": "way/619081708",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8124858,
+    "lon": 108.2442124,
+    "osm_name": "way/619108136",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8165538,
+    "lon": 108.2240835,
+    "osm_name": "Jalan Tarikolot",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8170796,
+    "lon": 108.2242841,
+    "osm_name": "way/619108144",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8261905,
+    "lon": 108.2142292,
+    "osm_name": "Jalan Sukajaya",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8250654,
+    "lon": 108.213937,
+    "osm_name": "Jalan Sukajaya",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8323917,
+    "lon": 108.2116516,
+    "osm_name": "way/619323085",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8348693,
+    "lon": 108.2187324,
+    "osm_name": "way/619345791",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8338205,
+    "lon": 108.2153795,
+    "osm_name": "way/619345797",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8369047,
+    "lon": 108.2260842,
+    "osm_name": "Jalan Pramuka",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8369832,
+    "lon": 108.2292253,
+    "osm_name": "Jalan Bhayangkara",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8364674,
+    "lon": 108.2325869,
+    "osm_name": "Jalan Suha",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8511129,
+    "lon": 108.2350134,
+    "osm_name": "way/619371903",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7065458,
+    "lon": 108.3294527,
+    "osm_name": "way/620205408",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7080623,
+    "lon": 108.3262628,
+    "osm_name": "way/620205410",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7103651,
+    "lon": 108.3608586,
+    "osm_name": "way/620205417",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.6908088,
+    "lon": 108.3610518,
+    "osm_name": "way/620205420",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7036111,
+    "lon": 108.3665023,
+    "osm_name": "way/620205427",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7173855,
+    "lon": 108.3568454,
+    "osm_name": "way/620205432",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.8446806,
+    "lon": 108.2765451,
+    "osm_name": "way/620218740",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8382705,
+    "lon": 108.2493898,
+    "osm_name": "way/620226495",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8374243,
+    "lon": 108.2487211,
+    "osm_name": "way/620226504",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8367162,
+    "lon": 108.2550308,
+    "osm_name": "way/620238314",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8312327,
+    "lon": 108.2413333,
+    "osm_name": "way/620273525",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8328988,
+    "lon": 108.2376824,
+    "osm_name": "way/620273529",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8334702,
+    "lon": 108.2377384,
+    "osm_name": "way/620273530",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8256954,
+    "lon": 108.2532665,
+    "osm_name": "way/620513110",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8188885,
+    "lon": 108.2490848,
+    "osm_name": "way/620514256",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.7864445,
+    "lon": 108.2337317,
+    "osm_name": "way/620521709",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7955597,
+    "lon": 108.2360139,
+    "osm_name": "way/620521716",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8367022,
+    "lon": 108.2518151,
+    "osm_name": "way/620522940",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.7477493,
+    "lon": 108.3431157,
+    "osm_name": "way/620523497",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7823605,
+    "lon": 108.2220302,
+    "osm_name": "way/620525569",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.8085427,
+    "lon": 108.2573181,
+    "osm_name": "way/620536306",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8076852,
+    "lon": 108.2404402,
+    "osm_name": "way/620536331",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.7842485,
+    "lon": 108.271816,
+    "osm_name": "way/620552942",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7954616,
+    "lon": 108.2679719,
+    "osm_name": "way/620552945",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -7.0169396,
+    "lon": 108.367325,
+    "osm_name": "way/620556078",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.7798715,
+    "lon": 108.2603703,
+    "osm_name": "way/620557660",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7710208,
+    "lon": 108.2430218,
+    "osm_name": "way/620557662",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.9775632,
+    "lon": 108.342295,
+    "osm_name": "way/620570772",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.7622518,
+    "lon": 108.2399601,
+    "osm_name": "way/620573660",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.8814746,
+    "lon": 108.3114887,
+    "osm_name": "way/637685749",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8884506,
+    "lon": 108.3059894,
+    "osm_name": "way/637700538",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.7862464,
+    "lon": 108.3490135,
+    "osm_name": "way/638098668",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.709707,
+    "lon": 108.2321185,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7098794,
+    "lon": 108.2320572,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7076317,
+    "lon": 108.2333151,
+    "osm_name": "way/641425716",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7138197,
+    "lon": 108.229654,
+    "osm_name": "way/641425718",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7538512,
+    "lon": 108.1879725,
+    "osm_name": "way/642082535",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.8206899,
+    "lon": 108.2235315,
+    "osm_name": "way/642360418",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8265666,
+    "lon": 108.215089,
+    "osm_name": "Jalan Cibasale",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8470132,
+    "lon": 108.2331727,
+    "osm_name": "way/642447889",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7250892,
+    "lon": 108.2669686,
+    "osm_name": "way/654094803",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.8280729,
+    "lon": 108.2015784,
+    "osm_name": "way/654884970",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8278495,
+    "lon": 108.2017644,
+    "osm_name": "way/654884971",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7015343,
+    "lon": 108.2667743,
+    "osm_name": "way/681036527",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7009716,
+    "lon": 108.2658729,
+    "osm_name": "way/681036529",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7016795,
+    "lon": 108.2508609,
+    "osm_name": "way/681036593",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6157032,
+    "lon": 108.1908716,
+    "osm_name": "way/681040223",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6195439,
+    "lon": 108.1970273,
+    "osm_name": "way/681040225",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6273669,
+    "lon": 108.1787145,
+    "osm_name": "way/681042003",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6272943,
+    "lon": 108.1783303,
+    "osm_name": "way/681042005",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6005818,
+    "lon": 108.1360751,
+    "osm_name": "way/681045808",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5868775,
+    "lon": 108.2276528,
+    "osm_name": "way/681056898",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6815562,
+    "lon": 108.2598856,
+    "osm_name": "Jalan Mayor Dasuki",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.5900501,
+    "lon": 108.1266329,
+    "osm_name": "way/681286181",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6074694,
+    "lon": 108.1145662,
+    "osm_name": "way/681286466",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7591876,
+    "lon": 108.1743251,
+    "osm_name": "way/681287020",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7602182,
+    "lon": 108.1692365,
+    "osm_name": "way/681287023",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7599888,
+    "lon": 108.1666496,
+    "osm_name": "way/681287025",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7596581,
+    "lon": 108.1663575,
+    "osm_name": "way/681287027",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7553798,
+    "lon": 108.1623427,
+    "osm_name": "way/681287028",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7648935,
+    "lon": 108.165927,
+    "osm_name": "way/681287030",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.75703,
+    "lon": 108.1638061,
+    "osm_name": "way/681289489",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7605958,
+    "lon": 108.1711936,
+    "osm_name": "way/681289492",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.594761,
+    "lon": 108.1972861,
+    "osm_name": "way/681294620",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.591553,
+    "lon": 108.2370688,
+    "osm_name": "way/681296371",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5890817,
+    "lon": 108.2259428,
+    "osm_name": "way/681296372",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5881544,
+    "lon": 108.2257108,
+    "osm_name": "way/681296374",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5886622,
+    "lon": 108.2234532,
+    "osm_name": "way/681296376",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6045368,
+    "lon": 108.2029201,
+    "osm_name": "way/681296378",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6539941,
+    "lon": 108.0806855,
+    "osm_name": "way/681296707",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6476643,
+    "lon": 108.0705222,
+    "osm_name": "way/681297007",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7547094,
+    "lon": 108.1876119,
+    "osm_name": "way/681297336",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7531989,
+    "lon": 108.1858243,
+    "osm_name": "way/681297346",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7006711,
+    "lon": 108.2371338,
+    "osm_name": "way/681300491",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7141976,
+    "lon": 108.2296382,
+    "osm_name": "way/681300507",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.650563,
+    "lon": 108.0984206,
+    "osm_name": "way/681303822",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5776045,
+    "lon": 108.1346631,
+    "osm_name": "way/681304226",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7028073,
+    "lon": 108.2197249,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7030143,
+    "lon": 108.2197757,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7013032,
+    "lon": 108.2132776,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7011242,
+    "lon": 108.213297,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7010292,
+    "lon": 108.211382,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7008554,
+    "lon": 108.2114479,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.700823,
+    "lon": 108.2056644,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7006373,
+    "lon": 108.2056351,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7092257,
+    "lon": 108.2133399,
+    "osm_name": "way/681306221",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7160983,
+    "lon": 108.2138007,
+    "osm_name": "way/681306223",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.716506,
+    "lon": 108.214007,
+    "osm_name": "way/681306225",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7168658,
+    "lon": 108.2152188,
+    "osm_name": "way/681306227",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7153797,
+    "lon": 108.2192106,
+    "osm_name": "way/681307172",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.6997126,
+    "lon": 108.2191284,
+    "osm_name": "way/681307586",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7051739,
+    "lon": 108.208424,
+    "osm_name": "way/681307620",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7023723,
+    "lon": 108.218454,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7025319,
+    "lon": 108.2183759,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.553181,
+    "lon": 108.1104476,
+    "osm_name": "way/681307969",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -7.0651838,
+    "lon": 108.3820527,
+    "osm_name": "way/681308140",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -6.5534308,
+    "lon": 108.1233973,
+    "osm_name": "way/681308627",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5537392,
+    "lon": 108.1253151,
+    "osm_name": "way/681308629",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.582058,
+    "lon": 108.2121294,
+    "osm_name": "way/681308969",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.5753074,
+    "lon": 108.2125707,
+    "osm_name": "way/681308972",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7015157,
+    "lon": 108.1922811,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7013352,
+    "lon": 108.1922871,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7015637,
+    "lon": 108.1880345,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7017445,
+    "lon": 108.1879799,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7153929,
+    "lon": 108.1855981,
+    "osm_name": "way/681313093",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6995897,
+    "lon": 108.1929966,
+    "osm_name": "way/681313095",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7138008,
+    "lon": 108.1871134,
+    "osm_name": "way/681313097",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7097501,
+    "lon": 108.178467,
+    "osm_name": "way/681323961",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7545754,
+    "lon": 108.1875752,
+    "osm_name": "way/681330866",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7486556,
+    "lon": 108.1858553,
+    "osm_name": "way/681330868",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7496597,
+    "lon": 108.1833822,
+    "osm_name": "way/681513141",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7481488,
+    "lon": 108.1836109,
+    "osm_name": "way/681513143",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7570565,
+    "lon": 108.1967993,
+    "osm_name": "way/681513148",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.6881908,
+    "lon": 108.1695085,
+    "osm_name": "way/681513692",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -7.0098703,
+    "lon": 108.3547456,
+    "osm_name": "way/681529669",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0111723,
+    "lon": 108.3587809,
+    "osm_name": "way/681529676",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.012036,
+    "lon": 108.3556626,
+    "osm_name": "Jalan Raya Talaga - Cikijing",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0102963,
+    "lon": 108.3507568,
+    "osm_name": "Jalan Raya Talaga - Cikijing",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0261179,
+    "lon": 108.3496229,
+    "osm_name": "way/681551622",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.622015,
+    "lon": 108.2110633,
+    "osm_name": "way/681552907",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -7.0229514,
+    "lon": 108.3548867,
+    "osm_name": "14",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.025311,
+    "lon": 108.3515031,
+    "osm_name": "14",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -7.0220847,
+    "lon": 108.388206,
+    "osm_name": "14",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.6626588,
+    "lon": 108.0932846,
+    "osm_name": "way/681812864",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6661088,
+    "lon": 108.0964899,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6659517,
+    "lon": 108.0966313,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6324953,
+    "lon": 108.1474182,
+    "osm_name": "way/682361256",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -7.0492268,
+    "lon": 108.3471928,
+    "osm_name": "way/682373471",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -6.6413312,
+    "lon": 108.0626917,
+    "osm_name": "way/682559225",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8943115,
+    "lon": 108.3588929,
+    "osm_name": "way/682573230",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.7354081,
+    "lon": 108.2215354,
+    "osm_name": "way/682621903",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7264077,
+    "lon": 108.2201624,
+    "osm_name": "way/682621906",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.5551115,
+    "lon": 108.1172638,
+    "osm_name": "way/682809487",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8252263,
+    "lon": 108.2068378,
+    "osm_name": "way/682816236",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7861505,
+    "lon": 108.2249662,
+    "osm_name": "way/682817407",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -7.0263077,
+    "lon": 108.3887533,
+    "osm_name": "14",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0264454,
+    "lon": 108.3886446,
+    "osm_name": "14",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0229708,
+    "lon": 108.3884597,
+    "osm_name": "14",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0205161,
+    "lon": 108.3886545,
+    "osm_name": "14",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.8313743,
+    "lon": 108.2232238,
+    "osm_name": "Jalan Cibasale",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8218796,
+    "lon": 108.2212,
+    "osm_name": "way/682821600",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8329658,
+    "lon": 108.2128,
+    "osm_name": "Jalan Kiai Haji Abdul Halim",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8330324,
+    "lon": 108.2127826,
+    "osm_name": "Jalan Kiai Haji Abdul Halim",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8303839,
+    "lon": 108.2083569,
+    "osm_name": "Jalan Pemuda",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8295929,
+    "lon": 108.2069656,
+    "osm_name": "way/682821612",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8280128,
+    "lon": 108.2063719,
+    "osm_name": "Jalan Kelurahan Cijati",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8341922,
+    "lon": 108.215843,
+    "osm_name": "Jalan Cijati Girang",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8279631,
+    "lon": 108.2016725,
+    "osm_name": "way/682823474",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8260758,
+    "lon": 108.2067678,
+    "osm_name": "way/682823482",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.66258,
+    "lon": 108.1278483,
+    "osm_name": "way/682823739",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6598481,
+    "lon": 108.128119,
+    "osm_name": "way/682823741",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6753683,
+    "lon": 108.1231145,
+    "osm_name": "way/682823747",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6728261,
+    "lon": 108.11516,
+    "osm_name": "way/682823748",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6564894,
+    "lon": 108.1234429,
+    "osm_name": "way/682823752",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6653849,
+    "lon": 108.1314955,
+    "osm_name": "way/682823755",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.9920099,
+    "lon": 108.3238159,
+    "osm_name": "Jalan Raya Talaga - Cikijing",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.8116221,
+    "lon": 108.2892866,
+    "osm_name": "way/683839656",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.819324,
+    "lon": 108.280298,
+    "osm_name": "way/683839661",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.8258518,
+    "lon": 108.2705715,
+    "osm_name": "way/683846907",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -7.020305,
+    "lon": 108.3822088,
+    "osm_name": "14",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0195603,
+    "lon": 108.3604262,
+    "osm_name": "14",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0195083,
+    "lon": 108.3602455,
+    "osm_name": "way/683859897",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.8505367,
+    "lon": 108.2824373,
+    "osm_name": "way/683866041",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8484398,
+    "lon": 108.2684817,
+    "osm_name": "way/683868766",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.7688694,
+    "lon": 108.169422,
+    "osm_name": "way/684040153",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.8685207,
+    "lon": 108.2859153,
+    "osm_name": "way/684040778",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.87592,
+    "lon": 108.2796353,
+    "osm_name": "way/684040794",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8592631,
+    "lon": 108.2791002,
+    "osm_name": "way/684043053",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.858166,
+    "lon": 108.2782771,
+    "osm_name": "way/684043056",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.7874317,
+    "lon": 108.3369595,
+    "osm_name": "way/684049095",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.7834916,
+    "lon": 108.3476845,
+    "osm_name": "Jalan Raya Imam Bonjol",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.783029,
+    "lon": 108.3498869,
+    "osm_name": "Jalan Raya Imam Bonjol",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.8771323,
+    "lon": 108.290586,
+    "osm_name": "way/684050476",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8793169,
+    "lon": 108.2737374,
+    "osm_name": "way/684050637",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.876655,
+    "lon": 108.2758564,
+    "osm_name": "way/684050638",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.786864,
+    "lon": 108.3520144,
+    "osm_name": "way/684057541",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.7579471,
+    "lon": 108.3324688,
+    "osm_name": "way/684065097",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7628155,
+    "lon": 108.3333421,
+    "osm_name": "Jalan KH Abdul Chalim",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7099589,
+    "lon": 108.1693305,
+    "osm_name": "way/684072508",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7055371,
+    "lon": 108.1721241,
+    "osm_name": "way/684072510",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7042914,
+    "lon": 108.1696319,
+    "osm_name": "way/684072537",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7102559,
+    "lon": 108.1681862,
+    "osm_name": "Simpang Susun Kertajati",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7102329,
+    "lon": 108.1681456,
+    "osm_name": "Simpang Susun Kertajati",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7128959,
+    "lon": 108.1733631,
+    "osm_name": "way/684072553",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7127792,
+    "lon": 108.160208,
+    "osm_name": "way/684072569",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7089538,
+    "lon": 108.1767883,
+    "osm_name": "way/684072571",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6926936,
+    "lon": 108.3270836,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6928747,
+    "lon": 108.3271198,
+    "osm_name": "Jalan Tol Cikopo–Palimanan",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.8435485,
+    "lon": 108.3344911,
+    "osm_name": "way/684080651",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.843948,
+    "lon": 108.3354561,
+    "osm_name": "way/684083643",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.6956602,
+    "lon": 108.3273349,
+    "osm_name": "way/684085638",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6953145,
+    "lon": 108.3273072,
+    "osm_name": "way/684085639",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.695067,
+    "lon": 108.3273076,
+    "osm_name": "way/684085641",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7750792,
+    "lon": 108.1696406,
+    "osm_name": "way/684278351",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.6891505,
+    "lon": 108.3386714,
+    "osm_name": "way/684280374",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6905947,
+    "lon": 108.3431865,
+    "osm_name": "way/684280733",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.681775,
+    "lon": 108.3556991,
+    "osm_name": "way/684281166",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.6904312,
+    "lon": 108.352914,
+    "osm_name": "way/684282097",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6828768,
+    "lon": 108.1883768,
+    "osm_name": "way/684283237",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6965057,
+    "lon": 108.1926131,
+    "osm_name": "way/684283241",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6785926,
+    "lon": 108.1889843,
+    "osm_name": "way/684283243",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6822583,
+    "lon": 108.1881386,
+    "osm_name": "way/684283245",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6785402,
+    "lon": 108.1881009,
+    "osm_name": "way/684283249",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6894303,
+    "lon": 108.341468,
+    "osm_name": "way/684290471",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.8054269,
+    "lon": 108.3254302,
+    "osm_name": "way/684294714",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.8021306,
+    "lon": 108.3175412,
+    "osm_name": "way/684296900",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.6443208,
+    "lon": 108.3291741,
+    "osm_name": "way/684298658",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6486599,
+    "lon": 108.3262314,
+    "osm_name": "way/684298660",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6465616,
+    "lon": 108.3275583,
+    "osm_name": "way/684298663",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6454463,
+    "lon": 108.3283563,
+    "osm_name": "way/684298665",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.644086,
+    "lon": 108.3293427,
+    "osm_name": "way/684301195",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7938307,
+    "lon": 108.3303004,
+    "osm_name": "way/684302685",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.6609915,
+    "lon": 108.1894636,
+    "osm_name": "way/684306774",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6688455,
+    "lon": 108.1929631,
+    "osm_name": "way/684306778",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6669649,
+    "lon": 108.1931536,
+    "osm_name": "way/684306801",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6625502,
+    "lon": 108.1990671,
+    "osm_name": "way/684306807",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6628362,
+    "lon": 108.1988392,
+    "osm_name": "way/684306810",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6655197,
+    "lon": 108.1963731,
+    "osm_name": "way/684306812",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6669526,
+    "lon": 108.1951333,
+    "osm_name": "way/684306814",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6700823,
+    "lon": 108.1924669,
+    "osm_name": "way/684306825",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.669633,
+    "lon": 108.192536,
+    "osm_name": "way/684306827",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6705481,
+    "lon": 108.1924154,
+    "osm_name": "way/684306831",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6720319,
+    "lon": 108.1918168,
+    "osm_name": "way/684306834",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6750187,
+    "lon": 108.1903198,
+    "osm_name": "way/684306841",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6787524,
+    "lon": 108.189047,
+    "osm_name": "way/684306844",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6732444,
+    "lon": 108.1911506,
+    "osm_name": "way/684306848",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7731876,
+    "lon": 108.1697628,
+    "osm_name": "way/684341102",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.767308,
+    "lon": 108.1693777,
+    "osm_name": "way/684341106",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.780045,
+    "lon": 108.177184,
+    "osm_name": "way/684341110",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7793543,
+    "lon": 108.1753862,
+    "osm_name": "way/684341116",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.6171206,
+    "lon": 108.3207948,
+    "osm_name": "way/684487441",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.6082706,
+    "lon": 108.3156865,
+    "osm_name": "way/684495749",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6933961,
+    "lon": 108.2259757,
+    "osm_name": "way/684500829",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.630235,
+    "lon": 108.3318398,
+    "osm_name": "way/684501614",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6859584,
+    "lon": 108.2263472,
+    "osm_name": "way/684505143",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.8615047,
+    "lon": 108.3221765,
+    "osm_name": "way/684506294",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.620443,
+    "lon": 108.228729,
+    "osm_name": "way/684509248",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6209709,
+    "lon": 108.2280927,
+    "osm_name": "way/684509250",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6207771,
+    "lon": 108.2272095,
+    "osm_name": "way/684509253",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.869272,
+    "lon": 108.3340781,
+    "osm_name": "way/684509864",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.8731279,
+    "lon": 108.3290758,
+    "osm_name": "way/684509865",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.8732667,
+    "lon": 108.3282772,
+    "osm_name": "way/684509867",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.6693422,
+    "lon": 108.3342072,
+    "osm_name": "way/684512241",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6694095,
+    "lon": 108.3344194,
+    "osm_name": "way/684513544",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6581569,
+    "lon": 108.3275704,
+    "osm_name": "way/684515000",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6688621,
+    "lon": 108.3328748,
+    "osm_name": "way/684531717",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6685781,
+    "lon": 108.3254252,
+    "osm_name": "way/684531719",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6638896,
+    "lon": 108.2253716,
+    "osm_name": "way/685151969",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.705365,
+    "lon": 108.3283496,
+    "osm_name": "11",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7103767,
+    "lon": 108.3203926,
+    "osm_name": "way/685152574",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7200415,
+    "lon": 108.3175314,
+    "osm_name": "way/685152579",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.705506,
+    "lon": 108.3216642,
+    "osm_name": "11",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7363261,
+    "lon": 108.3291332,
+    "osm_name": "way/685161789",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7241841,
+    "lon": 108.3292877,
+    "osm_name": "way/685161798",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6443314,
+    "lon": 108.2269844,
+    "osm_name": "way/685165660",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7357508,
+    "lon": 108.313073,
+    "osm_name": "way/685166306",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.6408704,
+    "lon": 108.2309244,
+    "osm_name": "way/685167450",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7759908,
+    "lon": 108.3083372,
+    "osm_name": "way/685177871",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.7813856,
+    "lon": 108.3202372,
+    "osm_name": "way/685178951",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.7208988,
+    "lon": 108.2488584,
+    "osm_name": "way/685341895",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.719463,
+    "lon": 108.2485563,
+    "osm_name": "way/685341897",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7746694,
+    "lon": 108.3182457,
+    "osm_name": "way/685346754",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.9183785,
+    "lon": 108.3183267,
+    "osm_name": "way/685353303",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.9142877,
+    "lon": 108.316795,
+    "osm_name": "way/685354717",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.9113469,
+    "lon": 108.3147754,
+    "osm_name": "way/685354720",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.9037593,
+    "lon": 108.3323223,
+    "osm_name": "way/685357544",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.6382919,
+    "lon": 108.2199351,
+    "osm_name": "way/685360224",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.635382,
+    "lon": 108.2109768,
+    "osm_name": "way/685360228",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7977096,
+    "lon": 108.3064458,
+    "osm_name": "way/685364630",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.9557412,
+    "lon": 108.246282,
+    "osm_name": "way/685367017",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.7997043,
+    "lon": 108.3006453,
+    "osm_name": "way/685373723",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.8190077,
+    "lon": 108.3063327,
+    "osm_name": "way/685380020",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.854446,
+    "lon": 108.2629572,
+    "osm_name": "way/685537139",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8405571,
+    "lon": 108.2513186,
+    "osm_name": "way/685537147",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8400314,
+    "lon": 108.2510387,
+    "osm_name": "way/685537148",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8353487,
+    "lon": 108.2532733,
+    "osm_name": "way/685538385",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8437376,
+    "lon": 108.24674,
+    "osm_name": "Jalan Babakankoda",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.852037,
+    "lon": 108.2639,
+    "osm_name": "way/685546179",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8563198,
+    "lon": 108.2531552,
+    "osm_name": "way/685547209",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8323472,
+    "lon": 108.2464581,
+    "osm_name": "Jalan Laswi",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7700493,
+    "lon": 108.2980211,
+    "osm_name": "way/685555279",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.8167968,
+    "lon": 108.2623029,
+    "osm_name": "way/685556475",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.8127674,
+    "lon": 108.2668513,
+    "osm_name": "way/685556482",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.8183076,
+    "lon": 108.2619323,
+    "osm_name": "way/685556497",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.814308,
+    "lon": 108.2643728,
+    "osm_name": "way/685556498",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.7516417,
+    "lon": 108.2943546,
+    "osm_name": "way/685559462",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7506371,
+    "lon": 108.292323,
+    "osm_name": "way/685559464",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.9650827,
+    "lon": 108.2486598,
+    "osm_name": "way/685594422",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9638677,
+    "lon": 108.2466803,
+    "osm_name": "Jalan Talaga-Bantarujeg",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.669934,
+    "lon": 108.3356264,
+    "osm_name": "way/685596716",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.8862329,
+    "lon": 108.3044632,
+    "osm_name": "Pintas Rajagaluh - Majalengka",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.7712406,
+    "lon": 108.2516197,
+    "osm_name": "way/685762588",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7701085,
+    "lon": 108.2476312,
+    "osm_name": "way/685762591",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.8845787,
+    "lon": 108.303995,
+    "osm_name": "way/685763684",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.7780137,
+    "lon": 108.2492948,
+    "osm_name": "way/685763787",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.8941076,
+    "lon": 108.3060161,
+    "osm_name": "way/685768273",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8951171,
+    "lon": 108.3110262,
+    "osm_name": "way/685773138",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.892425,
+    "lon": 108.3086136,
+    "osm_name": "way/685773161",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.7611058,
+    "lon": 108.2420233,
+    "osm_name": "way/685774427",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.8725241,
+    "lon": 108.3068771,
+    "osm_name": "way/685776274",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.862838,
+    "lon": 108.2997824,
+    "osm_name": "way/685777779",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8615201,
+    "lon": 108.2958426,
+    "osm_name": "way/685779026",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.7621203,
+    "lon": 108.2359249,
+    "osm_name": "way/685779928",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.9639751,
+    "lon": 108.2594577,
+    "osm_name": "way/685805581",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9600993,
+    "lon": 108.2553291,
+    "osm_name": "way/685805589",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9612851,
+    "lon": 108.2575098,
+    "osm_name": "way/685805593",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.859134,
+    "lon": 108.2923889,
+    "osm_name": "way/685807747",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.7604359,
+    "lon": 108.2715203,
+    "osm_name": "way/685997002",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7542571,
+    "lon": 108.2758775,
+    "osm_name": "way/685997005",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7552413,
+    "lon": 108.2784123,
+    "osm_name": "way/685998027",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7867032,
+    "lon": 108.2727308,
+    "osm_name": "way/686009743",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7853662,
+    "lon": 108.2683587,
+    "osm_name": "way/686009749",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7757651,
+    "lon": 108.2700417,
+    "osm_name": "way/686009755",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7870253,
+    "lon": 108.2705324,
+    "osm_name": "way/686009767",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7852054,
+    "lon": 108.2707116,
+    "osm_name": "way/686009770",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.8473858,
+    "lon": 108.2446057,
+    "osm_name": "way/686010350",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8408947,
+    "lon": 108.2271673,
+    "osm_name": "way/686010355",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8434088,
+    "lon": 108.2439314,
+    "osm_name": "way/686010359",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8383422,
+    "lon": 108.2249217,
+    "osm_name": "Jalan Imam Bonjol",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8371229,
+    "lon": 108.2302732,
+    "osm_name": "Jalan Babakan",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7740178,
+    "lon": 108.2846068,
+    "osm_name": "way/686016994",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7681861,
+    "lon": 108.2848743,
+    "osm_name": "way/686017009",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.6524802,
+    "lon": 108.2781682,
+    "osm_name": "Jalan Jatiwangi - Wanasalam",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.8499015,
+    "lon": 108.2460966,
+    "osm_name": "way/686020025",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8433467,
+    "lon": 108.2455331,
+    "osm_name": "way/686020034",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8365991,
+    "lon": 108.2351542,
+    "osm_name": "Jalan Olahraga",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8362945,
+    "lon": 108.2249852,
+    "osm_name": "Jalan Imam Bonjol",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -7.0192335,
+    "lon": 108.3044253,
+    "osm_name": "way/686022345",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -7.0295966,
+    "lon": 108.3076289,
+    "osm_name": "way/686023758",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -6.632427,
+    "lon": 108.2876853,
+    "osm_name": "way/686024944",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6372463,
+    "lon": 108.2882985,
+    "osm_name": "way/686025210",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -7.0293707,
+    "lon": 108.305222,
+    "osm_name": "way/686029704",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -7.0193835,
+    "lon": 108.3064352,
+    "osm_name": "way/686029723",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.8411819,
+    "lon": 108.2244988,
+    "osm_name": "way/686058805",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.852555,
+    "lon": 108.2340022,
+    "osm_name": "way/686068161",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8455736,
+    "lon": 108.238046,
+    "osm_name": "Jalan Babakankoda",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.6845859,
+    "lon": 108.2817491,
+    "osm_name": "way/686518906",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6787682,
+    "lon": 108.2889718,
+    "osm_name": "way/686518917",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6861284,
+    "lon": 108.2806478,
+    "osm_name": "way/686518923",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6815402,
+    "lon": 108.283957,
+    "osm_name": "way/686518927",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6420229,
+    "lon": 108.2331547,
+    "osm_name": "way/686593965",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.731964,
+    "lon": 108.2199388,
+    "osm_name": "way/686771462",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.741826,
+    "lon": 108.2126526,
+    "osm_name": "way/686771465",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.983151,
+    "lon": 108.1858491,
+    "osm_name": "way/686817529",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.988333,
+    "lon": 108.2014234,
+    "osm_name": "way/686817533",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.9028497,
+    "lon": 108.3189717,
+    "osm_name": "way/687258440",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.6249318,
+    "lon": 108.2703428,
+    "osm_name": "way/687259506",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.9601013,
+    "lon": 108.179723,
+    "osm_name": "way/687264327",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.6179289,
+    "lon": 108.2740906,
+    "osm_name": "way/687264664",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.619774,
+    "lon": 108.2729227,
+    "osm_name": "way/687264667",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.9586405,
+    "lon": 108.1986193,
+    "osm_name": "way/687265084",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.9757948,
+    "lon": 108.2942322,
+    "osm_name": "way/687267561",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.62436,
+    "lon": 108.2709275,
+    "osm_name": "way/687267979",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.9768877,
+    "lon": 108.3128015,
+    "osm_name": "way/687271774",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.9870531,
+    "lon": 108.3033359,
+    "osm_name": "way/687274043",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.9885587,
+    "lon": 108.3014266,
+    "osm_name": "way/687274044",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.9760222,
+    "lon": 108.3114889,
+    "osm_name": "Jalan Jendral Ahmad Yani",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.8856577,
+    "lon": 108.3267193,
+    "osm_name": "way/687285935",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.8207471,
+    "lon": 108.3203009,
+    "osm_name": "way/687289763",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.8982953,
+    "lon": 108.3338904,
+    "osm_name": "way/687291125",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.8298459,
+    "lon": 108.3250726,
+    "osm_name": "way/687292163",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.8139797,
+    "lon": 108.3257351,
+    "osm_name": "way/687292171",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.8159805,
+    "lon": 108.3242837,
+    "osm_name": "way/687292175",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.8165152,
+    "lon": 108.3241199,
+    "osm_name": "way/687299961",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -7.0500213,
+    "lon": 108.1910903,
+    "osm_name": "way/687505411",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.8413277,
+    "lon": 108.3371251,
+    "osm_name": "way/687511566",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.8686625,
+    "lon": 108.3506941,
+    "osm_name": "way/687519216",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.8628433,
+    "lon": 108.3508744,
+    "osm_name": "way/687520412",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.8039315,
+    "lon": 108.1635316,
+    "osm_name": "way/688069009",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.7680589,
+    "lon": 108.212102,
+    "osm_name": "way/688069577",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.6651141,
+    "lon": 108.2898535,
+    "osm_name": "way/688072867",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6645586,
+    "lon": 108.2899833,
+    "osm_name": "way/688072879",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.8096466,
+    "lon": 108.1742738,
+    "osm_name": "way/688073265",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.6593007,
+    "lon": 108.2644359,
+    "osm_name": "way/688078270",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.657535,
+    "lon": 108.2524068,
+    "osm_name": "way/688078274",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.8017088,
+    "lon": 108.1848163,
+    "osm_name": "way/688081457",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.7971212,
+    "lon": 108.1821619,
+    "osm_name": "way/688081459",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.7941127,
+    "lon": 108.1803245,
+    "osm_name": "way/688084395",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.8020134,
+    "lon": 108.1985998,
+    "osm_name": "way/688087023",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.6722832,
+    "lon": 108.2632864,
+    "osm_name": "way/688088816",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.9705396,
+    "lon": 108.1711219,
+    "osm_name": "way/688139306",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.7057245,
+    "lon": 108.351569,
+    "osm_name": "11",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7037174,
+    "lon": 108.3393037,
+    "osm_name": "11",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.978316,
+    "lon": 108.2344032,
+    "osm_name": "way/688159565",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.8453808,
+    "lon": 108.212873,
+    "osm_name": "way/688164455",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8438334,
+    "lon": 108.2224243,
+    "osm_name": "way/688164459",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7328246,
+    "lon": 108.2708329,
+    "osm_name": "way/688176728",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -7.0564306,
+    "lon": 108.2696146,
+    "osm_name": "way/688182205",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -6.7295513,
+    "lon": 108.3501566,
+    "osm_name": "way/688185817",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7323665,
+    "lon": 108.3528328,
+    "osm_name": "way/688185831",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7781589,
+    "lon": 108.4001925,
+    "osm_name": "Jalan Raya Imam Bonjol",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7754675,
+    "lon": 108.3948336,
+    "osm_name": "way/688185961",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7775737,
+    "lon": 108.3865652,
+    "osm_name": "Jalan Raya Imam Bonjol",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.8365019,
+    "lon": 108.2208278,
+    "osm_name": "Jalan Emen Slamet",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8355704,
+    "lon": 108.2217579,
+    "osm_name": "Jalan Siti Armilah",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8361663,
+    "lon": 108.2230841,
+    "osm_name": "Jalan Pahlawan",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8375924,
+    "lon": 108.223009,
+    "osm_name": "Jalan Pahlawan",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8412395,
+    "lon": 108.2136482,
+    "osm_name": "way/688187157",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -7.0191227,
+    "lon": 108.2300083,
+    "osm_name": "way/688202923",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.7406999,
+    "lon": 108.3480297,
+    "osm_name": "way/688203062",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7440677,
+    "lon": 108.3489343,
+    "osm_name": "way/688203071",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7656609,
+    "lon": 108.3358073,
+    "osm_name": "way/688203081",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.8087834,
+    "lon": 108.384133,
+    "osm_name": "way/688211177",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7901663,
+    "lon": 108.3854343,
+    "osm_name": "way/688211180",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7898627,
+    "lon": 108.3822147,
+    "osm_name": "way/688211216",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.8639028,
+    "lon": 108.2011404,
+    "osm_name": "way/688213632",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8643235,
+    "lon": 108.2032507,
+    "osm_name": "way/688213634",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7423535,
+    "lon": 108.293093,
+    "osm_name": "Jalan Kavling Azhar",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7316379,
+    "lon": 108.2965702,
+    "osm_name": "way/688273702",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7674791,
+    "lon": 108.2098687,
+    "osm_name": "way/688275089",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7361129,
+    "lon": 108.3115786,
+    "osm_name": "way/688281369",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7330454,
+    "lon": 108.3120052,
+    "osm_name": "way/688282578",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7436878,
+    "lon": 108.2933604,
+    "osm_name": "way/688283073",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.9886973,
+    "lon": 108.3520034,
+    "osm_name": "way/688291536",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.7847864,
+    "lon": 108.3742409,
+    "osm_name": "way/688312533",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7907909,
+    "lon": 108.1840877,
+    "osm_name": "way/688319054",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7815352,
+    "lon": 108.3717578,
+    "osm_name": "Jalan Raya Imam Bonjol",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7978028,
+    "lon": 108.3309722,
+    "osm_name": "way/688336456",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.7856079,
+    "lon": 108.377018,
+    "osm_name": "way/688336832",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7863684,
+    "lon": 108.3741467,
+    "osm_name": "way/688336838",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7863079,
+    "lon": 108.3736971,
+    "osm_name": "way/688336842",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.9625264,
+    "lon": 108.2190026,
+    "osm_name": "way/688443828",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.7610563,
+    "lon": 108.2054168,
+    "osm_name": "way/688527060",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7560929,
+    "lon": 108.2177628,
+    "osm_name": "way/688527063",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -7.0316137,
+    "lon": 108.2711126,
+    "osm_name": "way/688535796",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -7.028988,
+    "lon": 108.2758151,
+    "osm_name": "way/688535798",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -6.9847932,
+    "lon": 108.2726685,
+    "osm_name": "way/688537094",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9821725,
+    "lon": 108.2837813,
+    "osm_name": "way/688541209",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.6390977,
+    "lon": 108.2496848,
+    "osm_name": "way/688547191",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6388871,
+    "lon": 108.2472822,
+    "osm_name": "way/688547195",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.9060462,
+    "lon": 108.2910647,
+    "osm_name": "way/688552452",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.732079,
+    "lon": 108.1661362,
+    "osm_name": "way/688566537",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7307496,
+    "lon": 108.1682696,
+    "osm_name": "way/688569380",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7252567,
+    "lon": 108.1678692,
+    "osm_name": "way/688569382",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7263518,
+    "lon": 108.1677772,
+    "osm_name": "way/688569385",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7292755,
+    "lon": 108.1678009,
+    "osm_name": "way/688569388",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7315419,
+    "lon": 108.167205,
+    "osm_name": "way/688571423",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.9534801,
+    "lon": 108.286017,
+    "osm_name": "way/688575823",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9612901,
+    "lon": 108.2795079,
+    "osm_name": "way/688575830",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.7140778,
+    "lon": 108.3583085,
+    "osm_name": "way/688643318",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.9558613,
+    "lon": 108.2202516,
+    "osm_name": "way/688677939",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.8263804,
+    "lon": 108.3406191,
+    "osm_name": "way/688818494",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.8251207,
+    "lon": 108.3390849,
+    "osm_name": "way/688818506",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.7397149,
+    "lon": 108.2290294,
+    "osm_name": "11",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.9096272,
+    "lon": 108.2427352,
+    "osm_name": "way/689095499",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -7.003523,
+    "lon": 108.3015147,
+    "osm_name": "way/689103900",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -7.0045507,
+    "lon": 108.3109896,
+    "osm_name": "way/689115932",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -7.0120902,
+    "lon": 108.308447,
+    "osm_name": "way/689115935",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.995171,
+    "lon": 108.296212,
+    "osm_name": "way/689115947",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.9324034,
+    "lon": 108.3016784,
+    "osm_name": "way/689141065",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.9129889,
+    "lon": 108.3128813,
+    "osm_name": "way/689159208",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.6598482,
+    "lon": 108.2022046,
+    "osm_name": "way/689174087",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6620387,
+    "lon": 108.2205905,
+    "osm_name": "way/689181776",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6681454,
+    "lon": 108.2027418,
+    "osm_name": "way/689181779",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6692686,
+    "lon": 108.2101114,
+    "osm_name": "way/689182637",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.8646742,
+    "lon": 108.1966716,
+    "osm_name": "way/689186099",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.657449,
+    "lon": 108.2076093,
+    "osm_name": "way/689193834",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.658693,
+    "lon": 108.204395,
+    "osm_name": "way/689193836",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6604532,
+    "lon": 108.2011622,
+    "osm_name": "way/689193838",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6607884,
+    "lon": 108.200547,
+    "osm_name": "way/689193840",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6611389,
+    "lon": 108.1999972,
+    "osm_name": "way/689193842",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6572812,
+    "lon": 108.2080104,
+    "osm_name": "way/689193848",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6576376,
+    "lon": 108.2070863,
+    "osm_name": "way/689193850",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6583223,
+    "lon": 108.2052318,
+    "osm_name": "way/689193852",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6569919,
+    "lon": 108.2087177,
+    "osm_name": "way/689193858",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6566154,
+    "lon": 108.2096034,
+    "osm_name": "way/689193861",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6565165,
+    "lon": 108.2098206,
+    "osm_name": "way/689193864",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6562697,
+    "lon": 108.210386,
+    "osm_name": "way/689193867",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6558305,
+    "lon": 108.2114007,
+    "osm_name": "way/689193870",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6658858,
+    "lon": 108.20379,
+    "osm_name": "way/689194295",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7368143,
+    "lon": 108.3333204,
+    "osm_name": "way/689562845",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.6912257,
+    "lon": 108.2142015,
+    "osm_name": "way/689565555",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.6775748,
+    "lon": 108.2190751,
+    "osm_name": "way/689566779",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.8093437,
+    "lon": 108.3605783,
+    "osm_name": "way/689571559",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.8071182,
+    "lon": 108.2222254,
+    "osm_name": "way/689572905",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.8898908,
+    "lon": 108.2095405,
+    "osm_name": "way/689577054",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8551326,
+    "lon": 108.3003834,
+    "osm_name": "way/689591639",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.6227158,
+    "lon": 108.3422768,
+    "osm_name": "way/689594073",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.8557965,
+    "lon": 108.2957339,
+    "osm_name": "way/689602179",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.9621833,
+    "lon": 108.254159,
+    "osm_name": "Jalan Talaga-Bantarujeg",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9623381,
+    "lon": 108.2483022,
+    "osm_name": "way/689612676",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9852674,
+    "lon": 108.2208681,
+    "osm_name": "way/689617374",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.953473,
+    "lon": 108.3217662,
+    "osm_name": "way/689629379",
+    "kecamatan": "Banjaran"
+  },
+  {
+    "lat": -6.959856,
+    "lon": 108.324977,
+    "osm_name": "way/689629381",
+    "kecamatan": "Banjaran"
+  },
+  {
+    "lat": -6.9580731,
+    "lon": 108.3327648,
+    "osm_name": "way/689630955",
+    "kecamatan": "Banjaran"
+  },
+  {
+    "lat": -7.0609584,
+    "lon": 108.2443361,
+    "osm_name": "way/689635570",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -6.9942013,
+    "lon": 108.2114904,
+    "osm_name": "way/689643621",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.6251412,
+    "lon": 108.3028538,
+    "osm_name": "way/689645190",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -7.0123019,
+    "lon": 108.2165296,
+    "osm_name": "way/689648903",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -6.6281069,
+    "lon": 108.2893979,
+    "osm_name": "way/689652661",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6211677,
+    "lon": 108.2937887,
+    "osm_name": "way/689652668",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7546333,
+    "lon": 108.3580775,
+    "osm_name": "way/689655767",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7640261,
+    "lon": 108.3641048,
+    "osm_name": "way/689655773",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -7.0164751,
+    "lon": 108.219073,
+    "osm_name": "way/689683975",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -7.0166976,
+    "lon": 108.2197044,
+    "osm_name": "way/689683977",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -7.0164728,
+    "lon": 108.2214136,
+    "osm_name": "way/689683979",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -7.0212846,
+    "lon": 108.2224224,
+    "osm_name": "way/689683982",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -6.9443328,
+    "lon": 108.2173305,
+    "osm_name": "way/689707719",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.7308691,
+    "lon": 108.2244783,
+    "osm_name": "way/689800696",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7554626,
+    "lon": 108.2034414,
+    "osm_name": "11",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7470027,
+    "lon": 108.2496995,
+    "osm_name": "way/689870744",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7319323,
+    "lon": 108.2540258,
+    "osm_name": "way/689902577",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7285967,
+    "lon": 108.2653847,
+    "osm_name": "way/689902582",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7274266,
+    "lon": 108.2643468,
+    "osm_name": "way/689902586",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7256896,
+    "lon": 108.2652862,
+    "osm_name": "way/689902601",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7266691,
+    "lon": 108.2643159,
+    "osm_name": "way/689902604",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7208465,
+    "lon": 108.2668269,
+    "osm_name": "way/689915784",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7298906,
+    "lon": 108.265888,
+    "osm_name": "11",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7366218,
+    "lon": 108.2627207,
+    "osm_name": "way/689915806",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7366016,
+    "lon": 108.2629668,
+    "osm_name": "way/689915812",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7431333,
+    "lon": 108.265381,
+    "osm_name": "way/689915817",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7435211,
+    "lon": 108.2655302,
+    "osm_name": "way/689915821",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7417989,
+    "lon": 108.2648855,
+    "osm_name": "way/689915826",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7414331,
+    "lon": 108.2647564,
+    "osm_name": "way/689915829",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7412118,
+    "lon": 108.2646661,
+    "osm_name": "way/689915832",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7394666,
+    "lon": 108.263638,
+    "osm_name": "way/689915835",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7384337,
+    "lon": 108.262164,
+    "osm_name": "way/689915839",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7367436,
+    "lon": 108.2570456,
+    "osm_name": "11",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7264695,
+    "lon": 108.2520795,
+    "osm_name": "way/689917519",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7260835,
+    "lon": 108.2519377,
+    "osm_name": "way/689917522",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7254373,
+    "lon": 108.2501544,
+    "osm_name": "way/689917525",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7236107,
+    "lon": 108.2499257,
+    "osm_name": "way/689917526",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7250432,
+    "lon": 108.2512368,
+    "osm_name": "way/689921395",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7277417,
+    "lon": 108.2526912,
+    "osm_name": "way/689921398",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7285201,
+    "lon": 108.2529849,
+    "osm_name": "way/689921400",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7280706,
+    "lon": 108.24616,
+    "osm_name": "way/689921404",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7253742,
+    "lon": 108.2662055,
+    "osm_name": "way/689933132",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7252839,
+    "lon": 108.2664526,
+    "osm_name": "way/689933134",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7251851,
+    "lon": 108.2667218,
+    "osm_name": "way/689933137",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7334023,
+    "lon": 108.2603879,
+    "osm_name": "11",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -7.0403604,
+    "lon": 108.3762428,
+    "osm_name": "way/690115015",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.9593957,
+    "lon": 108.2317053,
+    "osm_name": "Jalan Talaga-Bantarujeg",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.8108764,
+    "lon": 108.2557026,
+    "osm_name": "way/690146514",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8417625,
+    "lon": 108.2402836,
+    "osm_name": "way/690663488",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.6455186,
+    "lon": 108.1910874,
+    "osm_name": "way/690699927",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.9522174,
+    "lon": 108.2834246,
+    "osm_name": "way/691179279",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9491372,
+    "lon": 108.2819057,
+    "osm_name": "way/691179281",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.736629,
+    "lon": 108.3505281,
+    "osm_name": "way/691257636",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7376726,
+    "lon": 108.3407193,
+    "osm_name": "way/691257650",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7242065,
+    "lon": 108.3568195,
+    "osm_name": "way/691257661",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.8127298,
+    "lon": 108.166985,
+    "osm_name": "way/691553101",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -7.0391272,
+    "lon": 108.3752444,
+    "osm_name": "way/691554337",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.7124314,
+    "lon": 108.1745594,
+    "osm_name": "way/691564665",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7121437,
+    "lon": 108.1749765,
+    "osm_name": "way/691564667",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7371123,
+    "lon": 108.3410921,
+    "osm_name": "way/691953429",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.8271156,
+    "lon": 108.1950482,
+    "osm_name": "way/695598902",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.815907,
+    "lon": 108.1982728,
+    "osm_name": "way/695599631",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.7649014,
+    "lon": 108.239309,
+    "osm_name": "way/707291763",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7376959,
+    "lon": 108.3126205,
+    "osm_name": "way/708419882",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.8385959,
+    "lon": 108.2745084,
+    "osm_name": "way/711509613",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -7.0035581,
+    "lon": 108.1682917,
+    "osm_name": "way/711558496",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.823495,
+    "lon": 108.1850461,
+    "osm_name": "way/711781196",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.7613325,
+    "lon": 108.3122577,
+    "osm_name": "way/711848895",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -7.046532,
+    "lon": 108.1811283,
+    "osm_name": "way/712005144",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.7471653,
+    "lon": 108.3273135,
+    "osm_name": "way/712138141",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7540451,
+    "lon": 108.3375802,
+    "osm_name": "way/712138160",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.804305,
+    "lon": 108.3424648,
+    "osm_name": "way/712150588",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.6735145,
+    "lon": 108.2002269,
+    "osm_name": "way/712153645",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7311937,
+    "lon": 108.3562658,
+    "osm_name": "way/713076282",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7291255,
+    "lon": 108.3503808,
+    "osm_name": "way/713076286",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.6260867,
+    "lon": 108.2438345,
+    "osm_name": "way/713128729",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6475364,
+    "lon": 108.2839163,
+    "osm_name": "way/713158418",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7289309,
+    "lon": 108.2531387,
+    "osm_name": "way/713478119",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.9797377,
+    "lon": 108.1818052,
+    "osm_name": "way/713613055",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -6.8143133,
+    "lon": 108.291654,
+    "osm_name": "way/713690232",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.5644583,
+    "lon": 108.0959276,
+    "osm_name": "way/715739891",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5627683,
+    "lon": 108.0962297,
+    "osm_name": "way/715739893",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5707307,
+    "lon": 108.0921079,
+    "osm_name": "way/715739895",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5982773,
+    "lon": 108.1131103,
+    "osm_name": "way/715752901",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.592126,
+    "lon": 108.1087985,
+    "osm_name": "way/715752904",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6225794,
+    "lon": 108.1439245,
+    "osm_name": "way/715752909",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6238838,
+    "lon": 108.1481851,
+    "osm_name": "way/715752910",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5964626,
+    "lon": 108.1196046,
+    "osm_name": "way/715752913",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.5872185,
+    "lon": 108.1080856,
+    "osm_name": "way/717162818",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6725927,
+    "lon": 108.1915561,
+    "osm_name": "way/717182519",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6637601,
+    "lon": 108.1807262,
+    "osm_name": "way/717182523",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.66063,
+    "lon": 108.1737107,
+    "osm_name": "way/717182526",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6549738,
+    "lon": 108.1566092,
+    "osm_name": "way/717182531",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6943111,
+    "lon": 108.1847494,
+    "osm_name": "way/718376057",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6797706,
+    "lon": 108.1882475,
+    "osm_name": "way/718376069",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7073697,
+    "lon": 108.1781642,
+    "osm_name": "way/718376090",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7591144,
+    "lon": 108.17272,
+    "osm_name": "way/718379225",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.7591139,
+    "lon": 108.1725684,
+    "osm_name": "way/718379227",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.9635324,
+    "lon": 108.2410407,
+    "osm_name": "way/721837762",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9922913,
+    "lon": 108.2466807,
+    "osm_name": "way/721840731",
+    "kecamatan": "Lemahsugih"
+  },
+  {
+    "lat": -7.0032613,
+    "lon": 108.2520129,
+    "osm_name": "way/722383144",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -7.0390454,
+    "lon": 108.2247084,
+    "osm_name": "way/722666546",
+    "kecamatan": "Malausma"
+  },
+  {
+    "lat": -6.6489053,
+    "lon": 108.3260978,
+    "osm_name": "way/723865157",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -7.0064243,
+    "lon": 108.337666,
+    "osm_name": "way/723931099",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0109323,
+    "lon": 108.3372418,
+    "osm_name": "way/723931102",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0112213,
+    "lon": 108.3439811,
+    "osm_name": "way/723931111",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0133171,
+    "lon": 108.343291,
+    "osm_name": "way/723931114",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0079886,
+    "lon": 108.3304048,
+    "osm_name": "way/723931118",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -7.0261228,
+    "lon": 108.3407369,
+    "osm_name": "way/723931134",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -7.0139826,
+    "lon": 108.3551016,
+    "osm_name": "way/723931145",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -7.0228872,
+    "lon": 108.3821138,
+    "osm_name": "way/724847242",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.6629296,
+    "lon": 108.3161219,
+    "osm_name": "way/725165866",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7184279,
+    "lon": 108.251233,
+    "osm_name": "way/725190118",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7573984,
+    "lon": 108.319272,
+    "osm_name": "way/726565835",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7740943,
+    "lon": 108.2067656,
+    "osm_name": "way/728207335",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.8478427,
+    "lon": 108.2428331,
+    "osm_name": "way/747796393",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8288925,
+    "lon": 108.1946402,
+    "osm_name": "way/747809604",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.8284558,
+    "lon": 108.1984375,
+    "osm_name": "way/747811286",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7503549,
+    "lon": 108.2508539,
+    "osm_name": "way/747858411",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7506066,
+    "lon": 108.1576662,
+    "osm_name": "way/747871009",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7369321,
+    "lon": 108.1873499,
+    "osm_name": "way/747875925",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.821394,
+    "lon": 108.1685781,
+    "osm_name": "way/748641611",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.7489515,
+    "lon": 108.1936615,
+    "osm_name": "way/748686739",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.6981845,
+    "lon": 108.2417149,
+    "osm_name": "way/749482921",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7457544,
+    "lon": 108.2663932,
+    "osm_name": "way/749502919",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.8225448,
+    "lon": 108.1779394,
+    "osm_name": "way/784656037",
+    "kecamatan": "Panyingkiran"
+  },
+  {
+    "lat": -6.726295,
+    "lon": 108.2220723,
+    "osm_name": "way/784980037",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -7.0306787,
+    "lon": 108.3420771,
+    "osm_name": "way/785815668",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -6.7288027,
+    "lon": 108.35448,
+    "osm_name": "way/786094300",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.6412996,
+    "lon": 108.2353796,
+    "osm_name": "way/786406591",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6218884,
+    "lon": 108.0970168,
+    "osm_name": "way/790360551",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6517748,
+    "lon": 108.2191767,
+    "osm_name": "way/791333568",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6460678,
+    "lon": 108.2258808,
+    "osm_name": "way/791351703",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6458164,
+    "lon": 108.2254666,
+    "osm_name": "way/791351705",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6528824,
+    "lon": 108.2247707,
+    "osm_name": "way/791351707",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.9699088,
+    "lon": 108.2621713,
+    "osm_name": "Jalan Talaga-Bantarujeg",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9717243,
+    "lon": 108.2699505,
+    "osm_name": "Jalan Talaga-Bantarujeg",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.9026888,
+    "lon": 108.358563,
+    "osm_name": "way/791726723",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.7042275,
+    "lon": 108.3376602,
+    "osm_name": "way/792105233",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7898703,
+    "lon": 108.3398971,
+    "osm_name": "way/792388455",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.7948465,
+    "lon": 108.34949,
+    "osm_name": "way/792398465",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.6852923,
+    "lon": 108.2812537,
+    "osm_name": "way/792864101",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.7375075,
+    "lon": 108.3124484,
+    "osm_name": "way/793707187",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7369607,
+    "lon": 108.3364136,
+    "osm_name": "way/793713678",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.6780675,
+    "lon": 108.1891141,
+    "osm_name": "way/793826191",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6737094,
+    "lon": 108.1908255,
+    "osm_name": "way/793826194",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8468484,
+    "lon": 108.2644503,
+    "osm_name": "way/794299831",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8149741,
+    "lon": 108.37481,
+    "osm_name": "way/794702970",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.815475,
+    "lon": 108.3769558,
+    "osm_name": "way/794702972",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -7.0412143,
+    "lon": 108.3353964,
+    "osm_name": "way/796925029",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -6.9528664,
+    "lon": 108.2418355,
+    "osm_name": "way/797213597",
+    "kecamatan": "Bantarujeg"
+  },
+  {
+    "lat": -6.5887025,
+    "lon": 108.1451036,
+    "osm_name": "way/798291875",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8940793,
+    "lon": 108.2879069,
+    "osm_name": "way/800637332",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8805581,
+    "lon": 108.2887172,
+    "osm_name": "way/800668209",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.8812458,
+    "lon": 108.3039549,
+    "osm_name": "Pintas Rajagaluh - Majalengka",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.6428449,
+    "lon": 108.1433938,
+    "osm_name": "way/803248061",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.9780292,
+    "lon": 108.36041,
+    "osm_name": "way/803558042",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -7.0300398,
+    "lon": 108.368826,
+    "osm_name": "way/804568875",
+    "kecamatan": "Cikijing"
+  },
+  {
+    "lat": -6.8774797,
+    "lon": 108.3183383,
+    "osm_name": "way/805955640",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.6662648,
+    "lon": 108.2895208,
+    "osm_name": "way/806332618",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6671638,
+    "lon": 108.2893916,
+    "osm_name": "way/806332620",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6638371,
+    "lon": 108.2901608,
+    "osm_name": "way/806332621",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6641386,
+    "lon": 108.2900801,
+    "osm_name": "way/806332625",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.6895889,
+    "lon": 108.1156242,
+    "osm_name": "way/813457890",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6882237,
+    "lon": 108.115527,
+    "osm_name": "way/813457892",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.689502,
+    "lon": 108.1178271,
+    "osm_name": "way/813457893",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7009117,
+    "lon": 108.171621,
+    "osm_name": "Simpang Susun Akses Kertajati",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7008966,
+    "lon": 108.1715474,
+    "osm_name": "Simpang Susun Akses Kertajati",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7906138,
+    "lon": 108.3487457,
+    "osm_name": "way/905386055",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.7682374,
+    "lon": 108.2396395,
+    "osm_name": "way/906042951",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7506463,
+    "lon": 108.1831971,
+    "osm_name": "way/906060928",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7502177,
+    "lon": 108.1832696,
+    "osm_name": "way/906060930",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7613299,
+    "lon": 108.167056,
+    "osm_name": "way/906253825",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7044567,
+    "lon": 108.3391596,
+    "osm_name": "way/906530512",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6478342,
+    "lon": 108.2838235,
+    "osm_name": "way/907241849",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.647694,
+    "lon": 108.2837592,
+    "osm_name": "way/907241851",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.787178,
+    "lon": 108.2653318,
+    "osm_name": "way/907245921",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7510006,
+    "lon": 108.2513407,
+    "osm_name": "way/939968403",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7260196,
+    "lon": 108.2645447,
+    "osm_name": "way/939977427",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.6908079,
+    "lon": 108.3431819,
+    "osm_name": "way/941038105",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6684551,
+    "lon": 108.3180466,
+    "osm_name": "way/945319273",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7599072,
+    "lon": 108.1766193,
+    "osm_name": "way/945460418",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.668997,
+    "lon": 108.3332252,
+    "osm_name": "way/946036568",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.6379627,
+    "lon": 108.2073807,
+    "osm_name": "way/946443105",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.7621086,
+    "lon": 108.3328115,
+    "osm_name": "way/946673667",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7619945,
+    "lon": 108.3194584,
+    "osm_name": "way/946742305",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.8430587,
+    "lon": 108.2930909,
+    "osm_name": "way/946800394",
+    "kecamatan": "Sukahaji"
+  },
+  {
+    "lat": -6.8543708,
+    "lon": 108.2809652,
+    "osm_name": "way/946826938",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.9913421,
+    "lon": 108.3432435,
+    "osm_name": "way/947081019",
+    "kecamatan": "Talaga"
+  },
+  {
+    "lat": -6.7373726,
+    "lon": 108.2179639,
+    "osm_name": "way/947137086",
+    "kecamatan": "Dawuan"
+  },
+  {
+    "lat": -6.8840122,
+    "lon": 108.3035114,
+    "osm_name": "way/947213619",
+    "kecamatan": "Maja"
+  },
+  {
+    "lat": -6.7896509,
+    "lon": 108.3806855,
+    "osm_name": "way/947220243",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7580754,
+    "lon": 108.3259349,
+    "osm_name": "way/947589956",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.8468273,
+    "lon": 108.3114677,
+    "osm_name": "way/947593934",
+    "kecamatan": "Sindang"
+  },
+  {
+    "lat": -6.7873262,
+    "lon": 108.3224474,
+    "osm_name": "way/947602145",
+    "kecamatan": "Rajagaluh"
+  },
+  {
+    "lat": -6.7469177,
+    "lon": 108.266813,
+    "osm_name": "way/947608819",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7042898,
+    "lon": 108.3374205,
+    "osm_name": "way/947626581",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7223855,
+    "lon": 108.2785014,
+    "osm_name": "way/947690111",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7442245,
+    "lon": 108.2935342,
+    "osm_name": "way/947690828",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.6885661,
+    "lon": 108.2788786,
+    "osm_name": "way/947701653",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.665572,
+    "lon": 108.237475,
+    "osm_name": "way/948048982",
+    "kecamatan": "Ligung"
+  },
+  {
+    "lat": -6.734058,
+    "lon": 108.3103262,
+    "osm_name": "way/948094592",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7313789,
+    "lon": 108.3101417,
+    "osm_name": "way/948095118",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7314089,
+    "lon": 108.3105035,
+    "osm_name": "way/948095120",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7287558,
+    "lon": 108.3125658,
+    "osm_name": "way/948097653",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7289347,
+    "lon": 108.3123667,
+    "osm_name": "way/948097654",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7368778,
+    "lon": 108.3122624,
+    "osm_name": "way/948102771",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7372175,
+    "lon": 108.3123324,
+    "osm_name": "way/948102773",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -7.0388763,
+    "lon": 108.3091571,
+    "osm_name": "way/949003385",
+    "kecamatan": "Cingambul"
+  },
+  {
+    "lat": -6.786803,
+    "lon": 108.2703322,
+    "osm_name": "way/949010565",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7912031,
+    "lon": 108.2734324,
+    "osm_name": "way/949013327",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.7905599,
+    "lon": 108.2729439,
+    "osm_name": "way/949013330",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.6799791,
+    "lon": 108.1776316,
+    "osm_name": "Simpang Susun Akses Kertajati",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6799435,
+    "lon": 108.1775313,
+    "osm_name": "Simpang Susun Akses Kertajati",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6930943,
+    "lon": 108.1088953,
+    "osm_name": "Jalan Tol Cileunyi–Sumedang–Dawuan",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.6929795,
+    "lon": 108.1088383,
+    "osm_name": "Jalan Tol Cileunyi–Sumedang–Dawuan",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7870211,
+    "lon": 108.23299,
+    "osm_name": "way/1123261392",
+    "kecamatan": "Kasokandel"
+  },
+  {
+    "lat": -6.7565525,
+    "lon": 108.3407129,
+    "osm_name": "way/1125150510",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7572329,
+    "lon": 108.3314574,
+    "osm_name": "way/1125321649",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7605999,
+    "lon": 108.3313348,
+    "osm_name": "way/1125329336",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.749133,
+    "lon": 108.3462751,
+    "osm_name": "way/1125346778",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.8988566,
+    "lon": 108.3168525,
+    "osm_name": "way/1146171577",
+    "kecamatan": "Argapura"
+  },
+  {
+    "lat": -6.5926542,
+    "lon": 108.2379334,
+    "osm_name": "way/1146834531",
+    "kecamatan": "Jatitujuh"
+  },
+  {
+    "lat": -6.6746422,
+    "lon": 108.1904226,
+    "osm_name": "way/1156898970",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6769398,
+    "lon": 108.1895151,
+    "osm_name": "way/1156898971",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6816421,
+    "lon": 108.1888321,
+    "osm_name": "way/1156898973",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.676613,
+    "lon": 108.1896786,
+    "osm_name": "way/1156900667",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6766942,
+    "lon": 108.1906704,
+    "osm_name": "way/1156900669",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7690535,
+    "lon": 108.3278554,
+    "osm_name": "way/1193055671",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7716184,
+    "lon": 108.329907,
+    "osm_name": "way/1193527414",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7464467,
+    "lon": 108.1681206,
+    "osm_name": "way/1198652508",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7698996,
+    "lon": 108.3287849,
+    "osm_name": "way/1198724848",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.7732821,
+    "lon": 108.3302278,
+    "osm_name": "way/1198724850",
+    "kecamatan": "Leuwimunding"
+  },
+  {
+    "lat": -6.9195938,
+    "lon": 108.2173729,
+    "osm_name": "Ciluntung",
+    "kecamatan": "Tidak Diketahui"
+  },
+  {
+    "lat": -6.8258492,
+    "lon": 108.2088759,
+    "osm_name": "way/1275972020",
+    "kecamatan": "Majalengka"
+  },
+  {
+    "lat": -6.7088187,
+    "lon": 108.3590086,
+    "osm_name": "way/1283862049",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.5886861,
+    "lon": 108.1436504,
+    "osm_name": "way/1306336742",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7127918,
+    "lon": 108.3570579,
+    "osm_name": "way/1375491559",
+    "kecamatan": "Sumberjaya"
+  },
+  {
+    "lat": -6.7641863,
+    "lon": 108.1791476,
+    "osm_name": "way/1375584133",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.7241768,
+    "lon": 108.2807725,
+    "osm_name": "way/1388021603",
+    "kecamatan": "Jatiwangi"
+  },
+  {
+    "lat": -6.652275,
+    "lon": 108.159073,
+    "osm_name": "way/1415193395",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6532659,
+    "lon": 108.1578775,
+    "osm_name": "way/1415193396",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6527781,
+    "lon": 108.1584658,
+    "osm_name": "way/1415193467",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6540748,
+    "lon": 108.157557,
+    "osm_name": "way/1415193468",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.8053447,
+    "lon": 108.2626214,
+    "osm_name": "way/1420121308",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.804926,
+    "lon": 108.2627743,
+    "osm_name": "way/1420121311",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.8039439,
+    "lon": 108.2634143,
+    "osm_name": "way/1420121315",
+    "kecamatan": "Cigasong"
+  },
+  {
+    "lat": -6.7497687,
+    "lon": 108.1645843,
+    "osm_name": "way/1420124362",
+    "kecamatan": "Kadipaten"
+  },
+  {
+    "lat": -6.6785884,
+    "lon": 108.1889145,
+    "osm_name": "way/1422394915",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.7604161,
+    "lon": 108.322755,
+    "osm_name": "way/1433193503",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7567869,
+    "lon": 108.3140267,
+    "osm_name": "way/1434772613",
+    "kecamatan": "Palasah"
+  },
+  {
+    "lat": -6.7867319,
+    "lon": 108.39139,
+    "osm_name": "way/1453522432",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7960501,
+    "lon": 108.3916028,
+    "osm_name": "way/1453522435",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.7861466,
+    "lon": 108.3924008,
+    "osm_name": "way/1453522441",
+    "kecamatan": "Sindangwangi"
+  },
+  {
+    "lat": -6.6517549,
+    "lon": 108.1561596,
+    "osm_name": "way/1458918204",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6513389,
+    "lon": 108.1566988,
+    "osm_name": "way/1458918205",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6508919,
+    "lon": 108.1572072,
+    "osm_name": "way/1458918206",
+    "kecamatan": "Kertajati"
+  },
+  {
+    "lat": -6.6504701,
+    "lon": 108.1577432,
+    "osm_name": "way/1458918207",
+    "kecamatan": "Kertajati"
+  }
+]

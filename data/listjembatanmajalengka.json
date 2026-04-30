@@ -1,0 +1,1226 @@
+[
+  {
+    "nama": "Jembatan Cilongkrang",
+    "kecamatan": "Argapura",
+    "latitude": -6.8937363,
+    "longitude": 108.3057861
+  },
+  {
+    "nama": "Jembatan Gantung Cicalung",
+    "kecamatan": "Argapura",
+    "latitude": -6.8445684,
+    "longitude": 108.3188137
+  },
+  {
+    "nama": "Jembatan Cilongktang",
+    "kecamatan": "Argapura",
+    "latitude": -6.9027912,
+    "longitude": 108.3189396
+  },
+  {
+    "nama": "Jembatan Cipari",
+    "kecamatan": "Argapura",
+    "latitude": -6.8614851,
+    "longitude": 108.3221752
+  },
+  {
+    "nama": "Jembatan Ciwaringin",
+    "kecamatan": "Argapura",
+    "latitude": -6.7830204,
+    "longitude": 108.3497791
+  },
+  {
+    "nama": "Jembatan Cikeruh",
+    "kecamatan": "Argapura",
+    "latitude": -6.8001375,
+    "longitude": 108.2948514
+  },
+  {
+    "nama": "Terasering Panyaweuyan",
+    "kecamatan": "Argapura",
+    "latitude": -6.9177756,
+    "longitude": 108.3461142
+  },
+  {
+    "nama": "Jembatan Cikadongdong",
+    "kecamatan": "Argapura",
+    "latitude": -6.8253863,
+    "longitude": 108.35879
+  },
+  {
+    "nama": "Jembatan Cijurey",
+    "kecamatan": "Argapura",
+    "latitude": -6.9638487,
+    "longitude": 108.2466793
+  },
+  {
+    "nama": "Jembatan Ciawi 1 Simpeureum",
+    "kecamatan": "Argapura",
+    "latitude": -6.8367476,
+    "longitude": 108.2550203
+  },
+  {
+    "nama": "Jembatan Cihikeu Perbatasan Majalengka Sumedang selatan",
+    "kecamatan": "Argapura",
+    "latitude": -6.9705375,
+    "longitude": 108.1711094
+  },
+  {
+    "nama": "Jembatan",
+    "kecamatan": "Argapura",
+    "latitude": -6.8214233,
+    "longitude": 108.2006133
+  },
+  {
+    "nama": "Jembatan Ciputri Rajagaluh",
+    "kecamatan": "Argapura",
+    "latitude": -6.7833348,
+    "longitude": 108.3479544
+  },
+  {
+    "nama": "Wisata Alam Curug Muara Jaya",
+    "kecamatan": "Argapura",
+    "latitude": -6.9115386,
+    "longitude": 108.35338
+  },
+  {
+    "nama": "Lembah Panyaweuyan",
+    "kecamatan": "Argapura",
+    "latitude": -6.9169355,
+    "longitude": 108.3501167
+  },
+  {
+    "nama": "Jembatan lalu-lintas",
+    "kecamatan": "Argapura",
+    "latitude": -6.8445106,
+    "longitude": 108.3189925
+  },
+  {
+    "nama": "Jembatan Cipamintar",
+    "kecamatan": "Argapura",
+    "latitude": -6.9661828,
+    "longitude": 108.315487
+  },
+  {
+    "nama": "JEMBATAN CIHERANG",
+    "kecamatan": "Argapura",
+    "latitude": -6.7977773,
+    "longitude": 108.3309799
+  },
+  {
+    "nama": "Jembatan Cigaleuh",
+    "kecamatan": "Argapura",
+    "latitude": -6.9983181,
+    "longitude": 108.2372571
+  },
+  {
+    "nama": "JEMBATAN ATOG WETAN",
+    "kecamatan": "Argapura",
+    "latitude": -6.7855221,
+    "longitude": 108.351421
+  },
+  {
+    "nama": "Jembatan Cikamarang",
+    "kecamatan": "Argapura",
+    "latitude": -6.8234643,
+    "longitude": 108.1850532
+  },
+  {
+    "nama": "Jembatan Cicamay",
+    "kecamatan": "Argapura",
+    "latitude": -6.95923,
+    "longitude": 108.2290535
+  },
+  {
+    "nama": "Jembatan Citerus",
+    "kecamatan": "Argapura",
+    "latitude": -6.9586935,
+    "longitude": 108.1985116
+  },
+  {
+    "nama": "Jembatan Cideres Girang",
+    "kecamatan": "Argapura",
+    "latitude": -6.8336139,
+    "longitude": 108.2406578
+  },
+  {
+    "nama": "Jembatan Cihagir",
+    "kecamatan": "Argapura",
+    "latitude": -7.0173103,
+    "longitude": 108.3638409
+  },
+  {
+    "nama": "Jembatan Cipacar",
+    "kecamatan": "Argapura",
+    "latitude": -6.7669183,
+    "longitude": 108.3414961
+  },
+  {
+    "nama": "Jembatan Tonjong Cilangkap",
+    "kecamatan": "Argapura",
+    "latitude": -7.0175493,
+    "longitude": 108.2550411
+  },
+  {
+    "nama": "Jembatan Dusun Pangkalan Cipeundeuy",
+    "kecamatan": "Argapura",
+    "latitude": -7.0193273,
+    "longitude": 108.2298646
+  },
+  {
+    "nama": "JEMBATAN ATOG KULON",
+    "kecamatan": "Argapura",
+    "latitude": -6.7862651,
+    "longitude": 108.3489307
+  },
+  {
+    "nama": "Jembatan Cibeureum",
+    "kecamatan": "Argapura",
+    "latitude": -7.019261,
+    "longitude": 108.3044203
+  },
+  {
+    "nama": "Jembatan Cisampora",
+    "kecamatan": "Argapura",
+    "latitude": -6.9942614,
+    "longitude": 108.2113976
+  },
+  {
+    "nama": "Jembatan Cikarikil",
+    "kecamatan": "Argapura",
+    "latitude": -6.8040424,
+    "longitude": 108.3756644
+  },
+  {
+    "nama": "Jembatan Senangrasa",
+    "kecamatan": "Argapura",
+    "latitude": -6.9689325,
+    "longitude": 108.2643353
+  },
+  {
+    "nama": "Jembatan Cinambo",
+    "kecamatan": "Argapura",
+    "latitude": -6.9560775,
+    "longitude": 108.2822389
+  },
+  {
+    "nama": "CIBUTUL BRIDGE",
+    "kecamatan": "Argapura",
+    "latitude": -6.8125948,
+    "longitude": 108.2910358
+  },
+  {
+    "nama": "Jembatan Gantung Blok Kepuh Desa Cijurey",
+    "kecamatan": "Argapura",
+    "latitude": -6.827999,
+    "longitude": 108.1613506
+  },
+  {
+    "nama": "JEMBATAN CILULUK",
+    "kecamatan": "Argapura",
+    "latitude": -6.834262,
+    "longitude": 108.2379342
+  },
+  {
+    "nama": "Jembatan Kalapa Dua",
+    "kecamatan": "Argapura",
+    "latitude": -6.8719259,
+    "longitude": 108.2425685
+  },
+  {
+    "nama": "Jembatan Desa Cipeundeuy",
+    "kecamatan": "Argapura",
+    "latitude": -7.0141042,
+    "longitude": 108.2362298
+  },
+  {
+    "nama": "Jembatan Sarongge",
+    "kecamatan": "Argapura",
+    "latitude": -6.7949664,
+    "longitude": 108.3490209
+  },
+  {
+    "nama": "Perbatasan Majalengka - Sumedang",
+    "kecamatan": "Argapura",
+    "latitude": -6.7659799,
+    "longitude": 108.1628632
+  },
+  {
+    "nama": "Jembatan Cihideung",
+    "kecamatan": "Argapura",
+    "latitude": -6.9955714,
+    "longitude": 108.2203913
+  },
+  {
+    "nama": "Jembatan Bantar Merak",
+    "kecamatan": "Argapura",
+    "latitude": -6.9424679,
+    "longitude": 108.2053354
+  },
+  {
+    "nama": "jembatan Cihideung",
+    "kecamatan": "Argapura",
+    "latitude": -6.9831435,
+    "longitude": 108.2270315
+  },
+  {
+    "nama": "Jembatan Cikamangi Cipinang - Rajagaluh",
+    "kecamatan": "Argapura",
+    "latitude": -6.787467,
+    "longitude": 108.336927
+  },
+  {
+    "nama": "Jembatan Cilandak",
+    "kecamatan": "Argapura",
+    "latitude": -6.7843802,
+    "longitude": 108.3440544
+  },
+  {
+    "nama": "Jembatan Cileutik",
+    "kecamatan": "Argapura",
+    "latitude": -6.873766,
+    "longitude": 108.2156777
+  },
+  {
+    "nama": "Jembatan Cilengkrang",
+    "kecamatan": "Argapura",
+    "latitude": -6.9592467,
+    "longitude": 108.2032611
+  },
+  {
+    "nama": "Jembatan gantung",
+    "kecamatan": "Argapura",
+    "latitude": -6.8697393,
+    "longitude": 108.1971145
+  },
+  {
+    "nama": "Sasak Cihieum",
+    "kecamatan": "Argapura",
+    "latitude": -7.0144829,
+    "longitude": 108.2280182
+  },
+  {
+    "nama": "Sasak beusi SILIWANGI",
+    "kecamatan": "Argapura",
+    "latitude": -6.8177423,
+    "longitude": 108.1975691
+  },
+  {
+    "nama": "Jembatan Singawada",
+    "kecamatan": "Argapura",
+    "latitude": -6.7948828,
+    "longitude": 108.3494645
+  },
+  {
+    "nama": "JEMBATAN CIKADONGDONG PERBATASAN CIPINANG RAJAGALUH",
+    "kecamatan": "Argapura",
+    "latitude": -6.7856306,
+    "longitude": 108.340032
+  },
+  {
+    "nama": "Jembatan Cibarengkok",
+    "kecamatan": "Argapura",
+    "latitude": -6.9522054,
+    "longitude": 108.2834031
+  },
+  {
+    "nama": "Air Terjun IBUN PELANGI",
+    "kecamatan": "Argapura",
+    "latitude": -6.9057737,
+    "longitude": 108.3292062
+  },
+  {
+    "nama": "Jembatan Gantung PT. Telkom kerjasama KODAM III Siliwangi",
+    "kecamatan": "Argapura",
+    "latitude": -6.9915474,
+    "longitude": 108.3004959
+  },
+  {
+    "nama": "Jembatan Cimanuk Cidomas",
+    "kecamatan": "Argapura",
+    "latitude": -6.9624223,
+    "longitude": 108.2482652
+  },
+  {
+    "nama": "Cilutung Bridge",
+    "kecamatan": "Argapura",
+    "latitude": -6.7661485,
+    "longitude": 108.163389
+  },
+  {
+    "nama": "Jembatan Cilutung",
+    "kecamatan": "Argapura",
+    "latitude": -6.9196697,
+    "longitude": 108.2174111
+  },
+  {
+    "nama": "Jembatan Biru",
+    "kecamatan": "Argapura",
+    "latitude": -6.8057724,
+    "longitude": 108.4004895
+  },
+  {
+    "nama": "Jembatan Cisambeng",
+    "kecamatan": "Argapura",
+    "latitude": -6.7798602,
+    "longitude": 108.2603204
+  },
+  {
+    "nama": "Jembatan Talang",
+    "kecamatan": "Argapura",
+    "latitude": -6.8527045,
+    "longitude": 108.26265
+  },
+  {
+    "nama": "Jembatan Gantung",
+    "kecamatan": "Argapura",
+    "latitude": -6.6926426,
+    "longitude": 108.2843486
+  },
+  {
+    "nama": "Jembatan cipondoh",
+    "kecamatan": "Argapura",
+    "latitude": -6.9552084,
+    "longitude": 108.2206612
+  },
+  {
+    "nama": "Jembatan Desa Mindi",
+    "kecamatan": "Argapura",
+    "latitude": -6.7656418,
+    "longitude": 108.3357782
+  },
+  {
+    "nama": "Lawang Saketeng",
+    "kecamatan": "Argapura",
+    "latitude": -6.9140554,
+    "longitude": 108.3448534
+  },
+  {
+    "nama": "Jembatan Ciasem",
+    "kecamatan": "Argapura",
+    "latitude": -6.8537806,
+    "longitude": 108.2849153
+  },
+  {
+    "nama": "Jembatan sukajaya hilir",
+    "kecamatan": "Argapura",
+    "latitude": -6.8258482,
+    "longitude": 108.208826
+  },
+  {
+    "nama": "Cimanuk Cikidang",
+    "kecamatan": "Argapura",
+    "latitude": -6.9639139,
+    "longitude": 108.2594478
+  },
+  {
+    "nama": "Permohonan Bronjong",
+    "kecamatan": "Argapura",
+    "latitude": -6.86155,
+    "longitude": 108.32223
+  },
+  {
+    "nama": "Wisata Situ Cipanten",
+    "kecamatan": "Argapura",
+    "latitude": -6.8232097,
+    "longitude": 108.3276015
+  },
+  {
+    "nama": "Sasak Leuwi jurig",
+    "kecamatan": "Argapura",
+    "latitude": -6.7631747,
+    "longitude": 108.2445832
+  },
+  {
+    "nama": "Jembatan kereta api cideres majalengka (prujakan kadipaten tanjung sari jatinangor rancaekek)",
+    "kecamatan": "Argapura",
+    "latitude": -6.7613978,
+    "longitude": 108.196294
+  },
+  {
+    "nama": "Jembatan Cimanuk Tol Cipali KM161-400",
+    "kecamatan": "Argapura",
+    "latitude": -6.7011504,
+    "longitude": 108.198178
+  },
+  {
+    "nama": "Cikadongdong River Tubing",
+    "kecamatan": "Argapura",
+    "latitude": -6.8257143,
+    "longitude": 108.3589107
+  },
+  {
+    "nama": "Jembatan Pantura Cirebon Kapetakan",
+    "kecamatan": "Argapura",
+    "latitude": -6.7026069,
+    "longitude": 108.4453304
+  },
+  {
+    "nama": "Jembatan Cidangdung",
+    "kecamatan": "Argapura",
+    "latitude": -6.7323722,
+    "longitude": 108.2023709
+  },
+  {
+    "nama": "Jembatan Beber Randegan",
+    "kecamatan": "Argapura",
+    "latitude": -6.6614856,
+    "longitude": 108.2416696
+  },
+  {
+    "nama": "Jembatan Monjot",
+    "kecamatan": "Argapura",
+    "latitude": -6.7318252,
+    "longitude": 108.1671086
+  },
+  {
+    "nama": "Sungai Sekunder Lung Benda",
+    "kecamatan": "Argapura",
+    "latitude": -6.7069709,
+    "longitude": 108.4343082
+  },
+  {
+    "nama": "Spot mancing jembatan wanasalam sindupraja",
+    "kecamatan": "Argapura",
+    "latitude": -6.6573239,
+    "longitude": 108.2527978
+  },
+  {
+    "nama": "Sungai Cilutung",
+    "kecamatan": "Argapura",
+    "latitude": -6.9638676,
+    "longitude": 108.2593451
+  },
+  {
+    "nama": "Jembatan Cinta 1",
+    "kecamatan": "Argapura",
+    "latitude": -6.945103,
+    "longitude": 108.0927738
+  },
+  {
+    "nama": "Jembatan Cimanuk Jatigede",
+    "kecamatan": "Argapura",
+    "latitude": -6.8481126,
+    "longitude": 108.0983649
+  },
+  {
+    "nama": "Jembatan Gantung Gunungsari",
+    "kecamatan": "Argapura",
+    "latitude": -6.5691352,
+    "longitude": 108.3074746
+  },
+  {
+    "nama": "Jembatan Desa Cipeles",
+    "kecamatan": "Argapura",
+    "latitude": -6.7905828,
+    "longitude": 108.0988762
+  },
+  {
+    "nama": "SITU JANAWI",
+    "kecamatan": "Argapura",
+    "latitude": -6.8268831,
+    "longitude": 108.3632451
+  },
+  {
+    "nama": "Jembatan Cimanuk",
+    "kecamatan": "Argapura",
+    "latitude": -6.95943,
+    "longitude": 108.0809084
+  },
+  {
+    "nama": "Jembatan Gantung Siliwangi 3 HUM 54 Palabuan",
+    "kecamatan": "Argapura",
+    "latitude": -6.7474173,
+    "longitude": 108.1511246
+  },
+  {
+    "nama": "Jembatan Cirungking",
+    "kecamatan": "Banjaran",
+    "latitude": -6.9783463,
+    "longitude": 108.3286292
+  },
+  {
+    "nama": "Jembatan Gantung Kali Merah",
+    "kecamatan": "Banjaran",
+    "latitude": -6.9533053,
+    "longitude": 108.237031
+  },
+  {
+    "nama": "Jembatan perbatasan majalengka sumedang palasah kertajati kabupaten majalengka",
+    "kecamatan": "Banjaran",
+    "latitude": -6.698176,
+    "longitude": 108.1250791
+  },
+  {
+    "nama": "Sasak Gantung",
+    "kecamatan": "Cigasong",
+    "latitude": -6.7535659,
+    "longitude": 108.2343631
+  },
+  {
+    "nama": "Bunderan Tonjong",
+    "kecamatan": "Cigasong",
+    "latitude": -6.8310144,
+    "longitude": 108.2495392
+  },
+  {
+    "nama": "Jembatan Cikijing I",
+    "kecamatan": "Cikijing",
+    "latitude": -7.0193981,
+    "longitude": 108.3608326
+  },
+  {
+    "nama": "Simpang Cikijing-Panjalu",
+    "kecamatan": "Cikijing",
+    "latitude": -7.0257407,
+    "longitude": 108.3510677
+  },
+  {
+    "nama": "jembatan sindang panji",
+    "kecamatan": "Cikijing",
+    "latitude": -7.0139137,
+    "longitude": 108.3771645
+  },
+  {
+    "nama": "Jembatan ciburang",
+    "kecamatan": "Cingambul",
+    "latitude": -7.038149,
+    "longitude": 108.3257841
+  },
+  {
+    "nama": "Jembatan Cisuminta",
+    "kecamatan": "Cingambul",
+    "latitude": -7.0424837,
+    "longitude": 108.3363257
+  },
+  {
+    "nama": "Jembatan Cibanjar Sakerta Barat Kuningan",
+    "kecamatan": "Cingambul",
+    "latitude": -7.0330323,
+    "longitude": 108.4098592
+  },
+  {
+    "nama": "Jembatan Lengkong Bangunjaya",
+    "kecamatan": "Cingambul",
+    "latitude": -7.0893849,
+    "longitude": 108.4169601
+  },
+  {
+    "nama": "Jembatan Waduk Darma",
+    "kecamatan": "Cingambul",
+    "latitude": -7.0054156,
+    "longitude": 108.4121661
+  },
+  {
+    "nama": "Jembatan Cigunung",
+    "kecamatan": "Cingambul",
+    "latitude": -7.1213163,
+    "longitude": 108.4308589
+  },
+  {
+    "nama": "Jembatan Nanggereng",
+    "kecamatan": "Cingambul",
+    "latitude": -6.7628306,
+    "longitude": 108.333296
+  },
+  {
+    "nama": "Jembatan Tonjong",
+    "kecamatan": "Cingambul",
+    "latitude": -7.1071655,
+    "longitude": 108.3732025
+  },
+  {
+    "nama": "Jembatan Cibugang",
+    "kecamatan": "Cingambul",
+    "latitude": -6.7170835,
+    "longitude": 108.3294872
+  },
+  {
+    "nama": "Jembatan Bojong",
+    "kecamatan": "Cingambul",
+    "latitude": -7.1141817,
+    "longitude": 108.4379768
+  },
+  {
+    "nama": "Sasak Gantung Cijolang",
+    "kecamatan": "Cingambul",
+    "latitude": -7.1141807,
+    "longitude": 108.4379296
+  },
+  {
+    "nama": "Jembatan Cisambeng I",
+    "kecamatan": "Cingambul",
+    "latitude": -6.7217541,
+    "longitude": 108.2930044
+  },
+  {
+    "nama": "Jembatan Kiwiri",
+    "kecamatan": "Cingambul",
+    "latitude": -7.0973038,
+    "longitude": 108.3522199
+  },
+  {
+    "nama": "Jembatan Cingaraja",
+    "kecamatan": "Cingambul",
+    "latitude": -7.0358535,
+    "longitude": 108.1714999
+  },
+  {
+    "nama": "Dawuan Interchange",
+    "kecamatan": "Dawuan",
+    "latitude": -6.688921,
+    "longitude": 108.116988
+  },
+  {
+    "nama": "Eks jembatan lori jatiwangi",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7225938,
+    "longitude": 108.2229243
+  },
+  {
+    "nama": "Jembatan TOL Majasuka",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6976025,
+    "longitude": 108.2984453
+  },
+  {
+    "nama": "Eks jembatan kereta kadipaten",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7660244,
+    "longitude": 108.172925
+  },
+  {
+    "nama": "Jembatan anjun tdk BS dilewati mobil",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7674153,
+    "longitude": 108.1695071
+  },
+  {
+    "nama": "Sasak Pa Bono",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7359182,
+    "longitude": 108.2202361
+  },
+  {
+    "nama": "Jembatan Kesejahteraan",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6959262,
+    "longitude": 108.2852659
+  },
+  {
+    "nama": "Jembatan Kigede Pamulihan",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6567148,
+    "longitude": 108.372365
+  },
+  {
+    "nama": "Jembatan Kasab",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6943,
+    "longitude": 108.3717875
+  },
+  {
+    "nama": "JEMBATAN MEKAR BUDI",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7320056,
+    "longitude": 108.3491116
+  },
+  {
+    "nama": "Sasak Tol Ciseureuh",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6987463,
+    "longitude": 108.2965312
+  },
+  {
+    "nama": "Eks jembatan kereta api indocement cirebon (cirebon kadipaten tanjung sari jatinangor rancaekek",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7016752,
+    "longitude": 108.4052505
+  },
+  {
+    "nama": "Pancang Kertajaya",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6752248,
+    "longitude": 108.1053226
+  },
+  {
+    "nama": "Jembatan Babakan",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6942225,
+    "longitude": 108.3712404
+  },
+  {
+    "nama": "Bekas Fondasi Jembatan Kereta Cirebon-Kadipaten",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7037327,
+    "longitude": 108.3393218
+  },
+  {
+    "nama": "Jembatan Kedongdong",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6470245,
+    "longitude": 108.3741166
+  },
+  {
+    "nama": "Bawah jembatan",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7349268,
+    "longitude": 108.2582317
+  },
+  {
+    "nama": "Jembatan Ci JAGO",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6583509,
+    "longitude": 108.2172216
+  },
+  {
+    "nama": "JEMBATAN PAKUWON",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7333434,
+    "longitude": 108.3484658
+  },
+  {
+    "nama": "Jembatan Pelumpuran",
+    "kecamatan": "Dawuan",
+    "latitude": -6.658082,
+    "longitude": 108.3954109
+  },
+  {
+    "nama": "Jembatan blok pulo",
+    "kecamatan": "Dawuan",
+    "latitude": -6.6191505,
+    "longitude": 108.2729348
+  },
+  {
+    "nama": "Jembatan careuy tarikolot~mirat",
+    "kecamatan": "Dawuan",
+    "latitude": -6.7407192,
+    "longitude": 108.3479458
+  },
+  {
+    "nama": "Sebrangan Ampel",
+    "kecamatan": "Jatitujuh",
+    "latitude": -6.6337898,
+    "longitude": 108.2841149
+  },
+  {
+    "nama": "Jembatan Putridalem",
+    "kecamatan": "Jatitujuh",
+    "latitude": -6.6383571,
+    "longitude": 108.2498073
+  },
+  {
+    "nama": "Sasak kidul",
+    "kecamatan": "Jatitujuh",
+    "latitude": -6.6832794,
+    "longitude": 108.2183559
+  },
+  {
+    "nama": "TB. Besi Jembatan Merah",
+    "kecamatan": "Jatitujuh",
+    "latitude": -6.6514869,
+    "longitude": 108.2213779
+  },
+  {
+    "nama": "Wahangan Panyingkiran",
+    "kecamatan": "Jatitujuh",
+    "latitude": -6.649506,
+    "longitude": 108.2132553
+  },
+  {
+    "nama": "JBT CIKEMANGI BONGAS",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7055048,
+    "longitude": 108.3216495
+  },
+  {
+    "nama": "Jembatan Lebak Ikhlas Ora Kapok",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.6925125,
+    "longitude": 108.3722969
+  },
+  {
+    "nama": "Jembatan singlar",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7283,
+    "longitude": 108.3012
+  },
+  {
+    "nama": "Jembatan cikaranti desa bringin",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.6659799,
+    "longitude": 108.3906804
+  },
+  {
+    "nama": "Stone Garden Majalengka",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.8459542,
+    "longitude": 108.3884338
+  },
+  {
+    "nama": "Sasak Leuwinagara",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7139159,
+    "longitude": 108.3020489
+  },
+  {
+    "nama": "Sasak Misbo",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7084374,
+    "longitude": 108.302301
+  },
+  {
+    "nama": "Sasak Ledeng",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.6986301,
+    "longitude": 108.298902
+  },
+  {
+    "nama": "Jembatan Cihirup",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.765677,
+    "longitude": 108.1600705
+  },
+  {
+    "nama": "Sasak Desa",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7122587,
+    "longitude": 108.30237
+  },
+  {
+    "nama": "Sasak Pa Acil",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7103884,
+    "longitude": 108.3029618
+  },
+  {
+    "nama": "Jembatan Gantung Palabuan",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7516681,
+    "longitude": 108.1453696
+  },
+  {
+    "nama": "Jembatan Cijonggol",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.761231,
+    "longitude": 108.145204
+  },
+  {
+    "nama": "Sasak Pa ilah",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.705654,
+    "longitude": 108.3032535
+  },
+  {
+    "nama": "Spot mancing jembatan baru wanasalam",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.6551913,
+    "longitude": 108.2605001
+  },
+  {
+    "nama": "Eks Jembatan Kereta Api Cisambeng",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.72241,
+    "longitude": 108.293117
+  },
+  {
+    "nama": "Sasak Pa Akun",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7146139,
+    "longitude": 108.3030788
+  },
+  {
+    "nama": "River Side Camp Legok Leles",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.8019823,
+    "longitude": 108.3913835
+  },
+  {
+    "nama": "Jembatan kali Grenjeng",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.6486441,
+    "longitude": 108.3821619
+  },
+  {
+    "nama": "Obyek Wisata Alam Prabu Siliwangi (Situ Cipadung)",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.8268958,
+    "longitude": 108.3402222
+  },
+  {
+    "nama": "Kuliner Jembatan Tol Surawangi (KJTS)",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7132863,
+    "longitude": 108.2393364
+  },
+  {
+    "nama": "JBT CINANCANG",
+    "kecamatan": "Jatiwangi",
+    "latitude": -6.7419152,
+    "longitude": 108.2399204
+  },
+  {
+    "nama": "Jembatan ciduet (padasuka)",
+    "kecamatan": "Kadipaten",
+    "latitude": -6.6428465,
+    "longitude": 108.1435819
+  },
+  {
+    "nama": "Jembatan cikutu",
+    "kecamatan": "Kadipaten",
+    "latitude": -6.6425628,
+    "longitude": 108.1397685
+  },
+  {
+    "nama": "Kadipaten Kota",
+    "kecamatan": "Kadipaten",
+    "latitude": -6.7686264,
+    "longitude": 108.1676022
+  },
+  {
+    "nama": "Alun-alun Desa Kasokandel",
+    "kecamatan": "Kasokandel",
+    "latitude": -6.7627709,
+    "longitude": 108.2089876
+  },
+  {
+    "nama": "Bandar Udara Internasional Jawa Barat Kertajati",
+    "kecamatan": "Kertajati",
+    "latitude": -6.6519467,
+    "longitude": 108.157686
+  },
+  {
+    "nama": "Jembatan Tol Kertajati",
+    "kecamatan": "Kertajati",
+    "latitude": -6.7020515,
+    "longitude": 108.1817571
+  },
+  {
+    "nama": "Gerbang Tol Kertajati",
+    "kecamatan": "Kertajati",
+    "latitude": -6.7082696,
+    "longitude": 108.1694461
+  },
+  {
+    "nama": "Wisata Majalengka",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.7375875,
+    "longitude": 108.3462451
+  },
+  {
+    "nama": "Taman Wisata Alam Cadas Gantung",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.7378462,
+    "longitude": 108.360678
+  },
+  {
+    "nama": "Sanghyangdora Campground (Situ Cibaringkeng)",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.7425575,
+    "longitude": 108.3542212
+  },
+  {
+    "nama": "JBT KALENJAYA",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.7001798,
+    "longitude": 108.4046182
+  },
+  {
+    "nama": "Puncak Bukit Sanghyangdora",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.7412453,
+    "longitude": 108.3617548
+  },
+  {
+    "nama": "Jembatan Cigayam",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.7645158,
+    "longitude": 108.4271783
+  },
+  {
+    "nama": "Jl belakang pasar leuwimunding",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.737421,
+    "longitude": 108.3449613
+  },
+  {
+    "nama": "JBT KEDUNG BUNDER",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.703466,
+    "longitude": 108.4083708
+  },
+  {
+    "nama": "JEMBATAN KERAMAT",
+    "kecamatan": "Leuwimunding",
+    "latitude": -6.7349213,
+    "longitude": 108.3476407
+  },
+  {
+    "nama": "Samping jembatan pelangi",
+    "kecamatan": "Ligung",
+    "latitude": -6.6528528,
+    "longitude": 108.2845833
+  },
+  {
+    "nama": "Perbatasan Majalengka Ciamis",
+    "kecamatan": "Malausma",
+    "latitude": -7.0631864,
+    "longitude": 108.278253
+  },
+  {
+    "nama": "Jembatan Ciherang",
+    "kecamatan": "Malausma",
+    "latitude": -6.9908283,
+    "longitude": 108.4369913
+  },
+  {
+    "nama": "Jembatan marsamad",
+    "kecamatan": "Malausma",
+    "latitude": -7.1261706,
+    "longitude": 108.31809
+  },
+  {
+    "nama": "Jembatan Cimanuk Tomo",
+    "kecamatan": "Panyingkiran",
+    "latitude": -6.7619301,
+    "longitude": 108.133488
+  },
+  {
+    "nama": "Bendungan Sindangpano",
+    "kecamatan": "Sindang",
+    "latitude": -6.8101227,
+    "longitude": 108.3606058
+  },
+  {
+    "nama": "Waduk Sindangpano.",
+    "kecamatan": "Sindang",
+    "latitude": -6.810694,
+    "longitude": 108.3607865
+  },
+  {
+    "nama": "Jembatan cikadu",
+    "kecamatan": "Sindang",
+    "latitude": -6.7645474,
+    "longitude": 108.448285
+  },
+  {
+    "nama": "Jembatan Curug trenggiling",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.7621696,
+    "longitude": 108.4324129
+  },
+  {
+    "nama": "Jembatan Ciparigi",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.7622078,
+    "longitude": 108.4341067
+  },
+  {
+    "nama": "KANDAGA WATERPARK SINDANGWANGI",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.7799947,
+    "longitude": 108.3739505
+  },
+  {
+    "nama": "Jembatan Mantan Terindah",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.7558949,
+    "longitude": 108.4325672
+  },
+  {
+    "nama": "Jembatan kali tumpang",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.7343358,
+    "longitude": 108.4340593
+  },
+  {
+    "nama": "Jembatan Ngenteni Lanang",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.7582098,
+    "longitude": 108.4322352
+  },
+  {
+    "nama": "Jembatan peninggalan Belanda",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.7343909,
+    "longitude": 108.4338234
+  },
+  {
+    "nama": "Jembatan Priuk",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.7442451,
+    "longitude": 108.426946
+  },
+  {
+    "nama": "Ciboer Pas & Villa Ciboer Pas",
+    "kecamatan": "Sindangwangi",
+    "latitude": -6.8097415,
+    "longitude": 108.3755898
+  },
+  {
+    "nama": "Jembatan Karangsambung",
+    "kecamatan": "Sumberjaya",
+    "latitude": -6.6086563,
+    "longitude": 108.3875242
+  },
+  {
+    "nama": "Jembatan Kreteg Abang",
+    "kecamatan": "Sumberjaya",
+    "latitude": -6.645233,
+    "longitude": 108.3698662
+  },
+  {
+    "nama": "Jembatan Gotrok",
+    "kecamatan": "Sumberjaya",
+    "latitude": -6.6002667,
+    "longitude": 108.4133287
+  },
+  {
+    "nama": "Jembatan Kuning",
+    "kecamatan": "Sumberjaya",
+    "latitude": -6.6180844,
+    "longitude": 108.3875735
+  },
+  {
+    "nama": "JEMBATAN BODAS",
+    "kecamatan": "Sumberjaya",
+    "latitude": -6.6049365,
+    "longitude": 108.2847673
+  },
+  {
+    "nama": "JEMBATAN IJO BAITUL MUTTAQIN",
+    "kecamatan": "Sumberjaya",
+    "latitude": -6.6219048,
+    "longitude": 108.3873032
+  },
+  {
+    "nama": "Jembatan irigasi",
+    "kecamatan": "Sumberjaya",
+    "latitude": -6.6086933,
+    "longitude": 108.3871376
+  },
+  {
+    "nama": "Bekas Jembatan Kereta Kedung Bunder",
+    "kecamatan": "Sumberjaya",
+    "latitude": -6.7035666,
+    "longitude": 108.4083344
+  },
+  {
+    "nama": "Jembatan gantung sumberjaya",
+    "kecamatan": "Sumberjaya",
+    "latitude": -7.233392,
+    "longitude": 108.1944691
+  },
+  {
+    "nama": "Museum Talaga Manggung",
+    "kecamatan": "Talaga",
+    "latitude": -6.9851409,
+    "longitude": 108.3111701
+  },
+  {
+    "nama": "Makam sunan parung telaga manggung",
+    "kecamatan": "Talaga",
+    "latitude": -6.9851409,
+    "longitude": 108.3111701
+  }
+]

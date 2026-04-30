@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gpx xmlns="http://www.topografix.com/GPX/1/1" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.topografix.com/GPX/1/1 http://www.topografix.com/GPX/1/1/gpx.xsd" version="1.1" creator="overpass-turbo"><metadata><desc>Filtered OSM data converted to GPX by overpass turbo</desc><copyright author="The data included in this document is from www.openstreetmap.org. The data is made available under ODbL."/><time>2026-04-27T06:48:26Z</time></metadata>
+<wpt lat="-6.7665298" lon="108.1651457"><name>Jembatan Dawuan</name><desc>bridge=yes;highway=trunk;layer=1;name=Jembatan Dawuan;ref=11</desc></wpt>
+<wpt lat="-7.0169396" lon="108.367325"><name>Jembatan Mandalaksana</name><desc>bridge=yes;highway=unclassified;layer=1</desc></wpt>
+<wpt lat="-6.7798715" lon="108.2603703"><name>Jembatan Cisambeng</name><desc>bridge=yes;highway=residential;layer=1;surface=asphalt</desc></wpt>
+<wpt lat="-7.037812" lon="108.205199"><name>Jembatan Cibarengkok</name><desc>bridge=yes;highway=residential;layer=1</desc></wpt>
+<wpt lat="-6.837311" lon="108.175510"><name>Jembatan Cijurey</name><desc>bridge=yes;highway=residential;layer=1</desc></wpt>
+<wpt lat="-6.992812" lon="108.188211"><name>Jembatan Pasir Kumbung</name><desc>bridge=yes;highway=residential;layer=1</desc></wpt>
+</gpx>

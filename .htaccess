@@ -1,5 +1,5 @@
 # PROTEKSI DATABASE & CONFIG
-<FilesMatch "\.(sqlite|sqlite3|db|env|json|js|log|md|sh|py)$">
+<FilesMatch "\.(sqlite|sqlite3|db|env|log|md|sh|py)$">
     Order deny,allow
     Deny from all
 </FilesMatch>

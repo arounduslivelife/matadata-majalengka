@@ -1,0 +1,63 @@
+{
+  "dataset_name": "Jumlah Pendapatan Asli Daerah (PAD) di Kabupaten Majalengka",
+  "source": "https://opendata.majalengkakab.go.id/dataset/jumlah-pendapatan-asli-daerah-pad-di-kabupaten-majalengka-2",
+  "api_endpoint": "https://opendata.majalengkakab.go.id/api/bigdata/bpd/jumlah_pendapatan_asli_daerah_pad_di_kabupaten_maja_1",
+  "last_updated_portal": "2026-02-05",
+  "data": [
+    {
+      "tahun": 2018,
+      "nilai": 449974129888.6,
+      "satuan": "Rupiah",
+      "status": "Realisasi"
+    },
+    {
+      "tahun": 2019,
+      "nilai": 439843264594.55,
+      "satuan": "Rupiah",
+      "status": "Realisasi"
+    },
+    {
+      "tahun": 2020,
+      "nilai": 490833472193.06,
+      "satuan": "Rupiah",
+      "status": "Realisasi"
+    },
+    {
+      "tahun": 2021,
+      "nilai": 466788495605.11,
+      "satuan": "Rupiah",
+      "status": "Realisasi"
+    },
+    {
+      "tahun": 2022,
+      "nilai": 501090583441.99,
+      "satuan": "Rupiah",
+      "status": "Realisasi"
+    },
+    {
+      "tahun": 2023,
+      "nilai": 524145902200.99,
+      "satuan": "Rupiah",
+      "status": "Realisasi"
+    },
+    {
+      "tahun": 2024,
+      "nilai": 524522818676.46,
+      "satuan": "Rupiah",
+      "status": "Realisasi"
+    },
+    {
+      "tahun": 2025,
+      "nilai": 714751284012.7,
+      "satuan": "Rupiah",
+      "status": "Realisasi"
+    },
+    {
+      "tahun": 2026,
+      "nilai": 670459000000,
+      "satuan": "Rupiah",
+      "status": "Target"
+    }
+  ],
+  "last_updated_scraper": "2026-04-29T11:55:18.685Z"
+}
