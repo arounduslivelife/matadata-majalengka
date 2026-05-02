@@ -2,11 +2,15 @@
     <div class="sidebar-handle" onclick="toggleSidebar()"></div>
     <!-- User Bar -->
     <div class="user-bar">
-        <?php if ($user['photo']): ?><img src="<?= htmlspecialchars($user['photo']) ?>" alt=""><?php else: ?><div style="width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;">👤</div><?php endif; ?>
+        <?php if (is_array($user) && !empty($user['photo'])): ?>
+            <img src="<?= htmlspecialchars($user['photo']) ?>" alt="">
+        <?php else: ?>
+            <div style="width:32px;height:32px;border-radius:50%;background:var(--accent);display:flex;align-items:center;justify-content:center;">👤</div>
+        <?php endif; ?>
         <div style="flex:1; min-width:0;">
-            <div class="uname"><?= htmlspecialchars($user['name']) ?></div>
-            <div class="uemail"><?= htmlspecialchars($user['email']) ?></div>
-            <?php if(isAdmin()): ?>
+            <div class="uname"><?= is_array($user) ? htmlspecialchars($user['name'] ?? 'User') : htmlspecialchars($user) ?></div>
+            <div class="uemail"><?= is_array($user) ? htmlspecialchars($user['email'] ?? '') : '' ?></div>
+            <?php if(function_exists('isAdmin') && isAdmin()): ?>
                 <a href="visitors.php" style="display:inline-block; margin-top:4px; font-size:0.6rem; color:var(--accent); text-decoration:none; background:rgba(59,130,246,0.1); padding:2px 6px; border-radius:4px;">👁️ Admin Log</a>
             <?php endif; ?>
         </div>
