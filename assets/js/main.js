@@ -281,11 +281,42 @@ window.toggleModal = function () {
 
 const statsJSON = window.APP_DATA.stats;
 const yearTotalsJSON = window.APP_DATA.year_totals;
-const allAudits = window.APP_DATA.all_audits;
+let allAudits = []; // Local reference
+let isDataLoaded = false;
+
+async function fetchAudits() {
+    try {
+        console.log("📥 Fetching audits from get_audits.php...");
+        const response = await fetch('get_audits.php');
+        const data = await response.json();
+        
+        // Update global and local references
+        window.APP_DATA.all_audits = data;
+        allAudits = data;
+        isDataLoaded = true;
+        
+        console.log("✅ Data loaded:", data.length, "rows.");
+        
+        // Hide indicator
+        const indicator = document.getElementById('dataLoadingIndicator');
+        if (indicator) indicator.style.display = 'none';
+        
+        // Refresh Current View
+        switchYear(activeYear);
+    } catch (err) {
+        console.error("❌ Failed to fetch audits:", err);
+        const indicator = document.getElementById('dataLoadingIndicator');
+        if (indicator) indicator.innerHTML = "❌ Gagal memuat data audit.";
+    }
+}
+
 const villageStats = window.APP_DATA.village_stats;
 const povertyStats = window.APP_DATA.poverty_stats;
 const padKecStats = window.APP_DATA.pad_kecamatan;
 const padGlobalStats = window.APP_DATA.pad_global;
+
+// Start fetching immediately
+fetchAudits();
 
 let currentMode = 'sirup';
 let activeYear = 2025;

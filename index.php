@@ -56,24 +56,8 @@ while($row = $yt_query->fetchArray(SQLITE3_ASSOC)) {
 }
 
 // Get all packages for the map details
-$audits_query = $db->query("SELECT * FROM realizations");
+// Audits data is now handled via get_audits.php for better performance
 $all_audits = [];
-while ($p = $audits_query->fetchArray(SQLITE3_ASSOC)) {
-    $all_audits[] = [
-        'id' => $p['id'],
-        'kecamatan' => $p['kecamatan'],
-        'nama' => $p['nama_paket'],
-        'pagu' => $p['total_nilai'],
-        'risk' => $p['risk_score'],
-        'note' => $p['audit_note'],
-        'satker' => $p['satker'],
-        'vendor' => mb_convert_encoding($p['vendor'] ?? '', 'UTF-8', 'UTF-8'),
-        'status' => $p['status'],
-        'tahun' => $p['tahun'],
-        'lat' => $p['lat'],
-        'lng' => $p['lng']
-    ];
-}
 
 // Dana Desa & Poverty stats (unchanged)
 $village_results = $db->query("SELECT * FROM villages");
@@ -120,11 +104,19 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
 </head>
 <body>
 
-<!-- Pull Indicator Tab -->
 <div class="pull-indicator" id="pullIndicator" onclick="toggleSidebar()">
     <span class="text">MENU</span>
     <span class="icon">›</span>
 </div>
+
+<div id="dataLoadingIndicator" style="position:fixed; bottom: 85px; left: 50%; transform: translateX(-50%); background: rgba(15,23,42,0.9); padding: 8px 16px; border-radius: 20px; border: 1px solid var(--accent); color: white; font-size: 0.75rem; z-index: 999999; display: flex; align-items: center; gap: 8px; backdrop-filter: blur(10px); box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <div class="spinner" style="width:12px; height:12px; border:2px solid rgba(255,255,255,0.1); border-top-color: var(--accent); border-radius: 50%; animation: spin 1s linear infinite;"></div>
+    <span>Memproses Data Audit...</span>
+</div>
+
+<style>
+@keyframes spin { to { transform: rotate(360deg); } }
+</style>
 
 <div class="share-modal" id="shareModal" onclick="if(event.target == this) toggleShare(false)">
     <div class="sawer-content" style="border-top: 5px solid var(--accent);">
@@ -288,7 +280,7 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
 window.APP_DATA = {
     stats: <?= json_encode($stats) ?>,
     year_totals: <?= json_encode($year_totals) ?>,
-    all_audits: <?= json_encode($all_audits, JSON_INVALID_UTF8_SUBSTITUTE) ?>,
+    all_audits: [], // Will be loaded asynchronously
     village_stats: <?= json_encode($village_stats) ?>,
     poverty_stats: <?= json_encode($poverty_stats) ?>,
     pad_kecamatan: <?= !empty($pad_kecamatan_json) ? $pad_kecamatan_json : '{}' ?>,
