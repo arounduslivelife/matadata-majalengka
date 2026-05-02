@@ -74,20 +74,20 @@ while ($row = $kec_dd_results->fetch()) {
     $kec_dd_stats[] = $row;
 }
 
-$total_majalengka_dd = $pdo->query("SELECT SUM(budget_2025) FROM villages")->fetchColumn();
+$total_majalengka_dd = $pdo->query("SELECT SUM(budget_2025) FROM villages")->fetchColumn() ?: 0;
 
 $poverty_results = $pdo->query("SELECT * FROM district_stats ORDER BY poverty_count DESC");
 $poverty_stats = [];
 while ($row = $poverty_results->fetch()) {
     $poverty_stats[$row['nm_kecamatan']] = [
-        'count' => $row['poverty_count'],
-        'pkh' => $row['kpm_pkh'],
-        'bpnt' => $row['kpm_bpnt'],
-        'road_pct' => $row['road_firmness_pct']
+        'count' => $row['poverty_count'] ?: 0,
+        'pkh' => $row['kpm_pkh'] ?: 0,
+        'bpnt' => $row['kpm_bpnt'] ?: 0,
+        'road_pct' => $row['road_firmness_pct'] ?: 0
     ];
 }
 
-$total_kpm_majalengka = $pdo->query("SELECT SUM(poverty_count) FROM district_stats")->fetchColumn();
+$total_kpm_majalengka = $pdo->query("SELECT SUM(poverty_count) FROM district_stats")->fetchColumn() ?: 0;
 
 // Load PAD Data
 $pad_kecamatan_json = file_exists('data/pad_majalengka_kecamatan.json') ? file_get_contents('data/pad_majalengka_kecamatan.json') : '{}';
