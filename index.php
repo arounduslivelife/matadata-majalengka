@@ -1,11 +1,5 @@
 <?php
 // Deployment Marker: 2026-05-02 (WebHook Test)
-// SECURITY HARDENING HEADERS (PENTEST COMPLIANT)
-header("X-Frame-Options: SAMEORIGIN");
-header("X-XSS-Protection: 1; mode=block");
-header("X-Content-Type-Options: nosniff");
-header("Referrer-Policy: strict-origin-when-cross-origin");
-// header("Content-Security-Policy: default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' unpkg.com fonts.googleapis.com; style-src 'self' 'unsafe-inline' unpkg.com fonts.googleapis.com; img-src 'self' data: https: *; font-src 'self' fonts.gstatic.com; connect-src 'self' https:;");
 
 require_once 'auth.php';
 requireAuth();
