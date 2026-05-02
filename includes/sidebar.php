@@ -23,6 +23,9 @@
     <div id="sidebar-sirup">
         <!-- Year Toggle Segmented Control -->
         <div class="year-toggle" id="global-year-toggle">
+            <div class="year-btn" onclick="switchYear(2022)">2022</div>
+            <div class="year-btn" onclick="switchYear(2023)">2023</div>
+            <div class="year-btn" onclick="switchYear(2024)">2024</div>
             <div class="year-btn active" onclick="switchYear(2025)">2025</div>
             <div class="year-btn" onclick="switchYear(2026)">2026</div>
         </div>
@@ -305,6 +308,18 @@
             <h3 style="font-size: 0.9rem; margin-bottom: 1rem;">Zona Risiko Tertinggi</h3>
             <div id="risk-ranking-list">
                 <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <!-- Anomaly Radar: Top 5 High Risk Packages -->
+        <div class="anomaly-radar-container" id="anomalyRadar">
+            <h3 style="font-size: 0.9rem; margin-bottom: 1rem; color: #ef4444; display: flex; align-items: center; gap: 8px;">
+                <span>📡 Anomaly Radar</span>
+                <span style="font-size: 0.6rem; background: rgba(239, 68, 68, 0.2); padding: 2px 6px; border-radius: 4px; color: #f87171;">TOP 5</span>
+            </h3>
+            <div id="anomalyList">
+                <!-- Filled by JS -->
+                <div style="font-size: 0.75rem; opacity: 0.5; text-align: center; padding: 20px;">Memindai anomali...</div>
             </div>
         </div>
 

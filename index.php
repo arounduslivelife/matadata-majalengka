@@ -34,9 +34,10 @@ function e($str) {
 $stats_query = $db->query("
     SELECT tahun, kecamatan, 
            COUNT(*) as total, 
-           SUM(pagu) as total_pagu,
+           SUM(total_nilai) as total_pagu,
            SUM(CASE WHEN risk_score IN ('High', 'ABSURD') THEN 1 ELSE 0 END) as high_risk_count
-    FROM packages 
+    FROM realizations 
+ 
     GROUP BY tahun, kecamatan
 ");
 
@@ -54,24 +55,24 @@ while ($row = $stats_query->fetchArray(SQLITE3_ASSOC)) {
 
 // Global year totals
 $year_totals = [];
-$yt_query = $db->query("SELECT tahun, SUM(pagu) as total_pagu, COUNT(*) as pkg_count FROM packages GROUP BY tahun");
+$yt_query = $db->query("SELECT tahun, SUM(total_nilai) as total_pagu, COUNT(*) as pkg_count FROM realizations GROUP BY tahun");
 while($row = $yt_query->fetchArray(SQLITE3_ASSOC)) {
     $year_totals[$row['tahun']] = $row;
 }
 
 // Get all packages for the map details
-$audits_query = $db->query("SELECT * FROM packages");
+$audits_query = $db->query("SELECT * FROM realizations");
 $all_audits = [];
 while ($p = $audits_query->fetchArray(SQLITE3_ASSOC)) {
     $all_audits[] = [
         'id' => $p['id'],
         'kecamatan' => $p['kecamatan'],
         'nama' => $p['nama_paket'],
-        'pagu' => $p['pagu'],
+        'pagu' => $p['total_nilai'],
         'risk' => $p['risk_score'],
         'note' => $p['audit_note'],
         'satker' => $p['satker'],
-        'vendor' => $p['pemenang'],
+        'vendor' => mb_convert_encoding($p['vendor'] ?? '', 'UTF-8', 'UTF-8'),
         'status' => $p['status'],
         'tahun' => $p['tahun'],
         'lat' => $p['lat'],
@@ -169,8 +170,6 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
     <div id="searchResults" class="search-results"></div>
 </div>
 
-<!-- Audit Disclaimer Modal moved to end of body -->
-
 <!-- Packet Detail Modal -->
 <div id="packetModal" class="modal" onclick="if(event.target == this) togglePacketModal()">
     <div class="modal-content" style="max-width: 500px; border-top: 5px solid var(--accent);">
@@ -205,6 +204,37 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
             <a id="p-sirup-link" href="https://data.inaproc.id/realisasi?tahun=2025&jenis_klpd=4&instansi=D100" target="_blank" style="background: var(--accent); color: white; text-align: center; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 10px;">
                 🔍 Lihat Detil di Inaproc ↗
             </a>
+        </div>
+    </div>
+</div>
+
+<!-- Vendor Detail Modal -->
+<div id="vendorModal" class="modal" style="z-index: 1000000;" onclick="if(event.target == this) toggleVendorModal()">
+    <div class="modal-content" style="max-width: 500px; border-top: 5px solid var(--accent);">
+        <span class="close-modal" onclick="toggleVendorModal()">&times;</span>
+        
+        <div style="text-align: center; margin-bottom: 25px;">
+            <div style="font-size: 0.65rem; opacity: 0.5; text-transform: uppercase; letter-spacing: 2px;">Entitas Penyedia</div>
+            <h2 id="v-name" style="font-size: 1.4rem; color: #fff; margin-top: 5px; font-weight: 800; font-family: 'Outfit';">Penyedia</h2>
+            <div style="height: 2px; width: 40px; background: var(--accent); margin: 15px auto;"></div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-bottom: 30px;">
+            <div style="background: rgba(255,255,255,0.04); padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                <div style="font-size: 0.6rem; opacity: 0.5; margin-bottom: 5px;">JANGKAUAN WILAYAH</div>
+                <div style="font-size: 1.5rem; font-weight: 800; color: var(--accent);" id="v-kec-count">0</div>
+                <div style="font-size: 0.6rem; opacity: 0.4;">Kecamatan</div>
+            </div>
+            <div style="background: rgba(255,255,255,0.04); padding: 15px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); text-align: center;">
+                <div style="font-size: 0.6rem; opacity: 0.5; margin-bottom: 5px;">TOTAL PEKERJAAN</div>
+                <div style="font-size: 1.5rem; font-weight: 800; color: #fff;" id="v-pkg-count">0</div>
+                <div style="font-size: 0.6rem; opacity: 0.4;">Paket (Audit)</div>
+            </div>
+        </div>
+
+        <div style="margin-bottom: 15px; font-size: 0.75rem; font-weight: 800; opacity: 0.8; letter-spacing: 0.5px;">📋 REKAPITULASI TAHUNAN</div>
+        <div id="v-year-list" style="display: flex; flex-direction: column; gap: 10px; max-height: 250px; overflow-y: auto; padding-right: 5px;" class="custom-scroll">
+            <!-- Data tahunan akan di-inject di sini -->
         </div>
     </div>
 </div>
@@ -263,7 +293,7 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
 window.APP_DATA = {
     stats: <?= json_encode($stats) ?>,
     year_totals: <?= json_encode($year_totals) ?>,
-    all_audits: <?= json_encode($all_audits) ?>,
+    all_audits: <?= json_encode($all_audits, JSON_INVALID_UTF8_SUBSTITUTE) ?>,
     village_stats: <?= json_encode($village_stats) ?>,
     poverty_stats: <?= json_encode($poverty_stats) ?>,
     pad_kecamatan: <?= !empty($pad_kecamatan_json) ? $pad_kecamatan_json : '{}' ?>,
