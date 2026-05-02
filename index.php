@@ -1,4 +1,5 @@
 <?php
+// Deployment Marker: 2026-05-02 (WebHook Test)
 // SECURITY HARDENING HEADERS (PENTEST COMPLIANT)
 header("X-Frame-Options: SAMEORIGIN");
 header("X-XSS-Protection: 1; mode=block");
