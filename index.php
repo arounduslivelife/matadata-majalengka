@@ -307,16 +307,16 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
 
     <script>
         window.APP_DATA = {
-            stats: <?= json_encode($stats) ?>,
-            year_totals: <?= json_encode($year_totals) ?>,
-            all_audits: [], // Will be loaded asynchronously
-            village_stats: <?= json_encode($village_stats) ?>,
-            poverty_stats: <?= json_encode($poverty_stats) ?>,
-            pad_kecamatan: <?= !empty($pad_kecamatan_json) ? $pad_kecamatan_json : '{}' ?>,
-            pad_global: <?= !empty($pad_global_json) ? $pad_global_json : '{}' ?>,
-            gps_granted: true
-        };
-        console.log("📦 APP_DATA initialized:", window.APP_DATA);
+    stats: <?= json_encode($stats ?: []) ?>,
+    year_totals: <?= json_encode($year_totals ?: []) ?>,
+    all_audits: [],
+    village_stats: <?= json_encode($village_stats ?: []) ?>,
+    poverty_stats: <?= json_encode($poverty_stats ?: []) ?>,
+    pad_kecamatan: <?= $pad_kecamatan_json ?: '{}' ?>,
+    pad_global: <?= $pad_global_json ?: '{}' ?>,
+    gps_granted: true
+};
+console.log("📦 APP_DATA initialized:", window.APP_DATA);
     </script>
     <script src="assets/js/main.js?v=<?= time() ?>"></script>
     <!-- FINAL MODALS (HARDCODED FOR STABILITY) -->
