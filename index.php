@@ -289,7 +289,7 @@ window.APP_DATA = {
 };
 console.log("📦 APP_DATA initialized:", window.APP_DATA);
 </script>
-<script src="assets/js/main.js"></script>
+<script src="assets/js/main.js?v=<?= time() ?>"></script>
 <!-- FINAL MODALS (HARDCODED FOR STABILITY) -->
 <div id="logicModal" class="modal" onclick="if(event.target == this) this.style.display='none'" style="display:none; position:fixed; inset:0; z-index: 999999; background:rgba(2,6,23,0.85); backdrop-filter:blur(15px); align-items:center; justify-content:center;">
      <div class="modal-content" style="max-width: 600px; background:#0f172a; padding:2.5rem; border-radius:28px; border:1px solid rgba(255,255,255,0.1); position:relative; box-shadow: 0 40px 100px rgba(0,0,0,0.8); animation: modalIn 0.3s ease;">
