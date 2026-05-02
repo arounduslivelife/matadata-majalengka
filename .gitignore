@@ -2,7 +2,6 @@
 
 # Sensitive Data (MUST NEVER BE COMMITTED)
 config.json
-database.sqlite
 audit_trail.sqlite
 auth.json
 .env
