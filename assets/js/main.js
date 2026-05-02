@@ -289,18 +289,18 @@ async function fetchAudits() {
         console.log("📥 Fetching audits from get_audits.php...");
         const response = await fetch('get_audits.php');
         const data = await response.json();
-        
+
         // Update global and local references
         window.APP_DATA.all_audits = data;
         allAudits = data;
         isDataLoaded = true;
-        
+
         console.log("✅ Data loaded:", data.length, "rows.");
-        
+
         // Hide indicator
         const indicator = document.getElementById('dataLoadingIndicator');
         if (indicator) indicator.style.display = 'none';
-        
+
         // Refresh Current View
         switchYear(activeYear);
     } catch (err) {
@@ -2496,7 +2496,7 @@ function unescapeHTML(str) {
 
 window.showVendorIntelligence = function (vendorName) {
     console.log("🔍 Vendor Intelligence Triggered for:", vendorName);
-    
+
     if (!vendorName || vendorName === 'PL' || vendorName.includes('Tidak Terdata')) {
         console.warn("⚠️ Invalid Vendor Name:", vendorName);
         return;
@@ -2515,18 +2515,18 @@ window.showVendorIntelligence = function (vendorName) {
     const allProjects = window.APP_DATA.all_audits.filter(p => {
         return p && (p.vendor === cleanVendorName || p.vendor === vendorName);
     });
-    
+
     console.log("📊 Projects Found:", allProjects.length);
 
     if (allProjects.length === 0) {
         alert("Data detail untuk penyedia ini tidak ditemukan dalam database audit.");
         return;
     }
-    
+
     // Grouping by Year
     const yearStats = {};
     const uniqueKec = new Set();
-    
+
     allProjects.forEach(p => {
         if (p.tahun) {
             if (!yearStats[p.tahun]) yearStats[p.tahun] = { count: 0, total: 0 };
