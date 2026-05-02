@@ -295,6 +295,7 @@ window.APP_DATA = {
     pad_global: <?= !empty($pad_global_json) ? $pad_global_json : '{}' ?>,
     gps_granted: true
 };
+console.log("📦 APP_DATA initialized:", window.APP_DATA);
 </script>
 <script src="assets/js/main.js"></script>
 <!-- FINAL MODALS (HARDCODED FOR STABILITY) -->

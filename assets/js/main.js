@@ -1,3 +1,4 @@
+console.log("🚀 main.js is starting...");
 function openSidebar() {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebarOverlay');
