@@ -1196,26 +1196,11 @@ function renderRiskRanking() {
     const listEl = document.getElementById('risk-ranking-list');
     if (!listEl) return;
 
-    // Calculate risks for all kecamatans
+    const stats = window.APP_DATA.audit_stats || {};
     const rankings = [];
-    const kecNames = Object.keys(districtLayers); // Assuming all districts are in this
 
-    kecNames.forEach(name => {
-        const pkts = allAudits.filter(p => p.kecamatan === name && p.tahun == 2025);
-
-        // Pillar 1: Satker Cluster
-        const satkerMap = {};
-        pkts.forEach(p => { if (p.pagu >= 180000000 && p.pagu < 200000000 && p.satker) { satkerMap[p.satker] = (satkerMap[p.satker] || 0) + 1; } });
-        const satkerVals = Object.values(satkerMap);
-        const score1 = (satkerVals.length > 0 ? Math.max(...satkerVals) : 0) * 25;
-
-        // Pillar 2: Vendor Cluster
-        const vendorMap = {};
-        pkts.forEach(p => { if (p.pagu >= 180000000 && p.pagu < 200000000 && p.vendor) { vendorMap[p.vendor] = (vendorMap[p.vendor] || 0) + 1; } });
-        const vendorVals = Object.values(vendorMap);
-        const score2 = (vendorVals.length > 0 ? Math.max(...vendorVals) : 0) * 30;
-
-        const totalScore = Math.min(100, score1 + score2);
+    Object.entries(stats).forEach(([name, s]) => {
+        const totalScore = Math.min(100, (parseInt(s.score_satker) || 0) + (parseInt(s.score_vendor) || 0));
         if (totalScore > 0) {
             rankings.push({ name, score: totalScore });
         }
@@ -1379,21 +1364,10 @@ function loadMapData() {
                             if (packetHtml) packetHtml += '</div>';
                             layer.bindPopup(`<div class="info-box" style="width:250px;"><b style="font-size:1.1rem; color:var(--accent);">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Monitoring Realisasi T.A ${activeYear}</span><hr style="opacity:0.2; margin:8px 0;"><b>Total Realisasi:</b> <span style="color:var(--accent)">${formatPaguJS(d.total_pagu)}</span><br>Temuan Anomali: <span style="color:${d.high_risk > 0 ? '#ef4444' : '#10b981'}">${d.high_risk}</span>${packetHtml}<hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(59,130,246,0.2); border-radius:8px; color:var(--accent); text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a><a href="#" onclick="showKecamatanVendors('${name}'); return false;" style="display:block; margin-top:8px; text-align:center; padding:8px; color:white; background:var(--accent); border-radius:8px; font-size:0.75rem; font-weight:600; text-decoration:none;">👤 Lihat Daftar Vendor ↗</a></div>`);
                         } else if (currentMode === 'audit') {
-                            const kecPackets = allAudits.filter(p => p.kecamatan === name && p.tahun == 2025);
-
-                            // LOGIC 1: Pemecahan Satker (Same Satker + Zona Kritis 180M-200M)
-                            const satkerClusters = {};
-                            kecPackets.forEach(p => { if (p.pagu >= 180000000 && p.pagu < 200000000 && p.satker) { satkerClusters[p.satker] = (satkerClusters[p.satker] || 0) + 1; } });
-                            const maxSatkerSplit = Math.max(0, ...Object.values(satkerClusters));
-                            const score1 = Math.min(100, maxSatkerSplit * 25);
-
-                            // LOGIC 2: Pemecahan Vendor (Same Vendor + Zona Kritis 180M-200M)
-                            const vendorClusters = {};
-                            kecPackets.forEach(p => { if (p.pagu >= 180000000 && p.pagu < 200000000 && p.vendor) { vendorClusters[p.vendor] = (vendorClusters[p.vendor] || 0) + 1; } });
-                            const maxVendorSplit = Math.max(0, ...Object.values(vendorClusters));
-                            const score2 = Math.min(100, maxVendorSplit * 30);
-
-                            const score3 = Math.min(100, (kecPackets.length > 5 ? 70 : 30));
+                            const as = (window.APP_DATA.audit_stats && window.APP_DATA.audit_stats[name]) ? window.APP_DATA.audit_stats[name] : { score_satker: 0, score_vendor: 0, score_monopoly: 30 };
+                            const score1 = as.score_satker;
+                            const score2 = as.score_vendor;
+                            const score3 = as.score_monopoly;
 
                             layer.bindPopup(`<div class="info-box" style="width:260px; border-top: 4px solid #ef4444;">
                                     <b style="font-size:1.1rem; color:#ef4444;">Audit Kec. ${name}</b><br>
