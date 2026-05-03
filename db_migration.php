@@ -72,13 +72,15 @@ try {
     ];
 
     // 2. Ambil semua ID desa dan RESET anggaran ke 0 dulu agar bersih
-    echo "Resetting budgets & Caching IDs... ";
+    echo "Resetting budgets & Caching IDs (Case-Insensitive)... ";
     $pdo->exec("UPDATE villages SET budget_real = 0, budget_2025 = 0");
     
     $village_map = [];
     $stmt = $pdo->query("SELECT id, nm_kelurahan FROM villages");
     while ($row = $stmt->fetch()) {
-        $village_map[$row['nm_kelurahan']] = $row['id'];
+        // Simpan dengan key UPPERCASE untuk pencocokan fleksibel
+        $clean_name = strtoupper(trim($row['nm_kelurahan']));
+        $village_map[$clean_name] = $row['id'];
     }
     echo "Done.\n";
 
@@ -100,10 +102,18 @@ try {
     $count_activities = 0;
 
     foreach ($data as $index => $item) {
-        $village_name = $item['village'];
+        $original_name = $item['village'];
+        $village_name = strtoupper(trim($original_name));
         
-        // Proteksi: Jika ini Kelurahan, jangan di-update anggarannya
-        if (in_array($village_name, $kelurahan_list)) continue;
+        // Proteksi: Jika ini Kelurahan (cek case-insensitive), jangan di-update anggarannya
+        $is_kelurahan = false;
+        foreach ($kelurahan_list as $kel) {
+            if (strtoupper(trim($kel)) === $village_name) {
+                $is_kelurahan = true;
+                break;
+            }
+        }
+        if ($is_kelurahan) continue;
 
         $v_id = $village_map[$village_name] ?? null;
 
