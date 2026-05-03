@@ -76,119 +76,31 @@ function toggleLegend() {
 
 const ALGO_EXPLANATIONS = {
     'sirup': {
-        title: 'Sistem Integrasi Realisasi',
-        subtitle: 'Bagaimana data realisasi diringkas dan dipetakan?',
+        title: 'Sistem Informasi Realisasi',
+        subtitle: 'Sistem pemetaan data realisasi belanja wilayah.',
         logic: [
-            { b: 'WHAT: Rekapitulasi Belanja', p: 'Monitoring realisasi belanja yang dilakukan oleh OPD melalui berbagai metode pengadaan.' },
-            { b: 'WHO: Integrasi Inaproc', p: 'Data bersumber langsung dari portal pengadaan nasional untuk wilayah Majalengka.' },
-            { b: 'WHY: Transparansi Anggaran', p: 'Memberikan gambaran umum mengenai distribusi anggaran di setiap wilayah kecamatan.' },
-            { b: 'WHERE: Wilayah Majalengka', p: 'Mencakup seluruh paket transaksi di lingkungan Pemkab Majalengka.' },
-            { b: 'WHEN: T.A 2025', p: 'Fokus pada catatan belanja tahun anggaran berjalan.' }
+            { b: 'Rekapitulasi Belanja', p: 'Monitoring realisasi belanja daerah melalui berbagai metode pengadaan.' },
+            { b: 'Integrasi Data', p: 'Data diolah dari sumber publik oleh agungds.' }
         ],
-        sources: [
-            'Portal Data Inaproc (Inaproc.id)',
-            'E-Katalog Versi 5.0/6.0',
-            'Catatan Realisasi Pengadaan'
-        ]
+        sources: ['Data Diolah oleh agungds']
     },
     'danadesa': {
-        title: 'Algoritma Analisis Dana Desa',
-        subtitle: 'Evaluasi pemerataan alokasi dana per desa terhadap status perkembangan.',
+        title: 'Analisis Alokasi Wilayah',
+        subtitle: 'Evaluasi pemerataan alokasi dana per wilayah.',
         logic: [
-            { b: 'WHAT: Analisis Pemerataan Dana', p: 'Memastikan alokasi Dana Desa (DD) dan Alokasi Dana Desa (ADD) tersalurkan secara proporsional.' },
-            { b: 'WHO: Integrasi Data Kemenkeu', p: 'Data bersumber dari Transfer Ke Daerah (TKD) Nasional dan DPMD Majalengka.' },
-            { b: 'WHY: Keadilan Fiskal Desa', p: 'Mencegah ketimpangan di mana desa maju mendapatkan dana jauh lebih besar dari desa tertinggal tanpa alasan jelas.' },
-            { b: 'WHERE: 330+ Desa di Majalengka', p: 'Pemetaan menyeluruh di tingkat desa/kelurahan.' },
-            { b: 'WHEN: T.A 2025', p: 'Dataset alokasi terbaru berdasarkan pagu Kemenkeu.' },
-            { b: 'HOW: Korelasi IDM', p: 'Menghitung skor distribusi berdasarkan korelasi antara Indeks Desa Membangun (IDM) dengan total pagu yang diterima.' }
+            { b: 'Analisis Pemerataan', p: 'Memastikan alokasi dana tersalurkan secara proporsional.' },
+            { b: 'Integrasi Data', p: 'Data diolah dari sumber publik oleh agungds.' }
         ],
-        sources: [
-            'Portal TKD Kemenkeu RI (Data Alokasi 2025)',
-            'DPMD Majalengka (Database Desa)',
-            'Indeks Desa Membangun / IDM (Benchmark status desa)'
-        ]
-    },
-    'kemiskinan': {
-        title: 'Metodologi Audit Kemiskinan',
-        subtitle: 'Visualisasi dan transparansi profil penerima manfaat bantuan sosial.',
-        logic: [
-            { b: 'WHAT: Mapping Profil KPM', p: 'Visualisasi sebaran Keluarga Penerima Manfaat (KPM) untuk bantuan PKH dan BPNT.' },
-            { b: 'WHO: Data Terpadu Kesejahteraan Sosial', p: 'Bersumber dari DTKS Kemensos RI yang dikelola oleh Dinsos Majalengka.' },
-            { b: 'WHY: Transparansi Bantuan', p: 'Memastikan publik tahu area mana yang memiliki beban sosial tertinggi untuk monitoring ketepatan sasaran.' },
-            { b: 'WHERE: Seluruh Kecamatan Majalengka', p: 'Data agregat yang dipetakan per wilayah kecamatan.' },
-            { b: 'WHEN: Periode 2024/2025', p: 'Data penerima aktif dalam sistem jaminan sosial.' },
-            { b: 'HOW: Density Analysis', p: 'Menghitung rasio KPM terhadap total populasi kecamatan untuk menentukan zona kebutuhan ekonomi.' }
-        ],
-        sources: [
-            'Data Terpadu Kesejahteraan Sosial (DTKS) Kemensos RI',
-            'Dinas Sosial Kabupaten Majalengka',
-            'Survey Sosial Ekonomi Nasional (Data Pendukung)'
-        ]
-    },
-    'infrastruktur': {
-        title: 'Algoritma Audit Infrastruktur',
-        subtitle: 'Analisis gap antara kondisi rill jaringan jalan dengan alokasi anggaran perbaikan.',
-        logic: [
-            { b: 'WHAT: Infra-Budget Gap Analysis', p: 'Mendeteksi area yang jalannya rusak namun tidak mendapatkan prioritas anggaran.' },
-            { b: 'WHO: Geometri Rill OpenStreetMap', p: 'Menggunakan data koordinat jalan asli (OSM) vs Laporan Statistik DPUTR.' },
-            { b: 'WHY: Prioritas Pembangunan', p: 'Mencegah penumpukan proyek di jalan yang sudah baik sambil membiarkan jalan rusak di area terpencil.' },
-            { b: 'WHERE: Jaringan Jalan Desa Majalengka', p: 'Mencakup 14.000+ ruas jalan lokal dan residensial.' },
-            { b: 'WHEN: Kondisi 2024 vs Budget 2025', p: 'Membandingkan baseline kerusakan terakhir dengan rencana belanja tahun ini.' },
-            { b: 'HOW: Spatial Overlap Audit', p: 'AI menandai "Neglected Area" pada kecamatan yang memiliki indeks kemantapan jalan < 70% namun minim pagu konstruksi.' }
-        ],
-        sources: [
-            'OpenStreetMap (OSM) - Geometri Jalan Terkini',
-            'DPUTR Majalengka (Statistik Kemantapan Jalan)',
-            'SP4N-LAPOR! (Database Keluhan Infrastruktur Masyarakat)'
-        ]
-    },
-    'realisasi': {
-        title: 'Audit Realisasi & Vendor 2026',
-        subtitle: 'Monitoring penyerapan anggaran dan dominansi penyedia dalam bentuk peta grafis.',
-        logic: [
-            { b: 'WHAT: Vendor & Spending Audit', p: 'Analisis distribusi paket pekerjaan kepada pihak ketiga (Penyedia/Vendor).' },
-            { b: 'WHO: E-Katalog & Tender Majalengka', p: 'Data transaksi asli hasil integrasi portal pengadaan tahun anggaran 2026.' },
-            { b: 'WHY: Deteksi Monopoli & Kecepatan', p: 'Mendeteksi konsentrasi proyek pada satu vendor (Spider Mapping) serta memantau kecepatan realisasi anggaran.' },
-            { b: 'WHERE: Satellite Units Majalengka', p: 'Pemetaan titik lokasi Puskesmas, RSUD, dan lokasi proyek fisik di seluruh kabupaten.' },
-            { b: 'WHEN: Real-time 2026', p: 'Dataset transaksi yang diperbarui berdasarkan siklus pembayaran dan kontrak.' },
-            { b: 'HOW: Network Visualization', p: 'Menggunakan algoritma jaring-laba-laba untuk menghubungkan penyedia dengan lokasi pekerjaan mereka.' }
-        ],
-        sources: [
-            'Data Realisasi 2026 (Internal Department Records)',
-            'Portal E-Katalog 6.0 (E-Purchasing Log)',
-            'Database Penyedia LKPP (Vendor Profiling)'
-        ]
+        sources: ['Data Diolah oleh agungds']
     },
     'audit': {
-        title: '⚖️ Landasan Hukum Audit AI',
-        subtitle: 'Implementasi Algoritma Forensic Berbasis Regulasi Pengadaan',
+        title: 'Sistem Audit Forensic',
+        subtitle: 'Implementasi Algoritma Deteksi Risiko Pengadaan',
         logic: [
-            { b: 'Pilar 1: Pelanggaran Ambang Batas', p: 'Landasan: Perpres 46/2025 Pasal 38 (Konstruksi 400jt) & Pasal 41 (Konsultansi 100jt).' },
-            { b: 'Pilar 2: Vendor Dominance', p: 'Landasan: Peraturan LKPP No. 12/2021 - Pengawasan terhadap indikasi kolusi pada paket Non-Tender.' },
-            { b: 'Pilar 3: Monopoli Global', p: 'Landasan: UU No. 5 Tahun 1999 - Larangan praktik monopoli dan persaingan usaha tidak sehat.' },
-            { b: 'Metodologi: Cluster Analysis', p: 'Logika matematis yang menghitung kepadatan paket (Density) pada satu titik koordinat dan entitas Satker yang sama.' }
+            { b: 'Deteksi Pemecahan Paket', p: 'Menganalisis paket di bawah ambang batas yang memiliki pola identik.' },
+            { b: 'Analisis Monopoli', p: 'Mendeteksi konsentrasi proyek pada penyedia tertentu.' }
         ],
-        sources: [
-            'Data SIRUP T.A 2025 (Rencana Umum Pengadaan)',
-            'Portal Inaproc (Data Agregasi Pengadaan Nasional)',
-            'Peraturan Presiden No. 12 Tahun 2021 (Regulasi Acuan)'
-        ]
-    },
-    'pad': {
-        title: 'Analisis Pendapatan Daerah',
-        subtitle: 'Visualisasi kontribusi fiskal per wilayah terhadap PAD Kabupaten.',
-        logic: [
-            { b: 'WHAT: Revenue Contribution Mapping', p: 'Memetakan kecamatan berdasarkan volume setoran pajak dan bagi hasil daerah.' },
-            { b: 'WHO: Bapenda Majalengka', p: 'Data bersumber dari Badan Pendapatan Daerah melalui portal Open Data.' },
-            { b: 'WHY: Analisis Potensi Ekonomi', p: 'Mengidentifikasi pusat pertumbuhan ekonomi dan wilayah dengan potensi pajak tinggi.' },
-            { b: 'WHERE: 26 Kecamatan Majalengka', p: 'Data agregat level kecamatan mencakup BPHTB, Hotel, dan Bagi Hasil.' },
-            { b: 'WHEN: Historis 2018-2025', p: 'Menampilkan tren pertumbuhan pendapatan asli daerah secara tahunan.' }
-        ],
-        sources: [
-            'Open Data Kabupaten Majalengka',
-            'Badan Pendapatan Daerah (Bapenda)',
-            'DPMD Majalengka (Data Bagi Hasil)'
-        ]
+        sources: ['Data Diolah oleh agungds']
     }
 };
 
@@ -1409,7 +1321,7 @@ function loadMapData() {
                                 </div>`);
                         } else if (currentMode === 'kemiskinan') {
                             const p = povertyStats[name] || { count: 0, pkh: 0, bpnt: 0, road_pct: 75 };
-                            layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#f59e0b;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">T.A 2024/2025 | Sumber: Dinsos/DTKS</span><hr style="opacity:0.2; margin:8px 0;"><b>Jumlah KPM Miskin:</b><br><span style="font-size:1.8rem; font-weight:600; color:#f59e0b;">${p.count.toLocaleString('id-ID')}</span><div style="margin-top:10px; display:grid; grid-template-columns: 1fr 1fr; gap:5px;"><div style="background:rgba(255,255,255,0.05); padding:5px; border-radius:5px; text-align:center;"><div style="font-size:0.6rem; opacity:0.6;">KPM BPNT</div><div style="font-weight:bold;">${p.bpnt.toLocaleString('id-ID')}</div></div><div style="background:rgba(255,255,255,0.05); padding:5px; border-radius:5px; text-align:center;"><div style="font-size:0.6rem; opacity:0.6;">KPM PKH</div><div style="font-weight:bold;">${p.pkh.toLocaleString('id-ID')}</div></div></div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(245,158,11,0.2); border-radius:8px; color:#fbbf24; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
+                            layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#f59e0b;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Analisis Kesejahteraan Wilayah</span><hr style="opacity:0.2; margin:8px 0;"><b>Estimasi Beban Sosial:</b><br><span style="font-size:1.8rem; font-weight:600; color:#f59e0b;">${p.count.toLocaleString('id-ID')}</span><div style="margin-top:10px; display:grid; grid-template-columns: 1fr 1fr; gap:5px;"><div style="background:rgba(255,255,255,0.05); padding:5px; border-radius:5px; text-align:center;"><div style="font-size:0.6rem; opacity:0.6;">Tipe A</div><div style="font-weight:bold;">${p.bpnt.toLocaleString('id-ID')}</div></div><div style="background:rgba(255,255,255,0.05); padding:5px; border-radius:5px; text-align:center;"><div style="font-size:0.6rem; opacity:0.6;">Tipe B</div><div style="font-weight:bold;">${p.pkh.toLocaleString('id-ID')}</div></div></div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 Data diolah oleh agungds</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(245,158,11,0.2); border-radius:8px; color:#fbbf24; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
                         } else if (currentMode === 'realisasi') {
                             const val = (statsJSON[2026] && statsJSON[2026][name]) ? statsJSON[2026][name].total_pagu : 0;
                             layer.bindPopup(`<div class="info-box" style="width:220px; border-top: 3px solid #8b5cf6;"><b style="font-size:1.1rem; color:#a78bfa;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Monitoring Realisasi T.A 2026</span><hr style="opacity:0.2; margin:8px 0;"><b>Total Realisasi:</b><br><span style="font-size:1.4rem; font-weight:600; color:#d8b4fe;">${formatPaguJS(val)}</span><br><div style="font-size:0.7rem; opacity:0.6; margin-top:5px;">Berdasarkan agregat 1.400+ paket transaksi yang terpetakan di wilayah ini.</div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(139,92,246,0.2); border-radius:8px; color:#d8b4fe; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
@@ -1443,7 +1355,7 @@ function loadMapData() {
                                 </div>`);
                         } else {
                             const infraData = povertyStats[name] || { road_pct: 75 };
-                            layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#06b6d4;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Data 2024 | Sumber: DPUTR Majalengka</span><hr style="opacity:0.2; margin:8px 0;"><b>Level Kemantapan:</b><br><span style="font-size:1.8rem; font-weight:600; color:#06b6d4;">${infraData.road_pct}%</span><br><div style="font-size:0.7rem; opacity:0.6; margin-top:5px;">Indeks berdasarkan integrasi SP4N-LAPOR! & Statistik Jalan Kabupaten.</div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(6,182,212,0.2); border-radius:8px; color:#22d3ee; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
+                            layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#06b6d4;">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Statistik Wilayah agungds</span><hr style="opacity:0.2; margin:8px 0;"><b>Level Kemantapan:</b><br><span style="font-size:1.8rem; font-weight:600; color:#06b6d4;">${infraData.road_pct}%</span><br><div style="font-size:0.7rem; opacity:0.6; margin-top:5px;">Indeks berdasarkan integrasi data geospasial & statistik diolah oleh agungds.</div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 Hubungi kami untuk transparansi data.</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(6,182,212,0.2); border-radius:8px; color:#22d3ee; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
                         }
                     } else {
                         villageLayers[name] = layer;
@@ -1451,7 +1363,7 @@ function loadMapData() {
                         const col = activeYear == 2025 ? 'budget' : 'budget_real';
                         let budgetVal = parseFloat(v[col] || 0);
                         let budgetDisplay = formatPaguJS(budgetVal);
-                        let sourceLabel = activeYear == 2025 ? 'Alokasi Estimasi T.A 2025' : 'Realisasi T.A 2024 (JAGA.id)';
+                        let sourceLabel = 'Data diolah secara mandiri oleh agungds';
 
                         let popupHtml = `<div class="info-box" style="width:230px;">
                             <b style="font-size:1.1rem; color:${budgetVal > 0 ? '#10b981' : '#94a3b8'};">${budgetVal > 0 ? 'Desa' : 'Kelurahan'} ${name}</b><br>
@@ -1578,7 +1490,7 @@ function renderRoadLayer(roadData) {
                     <b style="color:var(--accent); font-size:1rem;">${f.properties.name || 'Jalan Tanpa Nama'}</b><br>
                     <span style="font-size:0.75rem; opacity:0.6;">Klasifikasi: ${f.properties.highway}</span><hr style="opacity:0.2; margin:5px 0;">
                     Status: <b style="color:${statusColor}">${f.properties.status}</b><br>
-                    <span style="font-size:0.7rem; opacity:0.5;">Data: OpenStreetMap 2024</span><hr style="opacity:0.1; margin:6px 0;">
+                    <span style="font-size:0.7rem; opacity:0.5;">Sumber: Olahan Data agungds</span><hr style="opacity:0.1; margin:6px 0;">
                     <div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div>
                     <a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(6,182,212,0.2); border-radius:8px; color:#22d3ee; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a>
                 </div>`);
@@ -1652,7 +1564,7 @@ function renderDeepBridgeLayer(data) {
 
         const popupHtml = `
                 <div class="info-box" style="width:280px; border-top: 5px solid #3b82f6; padding:15px; background: rgba(15, 23, 42, 0.98);">
-                    <div style="font-size:0.6rem; opacity:0.6; text-transform:uppercase; color:#3b82f6; letter-spacing:1px; margin-bottom:5px;">Scraped Bridge (Grid AI)</div>
+                    <div style="font-size:0.6rem; opacity:0.6; text-transform:uppercase; color:#3b82f6; letter-spacing:1px; margin-bottom:5px;">Digital Asset (agungds AI)</div>
                     <b style="color:white; font-size:1.1rem; display:block; margin-bottom:2px;">${p.nama}</b>
                     <span style="font-size:0.75rem; opacity:0.5;">Kecamatan ${p.kecamatan}</span>
                     <hr style="opacity:0.1; margin:12px 0;">

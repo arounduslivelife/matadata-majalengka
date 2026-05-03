@@ -47,7 +47,7 @@
                 <div class="secondary-content">
                     <div class="sidebar-meta">
                         <div>📅 <b>Tahun:</b> <span id="meta-year">2025</span></div>
-                        <div>📡 <b>Sumber:</b> <a href="https://data.inaproc.id/" target="_blank" style="color:var(--accent); text-decoration:none;">data.inaproc.id ↗</a></div>
+                        <div>📡 <b>Sumber:</b> Diolah oleh agungds (Hubungi kami untuk transparansi)</div>
                     </div>
                 </div>
             </details>
@@ -103,12 +103,11 @@
             </div>
         </div>
 
-        <details class="secondary-info" style="border-left-color: var(--success); margin-top:1.5rem;">
-            <summary>Integrasi Data JAGA.id</summary>
+            <summary>Informasi Data</summary>
             <div class="secondary-content">
                 <div class="sidebar-meta" style="border-left-color: var(--success);">
-                    <div id="dd-meta-source">📡 <b>Sumber:</b> Portal JAGA.id (KPK RI)</div>
-                    <div style="margin-top:5px;">📍 <b>Cakupan:</b> 330 Desa & 13 Kelurahan</div>
+                    <div id="dd-meta-source">📡 <b>Sumber:</b> Diolah secara mandiri oleh agungds</div>
+                    <div style="margin-top:5px;">📍 <b>Cakupan:</b> Wilayah Kabupaten Majalengka</div>
                 </div>
                 <div class="sidebar-why" style="background: rgba(16,185,129,0.08);">
                     💡 <b>Transparansi:</b> Data ini memetakan bagaimana dana desa dialokasikan untuk pembangunan infrastruktur dan pemberdayaan masyarakat.
@@ -136,7 +135,7 @@
                 <div class="sidebar-meta" style="border-left-color: var(--warning);">
                     <div>📅 <b>Periode Data:</b> 2024/2025</div>
                     <div>🕒 <b>Data Diambil:</b> 19 April 2026</div>
-                    <div>📡 <b>Sumber:</b> <a href="https://data.inaproc.id/" target="_blank" style="color:var(--warning); text-decoration:none;">data.inaproc.id ↗</a></div>
+                    <div>📡 <b>Sumber:</b> Diolah oleh agungds</div>
                 </div>
                 <div class="sidebar-why" style="background: rgba(245,158,11,0.08);">
                     💡 <b>Monitoring:</b> Mengetahui sebaran kemiskinan membantu warga mengawasi ketepatan sasaran bantuan sosial di setiap wilayah.
@@ -170,11 +169,7 @@
             <div class="secondary-content">
                 <div class="sidebar-meta" style="border-left-color: #06b6d4;">
                     <div>📅 <b>Baseline:</b> 2024</div>
-                    <div>📡 <b>Sumber Integrasi:</b></div>
-                    <div style="margin-top: 6px; display: flex; flex-direction: column; gap: 4px;">
-                        <a href="https://data.inaproc.id/" target="_blank" style="color: #22d3ee; text-decoration: none; font-size: 0.7rem;">🔗 Data Inaproc Realisasi ↗</a>
-                        <a href="https://www.openstreetmap.org" target="_blank" style="color: #22d3ee; text-decoration: none; font-size: 0.7rem;">🔗 OpenStreetMap Data ↗</a>
-                    </div>
+                    <div>📡 <b>Sumber:</b> Olahan Data agungds</div>
                 </div>
                 <div class="sidebar-why" style="background: rgba(6,182,212,0.08);">
                     💡 <b>Insight:</b> Jalan adalah nadi ekonomi. Gunakan peta ini untuk memantau prioritas perbaikan infrastruktur di kecamatan Anda.
@@ -374,21 +369,11 @@
         </div>
 
         <details class="secondary-info" style="border-left-color: #ec4899; margin-top: 1rem;">
-            <summary>Metodologi & Sumber PAD</summary>
+            <summary>Informasi Data PAD</summary>
             <div class="secondary-content">
                 <div class="sidebar-meta" style="border-left-color: #ec4899;">
                     <div style="margin-bottom:8px;">📅 <b>Rentang Data:</b> 2018 - 2025</div>
-                    <div style="margin-bottom:8px;">📡 <b>Portal Utama:</b> <a href="https://opendata.majalengkakab.go.id/" target="_blank" style="color:#ec4899; text-decoration:none;">Open Data Majalengka ↗</a></div>
-                    
-                    <div style="font-size:0.65rem; opacity:0.8; margin-top:10px; border-top:1px solid rgba(255,255,255,0.05); padding-top:10px;">
-                        <b>Datasets Terintegrasi:</b>
-                        <ul style="padding-left:15px; margin-top:5px;">
-                            <li><a href="https://opendata.majalengkakab.go.id/dataset/jumlah-pendapatan-asli-daerah-pad-di-kabupaten-majalengka-2" target="_blank" style="color:#f472b6;">Global Realisasi PAD (Bapenda)</a></li>
-                            <li><a href="https://opendata.majalengkakab.go.id/dataset/jumlah-pendapatan-bphtb-berdasarkan-kecamatan-di-kabupaten-majalengka" target="_blank" style="color:#f472b6;">Penerimaan BPHTB Per Kec.</a></li>
-                            <li><a href="https://opendata.majalengkakab.go.id/dataset/jumlah-pendapatan-pajak-hotel-berdasarkan-kecamatan-di-kabupaten-majalengka" target="_blank" style="color:#f472b6;">Pajak Hotel Per Kec.</a></li>
-                            <li><a href="https://opendata.majalengkakab.go.id/dataset/bagi-hasil-pajak-dan-retribusi-daerah-berdasarkan-kecamatan-di-kabupaten-majalengka" target="_blank" style="color:#f472b6;">Bagi Hasil Pajak & Retribusi (DPMD)</a></li>
-                        </ul>
-                    </div>
+                    <div style="margin-bottom:8px;">📡 <b>Sumber:</b> Olahan Data agungds</div>
                 </div>
                 <div class="sidebar-why" style="background: rgba(236, 72, 153, 0.08);">
                     💡 <b>Algoritma Visualisasi:</b> Peta menggunakan agregasi data sektoral (BPHTB + Hotel + Bagi Hasil) untuk menghitung bobot kontribusi ekonomi tiap kecamatan terhadap pendapatan daerah.

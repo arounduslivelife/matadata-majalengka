@@ -305,7 +305,6 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
                 <line x1="14" y1="1" x2="14" y2="4"></line>
             </svg>
         </div>
-        <div class="dock-item" onclick="toggleModal()" title="Help / Info" style="font-size: 1.1rem; font-weight: bold; font-family: 'Outfit';">?</div>
     </div>
 
 
@@ -323,7 +322,7 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
                 <!-- Data will be loaded here -->
             </div>
             <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.75rem; opacity: 0.6; text-align: center;">
-                Data bersumber dari Portal JAGA.id (KPK RI) T.A 2024
+                Data diolah secara mandiri oleh agungds
             </div>
         </div>
     </div>
