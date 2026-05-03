@@ -64,8 +64,17 @@ try {
     echo "\n<b>[3/3] Mengimpor Data ke MySQL (Streaming Mode)...</b>\n";
     echo str_repeat(" ", 1024); // Force browser padding
     
-    // 1. Ambil semua ID desa dan simpan di memory (Cache)
-    echo "Caching village IDs... ";
+    // 1. Daftar Kelurahan yang TIDAK boleh memiliki Dana Desa
+    $kelurahan_list = [
+        'Majalengka Kulon', 'Majalengka Wetan', 'Cicurug', 'Babakan Jawa', 
+        'Munjul', 'Tarikolot', 'Tonjong', 'Cigasong', 'Cicenang', 
+        'Simpeureum', 'Sindangkasih', 'Simpang'
+    ];
+
+    // 2. Ambil semua ID desa dan RESET anggaran ke 0 dulu agar bersih
+    echo "Resetting budgets & Caching IDs... ";
+    $pdo->exec("UPDATE villages SET budget_real = 0, budget_2025 = 0");
+    
     $village_map = [];
     $stmt = $pdo->query("SELECT id, nm_kelurahan FROM villages");
     while ($row = $stmt->fetch()) {
@@ -73,7 +82,7 @@ try {
     }
     echo "Done.\n";
 
-    // 2. Bersihkan tabel kegiatan & Matikan Index sementara
+    // 3. Bersihkan tabel kegiatan & Matikan Index sementara
     echo "Preparing table & disabling indexes... ";
     $pdo->exec("TRUNCATE TABLE village_activities");
     $pdo->exec("ALTER TABLE village_activities DISABLE KEYS");
@@ -92,6 +101,10 @@ try {
 
     foreach ($data as $index => $item) {
         $village_name = $item['village'];
+        
+        // Proteksi: Jika ini Kelurahan, jangan di-update anggarannya
+        if (in_array($village_name, $kelurahan_list)) continue;
+
         $v_id = $village_map[$village_name] ?? null;
 
         if ($v_id) {
@@ -123,7 +136,6 @@ try {
                 }
             }
 
-            // Kirim progres ke browser setiap 20 desa
             if ($count_villages % 20 == 0) {
                 echo "Processed $count_villages villages... ($count_activities activities)\n";
                 if (ob_get_level() > 0) ob_flush();
