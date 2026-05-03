@@ -55,7 +55,18 @@ while ($row = $yt_query->fetch()) {
     $year_totals[$row['tahun']] = $row;
 }
 
-$all_audits = [];
+// Ambil data hasil audit yang sudah diproses di server
+$audit_stats = [];
+try {
+    $stmt = $pdo->query("SELECT * FROM audit_district_stats");
+    while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $audit_stats[$row['kecamatan']] = $row;
+    }
+} catch (Exception $e) {
+    // Tabel mungkin belum dibuat jika belum menjalankan process_audits.php
+}
+
+$all_audits = []; // Tetap kosongkan atau isi seperlunya agar tidak berat
 
 // Dana Desa & Poverty stats
 $village_results = $pdo->query("SELECT * FROM villages");
@@ -328,6 +339,7 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
     stats: <?= json_encode($stats ?: []) ?>,
     year_totals: <?= json_encode($year_totals ?: []) ?>,
     all_audits: [],
+    audit_stats: <?= json_encode($audit_stats ?: []) ?>,
     village_stats: <?= json_encode($village_stats ?: []) ?>,
     poverty_stats: <?= json_encode($poverty_stats ?: []) ?>,
     pad_kecamatan: <?= $pad_kecamatan_json ?: '{}' ?>,
