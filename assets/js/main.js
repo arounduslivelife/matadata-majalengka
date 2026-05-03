@@ -197,6 +197,13 @@ let allAudits = []; // Local reference
 let isDataLoaded = false;
 
 async function fetchAudits() {
+    // If we have pre-calculated stats, we can hide indicator early
+    if (window.APP_DATA.audit_stats && Object.keys(window.APP_DATA.audit_stats).length > 0) {
+        const ind = document.getElementById('dataLoadingIndicator');
+        if (ind) ind.style.display = 'none';
+        renderRiskRanking(); // Show ranking immediately
+    }
+
     try {
         console.log("📥 Fetching audits from get_audits.php...");
         const response = await fetch('get_audits.php');
@@ -209,9 +216,14 @@ async function fetchAudits() {
 
         console.log("✅ Data loaded:", data.length, "rows.");
 
-        // Hide indicator
-        const indicator = document.getElementById('dataLoadingIndicator');
-        if (indicator) indicator.style.display = 'none';
+        // Hide indicator if it's still there
+        const ind = document.getElementById('dataLoadingIndicator');
+        if (ind) ind.style.display = 'none';
+
+        renderRiskRanking();
+        renderAnomalyRadar();
+        updateGlobalAuditFindings();
+        if (currentMode === 'audit') loadMapData();
 
         // Refresh Current View
         switchYear(activeYear);
