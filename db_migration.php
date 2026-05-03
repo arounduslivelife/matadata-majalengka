@@ -22,11 +22,17 @@ try {
         throw new Exception("File $sql_file tidak ditemukan! Pastikan file sudah dipush ke VPS.");
     }
 
-    echo "<b>[1/2] Membersihkan Database Lama...</b>\n";
-    // Opsional: Matikan foreign key check agar lancar
+    echo "<b>[1/2] Membersihkan Database Lama (DROP Mode)...</b>\n";
     $pdo->exec("SET FOREIGN_KEY_CHECKS = 0;");
     
-    echo "<b>[2/2] Mengeksekusi File SQL...</b>\n";
+    // Ambil semua nama tabel yang ada di DB saat ini
+    $tables = $pdo->query("SHOW TABLES")->fetchAll(PDO::FETCH_COLUMN);
+    foreach ($tables as $table) {
+        $pdo->exec("DROP TABLE IF EXISTS `$table` ");
+        echo "🗑️ Dropped table: $table\n";
+    }
+    
+    echo "\n<b>[2/2] Mengeksekusi File SQL (Fresh Install)...</b>\n";
     
     // Baca file SQL
     $sql = file_get_contents($sql_file);
