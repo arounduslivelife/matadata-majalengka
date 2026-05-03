@@ -61,55 +61,73 @@ try {
     echo "✅ Berhasil memuat " . count($data) . " data desa.\n";
 
     // --- STEP 3: IMPORT DATA ---
-    echo "\n<b>[3/3] Mengimpor Data ke MySQL...</b>\n";
+    echo "\n<b>[3/3] Mengimpor Data ke MySQL (Optimized Bulk Mode)...</b>\n";
     
-    // Siapkan statement agar cepat
-    $update_village = $pdo->prepare("UPDATE villages SET budget_real = ?, budget_2025 = ? WHERE nm_kelurahan = ?");
-    $delete_activities = $pdo->prepare("DELETE FROM village_activities WHERE village_id = ?");
-    $insert_activity = $pdo->prepare("INSERT INTO village_activities (village_id, year, uraian, volume, output, anggaran) VALUES (?, ?, ?, ?, ?, ?)");
+    // 1. Ambil semua ID desa dan simpan di memory (Cache)
+    echo "Caching village IDs...\n";
+    $village_map = [];
+    $stmt = $pdo->query("SELECT id, nm_kelurahan FROM villages");
+    while ($row = $stmt->fetch()) {
+        $village_map[$row['nm_kelurahan']] = $row['id'];
+    }
+
+    // 2. Bersihkan tabel kegiatan sekali saja agar cepat
+    echo "Clearing old activity data...\n";
+    $pdo->exec("TRUNCATE TABLE village_activities");
 
     $pdo->beginTransaction();
+    
+    $update_village = $pdo->prepare("UPDATE villages SET budget_real = ?, budget_2025 = ? WHERE id = ?");
+    $insert_sql = "INSERT INTO village_activities (village_id, year, uraian, volume, output, anggaran) VALUES ";
+    $insert_values = [];
+    $params = [];
+    $batch_size = 500; // Masukkan 500 baris sekaligus
     
     $count_villages = 0;
     $count_activities = 0;
 
     foreach ($data as $item) {
         $village_name = $item['village'];
-        $pagu_2024 = $item['data_2024']['pagu'] ?? 0;
-        $pagu_2025 = $item['data_2025']['pagu'] ?? 0;
+        $v_id = $village_map[$village_name] ?? null;
 
-        // 1. Update budget di tabel villages
-        $update_village->execute([$pagu_2024, $pagu_2025, $village_name]);
-        
-        if ($update_village->rowCount() > 0) {
-            // Dapatkan ID desa untuk relasi
-            $stmt = $pdo->prepare("SELECT id FROM villages WHERE nm_kelurahan = ?");
-            $stmt->execute([$village_name]);
-            $v_id = $stmt->fetchColumn();
+        if ($v_id) {
+            $count_villages++;
+            $pagu_2024 = $item['data_2024']['pagu'] ?? 0;
+            $pagu_2025 = $item['data_2025']['pagu'] ?? 0;
 
-            if ($v_id) {
-                $count_villages++;
-                
-                // Bersihkan data lama agar tidak dobel
-                $delete_activities->execute([$v_id]);
+            // Update budget villages
+            $update_village->execute([$pagu_2024, $pagu_2025, $v_id]);
 
-                // 2. Simpan rincian kegiatan 2024
-                if (!empty($item['data_2024']['activities'])) {
-                    foreach ($item['data_2024']['activities'] as $act) {
-                        $insert_activity->execute([$v_id, 2024, $act['uraian'], $act['volume'], $act['output'], $act['anggaran']]);
-                        $count_activities++;
-                    }
-                }
+            // Koleksi kegiatan 2024 & 2025
+            $years = [2024 => $item['data_2024']['activities'] ?? [], 2025 => $item['data_2025']['activities'] ?? []];
+            
+            foreach ($years as $year => $activities) {
+                foreach ($activities as $act) {
+                    $insert_values[] = "(?, ?, ?, ?, ?, ?)";
+                    $params[] = $v_id;
+                    $params[] = $year;
+                    $params[] = $act['uraian'];
+                    $params[] = $act['volume'];
+                    $params[] = $act['output'];
+                    $params[] = $act['anggaran'];
+                    $count_activities++;
 
-                // 3. Simpan rincian kegiatan 2025
-                if (!empty($item['data_2025']['activities'])) {
-                    foreach ($item['data_2025']['activities'] as $act) {
-                        $insert_activity->execute([$v_id, 2025, $act['uraian'], $act['volume'], $act['output'], $act['anggaran']]);
-                        $count_activities++;
+                    // Jika batch sudah penuh, eksekusi bulk insert
+                    if (count($insert_values) >= $batch_size) {
+                        $stmt = $pdo->prepare($insert_sql . implode(', ', $insert_values));
+                        $stmt->execute($params);
+                        $insert_values = [];
+                        $params = [];
                     }
                 }
             }
         }
+    }
+
+    // Eksekusi sisa batch yang belum terkirim
+    if (!empty($insert_values)) {
+        $stmt = $pdo->prepare($insert_sql . implode(', ', $insert_values));
+        $stmt->execute($params);
     }
 
     $pdo->commit();
