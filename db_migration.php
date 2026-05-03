@@ -31,19 +31,37 @@ try {
     // Baca file SQL
     $sql = file_get_contents($sql_file);
     
-    // Pisahkan query berdasarkan titik koma (;) tapi abaikan yang di dalam string
-    // Untuk keamanan dan kecepatan pada file besar, kita gunakan cara yang lebih robust
-    $queries = explode(";\n", $sql);
+    // Deteksi dan konversi UTF-16 ke UTF-8 jika perlu
+    $encoding = mb_detect_encoding($sql, ['UTF-8', 'UTF-16', 'ISO-8859-1']);
+    if ($encoding === 'UTF-16' || bin2hex(substr($sql, 0, 2)) === 'fffe' || bin2hex(substr($sql, 0, 2)) === 'feff') {
+        echo "ℹ️ Detecting UTF-16 encoding, converting to UTF-8...\n";
+        $sql = mb_convert_encoding($sql, 'UTF-8', 'UTF-16');
+    }
+
+    // Bersihkan BOM jika ada
+    $sql = preg_replace('/^\xEF\xBB\xBF/', '', $sql);
+    
+    // Pisahkan query dengan regex yang lebih kuat (memisahkan berdasarkan ; di akhir baris)
+    $queries = preg_split("/;[\r\n]+/", $sql);
     
     $count = 0;
     foreach ($queries as $query) {
         $query = trim($query);
         if (!empty($query)) {
-            $pdo->exec($query);
-            $count++;
+            // Abaikan komentar SQL
+            if (strpos($query, '--') === 0 || strpos($query, '/*') === 0) continue;
+            
+            try {
+                $pdo->exec($query);
+                $count++;
+            } catch (PDOException $qe) {
+                // Tampilkan error query tapi lanjut ke yang lain agar tidak stuck total
+                echo "⚠️ Skip error in query $count: " . substr($qe->getMessage(), 0, 100) . "...\n";
+            }
             
             if ($count % 500 == 0) {
                 echo "Executed $count queries...\n";
+                if (ob_get_level() > 0) ob_flush();
                 flush();
             }
         }
