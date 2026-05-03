@@ -65,44 +65,56 @@
         </div>
     </div>
 
-    <!-- Sidebar Section: DANA DESA -->
     <div id="sidebar-danadesa" style="display: none;">
+        <!-- Year Toggle for Dana Desa -->
+        <div class="year-toggle" id="dd-year-toggle">
+            <div class="year-btn" onclick="switchYear(2024)">2024</div>
+            <div class="year-btn active" onclick="switchYear(2025)">2025</div>
+        </div>
+
         <div class="stat-grid-mobile">
-            <div class="stat-card" style="border-left-color: var(--success);">
-                <h3>Total Alokasi 2025</h3>
-                <div class="value" style="font-size: 1.2rem;"><?= formatPagu($total_majalengka_dd) ?></div>
+            <div class="stat-card" style="border-left-color: var(--success); background: rgba(16,185,129,0.05);">
+                <h3 id="dd-stat-label">Total Alokasi 2025</h3>
+                <div class="value" id="dd-total-val" style="font-size: 1.4rem; color: #10b981;"><?= formatPagu($total_majalengka_dd) ?></div>
+                <p id="dd-stat-desc" style="font-size: 0.65rem; opacity:0.6; margin-top:5px;">Agregat seluruh desa di Kab. Majalengka</p>
             </div>
-            <div class="stat-card" style="border-left-color: var(--success);">
+            <div class="stat-card" style="border-left-color: #3b82f6;">
                 <h3>Total Desa</h3>
                 <div class="value">343</div>
+                <p style="font-size: 0.65rem; opacity:0.6; margin-top:5px;">Penerima Dana Desa</p>
             </div>
         </div>
 
-        <details class="secondary-info" style="border-left-color: var(--success);">
-            <summary>Sumber Data & Transparansi</summary>
+        <div style="margin-top: 1.5rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:10px;">
+                <h3 style="font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5;">Ranking Kecamatan</h3>
+                <span style="font-size: 0.6rem; background: rgba(16,185,129,0.2); padding: 2px 6px; border-radius: 4px; color: #10b981;">Berdasarkan Anggaran</span>
+            </div>
+            <div id="dd-kec-ranking" style="max-height: 220px; overflow-y: auto; padding-right: 5px;" class="custom-scroll">
+                <!-- Filled by JS -->
+                <div style="text-align:center; padding:20px; opacity:0.5; font-size:0.8rem;">Memproses ranking...</div>
+            </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid rgba(255,255,255,0.05);">
+            <h3 style="font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom:12px;">Top 5 Desa Tertinggi</h3>
+            <div id="dd-village-ranking">
+                <!-- Filled by JS -->
+            </div>
+        </div>
+
+        <details class="secondary-info" style="border-left-color: var(--success); margin-top:1.5rem;">
+            <summary>Integrasi Data JAGA.id</summary>
             <div class="secondary-content">
                 <div class="sidebar-meta" style="border-left-color: var(--success);">
-                    <div>📅 <b>Tahun Anggaran:</b> 2025</div>
-                    <div>🕒 <b>Data Diambil:</b> 19 April 2026</div>
-                    <div>📡 <b>Sumber:</b> <a href="https://data.inaproc.id/" target="_blank" style="color:var(--success); text-decoration:none;">data.inaproc.id ↗</a></div>
+                    <div id="dd-meta-source">📡 <b>Sumber:</b> Portal JAGA.id (KPK RI)</div>
+                    <div style="margin-top:5px;">📍 <b>Cakupan:</b> 330 Desa & 13 Kelurahan</div>
                 </div>
                 <div class="sidebar-why" style="background: rgba(16,185,129,0.08);">
-                    💡 <b>Penting:</b> Dana Desa adalah hak warga. Dengan transparansi ini, Anda bisa memastikan desa mendapat alokasi yang adil dan proporsional.
+                    💡 <b>Transparansi:</b> Data ini memetakan bagaimana dana desa dialokasikan untuk pembangunan infrastruktur dan pemberdayaan masyarakat.
                 </div>
             </div>
         </details>
-
-        <div style="margin-top: 1.5rem;">
-            <h3 style="font-size: 0.9rem; margin-bottom: 1rem;">Ranking Alokasi Kecamatan</h3>
-            <div style="max-height: 200px; overflow-y: auto; padding-right: 5px;">
-                <?php foreach($kec_dd_stats as $k): ?>
-                    <div class="kec-list-item">
-                        <span style="font-weight: 500;"><?= $k['nm_kecamatan'] ?></span>
-                        <span style="color: var(--success); font-weight: 600;"><?= formatPagu($k['total_budget']) ?></span>
-                    </div>
-                <?php endforeach; ?>
-            </div>
-        </div>
     </div>
 
     <!-- Sidebar Section: KEMISKINAN -->

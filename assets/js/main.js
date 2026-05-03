@@ -337,7 +337,7 @@ function switchYear(year) {
     activeYear = parseInt(year);
 
     // Update Buttons
-    document.querySelectorAll('#global-year-toggle .year-btn').forEach(btn => {
+    document.querySelectorAll('#global-year-toggle .year-btn, #dd-year-toggle .year-btn').forEach(btn => {
         btn.classList.toggle('active', btn.innerText == year);
     });
 
@@ -400,6 +400,10 @@ function switchYear(year) {
     }
     if (currentMode === 'pad') {
         switchPadYear(year);
+    }
+    if (currentMode === 'danadesa') {
+        renderDanaDesaStats(year);
+        loadMapData();
     }
     if (heatLayer) updateHeatmap();
     renderAnomalyRadar();
@@ -964,8 +968,14 @@ function getSIRUPColor(name) {
 }
 
 function getDDColor(name) {
-    const d = villageStats[name] ? villageStats[name].budget : 0;
-    return d > 1200000000 ? '#064e3b' : d > 1000000000 ? '#065f46' : d > 800000000 ? '#059669' : d > 0 ? '#10b981' : '#1e293b';
+    const col = activeYear == 2025 ? 'budget' : 'budget_real';
+    const d = villageStats[name] ? villageStats[name][col] : 0;
+    
+    // Scale for Dana Desa (Darker Green for higher budget)
+    return d > 1200000000 ? '#064e3b' : 
+           d > 1000000000 ? '#065f46' : 
+           d > 800000000 ? '#059669' : 
+           d > 0 ? '#10b981' : '#1e293b';
 }
 
 function getPovertyColor(name) {
@@ -1012,6 +1022,7 @@ function switchPadYear(year) {
     if (totalEl) totalEl.innerText = formatPaguJS(totalVal);
 
     renderPadRanking(displayYear);
+    if (currentMode === 'danadesa') renderDanaDesaStats(activeYear);
     loadMapData();
 }
 
@@ -1462,8 +1473,41 @@ function loadMapData() {
                         }
                     } else {
                         villageLayers[name] = layer;
-                        const v = villageStats[name] || { budget: 0, risk: 0, kecamatan: 'Unknown' };
-                        layer.bindPopup(`<div class="info-box" style="width:220px;"><b style="font-size:1.1rem; color:#10b981;">Desa ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Kecamatan ${v.kecamatan}</span><hr style="opacity:0.2; margin:8px 0;"><b>Alokasi Dana Desa T.A 2025:</b><br><span style="font-size:1.4rem; font-weight:600; color:#10b981;">${formatPaguJS(v.budget)}</span><br><div style="margin-top:10px; font-size:0.75rem; opacity:0.7; line-height:1.4;">Sumber: Alokasi TKD Kemenkeu RI T.A 2025</div><hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(16,185,129,0.2); border-radius:8px; color:#34d399; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a></div>`);
+                        const v = villageStats[name] || { budget: 0, budget_real: 0, risk: 0, kecamatan: 'Unknown', id: '' };
+                        const col = activeYear == 2025 ? 'budget' : 'budget_real';
+                        let budgetVal = parseFloat(v[col] || 0);
+                        let budgetDisplay = formatPaguJS(budgetVal);
+                        let sourceLabel = activeYear == 2025 ? 'Alokasi Estimasi T.A 2025' : 'Realisasi T.A 2024 (JAGA.id)';
+
+                        let popupHtml = `<div class="info-box" style="width:230px;">
+                            <b style="font-size:1.1rem; color:${budgetVal > 0 ? '#10b981' : '#94a3b8'};">${budgetVal > 0 ? 'Desa' : 'Kelurahan'} ${name}</b><br>
+                            <span style="font-size:0.7rem; opacity:0.5;">Kecamatan ${v.kecamatan}</span><hr style="opacity:0.2; margin:8px 0;">`;
+
+                        if (budgetVal > 0) {
+                            popupHtml += `
+                                <b>Dana Desa ${activeYear}:</b><br>
+                                <span style="font-size:1.4rem; font-weight:600; color:#10b981;">${budgetDisplay}</span><br>
+                                <div style="margin-top:10px; font-size:0.75rem; opacity:0.7; line-height:1.4;">Sumber: ${sourceLabel}</div>
+                                <hr style="opacity:0.1; margin:8px 0;">
+                                <div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div>
+                                <a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(16,185,129,0.2); border-radius:8px; color:var(--accent); text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a>
+                                <a href="#" onclick="showVillageDetails('${v.id}', '${name}'); return false;" style="display:block; margin-top:8px; text-align:center; padding:8px; color:white; background:var(--accent); border-radius:8px; font-size:0.75rem; font-weight:600; text-decoration:none;">📋 Lihat Rincian Kegiatan ↗</a>
+                            `;
+                        } else {
+                            popupHtml += `
+                                <div style="padding:15px 10px; background:rgba(255,255,255,0.03); border-radius:10px; text-align:center; border:1px dashed rgba(255,255,255,0.1);">
+                                    <div style="font-size:1.5rem; margin-bottom:8px;">🏛️</div>
+                                    <div style="font-size:0.8rem; font-weight:600; color:#94a3b8;">Wilayah Kelurahan</div>
+                                    <div style="font-size:0.65rem; opacity:0.5; margin-top:4px;">Bukan merupakan desa penerima Dana Desa (Skema APBD/DAU)</div>
+                                </div>
+                                <hr style="opacity:0.1; margin:12px 0;">
+                                <div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div>
+                                <a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(148,163,184,0.1); border-radius:8px; color:#94a3b8; text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a>
+                            `;
+                        }
+
+                        popupHtml += `</div>`;
+                        layer.bindPopup(popupHtml);
                     }
 
                     layer.on('mouseover', function () { this.setStyle({ fillOpacity: 0.9, weight: 2 }); });
@@ -2574,3 +2618,134 @@ window.showVendorIntelligence = function (vendorName) {
         console.error("❌ vendorModal element not found in DOM!");
     }
 };
+
+window.showVillageDetails = async function(id, name) {
+    const modal = document.getElementById('villageDetailModal');
+    const content = document.getElementById('villageDetailContent');
+    const title = document.getElementById('villageDetailTitle');
+    
+    title.innerText = `Rincian Dana Desa: ${name} (${activeYear})`;
+    content.innerHTML = '<div style="text-align:center; padding:40px; opacity:0.6;">⏳ Memuat rincian kegiatan...</div>';
+    modal.style.display = 'flex';
+    
+    try {
+        const response = await fetch(`get_village_detail.php?id=${id}&year=${activeYear}`);
+        const data = await response.json();
+        
+        if (data.error) throw new Error(data.error);
+        
+        let html = `
+            <div style="background:rgba(255,255,255,0.03); padding:15px; border-radius:12px; margin-bottom:20px; border:1px solid rgba(255,255,255,0.05);">
+                <div style="font-size:0.7rem; opacity:0.6; text-transform:uppercase;">Total Anggaran ${activeYear}</div>
+                <div style="font-size:1.8rem; font-weight:800; color:var(--accent);">${formatPaguJS(parseFloat(data.pagu))}</div>
+            </div>
+            
+            <div style="font-weight:600; margin-bottom:10px; font-size:0.9rem;">Rincian ${data.activities.length} Kegiatan:</div>
+            <div class="custom-scroll" style="max-height:400px; overflow-y:auto;">
+                <table style="width:100%; border-collapse:collapse; font-size:0.8rem;">
+                    <thead>
+                        <tr style="text-align:left; border-bottom:2px solid rgba(255,255,255,0.1);">
+                            <th style="padding:10px;">Uraian Kegiatan</th>
+                            <th style="padding:10px; text-align:right;">Anggaran</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+        `;
+        
+        if (data.activities.length === 0) {
+            html += `<tr><td colspan="2" style="padding:20px; text-align:center; opacity:0.5;">Belum ada rincian kegiatan untuk tahun ini.</td></tr>`;
+        } else {
+            data.activities.forEach(a => {
+                html += `
+                    <tr style="border-bottom:1px solid rgba(255,255,255,0.05);">
+                        <td style="padding:10px; vertical-align:top;">
+                            <div style="font-weight:600;">${escapeHTML(a.uraian)}</div>
+                            <div style="font-size:0.7rem; opacity:0.5; margin-top:4px;">Volume: ${escapeHTML(a.volume || '-')} | Output: ${escapeHTML(a.output || '-')}</div>
+                        </td>
+                        <td style="padding:10px; text-align:right; font-weight:800; color:var(--accent); white-space:nowrap; vertical-align:top;">
+                            ${formatPaguJS(parseFloat(a.anggaran))}
+                        </td>
+                    </tr>
+                `;
+            });
+        }
+        
+        html += `</tbody></table></div>`;
+        content.innerHTML = html;
+        
+    } catch (err) {
+        content.innerHTML = `<div style="color:#ef4444; padding:20px; text-align:center;">❌ Gagal memuat data: ${err.message}</div>`;
+    }
+}
+
+window.renderDanaDesaStats = function(year) {
+    const col = year == 2025 ? 'budget' : 'budget_real';
+    const villages = Object.entries(villageStats);
+    
+    // 1. Calculate Total & District Aggregation
+    let totalAll = 0;
+    const kecMap = {};
+    const villageList = [];
+
+    villages.forEach(([name, data]) => {
+        const val = parseFloat(data[col] || 0);
+        totalAll += val;
+        
+        // Group by Kecamatan
+        if (!kecMap[data.kecamatan]) kecMap[data.kecamatan] = 0;
+        kecMap[data.kecamatan] += val;
+        
+        // For Village Ranking
+        villageList.push({ name, val, kecamatan: data.kecamatan, id: data.id });
+    });
+
+    // Update Global Cards
+    const ddLabel = document.getElementById('dd-stat-label');
+    const ddVal = document.getElementById('dd-total-val');
+    const ddDesc = document.getElementById('dd-stat-desc');
+    const ddMetaSource = document.getElementById('dd-meta-source');
+    
+    if (ddLabel) ddLabel.innerText = year == 2025 ? `Total Alokasi ${year}` : `Total Realisasi ${year}`;
+    if (ddVal) ddVal.innerText = formatPaguJS(totalAll);
+    if (ddDesc) ddDesc.innerText = year == 2025 ? "Pagu anggaran yang direncanakan" : "Dana yang telah tersalurkan & dilaporkan";
+    if (ddMetaSource) ddMetaSource.innerHTML = `📡 <b>Sumber:</b> ${year == 2025 ? 'Estimasi DPMD' : 'Portal JAGA.id (KPK RI)'}`;
+
+    // 2. Render District Ranking with Progress Bars
+    const kecRankingEl = document.getElementById('dd-kec-ranking');
+    if (kecRankingEl) {
+        const sortedKec = Object.entries(kecMap).sort((a, b) => b[1] - a[1]);
+        const maxKecVal = sortedKec.length > 0 ? sortedKec[0][1] : 1;
+        
+        kecRankingEl.innerHTML = sortedKec.map(([name, val]) => {
+            const pct = (val / maxKecVal) * 100;
+            return `
+                <div class="kec-list-item" onclick="selectDistrict('${name}')" style="cursor:pointer; margin-bottom:12px; border:none; padding:0;">
+                    <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:4px;">
+                        <span style="font-weight:600; font-size:0.8rem;">${name}</span>
+                        <span style="color:#10b981; font-weight:800; font-size:0.75rem;">${formatPaguJS(val)}</span>
+                    </div>
+                    <div style="width:100%; height:4px; background:rgba(255,255,255,0.05); border-radius:2px; overflow:hidden;">
+                        <div style="width:${pct}%; height:100%; background:#10b981; border-radius:2px;"></div>
+                    </div>
+                </div>
+            `;
+        }).join('');
+    }
+
+    // 3. Render Top 5 Villages
+    const villageRankingEl = document.getElementById('dd-village-ranking');
+    if (villageRankingEl) {
+        const topVillages = villageList.sort((a, b) => b.val - a.val).slice(0, 5);
+        
+        villageRankingEl.innerHTML = topVillages.map((v, i) => `
+            <div onclick="showVillageDetails('${v.id}', '${v.name}')" style="background:rgba(255,255,255,0.03); border:1px solid rgba(255,255,255,0.05); border-radius:12px; padding:12px; margin-bottom:8px; cursor:pointer; display:flex; align-items:center; gap:12px; transition:0.3s;" onmouseover="this.style.background='rgba(16,185,129,0.08)'" onmouseout="this.style.background='rgba(255,255,255,0.03)'">
+                <div style="width:24px; height:24px; background:rgba(16,185,129,0.2); border-radius:50%; display:flex; align-items:center; justify-content:center; color:#10b981; font-weight:800; font-size:0.7rem;">${i+1}</div>
+                <div style="flex:1;">
+                    <div style="font-weight:600; font-size:0.8rem;">Desa ${v.name}</div>
+                    <div style="font-size:0.65rem; opacity:0.5;">Kec. ${v.kecamatan}</div>
+                </div>
+                <div style="font-weight:800; color:#10b981; font-size:0.75rem;">${formatPaguJS(v.val)}</div>
+            </div>
+        `).join('');
+    }
+}

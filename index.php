@@ -62,8 +62,10 @@ $village_results = $pdo->query("SELECT * FROM villages");
 $village_stats = [];
 while ($row = $village_results->fetch()) {
     $village_stats[$row['nm_kelurahan']] = [
+        'id' => $row['id'],
         'kecamatan' => $row['nm_kecamatan'],
         'budget' => $row['budget_2025'],
+        'budget_real' => $row['budget_real'],
         'risk' => $row['risk_score']
     ];
 }
@@ -299,6 +301,22 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css" />
     <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css" />
+    <!-- Village Detail Modal -->
+    <div id="villageDetailModal" class="share-modal" style="display:none; z-index: 9999999;" onclick="if(event.target == this) this.style.display='none'">
+        <div class="sawer-content" style="width: 90%; max-width: 800px; max-height: 85vh; overflow-y: auto; text-align: left; padding: 25px;">
+            <div style="display:flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 id="villageDetailTitle" style="margin:0; font-size: 1.4rem; color: var(--accent);">Rincian Penggunaan Dana Desa</h2>
+                <button onclick="document.getElementById('villageDetailModal').style.display='none'" style="background:none; border:none; color:white; font-size:1.5rem; cursor:pointer;">&times;</button>
+            </div>
+            <div id="villageDetailContent">
+                <!-- Data will be loaded here -->
+            </div>
+            <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.75rem; opacity: 0.6; text-align: center;">
+                Data bersumber dari Portal JAGA.id (KPK RI) T.A 2024
+            </div>
+        </div>
+    </div>
+
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
     <script src="https://unpkg.com/leaflet.heat@0.2.0/dist/leaflet-heat.js"></script>

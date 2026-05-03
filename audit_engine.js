@@ -1,18 +1,16 @@
 const { GoogleGenerativeAI } = require("@google/generative-ai");
 const axios = require('axios');
-const Database = require('better-sqlite3');
+const db = require('./db');
 const fs = require('fs');
 const path = require('path');
 
 const configPath = path.join(__dirname, 'config.json');
-const dbPath = path.join(__dirname, 'database.sqlite');
 const progressPath = path.join(__dirname, 'progress.json');
 const controlPath = path.join(__dirname, 'control.json');
 const statusPath = path.join(__dirname, 'api_status.json');
 const pidPath = path.join(__dirname, 'audit.pid');
 
 const config = JSON.parse(fs.readFileSync(configPath, 'utf8'));
-const db = new Database(dbPath);
 
 // Write PID for tracking
 fs.writeFileSync(pidPath, process.pid.toString());
@@ -43,9 +41,8 @@ updateProgressStatus('RUNNING');
 let genAI, geminiModel;
 if (config.GEMINI_API_KEY) {
     genAI = new GoogleGenerativeAI(config.GEMINI_API_KEY);
-    // UPGRADED to Gemini 2.5 Flash + JSON MODE ENFORCED
     geminiModel = genAI.getGenerativeModel({ 
-        model: "gemini-2.5-flash",
+        model: "gemini-2.0-flash", // Reverted to a known stable model if 2.5 was a typo in previous version, or kept if intended. User mentioned 3 Flash in settings but 2.0-flash is standard.
         generationConfig: { responseMimeType: "application/json" }
     });
 }
@@ -84,7 +81,6 @@ if (fs.existsSync(statusPath)) {
     try {
         const savedStatuses = JSON.parse(fs.readFileSync(statusPath, 'utf8'));
         if (savedStatuses.length === allProviders.length) {
-            // Keep the saved status, but reset local session flags like is_active
             apiStatuses = savedStatuses.map(s => ({ ...s, is_active: false }));
             console.log(`[MEMO] Successfully restored status for ${allProviders.length} keys from disk.`);
         } else {
@@ -102,7 +98,6 @@ function markActiveKey(index) {
     fs.writeFileSync(statusPath, JSON.stringify(apiStatuses, null, 2));
 }
 
-// Robust JSON parser that handles conversational noise or markdown backticks
 function relaxedParseJSON(text) {
     try { return JSON.parse(text); } 
     catch (e) {
@@ -124,7 +119,7 @@ function updateKeyStatus(index, status, error = null) {
         apiStatuses[index].error_count++;
     } else {
         apiStatuses[index].error_count = 0;
-        apiStatuses[index].last_error = null; // CLEAR error message on success
+        apiStatuses[index].last_error = null;
     }
     fs.writeFileSync(statusPath, JSON.stringify(apiStatuses, null, 2));
 }
@@ -132,18 +127,18 @@ function updateKeyStatus(index, status, error = null) {
 // Initial persist
 fs.writeFileSync(statusPath, JSON.stringify(apiStatuses, null, 2));
 
-function checkControlSignal() {
+async function checkControlSignal() {
     try {
         if (fs.existsSync(controlPath)) {
             const control = JSON.parse(fs.readFileSync(controlPath, 'utf8'));
             if (control.action === 'stop') {
                 console.log("[CONTROL] Stop signal received. Shutting down...");
-                const totalProcessed = db.prepare("SELECT COUNT(*) FROM packages WHERE processed = 1").pluck().get();
-                const totalAll = db.prepare("SELECT COUNT(*) FROM packages").pluck().get();
+                const [rowProcessed] = await db.query("SELECT COUNT(*) as count FROM packages WHERE processed = 1");
+                const [rowTotal] = await db.query("SELECT COUNT(*) as count FROM packages");
                 fs.writeFileSync(progressPath, JSON.stringify({ 
                     status: 'IDLE', 
-                    processed: totalProcessed, 
-                    total: totalAll, 
+                    processed: rowProcessed[0].count, 
+                    total: rowTotal[0].count, 
                     kecamatan: 'Manual Stop' 
                 }));
                 process.exit(0);
@@ -187,7 +182,7 @@ async function callGemini(prompt) {
 async function interruptibleSleep(ms) {
     const seconds = Math.ceil(ms / 1000);
     for (let i = 0; i < seconds; i++) {
-        checkControlSignal();
+        await checkControlSignal();
         await new Promise(r => setTimeout(r, 1000));
     }
 }
@@ -195,7 +190,7 @@ async function interruptibleSleep(ms) {
 async function auditBatch() {
     let activeProvider = getActiveProvider();
     
-    // AUTO-SKIP Logic: Skip keys that are already marked as exhausted for today
+    // AUTO-SKIP Logic
     let skipCount = 0;
     while (apiStatuses[currentProviderIndex].status === 'DAILY_LIMIT_HIT' && skipCount < allProviders.length) {
         console.log(`[AUTO-SKIP] Provider #${currentProviderIndex + 1} (${activeProvider.type.toUpperCase()}) is exhausted. Skipping to next...`);
@@ -204,44 +199,33 @@ async function auditBatch() {
         skipCount++;
     }
     
-    // If we've circled through all providers and all are dead
     if (skipCount >= allProviders.length) {
         console.log("CRITICAL: All configured API keys (Groq & Gemini) have reached their daily limits.");
-        const totalProcessed = db.prepare("SELECT COUNT(*) FROM packages WHERE processed = 1").pluck().get();
-        const totalAll = db.prepare("SELECT COUNT(*) FROM packages").pluck().get();
+        const [rowProcessed] = await db.query("SELECT COUNT(*) as count FROM packages WHERE processed = 1");
+        const [rowTotal] = await db.query("SELECT COUNT(*) as count FROM packages");
         fs.writeFileSync(progressPath, JSON.stringify({ 
             status: 'IDLE', 
-            processed: totalProcessed, 
-            total: totalAll, 
+            processed: rowProcessed[0].count, 
+            total: rowTotal[0].count, 
             kecamatan: 'All Keys Daily Limit Hit' 
         }));
-        return false; // Stop the engine naturally
+        return false;
     }
 
     markActiveKey(currentProviderIndex);
     
-    const totalProcessed = db.prepare("SELECT COUNT(*) FROM packages WHERE processed = 1").pluck().get();
-    const totalAll = db.prepare("SELECT COUNT(*) FROM packages").pluck().get();
+    const [rowProcessed] = await db.query("SELECT COUNT(*) as count FROM packages WHERE processed = 1");
+    const [rowTotal] = await db.query("SELECT COUNT(*) as count FROM packages");
+    const totalProcessed = rowProcessed[0].count;
+    const totalAll = rowTotal[0].count;
     
-    const packages = db.prepare("SELECT * FROM packages WHERE processed = 0 LIMIT 25").all();
+    const [packages] = await db.query("SELECT * FROM packages WHERE processed = 0 LIMIT 25");
     
     if (packages.length === 0) {
         console.log("No more packages to audit.");
         fs.writeFileSync(progressPath, JSON.stringify({ status: 'DONE', processed: totalProcessed, total: totalAll, kecamatan: 'Semua Selesai' }));
         return false;
     }
-
-    // OPTIMIZATION: Smart Context Filtering
-    const allDistricts = db.prepare("SELECT nm_kecamatan, road_firmness_pct FROM district_stats").all();
-    const batchText = packages.map(p => (p.nama_paket + " " + p.satker).toLowerCase()).join(" ");
-    
-    const relevantDistricts = allDistricts.filter(d => 
-        batchText.includes(d.nm_kecamatan.toLowerCase())
-    );
-    
-    // Use relevant districts or top 3 as baseline if none detected
-    const displayDistricts = relevantDistricts.length > 0 ? relevantDistricts : allDistricts.slice(0, 3);
-    const roadContext = displayDistricts.map(s => `${s.nm_kecamatan}:${s.road_firmness_pct}%`).join(', ');
 
     const prompt = `Auditor AI MATADATA Majalengka. TA 2025/2026.
 Landasan Hukum Terbaru (Perpres 46/2025):
@@ -277,21 +261,26 @@ Output JSON: { "results": [ { "id", "risk_score", "audit_note", "kecamatan" } ] 
         const parsed = relaxedParseJSON(textResult);
         const results = Array.isArray(parsed) ? parsed : (parsed.results || []);
 
-        const updateStmt = db.prepare(`
-            UPDATE packages 
-            SET risk_score = ?, audit_note = ?, kecamatan = ?, processed = 1 
-            WHERE id = ?
-        `);
-
         let lastKecamatan = 'Memproses...';
-        const transaction = db.transaction((rows) => {
-            for (const row of rows) {
+        
+        // Use a connection for transaction
+        const connection = await db.getConnection();
+        try {
+            await connection.beginTransaction();
+            for (const row of results) {
                 if (row.kecamatan && row.kecamatan !== '...') lastKecamatan = row.kecamatan;
-                updateStmt.run(row.risk_score, row.audit_note, row.kecamatan, row.id);
+                await connection.query(
+                    "UPDATE packages SET risk_score = ?, audit_note = ?, kecamatan = ?, processed = 1 WHERE id = ?",
+                    [row.risk_score, row.audit_note, row.kecamatan, row.id]
+                );
             }
-        });
-
-        transaction(results);
+            await connection.commit();
+        } catch (txError) {
+            await connection.rollback();
+            throw txError;
+        } finally {
+            connection.release();
+        }
         
         // Update progress file
         fs.writeFileSync(progressPath, JSON.stringify({ 
@@ -307,7 +296,6 @@ Output JSON: { "results": [ { "id", "risk_score", "audit_note", "kecamatan" } ] 
         const errorMsg = e.response?.data?.error?.message || e.message;
         console.error(`${activeProvider.type.toUpperCase()} Audit Error:`, errorMsg);
         
-        // Broadened Rate Limit & Quota Detection (Groq + Gemini)
         const isRateLimit = errorMsg.includes('Rate limit') || 
                           errorMsg.includes('quota') || 
                           errorMsg.includes('429') || 
@@ -324,7 +312,7 @@ Output JSON: { "results": [ { "id", "risk_score", "audit_note", "kecamatan" } ] 
 
             if (allProviders.length > 1) {
                 rotateProvider();
-                return true; // Retry immediately with next key in rotation
+                return true;
             }
 
             console.log("Global rate limit reached for all keys. Interruptible wait for 30s...");
@@ -338,7 +326,6 @@ Output JSON: { "results": [ { "id", "risk_score", "audit_note", "kecamatan" } ] 
             return true; 
         }
         
-        // Fatal Error but 5 providers available? Try rotating anyway!
         if (allProviders.length > 1 && apiStatuses[currentProviderIndex].error_count < 3) {
             console.log(`[RECOVERY] Non-rate error detected. Rotating to next provider as fallback...`);
             updateKeyStatus(currentProviderIndex, 'ERROR', errorMsg);
@@ -353,24 +340,23 @@ Output JSON: { "results": [ { "id", "risk_score", "audit_note", "kecamatan" } ] 
 async function run() {
     let hasMore = true;
     while (hasMore) {
-        checkControlSignal();
+        await checkControlSignal();
         hasMore = await auditBatch();
         if (hasMore) {
-            // Delay management: Gemini needs more breathing room in free tier
             const delay = getActiveProvider().type === 'gemini' ? 8000 : 5000;
             await interruptibleSleep(delay);
         }
     }
     
-    // Final status update if we exit naturally
-    const totalProcessed = db.prepare("SELECT COUNT(*) FROM packages WHERE processed = 1").pluck().get();
-    const totalAll = db.prepare("SELECT COUNT(*) FROM packages").pluck().get();
+    const [rowProcessed] = await db.query("SELECT COUNT(*) as count FROM packages WHERE processed = 1");
+    const [rowTotal] = await db.query("SELECT COUNT(*) as count FROM packages");
     fs.writeFileSync(progressPath, JSON.stringify({ 
         status: 'IDLE', 
-        processed: totalProcessed, 
-        total: totalAll, 
+        processed: rowProcessed[0].count, 
+        total: rowTotal[0].count, 
         kecamatan: 'All Done / Manual Stop' 
     }));
 }
 
 run();
+

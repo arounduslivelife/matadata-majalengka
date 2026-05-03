@@ -1,0 +1,47 @@
+===========================================================
+DOKUMENTASI SCRAPER DANA DESA (JAGA.ID) - MATADATA
+===========================================================
+
+1. DESKRIPSI
+Scraper ini berfungsi untuk mengambil data rill Dana Desa dari portal 
+JAGA.id (KPK RI). Data yang diambil meliputi:
+- Total Pagu/Anggaran rill per desa.
+- Rincian penggunaan anggaran (Uraian kegiatan, Output, Volume, Anggaran).
+
+2. CARA MENJALANKAN (VIA CMD)
+Buka CMD/Terminal, lalu jalankan:
+   
+   cd c:\xampp\htdocs\matadata
+   node scrape_jaga_desa.js
+
+Jika ingin melakukan pengetesan pada 5 desa saja:
+   node scrape_jaga_desa.js --test
+
+3. TEKNIS PEMETAAN DATA
+Skrip ini secara otomatis mengonversi kode wilayah yang ada di database 
+menjadi kode JAGA.id (10 digit) dengan aturan:
+   32 (Provinsi) + 10 (Kabupaten) + [Kecamatan] + 2 (Flag Desa) + [Kelurahan]
+Contoh: Desa Ampel -> 3210162008
+
+4. STRUKTUR DATABASE TERKAIT
+- Tabel 'villages': 
+  * budget_real: Menyimpan total anggaran rill dari JAGA.id.
+- Tabel 'village_activities':
+  * Menyimpan list rincian kegiatan per desa.
+
+5. FITUR DASHBOARD
+Setelah data berhasil ditarik:
+- Layer Dana Desa akan menampilkan label "Realisasi T.A 2024 (JAGA.id)".
+- Akan muncul tombol "📋 Detail Penggunaan" di popover desa.
+- Klik tombol tersebut untuk melihat tabel rincian kegiatan desa.
+
+6. CATATAN PENTING
+- Data default menggunakan T.A 2024 karena pelaporan 2025 di JAGA.id 
+  masih dalam proses oleh masing-masing desa.
+- Terdapat jeda (delay) otomatis 1-3 detik per request agar aman dari 
+  pemblokiran server (anti-spam).
+
+===========================================================
+Last Updated: 2026-05-02
+Author: Antigravity AI
+===========================================================

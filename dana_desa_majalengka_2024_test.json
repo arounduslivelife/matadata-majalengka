@@ -1,0 +1,62 @@
+[
+  {
+    "id": 1,
+    "name": "Gununglarang",
+    "code": "3210022011",
+    "error": "Empty data"
+  },
+  {
+    "id": 2,
+    "name": "Sunia",
+    "code": "3210222002",
+    "error": "Empty data"
+  },
+  {
+    "id": 3,
+    "name": "Gunungmanik",
+    "code": "3210042013",
+    "error": "Empty data"
+  },
+  {
+    "id": 4,
+    "name": "Palasah",
+    "code": "3210192003",
+    "error": "Empty data"
+  },
+  {
+    "id": 5,
+    "name": "Sukadana",
+    "code": "3210262001",
+    "error": "Empty data"
+  },
+  {
+    "id": 6,
+    "name": "Cibunut",
+    "code": "3210052002",
+    "error": "Empty data"
+  },
+  {
+    "id": 7,
+    "name": "Sindangkerta",
+    "code": "3210062012",
+    "error": "Empty data"
+  },
+  {
+    "id": 8,
+    "name": "Loji",
+    "code": "3210112013",
+    "error": "Empty data"
+  },
+  {
+    "id": 9,
+    "name": "Lojikobong",
+    "code": "3210172011",
+    "error": "Empty data"
+  },
+  {
+    "id": 10,
+    "name": "Maja Utara",
+    "code": "3210062008",
+    "error": "Empty data"
+  }
+]

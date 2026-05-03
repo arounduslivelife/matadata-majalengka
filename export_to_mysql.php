@@ -6,59 +6,47 @@ $handle = fopen($mysql_file, 'w');
 fwrite($handle, "SET NAMES utf8mb4;\n");
 fwrite($handle, "SET FOREIGN_KEY_CHECKS = 0;\n\n");
 
-// Create Table Structure for MySQL
-$tables = [
-    'realizations' => "CREATE TABLE `realizations` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `kecamatan` varchar(255) DEFAULT NULL,
-      `nama_paket` text DEFAULT NULL,
-      `total_nilai` double DEFAULT NULL,
-      `risk_score` varchar(50) DEFAULT '0',
-      `audit_note` text DEFAULT NULL,
-      `satker` varchar(255) DEFAULT NULL,
-      `vendor` varchar(255) DEFAULT NULL,
-      `status` varchar(100) DEFAULT NULL,
-      `tahun` int(11) DEFAULT NULL,
-      `lat` double DEFAULT NULL,
-      `lng` double DEFAULT NULL,
-      PRIMARY KEY (`id`),
-      KEY `idx_kec_tahun` (`kecamatan`,`tahun`),
-      KEY `idx_tahun` (`tahun`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;",
-
-    'villages' => "CREATE TABLE `villages` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `nm_kecamatan` varchar(255) DEFAULT NULL,
-      `nm_kelurahan` varchar(255) DEFAULT NULL,
-      `budget_2025` double DEFAULT NULL,
-      `risk_score` varchar(50) DEFAULT NULL,
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;",
-
-    'district_stats' => "CREATE TABLE `district_stats` (
-      `id` int(11) NOT NULL AUTO_INCREMENT,
-      `nm_kecamatan` varchar(255) DEFAULT NULL,
-      `poverty_count` int(11) DEFAULT NULL,
-      `kpm_pkh` int(11) DEFAULT NULL,
-      `kpm_bpnt` int(11) DEFAULT NULL,
-      `road_firmness_pct` double DEFAULT NULL,
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;"
-];
-
-foreach ($tables as $name => $sql) {
-    fwrite($handle, "DROP TABLE IF EXISTS `$name`;\n$sql\n\n");
+foreach (['realizations', 'villages', 'district_stats'] as $name) {
+    fwrite($handle, "DROP TABLE IF EXISTS `$name`;\n");
+    
+    // Get column info from SQLite
+    $cols_query = $sqlite->query("PRAGMA table_info($name)");
+    $cols = [];
+    $create_cols = [];
+    while($c = $cols_query->fetchArray(SQLITE3_ASSOC)) { 
+        $cols[] = "`".$c['name']."`";
+        $type = "TEXT";
+        if (strpos(strtolower($c['type']), 'int') !== false) $type = "INT(11)";
+        elseif (strpos(strtolower($c['type']), 'float') !== false || strpos(strtolower($c['type']), 'double') !== false) $type = "DOUBLE";
+        elseif (in_array($c['name'], ['kecamatan', 'nm_kecamatan', 'nm_kelurahan', 'status', 'vendor'])) $type = "VARCHAR(255)";
+        
+        $col_def = "`".$c['name']."` $type" . ($c['pk'] ? " NOT NULL AUTO_INCREMENT" : " DEFAULT NULL");
+        $create_cols[] = $col_def;
+    }
+    
+    $create_sql = "CREATE TABLE `$name` (\n  " . implode(",\n  ", $create_cols) . ",\n  PRIMARY KEY (`id`)";
+    if ($name === 'realizations') {
+        $create_sql .= ",\n  KEY `idx_kec_tahun` (`kecamatan`,`tahun`),\n  KEY `idx_tahun` (`tahun`)";
+    }
+    $create_sql .= "\n) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;\n\n";
+    fwrite($handle, $create_sql);
     
     $results = $sqlite->query("SELECT * FROM $name");
     $cols_query = $sqlite->query("PRAGMA table_info($name)");
     $cols = [];
     while($c = $cols_query->fetchArray(SQLITE3_ASSOC)) { $cols[] = "`".$c['name']."`"; }
     
-    fwrite($handle, "INSERT INTO `$name` (" . implode(", ", $cols) . ") VALUES \n");
-
-    $first = true;
+    $count = 0;
+    $first_in_batch = true;
     while ($row = $results->fetchArray(SQLITE3_ASSOC)) {
-        if (!$first) fwrite($handle, ",\n");
+        if ($count % 500 == 0) {
+            if ($count > 0) fwrite($handle, ";\n\n");
+            fwrite($handle, "INSERT INTO `$name` (" . implode(", ", $cols) . ") VALUES \n");
+            $first_in_batch = true;
+        }
+
+        if (!$first_in_batch) fwrite($handle, ",\n");
+        
         $values = [];
         foreach ($row as $val) {
             if ($val === null) $values[] = "NULL";
@@ -70,7 +58,8 @@ foreach ($tables as $name => $sql) {
             }
         }
         fwrite($handle, "(" . implode(", ", $values) . ")");
-        $first = false;
+        $first_in_batch = false;
+        $count++;
     }
     fwrite($handle, ";\n\n");
 }

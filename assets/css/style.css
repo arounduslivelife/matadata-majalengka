@@ -989,3 +989,38 @@
             cursor: pointer;
             transition: 0.3s;
         }
+
+/* Village Detail Activity Table */
+#villageDetailContent table {
+    width: 100%;
+    margin-top: 15px;
+}
+
+#villageDetailContent tr:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+#villageDetailContent td {
+    padding: 12px 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.custom-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) rgba(255, 255, 255, 0.05);
+}
+
+#dd-year-toggle {
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+@media (max-width: 600px) {
+    #villageDetailModal .sawer-content {
+        width: 95% !important;
+        padding: 15px !important;
+    }
+    #villageDetailContent td {
+        font-size: 0.75rem;
+    }
+}
