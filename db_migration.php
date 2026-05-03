@@ -61,19 +61,23 @@ try {
     echo "✅ Berhasil memuat " . count($data) . " data desa.\n";
 
     // --- STEP 3: IMPORT DATA ---
-    echo "\n<b>[3/3] Mengimpor Data ke MySQL (Optimized Bulk Mode)...</b>\n";
+    echo "\n<b>[3/3] Mengimpor Data ke MySQL (Streaming Mode)...</b>\n";
+    echo str_repeat(" ", 1024); // Force browser padding
     
     // 1. Ambil semua ID desa dan simpan di memory (Cache)
-    echo "Caching village IDs...\n";
+    echo "Caching village IDs... ";
     $village_map = [];
     $stmt = $pdo->query("SELECT id, nm_kelurahan FROM villages");
     while ($row = $stmt->fetch()) {
         $village_map[$row['nm_kelurahan']] = $row['id'];
     }
+    echo "Done.\n";
 
-    // 2. Bersihkan tabel kegiatan sekali saja agar cepat
-    echo "Clearing old activity data...\n";
+    // 2. Bersihkan tabel kegiatan & Matikan Index sementara
+    echo "Preparing table & disabling indexes... ";
     $pdo->exec("TRUNCATE TABLE village_activities");
+    $pdo->exec("ALTER TABLE village_activities DISABLE KEYS");
+    echo "Done.\n";
 
     $pdo->beginTransaction();
     
@@ -81,12 +85,12 @@ try {
     $insert_sql = "INSERT INTO village_activities (village_id, year, uraian, volume, output, anggaran) VALUES ";
     $insert_values = [];
     $params = [];
-    $batch_size = 500; // Masukkan 500 baris sekaligus
+    $batch_size = 1000; 
     
     $count_villages = 0;
     $count_activities = 0;
 
-    foreach ($data as $item) {
+    foreach ($data as $index => $item) {
         $village_name = $item['village'];
         $v_id = $village_map[$village_name] ?? null;
 
@@ -95,10 +99,8 @@ try {
             $pagu_2024 = $item['data_2024']['pagu'] ?? 0;
             $pagu_2025 = $item['data_2025']['pagu'] ?? 0;
 
-            // Update budget villages
             $update_village->execute([$pagu_2024, $pagu_2025, $v_id]);
 
-            // Koleksi kegiatan 2024 & 2025
             $years = [2024 => $item['data_2024']['activities'] ?? [], 2025 => $item['data_2025']['activities'] ?? []];
             
             foreach ($years as $year => $activities) {
@@ -112,7 +114,6 @@ try {
                     $params[] = $act['anggaran'];
                     $count_activities++;
 
-                    // Jika batch sudah penuh, eksekusi bulk insert
                     if (count($insert_values) >= $batch_size) {
                         $stmt = $pdo->prepare($insert_sql . implode(', ', $insert_values));
                         $stmt->execute($params);
@@ -121,14 +122,24 @@ try {
                     }
                 }
             }
+
+            // Kirim progres ke browser setiap 20 desa
+            if ($count_villages % 20 == 0) {
+                echo "Processed $count_villages villages... ($count_activities activities)\n";
+                if (ob_get_level() > 0) ob_flush();
+                flush();
+            }
         }
     }
 
-    // Eksekusi sisa batch yang belum terkirim
     if (!empty($insert_values)) {
         $stmt = $pdo->prepare($insert_sql . implode(', ', $insert_values));
         $stmt->execute($params);
     }
+
+    echo "\nEnabling indexes... ";
+    $pdo->exec("ALTER TABLE village_activities ENABLE KEYS");
+    echo "Done.\n";
 
     $pdo->commit();
     echo "✅ Berhasil sinkronisasi $count_villages desa.\n";
