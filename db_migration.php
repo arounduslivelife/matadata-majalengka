@@ -46,8 +46,13 @@ try {
 
     // Bersihkan BOM jika ada
     $sql = preg_replace('/^\xEF\xBB\xBF/', '', $sql);
+
+    // NEW: Clean non-UTF8 characters that cause "Incorrect string value" errors
+    // Specifically target non-breaking spaces and other problematic bytes
+    $sql = str_replace("\xA0", " ", $sql);
+    $sql = mb_convert_encoding($sql, 'UTF-8', 'UTF-8');
     
-    // Pisahkan query dengan regex yang lebih kuat (memisahkan berdasarkan ; di akhir baris)
+    $pdo->exec("SET NAMES utf8mb4");
     $queries = preg_split("/;[\r\n]+/", $sql);
     
     $count = 0;
