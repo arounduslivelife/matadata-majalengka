@@ -137,11 +137,12 @@ try {
         $stmt->execute($params);
     }
 
+    $pdo->commit();
+
     echo "\nEnabling indexes... ";
     $pdo->exec("ALTER TABLE village_activities ENABLE KEYS");
     echo "Done.\n";
 
-    $pdo->commit();
     echo "✅ Berhasil sinkronisasi $count_villages desa.\n";
     echo "✅ Berhasil mengimpor $count_activities rincian kegiatan.\n";
 
