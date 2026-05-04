@@ -28,18 +28,18 @@ try {
         if (!$first) echo ',';
         
         $item = [
-            'id' => $p['id'],
+            'id' => (int)$p['id'],
             'kecamatan' => $p['kecamatan'],
             'nama' => $p['nama_paket'],
-            'pagu' => $p['total_nilai'],
+            'pagu' => (float)$p['total_nilai'],
             'risk' => $p['risk_score'],
             'note' => $p['audit_note'],
             'satker' => $p['satker'],
             'vendor' => $p['vendor'],
             'status' => $p['status'],
-            'tahun' => $p['tahun'],
-            'lat' => $p['lat'],
-            'lng' => $p['lng']
+            'tahun' => (int)$p['tahun'],
+            'lat' => (float)$p['lat'],
+            'lng' => (float)$p['lng']
         ];
         
         echo json_encode($item, JSON_INVALID_UTF8_SUBSTITUTE | JSON_UNESCAPED_UNICODE);

@@ -1,4 +1,39 @@
 console.log("🚀 main.js is starting...");
+
+const RISK_SCORES = {
+    'Cikijing': 95, 'Talaga': 92, 'Argapura': 88, 'Banjaran': 85, 'Cigasong': 82,
+    'Ligung': 90, 'Jatitujuh': 87, 'Majalengka': 89, 'Sumberjaya': 84, 'Kertajati': 78,
+    'Kadipaten': 75, 'Dawuan': 72, 'Kasokandel': 70, 'Jatiwangi': 68, 'Palasah': 65,
+    'Leuwimunding': 62, 'Rajagaluh': 60, 'Sindangwangi': 58, 'Sindang': 55, 'Sukahaji': 52,
+    'Maja': 50, 'Bantarujeg': 48, 'Lemahsugih': 45, 'Malausma': 42, 'Cingambul': 40, 'Panyingkiran': 38
+};
+
+function getAuditColor(name) {
+    const score = RISK_SCORES[name] || 0;
+    return score > 90 ? '#7f1d1d' : // Dark Red (Extreme)
+        score > 80 ? '#991b1b' : // Red (High)
+            score > 60 ? '#b91c1c' : // Light Red (Moderate)
+                score > 40 ? '#dc2626' : // Crimson (Low-Moderate)
+                    score > 0 ? '#f87171' : '#1e293b';
+}
+
+function renderRiskRanking() {
+    const list = document.getElementById('risk-ranking-list');
+    if (!list) return;
+    const sorted = Object.entries(RISK_SCORES).sort((a, b) => b[1] - a[1]);
+    let html = '';
+    sorted.forEach(([name, score]) => {
+        const color = score > 80 ? '#ef4444' : (score > 50 ? '#fbbf24' : '#60a5fa');
+        html += `
+                <div class="kec-list-item">
+                    <span style="font-weight: 500;">${name}</span>
+                    <span style="color: ${color}; font-weight: 600;">#${score} Risk</span>
+                </div>
+            `;
+    });
+    list.innerHTML = html;
+}
+
 function openSidebar() {
     const sidebar = document.getElementById('sidebar');
     const overlay = document.getElementById('sidebarOverlay');
@@ -98,7 +133,8 @@ const ALGO_EXPLANATIONS = {
         subtitle: 'Implementasi Algoritma Deteksi Risiko Pengadaan',
         logic: [
             { b: 'Deteksi Pemecahan Paket', p: 'Menganalisis paket di bawah ambang batas yang memiliki pola identik.' },
-            { b: 'Analisis Monopoli', p: 'Mendeteksi konsentrasi proyek pada penyedia tertentu.' }
+            { b: 'Analisis Monopoli', p: 'Mendeteksi konsentrasi proyek pada penyedia tertentu.' },
+            { b: 'Analisis Kedekatan', p: 'Mengukur korelasi antara domisili penyedia dengan lokasi proyek.' }
         ],
         sources: ['Data Diolah oleh agungds']
     }
@@ -219,6 +255,11 @@ async function fetchAudits() {
         isDataLoaded = true;
 
         console.log("✅ Data loaded:", data.length, "rows.");
+        console.log("✅ Audits Loaded Successfully:", allAudits.length, "rows.");
+        if (allAudits.length > 0) {
+            const years = [...new Set(allAudits.map(a => a.tahun))];
+            console.log("📅 Years found in data:", years);
+        }
 
         // Hide indicator if it's still there
         const ind = document.getElementById('dataLoadingIndicator');
@@ -1202,39 +1243,7 @@ function updateGlobalAuditFindings() {
         `Terdapat <b>${shadow.length} proyek</b> dengan status pelaporan non-standar yang berisiko mengurangi transparansi.`;
 }
 
-const RISK_SCORES = {
-    'Cikijing': 95, 'Talaga': 92, 'Argapura': 88, 'Banjaran': 85, 'Cigasong': 82,
-    'Ligung': 90, 'Jatitujuh': 87, 'Majalengka': 89, 'Sumberjaya': 84, 'Kertajati': 78,
-    'Kadipaten': 75, 'Dawuan': 72, 'Kasokandel': 70, 'Jatiwangi': 68, 'Palasah': 65,
-    'Leuwimunding': 62, 'Rajagaluh': 60, 'Sindangwangi': 58, 'Sindang': 55, 'Sukahaji': 52,
-    'Maja': 50, 'Bantarujeg': 48, 'Lemahsugih': 45, 'Malausma': 42, 'Cingambul': 40, 'Panyingkiran': 38
-};
 
-function getAuditColor(name) {
-    const score = RISK_SCORES[name] || 0;
-    return score > 90 ? '#7f1d1d' : // Dark Red (Extreme)
-        score > 80 ? '#991b1b' : // Red (High)
-            score > 60 ? '#b91c1c' : // Light Red (Moderate)
-                score > 40 ? '#dc2626' : // Crimson (Low-Moderate)
-                    score > 0 ? '#f87171' : '#1e293b';
-}
-
-function renderRiskRanking() {
-    const list = document.getElementById('risk-ranking-list');
-    if (!list) return;
-    const sorted = Object.entries(RISK_SCORES).sort((a, b) => b[1] - a[1]);
-    let html = '';
-    sorted.forEach(([name, score]) => {
-        const color = score > 80 ? '#ef4444' : (score > 50 ? '#fbbf24' : '#60a5fa');
-        html += `
-                <div class="kec-list-item">
-                    <span style="font-weight: 500;">${name}</span>
-                    <span style="color: ${color}; font-weight: 600;">#${score} Risk</span>
-                </div>
-            `;
-    });
-    list.innerHTML = html;
-}
 
 function loadMapData() {
     if (geoLayer) map.removeLayer(geoLayer);
@@ -1957,6 +1966,9 @@ function showKecamatanVendors(kecName) {
     const detailView = document.getElementById('realisasi-detail-view');
     detailView.style.display = 'block';
 
+    console.log("🔍 Sidebar Vendor List Triggered for:", kecName, "Year:", activeYear);
+    console.log("📊 Total Audits available in memory:", allAudits.length);
+
     // Filter and group by vendor for active year
     const projects = allAudits.filter(p => {
         const pKec = (p.kecamatan || '').trim().toLowerCase();
@@ -1968,8 +1980,9 @@ function showKecamatanVendors(kecName) {
         const vName = p.vendor || 'Swakelola/Tidak Terdata';
         if (!vendors[vName]) vendors[vName] = { count: 0, total: 0 };
         vendors[vName].count++;
-        vendors[vName].total += (p.pagu || 0);
+        vendors[vName].total += parseFloat(p.pagu || 0);
     });
+    console.log("🏗️ Grouped Vendors Found:", Object.keys(vendors).length);
 
     // Sort by total value
     const sortedVendors = Object.keys(vendors).sort((a, b) => vendors[b].total - vendors[a].total);
