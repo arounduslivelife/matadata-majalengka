@@ -274,75 +274,12 @@
         </div>
     </div>
 
-    <!-- Sidebar Section: AUDIT AI (LAYER 5) -->
     <div id="sidebar-audit" style="display: none;">
-        <div class="stat-card" style="border-left-color: #ef4444; background: rgba(239, 68, 68, 0.05);">
-            <div style="display: flex; justify-content: space-between; align-items: start;">
-                <div>
-                    <h3 style="color: #f87171;">Audit Intelligence</h3>
-                    <div class="value" style="font-size: 1.5rem; color: #ef4444;">127 Indikasi</div>
-                </div>
-                <div style="background: #ef4444; color: white; padding: 4px 8px; border-radius: 6px; font-size: 0.6rem; font-weight: bold;">HIGH RISK</div>
-            </div>
-            <p style="font-size: 0.7rem; opacity: 0.7; margin-top: 8px;">Anomalitas terdeteksi pada skema pengadaan T.A 2025</p>
-        </div>
-
-        <div style="margin-top: 1.5rem;">
-            <h3 style="font-size: 0.8rem; letter-spacing: 1px; text-transform: uppercase; opacity: 0.5; margin-bottom: 10px;">Suspicious Patterns</h3>
-            
-            <div class="audit-card">
-                <div class="audit-icon" style="color: #fca5a5;">⚠️</div>
-                <div class="audit-body">
-                    <div class="audit-title">Indikasi Pemecahan Paket</div>
-                    <div class="audit-desc" id="audit-pemecahan-desc">Mendeteksi paket di bawah ambang batas (200jt/400jt) yang polanya identik/berdekatan...</div>
-                </div>
-            </div>
-
-            <div class="audit-card">
-                <div class="audit-icon" style="color: #fbbf24;">🐙</div>
-                <div class="audit-body">
-                    <div class="audit-title">Dominansi Penyedia Tunggal</div>
-                    <div class="audit-desc" id="audit-dominansi-desc">Mencari grup penyedia dengan konsentrasi paket tertinggi...</div>
-                </div>
-            </div>
-
-            <div class="audit-card">
-                <div class="audit-icon" style="color: #60a5fa;">⚖️</div>
-                <div class="audit-body">
-                    <div class="audit-title">Shadow Payments</div>
-                    <div class="audit-desc" id="audit-shadow-desc">Mendeteksi transaksi dengan status 'Outside System'...</div>
-                </div>
-            </div>
-        </div>
-
-        <div style="margin-top: 1.5rem;">
-            <h3 style="font-size: 0.9rem; margin-bottom: 1rem;">Zona Risiko Tertinggi</h3>
-            <div id="risk-ranking-list">
-                <!-- Filled by JS -->
-            </div>
-        </div>
-
-        <!-- Anomaly Radar: Top 5 High Risk Packages -->
-        <div class="anomaly-radar-container" id="anomalyRadar">
-            <h3 style="font-size: 0.9rem; margin-bottom: 1rem; color: #ef4444; display: flex; align-items: center; gap: 8px;">
-                <span>📡 Anomaly Radar</span>
-                <span style="font-size: 0.6rem; background: rgba(239, 68, 68, 0.2); padding: 2px 6px; border-radius: 4px; color: #f87171;">TOP 5</span>
-            </h3>
-            <div id="anomalyList">
-                <!-- Filled by JS -->
-                <div style="font-size: 0.75rem; opacity: 0.5; text-align: center; padding: 20px;">Memindai anomali...</div>
-            </div>
-        </div>
-
-        <!-- NEW: Selected Kecamatan Audit Report (Drill-down) -->
-        <div id="audit-district-report" style="display: none; margin-top: 2rem; border-top: 2px solid rgba(239,68,68,0.2); padding-top: 1.5rem;">
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:15px;">
-                <h3 id="audit-report-title" style="margin:0; font-size:1.1rem; color:#ef4444;">Laporan Audit</h3>
-                <button onclick="document.getElementById('audit-district-report').style.display='none'" style="background:none; border:none; color:white; opacity:0.5; padding:5px;">&times; Tutup</button>
-            </div>
-            <div id="audit-report-body">
-                <!-- Filled dynamically by showKecamatanAuditDetails -->
-            </div>
+        <div style="padding: 40px 20px; text-align: center; opacity: 0.5;">
+            <div style="font-size: 3rem; margin-bottom: 20px;">🤖</div>
+            <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 10px;">Audit Intelligence</h3>
+            <p style="font-size: 0.8rem; line-height: 1.6;">Layer ini sedang dalam tahap perombakan total untuk memberikan analisis yang lebih akurat dan mendalam.</p>
+            <div style="margin-top: 30px; height: 2px; width: 40px; background: #ef4444; margin-left: auto; margin-right: auto;"></div>
         </div>
     </div>
     

@@ -9,12 +9,7 @@ const RISK_SCORES = {
 };
 
 function getAuditColor(name) {
-    const score = RISK_SCORES[name] || 0;
-    return score > 90 ? '#7f1d1d' : // Dark Red (Extreme)
-        score > 80 ? '#991b1b' : // Red (High)
-            score > 60 ? '#b91c1c' : // Light Red (Moderate)
-                score > 40 ? '#dc2626' : // Crimson (Low-Moderate)
-                    score > 0 ? '#f87171' : '#1e293b';
+    return '#1e293b'; // Neutral background for revamp
 }
 
 function renderRiskRanking() {
@@ -597,9 +592,7 @@ window.switchMode = function (mode) {
         renderAnomalyRadar();
     }
     if (mode === 'audit') {
-        renderRiskRanking();
-        updateGlobalAuditFindings();
-        renderAnomalyRadar();
+        // Empty audit logic for revamp
     }
 }
 
