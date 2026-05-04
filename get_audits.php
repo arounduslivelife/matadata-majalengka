@@ -5,13 +5,22 @@ require_once 'db.php';
 
 header('Content-Type: application/json');
 
-ini_set('display_errors', 1);
+ini_set('display_errors', 0); // Disable for JSON output to prevent corruption
 error_reporting(E_ALL);
 ini_set('memory_limit', '512M');
+
+// Fallback for older PHP versions
+if (!defined('JSON_INVALID_UTF8_SUBSTITUTE')) {
+    define('JSON_INVALID_UTF8_SUBSTITUTE', 0);
+}
+
 
 try {
     $stmt = $pdo->prepare("SELECT id, kecamatan, nama_paket, total_nilai, risk_score, audit_note, satker, vendor, status, tahun, lat, lng FROM realizations");
     $stmt->execute();
+
+    // Clear any previous output (warnings/notices)
+    if (ob_get_length()) ob_clean();
 
     echo '[';
     $first = true;
@@ -33,7 +42,7 @@ try {
             'lng' => $p['lng']
         ];
         
-        echo json_encode($item, JSON_INVALID_UTF8_SUBSTITUTE);
+        echo json_encode($item, JSON_INVALID_UTF8_SUBSTITUTE | JSON_UNESCAPED_UNICODE);
         $first = false;
         
         // Optional: Flush every 1000 rows

@@ -207,6 +207,10 @@ async function fetchAudits() {
     try {
         console.log("📥 Fetching audits from get_audits.php...");
         const response = await fetch('get_audits.php');
+        if (!response.ok) {
+            const errorText = await response.text();
+            throw new Error(`HTTP Error ${response.status}: ${errorText.substring(0, 100)}`);
+        }
         const data = await response.json();
 
         // Update global and local references
@@ -230,7 +234,11 @@ async function fetchAudits() {
     } catch (err) {
         console.error("❌ Failed to fetch audits:", err);
         const indicator = document.getElementById('dataLoadingIndicator');
-        if (indicator) indicator.innerHTML = "❌ Gagal memuat data audit.";
+        if (indicator) {
+            indicator.style.display = 'block';
+            indicator.style.background = '#ef4444';
+            indicator.innerHTML = `⚠️ Gagal memuat data audit: ${err.message}`;
+        }
     }
 }
 
@@ -1266,7 +1274,11 @@ function loadMapData() {
 
                         if (currentMode === 'sirup') {
                             const d = getActiveStats()[name] || { total_pagu: 0, high_risk: 0 };
-                            const packets = allAudits.filter(p => p.kecamatan === name && p.tahun == activeYear);
+                            const packets = allAudits.filter(p => {
+                                const pKec = (p.kecamatan || '').trim().toLowerCase();
+                                const searchKec = (name || '').trim().toLowerCase();
+                                return pKec === searchKec && p.tahun == activeYear;
+                            });
                             let packetHtml = packets.length > 0 ? '<div style="margin-top:10px; max-height:200px; overflow-y:auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top:10px;">' : '';
                             packets.forEach(p => {
                                 let statusColor = '#94a3b8';
@@ -1946,7 +1958,11 @@ function showKecamatanVendors(kecName) {
     detailView.style.display = 'block';
 
     // Filter and group by vendor for active year
-    const projects = allAudits.filter(p => p.kecamatan === kecName && p.tahun == activeYear);
+    const projects = allAudits.filter(p => {
+        const pKec = (p.kecamatan || '').trim().toLowerCase();
+        const searchKec = (kecName || '').trim().toLowerCase();
+        return pKec === searchKec && p.tahun == activeYear;
+    });
     const vendors = {};
     projects.forEach(p => {
         const vName = p.vendor || 'Swakelola/Tidak Terdata';
