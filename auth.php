@@ -1,5 +1,16 @@
 <?php
 date_default_timezone_set('Asia/Jakarta');
+
+// SECURE SESSION CONFIG
+ini_set('session.cookie_httponly', 1);
+ini_set('session.use_only_cookies', 1);
+ini_set('session.cookie_samesite', 'Lax');
+
+// Check if HTTPS is active for secure cookie
+if (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') {
+    ini_set('session.cookie_secure', 1);
+}
+
 session_start();
 
 function getConfig() {

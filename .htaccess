@@ -1,5 +1,5 @@
 # PROTEKSI DATABASE & CONFIG
-<FilesMatch "\.(sqlite|sqlite3|db|env|log|md|sh|py)$">
+<FilesMatch "\.(sqlite|sqlite3|db|env|log|md|sh|py|json)$">
     Order deny,allow
     Deny from all
 </FilesMatch>
@@ -17,6 +17,10 @@ ServerSignature Off
 <IfModule mod_rewrite.c>
     RewriteEngine On
     
+    # FORCE HTTPS
+    RewriteCond %{HTTPS} off
+    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
     # Map pretty URLs to .php files
     # Example: /landing -> landing.php
     RewriteCond %{REQUEST_FILENAME} !-f
@@ -27,6 +31,7 @@ ServerSignature Off
 
 # SECURITY HEADERS (Fallback if not set by PHP)
 <IfModule mod_headers.c>
+    Header set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
     Header set X-XSS-Protection "1; mode=block"
     Header set X-Frame-Options "SAMEORIGIN"
     Header set X-Content-Type-Options "nosniff"

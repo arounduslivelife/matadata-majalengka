@@ -72,11 +72,18 @@ $all_audits = []; // Tetap kosongkan atau isi seperlunya agar tidak berat
 $village_results = $pdo->query("SELECT * FROM villages");
 $village_stats = [];
 while ($row = $village_results->fetch()) {
+    $b25 = $row['budget_2025'] ?: 0;
+    $b24 = $row['budget_real'] ?: 0;
+    $trend = 'stagnan';
+    if ($b25 > $b24) $trend = 'naik';
+    else if ($b25 < $b24) $trend = 'turun';
+
     $village_stats[$row['nm_kelurahan']] = [
         'id' => $row['id'],
         'kecamatan' => $row['nm_kecamatan'],
-        'budget' => $row['budget_2025'],
-        'budget_real' => $row['budget_real'],
+        'budget' => $b25,
+        'budget_real' => $b24,
+        'trend' => $trend,
         'risk' => $row['risk_score']
     ];
 }
@@ -88,6 +95,10 @@ while ($row = $kec_dd_results->fetch()) {
 }
 
 $total_majalengka_dd = $pdo->query("SELECT SUM(budget_2025) FROM villages")->fetchColumn() ?: 0;
+$total_majalengka_dd_2024 = $pdo->query("SELECT SUM(budget_real) FROM villages")->fetchColumn() ?: 0;
+$global_trend = 'stagnan';
+if ($total_majalengka_dd > $total_majalengka_dd_2024) $global_trend = 'naik';
+else if ($total_majalengka_dd < $total_majalengka_dd_2024) $global_trend = 'turun';
 
 $poverty_results = $pdo->query("SELECT * FROM district_stats ORDER BY poverty_count DESC");
 $poverty_stats = [];
@@ -343,6 +354,7 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
     poverty_stats: <?= json_encode($poverty_stats ?: []) ?>,
     pad_kecamatan: <?= $pad_kecamatan_json ?: '{}' ?>,
     pad_global: <?= $pad_global_json ?: '{}' ?>,
+    global_trend_dd: "<?= $global_trend ?>",
     gps_granted: true
 };
 console.log("📦 APP_DATA initialized:", window.APP_DATA);

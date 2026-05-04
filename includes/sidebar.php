@@ -74,8 +74,15 @@
 
         <div class="stat-grid-mobile">
             <div class="stat-card" style="border-left-color: var(--success); background: rgba(16,185,129,0.05);">
-                <h3 id="dd-stat-label">Total Alokasi 2025</h3>
-                <div class="value" id="dd-total-val" style="font-size: 1.4rem; color: #10b981;"><?= formatPagu($total_majalengka_dd) ?></div>
+                <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+                    <div>
+                        <h3 id="dd-stat-label">Total Alokasi 2025</h3>
+                        <div class="value" id="dd-total-val" style="font-size: 1.4rem; color: #10b981;"><?= formatPagu($total_majalengka_dd) ?></div>
+                    </div>
+                    <div id="dd-global-trend" style="padding: 4px 8px; border-radius: 8px; font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; gap: 4px;">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
                 <p id="dd-stat-desc" style="font-size: 0.65rem; opacity:0.6; margin-top:5px;">Agregat seluruh desa di Kab. Majalengka</p>
             </div>
             <div class="stat-card" style="border-left-color: #3b82f6;">
@@ -275,11 +282,90 @@
     </div>
 
     <div id="sidebar-audit" style="display: none;">
-        <div style="padding: 40px 20px; text-align: center; opacity: 0.5;">
-            <div style="font-size: 3rem; margin-bottom: 20px;">🤖</div>
-            <h3 style="font-size: 1.1rem; color: #fff; margin-bottom: 10px;">Audit Intelligence</h3>
-            <p style="font-size: 0.8rem; line-height: 1.6;">Layer ini sedang dalam tahap perombakan total untuk memberikan analisis yang lebih akurat dan mendalam.</p>
-            <div style="margin-top: 30px; height: 2px; width: 40px; background: #ef4444; margin-left: auto; margin-right: auto;"></div>
+        <div style="padding: 15px;">
+            <!-- Year Toggle for Audit -->
+            <div class="year-toggle" id="audit-year-toggle" style="margin-bottom: 15px;">
+                <div class="year-btn" onclick="switchYear(2022)">2022</div>
+                <div class="year-btn" onclick="switchYear(2023)">2023</div>
+                <div class="year-btn" onclick="switchYear(2024)">2024</div>
+                <div class="year-btn active" onclick="switchYear(2025)">2025</div>
+                <div class="year-btn" onclick="switchYear(2026)">2026</div>
+            </div>
+
+            <div style="background: rgba(239, 68, 68, 0.1); border-left: 3px solid #ef4444; padding: 12px; border-radius: 8px; margin-bottom: 20px;">
+                <h3 style="font-size: 0.9rem; color: #fca5a5; margin-bottom: 4px;">Intelligence Q&A</h3>
+                <p style="font-size: 0.7rem; opacity: 0.7; margin: 0;">Pilih pertanyaan di bawah untuk menganalisis sebaran anggaran secara otomatis di seluruh Majalengka.</p>
+            </div>
+
+            <div id="audit-qa-list" style="display: flex; flex-direction: column; gap: 10px;">
+                <div class="qa-card" onclick="selectAuditQA('konsumsi')">
+                    <div class="qa-icon">🍱</div>
+                    <div class="qa-body">
+                        <div class="qa-q">Berapa dana untuk makan-minum rapat?</div>
+                        <div class="qa-hint">Konsumsi kegiatan & jamuan tamu</div>
+                    </div>
+                </div>
+
+                <div class="qa-card" onclick="selectAuditQA('sewa')">
+                    <div class="qa-icon">🚗</div>
+                    <div class="qa-body">
+                        <div class="qa-q">Berapa biaya untuk sewa kendaraan?</div>
+                        <div class="qa-hint">Sewa mobil, bus & transportasi</div>
+                    </div>
+                </div>
+
+                <div class="qa-card" onclick="selectAuditQA('taman')">
+                    <div class="qa-icon">🌳</div>
+                    <div class="qa-body">
+                        <div class="qa-q">Berapa biaya pemeliharaan taman?</div>
+                        <div class="qa-hint">Perawatan taman & RTH</div>
+                    </div>
+                </div>
+
+                <div class="qa-card" onclick="selectAuditQA('atk')">
+                    <div class="qa-icon">📝</div>
+                    <div class="qa-body">
+                        <div class="qa-q">Berapa biaya ATK & penggandaan?</div>
+                        <div class="qa-hint">Kertas, tinta & fotocopy</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Result Panel -->
+            <div id="audit-qa-result" style="display: none; margin-top: 25px; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+                <div style="text-align: center; margin-bottom: 20px;">
+                    <div style="font-size: 0.65rem; opacity: 0.5; text-transform: uppercase; letter-spacing: 1px;">Hasil Analisis Intelijen <span id="qa-res-year" style="color:#ef4444; font-weight:bold;">2025</span></div>
+                    <h2 id="qa-res-total" style="font-size: 1.8rem; font-weight: 800; color: #ef4444; margin-top: 5px;">Rp 0</h2>
+                    <div id="qa-res-count" style="font-size: 0.75rem; opacity: 0.6;">Berdasarkan 0 paket proyek</div>
+                </div>
+
+                <div style="background: rgba(255,255,255,0.03); border-radius: 12px; padding: 15px; border: 1px solid rgba(255,255,255,0.05); margin-bottom: 20px;">
+                    <div style="font-size: 0.75rem; font-weight: 800; margin-bottom: 10px; opacity: 0.8;">📍 KONSENTRASI TERTINGGI</div>
+                    <div id="qa-res-top-list">
+                        <!-- Filled by JS -->
+                    </div>
+                </div>
+
+                <div style="font-size: 0.65rem; opacity: 0.5; text-align: center; padding: 10px; background: rgba(239, 68, 68, 0.05); border-radius: 8px; border: 1px dashed rgba(239, 68, 68, 0.2);">
+                    💡 Klik wilayah pada peta untuk melihat rincian paket di kecamatan tersebut.
+                </div>
+
+                <button onclick="resetAuditQA()" style="width: 100%; margin-top: 15px; padding: 10px; background: rgba(255,255,255,0.05); border: none; border-radius: 8px; color: #fff; font-size: 0.75rem; cursor: pointer;">✕ Reset Analisis</button>
+            </div>
+
+            <!-- Detail View (Drill-down) -->
+            <div id="audit-qa-detail-view" style="display: none; margin-top: 10px;">
+                <button onclick="backToQAResult()" style="background: none; border: none; color: #ef4444; font-size: 0.75rem; font-weight: 600; cursor: pointer; padding: 10px 0; display: flex; align-items: center; gap: 5px;">
+                    ← Kembali ke Ringkasan
+                </button>
+                <div style="margin-top: 10px; margin-bottom: 15px;">
+                    <h3 id="qa-detail-title" style="font-size: 1.1rem; margin-bottom: 2px;">Kecamatan</h3>
+                    <p id="qa-detail-subtitle" style="font-size: 0.7rem; opacity: 0.6;">Daftar paket terdeteksi</p>
+                </div>
+                <div id="qa-detail-list" style="display: flex; flex-direction: column; gap: 8px;">
+                    <!-- Filled by JS -->
+                </div>
+            </div>
         </div>
     </div>
     

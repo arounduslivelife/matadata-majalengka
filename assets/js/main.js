@@ -325,7 +325,7 @@ function switchYear(year) {
     activeYear = parseInt(year);
 
     // Update Buttons
-    document.querySelectorAll('#global-year-toggle .year-btn, #dd-year-toggle .year-btn').forEach(btn => {
+    document.querySelectorAll('#global-year-toggle .year-btn, #dd-year-toggle .year-btn, #audit-year-toggle .year-btn').forEach(btn => {
         btn.classList.toggle('active', btn.innerText == year);
     });
 
@@ -395,7 +395,15 @@ function switchYear(year) {
     }
     if (heatLayer) updateHeatmap();
     renderAnomalyRadar();
+
+    if (currentMode === 'audit' && activeQA) {
+        // Refresh the current QA view with the new year's data
+        // Find current QA id from its config
+        const currentId = Object.keys(QA_CONFIG).find(key => QA_CONFIG[key] === activeQA);
+        if (currentId) selectAuditQA(currentId);
+    }
 }
+
 
 // Initial load switch to 2025
 setTimeout(() => {
@@ -1382,8 +1390,19 @@ function loadMapData() {
                             <span style="font-size:0.7rem; opacity:0.5;">Kecamatan ${v.kecamatan}</span><hr style="opacity:0.2; margin:8px 0;">`;
 
                         if (budgetVal > 0) {
+                            const trend = v.trend || 'stagnan';
+                            const trendConfig = {
+                                'naik': { icon: '📈', label: 'Naik', color: '#10b981', bg: 'rgba(16,185,129,0.1)' },
+                                'turun': { icon: '📉', label: 'Turun', color: '#ef4444', bg: 'rgba(239,68,68,0.1)' },
+                                'stagnan': { icon: '➖', label: 'Stagnan', color: '#94a3b8', bg: 'rgba(255,255,255,0.05)' }
+                            };
+                            const t = trendConfig[trend];
+
                             popupHtml += `
-                                <b>Dana Desa ${activeYear}:</b><br>
+                                <div style="display:flex; justify-content:space-between; align-items:center;">
+                                    <b>Dana Desa ${activeYear}:</b>
+                                    <span style="font-size:0.6rem; padding:2px 6px; border-radius:4px; background:${t.bg}; color:${t.color}; font-weight:800; display:flex; align-items:center; gap:3px;">${t.icon} ${t.label}</span>
+                                </div>
                                 <span style="font-size:1.4rem; font-weight:600; color:#10b981;">${budgetDisplay}</span><br>
                                 <div style="margin-top:10px; font-size:0.75rem; opacity:0.7; line-height:1.4;">Sumber: ${sourceLabel}</div>
                                 <hr style="opacity:0.1; margin:8px 0;">
@@ -2618,6 +2637,21 @@ window.renderDanaDesaStats = function(year) {
     if (ddDesc) ddDesc.innerText = year == 2025 ? "Pagu anggaran yang direncanakan" : "Dana yang telah tersalurkan & dilaporkan";
     if (ddMetaSource) ddMetaSource.innerHTML = `📡 <b>Sumber:</b> ${year == 2025 ? 'Estimasi DPMD' : 'Portal JAGA.id (KPK RI)'}`;
 
+    // Update Global Trend
+    const globalTrendEl = document.getElementById('dd-global-trend');
+    if (globalTrendEl && window.APP_DATA.global_trend_dd) {
+        const gTrend = window.APP_DATA.global_trend_dd;
+        const trendConfig = {
+            'naik': { icon: '📈', label: 'Naik', color: '#10b981', bg: 'rgba(16,185,129,0.1)' },
+            'turun': { icon: '📉', label: 'Turun', color: '#ef4444', bg: 'rgba(239,68,68,0.1)' },
+            'stagnan': { icon: '➖', label: 'Stagnan', color: '#94a3b8', bg: 'rgba(255,255,255,0.05)' }
+        };
+        const t = trendConfig[gTrend];
+        globalTrendEl.style.background = t.bg;
+        globalTrendEl.style.color = t.color;
+        globalTrendEl.innerHTML = `<span>${t.icon}</span> <span>${t.label}</span>`;
+    }
+
     // 2. Render District Ranking with Progress Bars
     const kecRankingEl = document.getElementById('dd-kec-ranking');
     if (kecRankingEl) {
@@ -2689,6 +2723,9 @@ window.selectAuditQA = function(id) {
     const totalEl = document.getElementById('qa-res-total');
     if (totalEl) totalEl.innerText = formatPaguJS(activeQAGlobalTotal);
     
+    const yearEl = document.getElementById('qa-res-year');
+    if (yearEl) yearEl.innerText = activeYear;
+
     const countEl = document.getElementById('qa-res-count');
     if (countEl) countEl.innerText = `Berdasarkan ${activeQAPacketCount} paket proyek`;
     
@@ -2767,3 +2804,37 @@ window.resetAuditQA = function() {
     if (list) list.style.display = 'flex';
     loadMapData();
 }
+
+// ==========================================
+// SECURITY & ANTI-INSPECT FRICTION
+// ==========================================
+document.addEventListener('contextmenu', e => e.preventDefault());
+
+document.onkeydown = function(e) {
+    // Disable F12
+    if (e.keyCode == 123) return false;
+    
+    // Disable Ctrl+Shift+I (Inspect)
+    if (e.ctrlKey && e.shiftKey && (e.keyCode == 'I'.charCodeAt(0) || e.keyCode == 'i'.charCodeAt(0))) return false;
+    
+    // Disable Ctrl+Shift+J (Console)
+    if (e.ctrlKey && e.shiftKey && (e.keyCode == 'J'.charCodeAt(0) || e.keyCode == 'j'.charCodeAt(0))) return false;
+    
+    // Disable Ctrl+U (View Source)
+    if (e.ctrlKey && (e.keyCode == 'U'.charCodeAt(0) || e.keyCode == 'u'.charCodeAt(0))) return false;
+    
+    // Disable Ctrl+Shift+C (Inspect Element)
+    if (e.ctrlKey && e.shiftKey && (e.keyCode == 'C'.charCodeAt(0) || e.keyCode == 'c'.charCodeAt(0))) return false;
+};
+
+// Optional: DevTools detection loop
+(function() {
+    let devtools = function() {};
+    devtools.toString = function() {
+        console.clear();
+        console.log("%c⚠️ SECURITY ALERT", "color: red; font-size: 20px; font-weight: bold;");
+        console.log("%cThis console is protected. Please close this window.", "font-size: 14px;");
+        return "";
+    };
+    console.log("%c", devtools);
+})();
