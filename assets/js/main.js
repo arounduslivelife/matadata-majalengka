@@ -1213,12 +1213,11 @@ function updateGlobalAuditFindings() {
         const [vendor, kec] = key.split('|');
         const totalValue = pkts.reduce((sum, p) => sum + p.pagu, 0);
 
-        document.getElementById('audit-pemecahan-desc').innerHTML =
-            `Terdeteksi <b>Pemecahan Paket</b>: <b>${pkts.length} paket</b> dikuasai oleh <b>${vendor.substring(0, 25)}</b> di Kec. <b>${kec}</b>.`;
+        const el = document.getElementById('audit-pemecahan-desc');
+        if (el) el.innerHTML = `Terdeteksi <b>Pemecahan Paket</b>: <b>${pkts.length} paket</b> dikuasai oleh <b>${vendor.substring(0, 25)}</b> di Kec. <b>${kec}</b>.`;
     } else {
-        document.getElementById('audit-pemecahan-desc').innerHTML =
-            `Pola distribusi paket kecil merata di berbagai penyedia (Indikasi Sehat).`;
-        // Change color to green for this icon if healthy? Let's just keep text for now.
+        const el = document.getElementById('audit-pemecahan-desc');
+        if (el) el.innerHTML = `Pola distribusi paket kecil merata di berbagai penyedia (Indikasi Sehat).`;
     }
 
     // 2. Dominansi Global
@@ -1226,14 +1225,14 @@ function updateGlobalAuditFindings() {
     data.forEach(p => { if (p.vendor) vendors[p.vendor] = (vendors[p.vendor] || 0) + 1; });
     const topVendors = Object.entries(vendors).sort((a, b) => b[1] - a[1]);
     if (topVendors.length > 0) {
-        document.getElementById('audit-dominansi-desc').innerHTML =
-            `Penyedia <b>${topVendors[0][0].substring(0, 25)}</b> mendominasi <b>${topVendors[0][1]} paket</b> pengadaan secara global.`;
+        const el = document.getElementById('audit-dominansi-desc');
+        if (el) el.innerHTML = `Penyedia <b>${topVendors[0][0].substring(0, 25)}</b> mendominasi <b>${topVendors[0][1]} paket</b> pengadaan secara global.`;
     }
 
     // 3. Shadow Payments
     const shadow = data.filter(p => !p.status || p.status.toLowerCase().includes('outside'));
-    document.getElementById('audit-shadow-desc').innerHTML =
-        `Terdapat <b>${shadow.length} proyek</b> dengan status pelaporan non-standar yang berisiko mengurangi transparansi.`;
+    const elShadow = document.getElementById('audit-shadow-desc');
+    if (elShadow) elShadow.innerHTML = `Terdapat <b>${shadow.length} proyek</b> dengan status pelaporan non-standar yang berisiko mengurangi transparansi.`;
 }
 
 
