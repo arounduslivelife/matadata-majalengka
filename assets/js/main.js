@@ -8,9 +8,29 @@ const RISK_SCORES = {
     'Maja': 50, 'Bantarujeg': 48, 'Lemahsugih': 45, 'Malausma': 42, 'Cingambul': 40, 'Panyingkiran': 38
 };
 
+const QA_CONFIG = {
+    'konsumsi': { keywords: ['makan', 'minum', 'konsumsi', 'jamuan'], color: '#ef4444' },
+    'sewa': { keywords: ['sewa', 'kendaraan', 'mobil', 'transportasi', 'bus'], color: '#fbbf24' },
+    'taman': { keywords: ['taman', 'pemeliharaan taman', 'perawatan taman'], color: '#10b981' },
+    'atk': { keywords: ['atk', 'fotocopy', 'kertas', 'tinta', 'penggandaan', 'cetak'], color: '#3b82f6' }
+};
+
+let activeQA = null;
+let activeQAResults = {}; // { kecName: totalValue }
+let activeQAGlobalTotal = 0;
+let activeQAPacketCount = 0;
+
 function getAuditColor(name) {
-    return '#1e293b'; // Neutral background for revamp
+    if (!activeQA) return '#1e293b';
+    
+    const val = activeQAResults[name] || 0;
+    if (val === 0) return '#1e293b';
+    
+    // Scale color intensity based on contribution to global total
+    const intensity = Math.min(1, val / (activeQAGlobalTotal / 5)); 
+    return activeQA.color; // For now just return the category color, could add opacity logic
 }
+
 
 function renderRiskRanking() {
     const list = document.getElementById('risk-ranking-list');
@@ -592,7 +612,7 @@ window.switchMode = function (mode) {
         renderAnomalyRadar();
     }
     if (mode === 'audit') {
-        // Empty audit logic for revamp
+        resetAuditQA();
     }
 }
 
@@ -1301,48 +1321,15 @@ function loadMapData() {
                             if (packetHtml) packetHtml += '</div>';
                             layer.bindPopup(`<div class="info-box" style="width:250px;"><b style="font-size:1.1rem; color:var(--accent);">Kecamatan ${name}</b><br><span style="font-size:0.7rem; opacity:0.5;">Monitoring Realisasi T.A ${activeYear}</span><hr style="opacity:0.2; margin:8px 0;"><b>Total Realisasi:</b> <span style="color:var(--accent)">${formatPaguJS(d.total_pagu)}</span><br>Temuan Anomali: <span style="color:${d.high_risk > 0 ? '#ef4444' : '#10b981'}">${d.high_risk}</span>${packetHtml}<hr style="opacity:0.1; margin:8px 0;"><div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div><a href="https://www.google.com/maps?q=${lat},${lng}" target="_blank" style="display:block; margin-top:6px; text-align:center; padding:6px; background:rgba(59,130,246,0.2); border-radius:8px; color:var(--accent); text-decoration:none; font-size:0.75rem; font-weight:600;">🗺️ Buka di Google Maps ↗</a><a href="#" onclick="showKecamatanVendors('${name}'); return false;" style="display:block; margin-top:8px; text-align:center; padding:8px; color:white; background:var(--accent); border-radius:8px; font-size:0.75rem; font-weight:600; text-decoration:none;">👤 Lihat Daftar Vendor ↗</a></div>`);
                         } else if (currentMode === 'audit') {
-                            const as = (window.APP_DATA.audit_stats && window.APP_DATA.audit_stats[name]) ? window.APP_DATA.audit_stats[name] : { score_satker: 0, score_vendor: 0, score_monopoly: 30 };
-                            const score1 = as.score_satker;
-                            const score2 = as.score_vendor;
-                            const score3 = as.score_monopoly;
-
-                            layer.bindPopup(`<div class="info-box" style="width:260px; border-top: 4px solid #ef4444;">
-                                    <b style="font-size:1.1rem; color:#ef4444;">Audit Kec. ${name}</b><br>
-                                    <span style="font-size:0.7rem; opacity:0.5;">Analisis 3 Pilar T.A 2025</span>
+                            const val = activeQAResults[name] || 0;
+                            const qaName = activeQA ? activeQA.keywords[0].toUpperCase() : 'AUDIT';
+                            layer.bindPopup(`<div class="info-box" style="width:200px; border-top: 3px solid #ef4444;">
+                                    <b style="font-size:1.1rem; color:#fca5a5;">${name}</b><br>
+                                    <span style="font-size:0.7rem; opacity:0.5;">Analisis Intelijen Q&A</span>
                                     <hr style="opacity:0.2; margin:8px 0;">
-                                    
-                                    <div style="margin-bottom:12px;">
-                                        <div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:4px;">
-                                            <span>1. Pemecahan Satker</span>
-                                            <b style="color:#ef4444;">${score1}</b>
-                                        </div>
-                                        <div style="width:100%; height:4px; background:rgba(255,255,255,0.1); border-radius:2px; overflow:hidden;">
-                                            <div style="width:${score1}%; height:100%; background:#ef4444;"></div>
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-bottom:12px;">
-                                        <div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:4px;">
-                                            <span>2. Pemecahan Vendor</span>
-                                            <b style="color:#ef4444;">${score2}</b>
-                                        </div>
-                                        <div style="width:100%; height:4px; background:rgba(255,255,255,0.1); border-radius:2px; overflow:hidden;">
-                                            <div style="width:${score2}%; height:100%; background:#ef4444;"></div>
-                                        </div>
-                                    </div>
-
-                                    <div style="margin-bottom:15px;">
-                                        <div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:4px;">
-                                            <span>3. Monopoli Kelompok</span>
-                                            <b style="color:#ef4444;">${score3}</b>
-                                        </div>
-                                        <div style="width:100%; height:4px; background:rgba(255,255,255,0.1); border-radius:2px; overflow:hidden;">
-                                            <div style="width:${score3}%; height:100%; background:#ef4444;"></div>
-                                        </div>
-                                    </div>
-
-                                    <a href="#" onclick="showKecamatanAuditDetails('${name}', 0); return false;" style="display:block; text-align:center; padding:10px; background:#ef4444; border-radius:8px; color:white; text-decoration:none; font-size:0.8rem; font-weight:bold; margin-bottom:8px;">🔍 Tunjukkan Bukti ↗</a>
-                                    <div style="font-size:0.65rem; opacity:0.5;">📍 ${lat}, ${lng}</div>
+                                    <div style="font-size:0.65rem; opacity:0.6; margin-bottom:4px;">PENGELUARAN ${qaName}:</div>
+                                    <div style="font-size:1.4rem; font-weight:800; color:#ef4444;">${formatPaguJS(val)}</div>
+                                    <div style="font-size:0.65rem; opacity:0.4; margin-top:8px;">📍 Klik wilayah untuk melihat rincian paket di sidebar.</div>
                                 </div>`);
                         } else if (currentMode === 'kemiskinan') {
                             const p = povertyStats[name] || { count: 0, pkh: 0, bpnt: 0, road_pct: 75 };
@@ -1427,6 +1414,8 @@ function loadMapData() {
                         currentOpenPopupKec = name;
                         if (currentMode === 'realisasi') {
                             showKecamatanVendors(name);
+                        } else if (currentMode === 'audit' && activeQA) {
+                            showKecamatanQADetail(name);
                         }
                     });
                     layer.on('popupclose', function () {
@@ -2667,4 +2656,114 @@ window.renderDanaDesaStats = function(year) {
             </div>
         `).join('');
     }
+}
+
+window.selectAuditQA = function(id) {
+    const config = QA_CONFIG[id];
+    if (!config) return;
+    
+    activeQA = config;
+    activeQAResults = {};
+    activeQAGlobalTotal = 0;
+    activeQAPacketCount = 0;
+    
+    const data = allAudits.filter(p => p.tahun == activeYear);
+    
+    data.forEach(p => {
+        const name = (p.nama || "").toLowerCase();
+        const match = config.keywords.some(kw => name.includes(kw.toLowerCase()));
+        
+        if (match) {
+            const val = parseFloat(p.pagu || 0);
+            activeQAGlobalTotal += val;
+            activeQAPacketCount++;
+            
+            const kec = p.kecamatan || "Luar Wilayah";
+            activeQAResults[kec] = (activeQAResults[kec] || 0) + val;
+        }
+    });
+    
+    const resEl = document.getElementById('audit-qa-result');
+    if (resEl) resEl.style.display = 'block';
+    
+    const totalEl = document.getElementById('qa-res-total');
+    if (totalEl) totalEl.innerText = formatPaguJS(activeQAGlobalTotal);
+    
+    const countEl = document.getElementById('qa-res-count');
+    if (countEl) countEl.innerText = `Berdasarkan ${activeQAPacketCount} paket proyek`;
+    
+    const sortedKecs = Object.entries(activeQAResults).sort((a, b) => b[1] - a[1]).slice(0, 5);
+    let html = '';
+    sortedKecs.forEach(([name, val]) => {
+        html += `
+            <div style="display:flex; justify-content:space-between; font-size:0.75rem; margin-bottom:8px; border-bottom:1px solid rgba(255,255,255,0.03); padding-bottom:4px;">
+                <span>${name}</span>
+                <b style="color:${config.color}">${formatPaguJS(val)}</b>
+            </div>
+        `;
+    });
+    const listEl = document.getElementById('qa-res-top-list');
+    if (listEl) listEl.innerHTML = html || '<div style="opacity:0.5; font-size:0.7rem;">Tidak ada data ditemukan.</div>';
+    
+    loadMapData();
+}
+
+window.showKecamatanQADetail = function(kecName) {
+    if (!activeQA) return;
+    
+    const config = activeQA;
+    const data = allAudits.filter(p => {
+        if (p.tahun != activeYear) return false;
+        const pKec = (p.kecamatan || "").trim().toLowerCase();
+        const searchKec = (kecName || "").trim().toLowerCase();
+        if (pKec !== searchKec) return false;
+        
+        const name = (p.nama || "").toLowerCase();
+        return config.keywords.some(kw => name.includes(kw.toLowerCase()));
+    });
+    
+    // Switch View
+    document.getElementById('audit-qa-list').style.display = 'none';
+    document.getElementById('audit-qa-result').style.display = 'none';
+    document.getElementById('audit-qa-detail-view').style.display = 'block';
+    
+    document.getElementById('qa-detail-title').innerText = `Kec. ${kecName}`;
+    document.getElementById('qa-detail-subtitle').innerText = `Daftar paket "${activeQA.keywords[0]}..." di wilayah ini.`;
+    
+    let html = '';
+    data.sort((a, b) => b.pagu - a.pagu).forEach(p => {
+        html += `
+            <div class="packet-item" onclick="selectPackage('${p.id}', '${p.kecamatan}')" style="border-left: 3px solid #ef4444;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                    <span class="tag" style="background:rgba(239, 68, 68, 0.2); color: #fca5a5;">${p.status || 'TERCATAT'}</span>
+                    <b style="color: #f87171; font-family: 'Outfit';">${formatPaguJS(p.pagu)}</b>
+                </div>
+                <div style="font-weight: 600; color: rgba(255,255,255,0.9); font-size:0.75rem;">${p.nama}</div>
+                <div style="font-size: 0.65rem; opacity: 0.4; margin-top: 4px; text-transform: uppercase;">${p.satker}</div>
+            </div>
+        `;
+    });
+    
+    document.getElementById('qa-detail-list').innerHTML = html || '<div style="opacity:0.5; font-size:0.8rem; text-align:center; padding:20px;">Tidak ada paket yang sesuai kriteria di wilayah ini.</div>';
+    
+    // Scroll to top of sidebar
+    document.getElementById('sidebar').scrollTop = 0;
+}
+
+window.backToQAResult = function() {
+    document.getElementById('audit-qa-list').style.display = 'flex';
+    document.getElementById('audit-qa-result').style.display = 'block';
+    document.getElementById('audit-qa-detail-view').style.display = 'none';
+}
+
+window.resetAuditQA = function() {
+    activeQA = null;
+    activeQAResults = {};
+    const res = document.getElementById('audit-qa-result');
+    if (res) res.style.display = 'none';
+    const detail = document.getElementById('audit-qa-detail-view');
+    if (detail) detail.style.display = 'none';
+    const list = document.getElementById('audit-qa-list');
+    if (list) list.style.display = 'flex';
+    loadMapData();
 }
