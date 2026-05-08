@@ -1023,4 +1023,51 @@
     #villageDetailContent td {
         font-size: 0.75rem;
     }
-}
+}
+
+/* --- AUDIT Q&A STYLES --- */
+.qa-card {
+    display: flex;
+    gap: 12px;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.qa-card:hover {
+    background: rgba(255, 255, 255, 0.06);
+    border-color: rgba(239, 68, 68, 0.3);
+    transform: translateX(4px);
+}
+
+.qa-card.active {
+    background: rgba(239, 68, 68, 0.1);
+    border-color: #ef4444;
+}
+
+.qa-icon {
+    font-size: 1.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.qa-body {
+    flex: 1;
+}
+
+.qa-q {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.qa-hint {
+    font-size: 0.6rem;
+    opacity: 0.4;
+}
+

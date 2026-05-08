@@ -669,7 +669,7 @@ function handleSearch() {
             return name.toLowerCase().includes(query) ||
                 vendor.toLowerCase().includes(query) ||
                 satker.toLowerCase().includes(query);
-        }).slice(0, 10);
+        });
 
         matchPackages.forEach(p => {
             const yearColor = p.tahun == 2026 ? '#a78bfa' : '#3b82f6';
@@ -696,7 +696,7 @@ function handleSearch() {
 
         // Search Schools (only if layer already loaded or pre-fetched)
         if (infraData.school && infraData.school.features) {
-            const matchSchools = infraData.school.features.filter(f => f.properties.nama.toLowerCase().includes(query) || (f.properties.tipe || '').toLowerCase().includes(query)).slice(0, 8);
+            const matchSchools = infraData.school.features.filter(f => f.properties.nama.toLowerCase().includes(query) || (f.properties.tipe || '').toLowerCase().includes(query));
             matchSchools.forEach(s => {
                 const tipe = s.properties.tipe || '';
                 html += `<div class="result-item" onclick="centerOnFeature('school', '${s.properties.nama.replace(/'/g, "\\'")}', ${s.geometry.coordinates[1]}, ${s.geometry.coordinates[0]})">
@@ -709,7 +709,7 @@ function handleSearch() {
 
         // Search Bridges
         if (infraData.bridge && infraData.bridge.features) {
-            const matchBridges = infraData.bridge.features.filter(f => f.properties.nama.toLowerCase().includes(query)).slice(0, 5);
+            const matchBridges = infraData.bridge.features.filter(f => f.properties.nama.toLowerCase().includes(query));
             matchBridges.forEach(b => {
                 html += `<div class="result-item" onclick="centerOnFeature('bridge', '${b.properties.nama.replace(/'/g, "\\'")}', ${b.geometry.coordinates[1]}, ${b.geometry.coordinates[0]})">
                                 <div class="type" style="color:#f59e0b">JEMBATAN</div>
@@ -721,7 +721,7 @@ function handleSearch() {
 
         // Search Deep Bridges
         if (infraData.bridgeDeep && infraData.bridgeDeep.features) {
-            const matchBridges = infraData.bridgeDeep.features.filter(f => f.properties.nama.toLowerCase().includes(query)).slice(0, 5);
+            const matchBridges = infraData.bridgeDeep.features.filter(f => f.properties.nama.toLowerCase().includes(query));
             matchBridges.forEach(b => {
                 html += `<div class="result-item" onclick="centerOnFeature('bridgeDeep', '${b.properties.nama.replace(/'/g, "\\'")}', ${b.geometry.coordinates[1]}, ${b.geometry.coordinates[0]})">
                                 <div class="type" style="color:#3b82f6">JEMBATAN (DEEP)</div>
