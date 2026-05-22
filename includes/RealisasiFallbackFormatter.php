@@ -48,7 +48,7 @@ class RealisasiFallbackFormatter
     {
         $lines = [];
         foreach (explode("\n", $ctx) as $line) {
-            if (preg_match('/^(Nama proyek|Pembuat|Tujuan|Kontak|Batasan):/u', $line)) {
+            if (preg_match('/^(Nama proyek|Pembuat|Tujuan|Batasan):/u', $line)) {
                 $lines[] = $line;
             }
         }

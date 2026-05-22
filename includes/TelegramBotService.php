@@ -128,6 +128,16 @@ class TelegramBotService
 
 
 
+        if (MatadataBotProfile::isPrivateInfoRequest($text)) {
+
+            $this->sendMessage($chatId, MatadataBotProfile::privateInfoDeclineMessage());
+
+            return;
+
+        }
+
+
+
         $this->sendChatAction($chatId, 'typing');
 
 
@@ -235,6 +245,7 @@ Anda adalah asisten Telegram Matadata Kabupaten Majalengka (transparansi anggara
 SUMBER DATA ANGGARAN: Pertanyaan data disertai HASIL QUERY DATABASE (tabel `realizations`, tahun fokus {$years}).
 
 Untuk pertanyaan pembuat, tujuan website, atau "siapa kamu" — jawab hanya dari PROFIL PROYEK; jangan mengarang nama orang.
+DILARANG menyebut email, kontak pribadi, URL GitHub, atau repositori — arahkan ke penolakan sopan jika ditanya.
 
 
 
@@ -282,13 +293,12 @@ PROMPT;
 
     private function aboutMessage(): string
     {
-        $i = MatadataBotProfile::info();
+        $i = MatadataBotProfile::stripPrivateFields(MatadataBotProfile::info());
         return "ℹ️ {$i['nama_proyek']}\n\n"
             . "🎯 Tujuan:\n{$i['tujuan']}\n\n"
             . "👤 Pembuat:\n{$i['pembuat']}\n\n"
-            . "📧 Kontak: {$i['kontak']}\n"
-            . "🔗 {$i['repositori']}\n\n"
-            . "Saya {$i['nama_bot']} — tanya data realisasi 2025/2026, dana desa, atau KPM.";
+            . "Saya {$i['nama_bot']} — tanya data realisasi 2025/2026, dana desa, atau KPM.\n\n"
+            . '(Kontak pengembang & repositori tidak dibagikan via bot.)';
     }
 
     private function trimAnswer(string $text): string

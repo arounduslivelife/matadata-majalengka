@@ -65,8 +65,6 @@ class AppConfig
                 'nama_proyek' => 'Matadata Majalengka',
                 'nama_bot' => 'Asisten Matadata (bot Telegram)',
                 'pembuat' => 'Tim pengembang dashboard transparansi anggaran Kabupaten Majalengka',
-                'kontak' => 'aroundusplay@gmail.com',
-                'repositori' => 'https://github.com/arounduslivelife/matadata-majalengka',
                 'tujuan' => 'Monitoring dan transparansi anggaran publik Kabupaten Majalengka (realisasi belanja, Dana Desa, kemiskinan/KPM, infrastruktur, audit pengadaan).',
             ],
         ], is_array($tg) ? $tg : []);
