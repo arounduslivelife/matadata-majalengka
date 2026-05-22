@@ -574,6 +574,60 @@ function postVisitLog(payload) {
     }).then(r => r.json()).catch(() => ({}));
 }
 
+function onGpsPositionSuccess(pos) {
+    const payload = {
+        latitude: pos.coords.latitude,
+        longitude: pos.coords.longitude,
+        accuracy: pos.coords.accuracy
+    };
+    try { sessionStorage.removeItem('matadata_gps_limited'); } catch (e) { /* ignore */ }
+    if (window.APP_DATA) {
+        window.APP_DATA.gps_limited_ack = false;
+    }
+    setGpsGrantedState(true);
+    hideGpsWelcome();
+    closeGpsLockSheet();
+    postVisitLog(payload);
+}
+
+function tryRestoreGpsFromBrowser() {
+    return new Promise((resolve) => {
+        if (!navigator.geolocation) {
+            resolve(false);
+            return;
+        }
+        if (window.gpsAccessGranted) {
+            resolve(true);
+            return;
+        }
+
+        const attempt = () => {
+            navigator.geolocation.getCurrentPosition(
+                (pos) => {
+                    onGpsPositionSuccess(pos);
+                    resolve(true);
+                },
+                () => resolve(false),
+                { enableHighAccuracy: false, timeout: 10000, maximumAge: 300000 }
+            );
+        };
+
+        if (navigator.permissions && navigator.permissions.query) {
+            navigator.permissions.query({ name: 'geolocation' })
+                .then((status) => {
+                    if (status.state === 'granted') {
+                        attempt();
+                    } else {
+                        resolve(false);
+                    }
+                })
+                .catch(() => attempt());
+        } else {
+            attempt();
+        }
+    });
+}
+
 function setGpsGrantedState(granted) {
     window.gpsAccessGranted = !!granted;
     if (window.APP_DATA) window.APP_DATA.gps_granted = !!granted;
@@ -586,13 +640,18 @@ function updateGpsChrome() {
     const banner = document.getElementById('gpsLimitedBanner');
     const floatBtn = document.getElementById('gpsFloatBtn');
 
-    if (overlay && window.gpsAccessGranted) {
-        overlay.classList.add('hidden');
+    if (overlay) {
+        if (window.gpsAccessGranted) {
+            overlay.classList.add('hidden');
+        }
     }
 
-    if (banner) banner.hidden = !limited;
+    if (banner) {
+        banner.hidden = !limited;
+        banner.style.display = limited ? '' : 'none';
+    }
     if (floatBtn) {
-        floatBtn.hidden = !limited;
+        floatBtn.hidden = limited;
         floatBtn.style.display = limited ? 'flex' : 'none';
     }
 
@@ -649,15 +708,7 @@ window.requestGPS = function () {
 
     navigator.geolocation.getCurrentPosition(
         (pos) => {
-            postVisitLog({
-                latitude: pos.coords.latitude,
-                longitude: pos.coords.longitude,
-                accuracy: pos.coords.accuracy
-            }).then((data) => {
-                if (data.gps) setGpsGrantedState(true);
-                hideGpsWelcome();
-                closeGpsLockSheet();
-            });
+            onGpsPositionSuccess(pos);
             if (btn) {
                 btn.disabled = false;
                 btn.textContent = 'Izinkan lokasi';
@@ -681,13 +732,33 @@ window.continueWithoutGps = function () {
         hideGpsWelcome();
         if (currentMode !== 'sirup') switchMode('sirup');
         updateGpsChrome();
+    }).catch(() => {
+        setGpsGrantedState(false);
+        hideGpsWelcome();
+        if (currentMode !== 'sirup') switchMode('sirup');
+        updateGpsChrome();
     });
 };
 
-function initGpsAccessFlow() {
+async function initGpsAccessFlow() {
+    if (navigator.permissions && navigator.permissions.query) {
+        try {
+            const perm = await navigator.permissions.query({ name: 'geolocation' });
+            perm.onchange = () => {
+                if (perm.state === 'granted') tryRestoreGpsFromBrowser();
+                else if (perm.state === 'denied') setGpsGrantedState(false);
+            };
+        } catch (e) { /* ignore */ }
+    }
+
     if (window.APP_DATA && window.APP_DATA.gps_granted) {
         setGpsGrantedState(true);
         logVisitorGPS();
+        return;
+    }
+
+    const restored = await tryRestoreGpsFromBrowser();
+    if (restored) {
         return;
     }
 
@@ -696,7 +767,6 @@ function initGpsAccessFlow() {
     if (dismissed || (window.APP_DATA && window.APP_DATA.gps_limited_ack)) {
         setGpsGrantedState(false);
         hideGpsWelcome();
-        postVisitLog({ limited_mode: true });
         updateGpsChrome();
         return;
     }
