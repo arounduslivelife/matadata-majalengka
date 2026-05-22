@@ -14,6 +14,7 @@ require_once __DIR__ . '/RealisasiQuestionRouter.php';
 require_once __DIR__ . '/MatadataBotProfile.php';
 require_once __DIR__ . '/RealisasiFallbackFormatter.php';
 require_once __DIR__ . '/TelegramChatMemory.php';
+require_once __DIR__ . '/TelegramActivityLog.php';
 require_once __DIR__ . '/QuestionInterpreter.php';
 
 
@@ -76,11 +77,17 @@ class TelegramBotService
 
         $text = trim($message['text']);
 
+        $allowed = $chatId !== '' && $this->isChatAllowed($chatId);
+
+        $this->recordUserTouch($message, $allowed);
 
 
-        if ($chatId === '' || !$this->isChatAllowed($chatId)) {
 
-            $this->sendMessage($chatId, '⛔ Chat ini tidak diizinkan mengakses bot Matadata.');
+        if ($chatId === '' || !$allowed) {
+
+            if ($chatId !== '') {
+                $this->sendMessage($chatId, '⛔ Chat ini tidak diizinkan mengakses bot Matadata.');
+            }
 
             return;
 
@@ -90,7 +97,11 @@ class TelegramBotService
 
         if (preg_match('/^\/start\b/i', $text)) {
 
-            $this->sendMessage($chatId, $this->tg['welcome_message']);
+            $welcome = (string) ($this->tg['welcome_message'] ?? 'Halo!');
+
+            $this->sendMessage($chatId, $welcome);
+
+            $this->recordExchange($chatId, $text, $welcome);
 
             return;
 
@@ -102,7 +113,11 @@ class TelegramBotService
 
             $years = implode(' & ', MatadataContextBuilder::defaultFocusYears());
 
-            $this->sendMessage($chatId, "Perintah:\n/start — sapaan\n/help — bantuan\n/about — tentang Matadata\n/reset — hapus memori obrolan (3 pesan terakhir)\n\nData realisasi fokus: {$years}.\nMemori: 3 tanya-jawab per chat Telegram (tidak dicampur antar user).\n\nContoh:\n• Adakah proyek terkait makanan tamu?\n• Vendor paling banyak proyek 2026?");
+            $help = "Perintah:\n/start — sapaan\n/help — bantuan\n/about — tentang Matadata\n/reset — hapus memori obrolan (3 pesan terakhir)\n\nData realisasi fokus: {$years}.\nMemori: 3 tanya-jawab per chat Telegram (tidak dicampur antar user).\n\nContoh:\n• Adakah proyek terkait makanan tamu?\n• Vendor paling banyak proyek 2026?";
+
+            $this->sendMessage($chatId, $help);
+
+            $this->recordExchange($chatId, $text, $help);
 
             return;
 
@@ -114,7 +129,11 @@ class TelegramBotService
 
             (new TelegramChatMemory())->clear($chatId);
 
-            $this->sendMessage($chatId, '🔄 Memori obrolan untuk chat ini dihapus. Silakan tanya lagi.');
+            $resetMsg = '🔄 Memori obrolan untuk chat ini dihapus. Silakan tanya lagi.';
+
+            $this->sendMessage($chatId, $resetMsg);
+
+            $this->recordExchange($chatId, $text, $resetMsg);
 
             return;
 
@@ -124,7 +143,11 @@ class TelegramBotService
 
         if (preg_match('/^\/about\b/i', $text)) {
 
-            $this->sendMessage($chatId, $this->aboutMessage());
+            $about = $this->aboutMessage();
+
+            $this->sendMessage($chatId, $about);
+
+            $this->recordExchange($chatId, $text, $about);
 
             return;
 
@@ -134,7 +157,11 @@ class TelegramBotService
 
         if (preg_match('/^\/(status|ping)\b/i', $text)) {
 
-            $this->sendMessage($chatId, '✅ Bot Matadata aktif. Groq keys: ' . count(AppConfig::groqKeys()));
+            $status = '✅ Bot Matadata aktif. Groq keys: ' . count(AppConfig::groqKeys());
+
+            $this->sendMessage($chatId, $status);
+
+            $this->recordExchange($chatId, $text, $status);
 
             return;
 
@@ -144,7 +171,11 @@ class TelegramBotService
 
         if (MatadataBotProfile::isPrivateInfoRequest($text)) {
 
-            $this->sendMessage($chatId, MatadataBotProfile::privateInfoDeclineMessage());
+            $decline = MatadataBotProfile::privateInfoDeclineMessage();
+
+            $this->sendMessage($chatId, $decline);
+
+            $this->recordExchange($chatId, $text, $decline);
 
             return;
 
@@ -162,16 +193,42 @@ class TelegramBotService
 
             $this->sendMessage($chatId, $answer);
 
+            $this->recordExchange($chatId, $text, $answer);
+
         } catch (Throwable $e) {
 
             error_log('Telegram bot: ' . $e->getMessage());
 
             $fallback = $this->fallbackAnswer($text, $e);
 
-            $this->sendMessage($chatId, $fallback ?: '⚠️ Maaf, gagal memproses pertanyaan. Coba lagi nanti atau hubungi admin.');
+            $errMsg = $fallback ?: '⚠️ Maaf, gagal memproses pertanyaan. Coba lagi nanti atau hubungi admin.';
+
+            $this->sendMessage($chatId, $errMsg);
+
+            $this->recordExchange($chatId, $text, $errMsg);
 
         }
 
+    }
+
+    /** @param array<string, mixed> $message */
+    private function recordUserTouch(array $message, bool $allowed): void
+    {
+        $chatId = (string) ($message['chat']['id'] ?? '');
+        if ($chatId === '') {
+            return;
+        }
+        (new TelegramActivityLog())->touchUser(
+            $chatId,
+            $message['from'] ?? [],
+            $message['chat'] ?? [],
+            $allowed
+        );
+    }
+
+    private function recordExchange(string $chatId, string $question, string $answer): void
+    {
+        (new TelegramActivityLog())->logExchange($chatId, $question, $answer);
     }
 
 

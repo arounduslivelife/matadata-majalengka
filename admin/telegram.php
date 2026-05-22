@@ -12,6 +12,8 @@ require_once dirname(__DIR__) . '/includes/TelegramBotService.php';
 
 require_once dirname(__DIR__) . '/includes/MatadataContextBuilder.php';
 
+require_once dirname(__DIR__) . '/includes/TelegramActivityLog.php';
+
 
 
 $tg = AppConfig::telegram();
@@ -186,6 +188,13 @@ if (!empty($tg['bot_token'])) {
         $telegramDiagnostics[] = ['danger', 'Telegram gagal mengirim ke webhook: ' . htmlspecialchars($lastErr)];
     }
 }
+
+$activityLog = new TelegramActivityLog();
+$tgActivityStats = $activityLog->stats();
+$tgUsers = $activityLog->listUsers();
+$viewChatId = isset($_GET['chat']) ? trim((string) $_GET['chat']) : '';
+$viewUser = $viewChatId !== '' ? $activityLog->getUser($viewChatId) : null;
+$viewConversations = $viewChatId !== '' ? $activityLog->getConversations($viewChatId) : [];
 
 require_once __DIR__ . '/includes/layout.php';
 
@@ -488,6 +497,106 @@ foreach ($telegramDiagnostics as [$diagType, $diagMsg]) {
 </div>
 
 
+
+<div class="row mt-3">
+    <div class="col-12">
+        <div class="card card-outline card-info">
+            <div class="card-header">
+                <h3 class="card-title"><i class="fas fa-users"></i> Pengguna &amp; percakapan bot</h3>
+                <div class="card-tools">
+                    <span class="badge badge-info"><?= (int) $tgActivityStats['user_count'] ?> pengguna</span>
+                    <span class="badge badge-secondary"><?= (int) $tgActivityStats['total_messages'] ?> pesan masuk</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <p class="text-muted small mb-3">
+                    Data tersimpan otomatis di <code>data/telegram_private/telegram_activity.json</code>
+                    (maks. <?= TelegramActivityLog::MAX_CONVERSATIONS ?> tanya-jawab terakhir per chat).
+                    Folder <code>data/</code> harus bisa ditulis web server.
+                </p>
+                <?php if (count($tgUsers) === 0): ?>
+                    <div class="alert alert-light border mb-0">
+                        Belum ada aktivitas tercatat. Kirim pesan ke bot dari Telegram setelah bot aktif &amp; webhook jalan.
+                    </div>
+                <?php else: ?>
+                    <div class="table-responsive">
+                        <table class="table table-sm table-hover mb-0">
+                            <thead>
+                                <tr>
+                                    <th>Pengguna / Chat</th>
+                                    <th>Chat ID</th>
+                                    <th>Username</th>
+                                    <th>Pesan</th>
+                                    <th>Terakhir aktif</th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <?php foreach ($tgUsers as $u): ?>
+                                    <?php
+                                    $cid = (string) ($u['chat_id'] ?? '');
+                                    $convCount = count($activityLog->getConversations($cid));
+                                    $lastAt = $u['last_seen_at'] ?? '';
+                                    $lastFmt = $lastAt !== '' ? date('d/m/Y H:i', strtotime($lastAt)) : '—';
+                                    ?>
+                                    <tr class="<?= $viewChatId === $cid ? 'table-info' : '' ?>">
+                                        <td>
+                                            <?= htmlspecialchars(TelegramActivityLog::displayName($u)) ?>
+                                            <?php if (empty($u['allowed'])): ?>
+                                                <span class="badge badge-warning">diblokir</span>
+                                            <?php endif; ?>
+                                            <?php if (($u['chat_type'] ?? '') !== 'private'): ?>
+                                                <span class="badge badge-secondary"><?= htmlspecialchars($u['chat_type'] ?? '') ?></span>
+                                            <?php endif; ?>
+                                        </td>
+                                        <td><code><?= htmlspecialchars($cid) ?></code></td>
+                                        <td><?= !empty($u['username']) ? '@' . htmlspecialchars($u['username']) : '—' ?></td>
+                                        <td><?= (int) ($u['message_count'] ?? 0) ?> <span class="text-muted">(<?= $convCount ?> dialog)</span></td>
+                                        <td class="text-nowrap"><?= htmlspecialchars($lastFmt) ?></td>
+                                        <td class="text-nowrap">
+                                            <a href="telegram.php?chat=<?= urlencode($cid) ?>" class="btn btn-xs btn-outline-primary">
+                                                <i class="fas fa-comments"></i> Riwayat
+                                            </a>
+                                        </td>
+                                    </tr>
+                                <?php endforeach; ?>
+                            </tbody>
+                        </table>
+                    </div>
+                <?php endif; ?>
+            </div>
+            <?php if ($viewChatId !== '' && $viewUser !== null): ?>
+                <div class="card-footer bg-light">
+                    <h6 class="mb-2">
+                        <i class="fas fa-comment-dots"></i>
+                        20 percakapan terakhir —
+                        <?= htmlspecialchars(TelegramActivityLog::displayName($viewUser)) ?>
+                        <code class="ml-1"><?= htmlspecialchars($viewChatId) ?></code>
+                        <a href="telegram.php" class="btn btn-xs btn-secondary float-right">Tutup</a>
+                    </h6>
+                    <?php if (count($viewConversations) === 0): ?>
+                        <p class="text-muted small mb-0">Belum ada dialog tersimpan (hanya sentuhan tanpa balasan bot).</p>
+                    <?php else: ?>
+                        <div class="telegram-conv-log" style="max-height: 480px; overflow-y: auto;">
+                            <?php foreach (array_reverse($viewConversations) as $i => $turn): ?>
+                                <?php
+                                $at = $turn['at'] ?? '';
+                                $atFmt = $at !== '' ? date('d/m/Y H:i:s', strtotime($at)) : '';
+                                $num = count($viewConversations) - $i;
+                                ?>
+                                <div class="border rounded p-2 mb-2 bg-white">
+                                    <div class="small text-muted mb-1">#<?= $num ?> · <?= htmlspecialchars($atFmt) ?></div>
+                                    <div class="mb-1"><strong class="text-primary">User:</strong> <?= nl2br(htmlspecialchars($turn['question'] ?? '')) ?></div>
+                                    <div><strong class="text-success">Bot:</strong> <?= nl2br(htmlspecialchars($turn['answer'] ?? '')) ?></div>
+                                </div>
+                            <?php endforeach; ?>
+                        </div>
+                    <?php endif; ?>
+                </div>
+            <?php endif; ?>
+        </div>
+    </div>
+</div>
 
 <?php adminRenderFooter(); ?>
 
