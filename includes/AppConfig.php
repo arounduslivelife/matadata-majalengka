@@ -62,6 +62,7 @@ class AppConfig
             'system_extra' => '',
             'max_tokens' => 400,
             'use_interpreter' => true,
+            'use_direct_answers' => true,
             'interpreter_max_tokens' => 280,
             'project_info' => [
                 'nama_proyek' => 'Matadata Majalengka',

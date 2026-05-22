@@ -653,10 +653,14 @@ class RealisasiQuestionRouter
             $m
         )) {
             $phrase = trim($m[1]);
-            $phrase = preg_replace('/\s+yang\s+.+$/iu', '', $phrase);
-            $phrase = preg_replace('/\s+di\s+(?:kecamatan|kec\.?)\s+.+$/iu', '', $phrase);
-            $phrase = preg_replace('/\s+di\s+20\d{2}$/iu', '', $phrase);
-            $phrase = preg_replace('/\s+tahun\s+20\d{2}.*$/iu', '', $phrase);
+            $phrase = sanitizeRealisasiThemePhrase($phrase);
+            if (mb_strlen($phrase) >= 3) {
+                return [$phrase];
+            }
+        }
+
+        if (preg_match('/terkait\s+(.+?)\s+di\s+tahun\s+20\d{2}/iu', $question, $m)) {
+            $phrase = sanitizeRealisasiThemePhrase(trim($m[1]));
             if (mb_strlen($phrase) >= 3) {
                 return [$phrase];
             }

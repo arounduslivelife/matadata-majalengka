@@ -216,6 +216,17 @@ class TelegramBotService
         $router = new RealisasiQuestionRouter($this->pdo);
         $dbContext = $router->buildContext($question, $interpretation);
 
+        if (!$isMeta && ($this->tg['use_direct_answers'] ?? true)) {
+            require_once __DIR__ . '/RealisasiDirectAnswer.php';
+            $direct = RealisasiDirectAnswer::tryAnswer($dbContext);
+            if ($direct !== null) {
+                if ($chatId !== null && $chatId !== '') {
+                    (new TelegramChatMemory())->append($chatId, $question, $direct);
+                }
+                return $direct;
+            }
+        }
+
         $groq = new GroqClient();
         $system = $this->buildSystemPrompt(!empty($interpretationBlock));
 
@@ -321,6 +332,7 @@ ATURAN JAWABAN (WAJIB):
 - Jika hasil query kosong, katakan "data tidak tersedia di sistem untuk pertanyaan ini".
 
 - Jika ada blok [Pencarian] dengan jumlah paket > 0, jawab ya/ada dan sebut contoh paket; jika 0 paket cocok, jawab tidak ada.
+- Jika riwayat obrolan bertentangan dengan DATA DATABASE, percayai DATA DATABASE.
 
 - Memori obrolan: maks 3 tanya-jawab sebelumnya **hanya untuk chat Telegram yang sama**; jangan campur dengan user lain.
 {$interpRules}

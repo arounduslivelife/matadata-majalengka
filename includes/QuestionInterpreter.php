@@ -3,6 +3,7 @@
 require_once __DIR__ . '/GroqClient.php';
 require_once __DIR__ . '/AppConfig.php';
 require_once __DIR__ . '/MatadataContextBuilder.php';
+require_once __DIR__ . '/format_helpers.php';
 
 /**
  * Langkah 1: AI menerjemahkan maksud pertanyaan → struktur untuk query database.
@@ -209,9 +210,14 @@ PROMPT;
     {
         if (preg_match('/(?:terkait|mengenai|seputar|tentang)\s+(.+?)(?:,|\s+yang|\s+di\s+|\?|$)/iu', $question, $m)) {
             $phrase = trim($m[1]);
-            $phrase = preg_replace('/\s+yang\s+.+$/iu', '', $phrase);
-            $phrase = preg_replace('/\s+di\s+(?:kecamatan|kec\.?)\s+.+$/iu', '', $phrase);
-            $phrase = preg_replace('/\s+tahun\s+20\d{2}.*$/iu', '', $phrase);
+            $phrase = sanitizeRealisasiThemePhrase($phrase);
+            if (mb_strlen($phrase) >= 4) {
+                return [$phrase];
+            }
+        }
+
+        if (preg_match('/terkait\s+(.+?)\s+di\s+tahun\s+20\d{2}/iu', $question, $m)) {
+            $phrase = sanitizeRealisasiThemePhrase(trim($m[1]));
             if (mb_strlen($phrase) >= 4) {
                 return [$phrase];
             }
