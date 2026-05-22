@@ -26,6 +26,19 @@ function e($str)
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
 
+/** URL asset publik (subfolder + cache bust dari filemtime) */
+function publicAsset(string $rel): string
+{
+    $base = rtrim(str_replace('\\', '/', dirname($_SERVER['SCRIPT_NAME'] ?? '')), '/');
+    if ($base === '' || $base === '.') {
+        $base = '';
+    }
+    $path = ltrim($rel, '/');
+    $full = __DIR__ . '/' . $path;
+    $ver = (is_file($full)) ? ('?v=' . filemtime($full)) : '';
+    return ($base !== '' ? $base . '/' : '/') . $path . $ver;
+}
+
 // Unified stats per kecamatan and per year
 $stats_query = $pdo->query("
     SELECT tahun, kecamatan, 
@@ -127,7 +140,16 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
     <link rel="icon" type="image/png" href="favicon.png?v=3">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="<?= e(publicAsset('assets/css/style.css')) ?>">
+    <!-- Fallback: tab insight (jika VPS/cache masih menyajikan style.css lama) -->
+    <style>
+        .insight-tabs{display:flex;gap:6px;overflow-x:auto;overflow-y:hidden;-webkit-overflow-scrolling:touch;scrollbar-width:none;padding-bottom:4px;margin-bottom:1rem}
+        .insight-tabs::-webkit-scrollbar{display:none}
+        .insight-tab{flex:0 0 auto;padding:8px 12px;font-family:'Outfit',sans-serif;font-size:.72rem;font-weight:600;border:1px solid rgba(255,255,255,.08);border-radius:10px;background:rgba(255,255,255,.04);color:rgba(255,255,255,.55);cursor:pointer;transition:.2s;white-space:nowrap;appearance:none;-webkit-appearance:none}
+        .insight-tab:hover{color:#fff;border-color:rgba(255,255,255,.15)}
+        .insight-tab.active{background:var(--accent,#3b82f6);border-color:transparent;color:#fff;box-shadow:0 4px 12px rgba(59,130,246,.35)}
+        .insight-panel{display:none}.insight-panel.active{display:block}.insight-panel[hidden]{display:none!important}
+    </style>
 </head>
 
 <body>
@@ -388,8 +410,8 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
 };
 console.log("📦 APP_DATA initialized:", window.APP_DATA);
     </script>
-    <script src="assets/js/insights.js?v=<?= time() ?>"></script>
-    <script src="assets/js/main.js?v=<?= time() ?>"></script>
+    <script src="<?= e(publicAsset('assets/js/insights.js')) ?>"></script>
+    <script src="<?= e(publicAsset('assets/js/main.js')) ?>"></script>
     <!-- FINAL MODALS (HARDCODED FOR STABILITY) -->
     <div id="logicModal" class="modal" onclick="if(event.target == this) this.style.display='none'" style="display:none; position:fixed; inset:0; z-index: 999999; background:rgba(2,6,23,0.85); backdrop-filter:blur(15px); align-items:center; justify-content:center;">
         <div class="modal-content" style="max-width: 600px; background:#0f172a; padding:2.5rem; border-radius:28px; border:1px solid rgba(255,255,255,0.1); position:relative; box-shadow: 0 40px 100px rgba(0,0,0,0.8); animation: modalIn 0.3s ease;">
