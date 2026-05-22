@@ -61,6 +61,8 @@ class AppConfig
             'welcome_message' => "Halo! Saya asisten Matadata Majalengka. Data realisasi fokus tahun 2025 & 2026. Tanya realisasi, dana desa, atau kemiskinan — jawaban singkat & berbasis data.",
             'system_extra' => '',
             'max_tokens' => 400,
+            'use_interpreter' => true,
+            'interpreter_max_tokens' => 280,
             'project_info' => [
                 'nama_proyek' => 'Matadata Majalengka',
                 'nama_bot' => 'Asisten Matadata (bot Telegram)',

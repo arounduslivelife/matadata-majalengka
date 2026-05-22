@@ -11,6 +11,8 @@ class RealisasiQuestionRouter
 {
     private PDO $pdo;
     private RealisasiQueryService $db;
+    /** @var array<string, mixed>|null */
+    private ?array $interpretation = null;
 
     public function __construct(PDO $pdo)
     {
@@ -18,20 +20,29 @@ class RealisasiQuestionRouter
         $this->db = new RealisasiQueryService($pdo);
     }
 
-    public function buildContext(string $question): string
+    /**
+     * @param array<string, mixed>|null $interpretation Hasil QuestionInterpreter::interpret()
+     */
+    public function buildContext(string $question, ?array $interpretation = null): string
     {
-        if (MatadataBotProfile::isMetaQuestion($question)) {
+        $this->interpretation = $interpretation;
+
+        if (MatadataBotProfile::isMetaQuestion($question)
+            || in_array('meta_project', $interpretation['intents'] ?? [], true)) {
             return MatadataBotProfile::buildContextBlock();
         }
 
-        $years = $this->extractYears($question);
-        $intents = $this->detectIntents($question);
+        $years = $this->resolveYears($question);
+        $intents = $this->resolveIntents($question);
         $lines = [
             '=== HASIL QUERY DATABASE (realisasi belanja — jawab HANYA dari data ini) ===',
-            'Pertanyaan: ' . $question,
-            'Tahun di-query: ' . implode(', ', $years),
-            '',
+            'Pertanyaan asli: ' . $question,
         ];
+        if ($interpretation !== null && !empty($interpretation['ringkasan_maksud'])) {
+            $lines[] = 'Makna pertanyaan (terjemahan sistem): ' . $interpretation['ringkasan_maksud'];
+        }
+        $lines[] = 'Tahun di-query: ' . implode(', ', $years);
+        $lines[] = '';
 
         foreach ($intents as $intent) {
             $block = $this->runIntent($intent, $question, $years);
@@ -46,6 +57,29 @@ class RealisasiQuestionRouter
             $text = substr($text, 0, 12000) . "\n...[hasil query dipotong]";
         }
         return $text;
+    }
+
+    /** @return int[] */
+    private function resolveYears(string $question): array
+    {
+        if (!empty($this->interpretation['tahun']) && is_array($this->interpretation['tahun'])) {
+            return array_map('intval', $this->interpretation['tahun']);
+        }
+        return $this->extractYears($question);
+    }
+
+    /** @return string[] */
+    private function resolveIntents(string $question): array
+    {
+        if (!empty($this->interpretation['intents']) && is_array($this->interpretation['intents'])) {
+            $intents = $this->interpretation['intents'];
+            if (!in_array('search_packages', $intents, true)
+                && in_array('search_text', $intents, true)) {
+                $intents[] = 'search_packages';
+            }
+            return array_values(array_unique($intents));
+        }
+        return $this->detectIntents($question);
     }
 
     /** @return int[] */
@@ -156,7 +190,7 @@ class RealisasiQuestionRouter
             'top_packages' => $this->blockTopPackages($years),
             'rank_satker' => $this->blockRankSatker($years),
             'by_status' => $this->blockByStatus($years),
-            'search_text' => $this->blockSearch($question, $years),
+            'search_text', 'search_packages' => $this->blockSearch($question, $years),
             'kecamatan_detail' => $this->blockKecamatanDetail($question, $years),
             'vendor_detail' => $this->blockVendorDetail($question, $years),
             'general_realisasi' => $this->blockGeneral($years),
@@ -302,7 +336,19 @@ class RealisasiQuestionRouter
     /** @param int[] $years */
     private function blockSearch(string $question, array $years): string
     {
-        $keywords = $this->extractSearchKeywords($question);
+        $keywords = [];
+        if (!empty($this->interpretation['keywords']) && is_array($this->interpretation['keywords'])) {
+            $keywords = $this->interpretation['keywords'];
+        }
+        if (count($keywords) === 0) {
+            $keywords = $this->extractSearchKeywords($question);
+        }
+        return $this->blockSearchWithKeywords($keywords, $years);
+    }
+
+    /** @param string[] $keywords */
+    private function blockSearchWithKeywords(array $keywords, array $years): string
+    {
         if (count($keywords) === 0) {
             return "[Pencarian]\nTidak dapat mengekstrak kata kunci dari pertanyaan. Coba: \"cari paket makanan tamu 2026\".";
         }
@@ -333,7 +379,10 @@ class RealisasiQuestionRouter
     /** @param int[] $years */
     private function blockKecamatanDetail(string $question, array $years): string
     {
-        $kec = $this->matchKecamatan($question);
+        $kec = $this->interpretation['kecamatan'] ?? null;
+        if ($kec === null || $kec === '') {
+            $kec = $this->matchKecamatan($question);
+        }
         if ($kec === null) {
             return '';
         }
@@ -356,7 +405,10 @@ class RealisasiQuestionRouter
     /** @param int[] $years */
     private function blockVendorDetail(string $question, array $years): string
     {
-        $needle = $this->extractVendorNeedle($question);
+        $needle = $this->interpretation['vendor'] ?? null;
+        if ($needle === null || $needle === '') {
+            $needle = $this->extractVendorNeedle($question);
+        }
         if ($needle === null) {
             return '';
         }

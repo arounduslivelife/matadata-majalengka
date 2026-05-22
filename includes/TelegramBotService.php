@@ -14,6 +14,7 @@ require_once __DIR__ . '/RealisasiQuestionRouter.php';
 require_once __DIR__ . '/MatadataBotProfile.php';
 require_once __DIR__ . '/RealisasiFallbackFormatter.php';
 require_once __DIR__ . '/TelegramChatMemory.php';
+require_once __DIR__ . '/QuestionInterpreter.php';
 
 
 
@@ -197,31 +198,43 @@ class TelegramBotService
 
     {
 
+        $isMeta = MatadataBotProfile::isMetaQuestion($question);
+
+        $interpretation = null;
+        $interpretationBlock = '';
+
+        if (!$isMeta && !empty($this->tg['use_interpreter'])) {
+            try {
+                $interpreter = new QuestionInterpreter();
+                $interpretation = $interpreter->interpret($question);
+                $interpretationBlock = $interpreter->formatForPrompt($interpretation);
+            } catch (Throwable $e) {
+                error_log('QuestionInterpreter: ' . $e->getMessage());
+            }
+        }
+
         $router = new RealisasiQuestionRouter($this->pdo);
-
-        $dbContext = $router->buildContext($question);
-
-
+        $dbContext = $router->buildContext($question, $interpretation);
 
         $groq = new GroqClient();
-
-        $system = $this->buildSystemPrompt();
-
-        $isMeta = MatadataBotProfile::isMetaQuestion($question);
+        $system = $this->buildSystemPrompt(!empty($interpretationBlock));
 
         $user = "Pertanyaan pengguna:\n{$question}\n\n";
 
         if ($isMeta) {
-
             $user .= "Pertanyaan tentang proyek/bot/pembuat. Jawab dari PROFIL PROYEK (bukan tabel realisasi).\n\n";
-
+            $user .= $dbContext;
+        } elseif ($interpretationBlock !== '') {
+            $user .= "Alur jawaban (3 langkah):\n";
+            $user .= "1) Makna pertanyaan sudah diterjemahkan di bawah.\n";
+            $user .= "2) Data relevan dari database MySQL ada di bawah.\n";
+            $user .= "3) Susun jawaban manusiawi, natural, dan mudah dibaca — jangan seperti laporan kaku.\n\n";
+            $user .= "--- MAKNA PERTANYAAN ---\n{$interpretationBlock}\n\n";
+            $user .= "--- DATA DATABASE ---\n{$dbContext}\n";
         } else {
-
             $user .= "Jawab singkat berdasarkan HASIL QUERY DATABASE di bawah (data realisasi 2025/2026 dari MySQL).\n\n";
-
+            $user .= $dbContext;
         }
-
-        $user .= $dbContext;
 
 
 
@@ -265,7 +278,7 @@ class TelegramBotService
 
 
 
-    private function buildSystemPrompt(): string
+    private function buildSystemPrompt(bool $withInterpreter = false): string
 
     {
 
@@ -274,8 +287,7 @@ class TelegramBotService
         $years = implode(', ', MatadataContextBuilder::defaultFocusYears());
 
         $profile = MatadataBotProfile::buildContextBlock();
-
-
+        $interpRules = $this->interpreterPromptExtra($withInterpreter);
 
         return <<<PROMPT
 
@@ -296,7 +308,7 @@ DILARANG menyebut email, kontak pribadi, URL GitHub, atau repositori — arahkan
 
 ATURAN JAWABAN (WAJIB):
 
-- Bahasa Indonesia, santai tapi profesional.
+- Bahasa Indonesia, santai tapi profesional, seperti penjelasan kepada warga (manusiawi).
 
 - Maksimal 4–8 kalimat atau bullet singkat (max 6 item).
 
@@ -311,7 +323,7 @@ ATURAN JAWABAN (WAJIB):
 - Jika ada blok [Pencarian] dengan jumlah paket > 0, jawab ya/ada dan sebut contoh paket; jika 0 paket cocok, jawab tidak ada.
 
 - Memori obrolan: maks 3 tanya-jawab sebelumnya **hanya untuk chat Telegram yang sama**; jangan campur dengan user lain.
-
+{$interpRules}
 - Tanpa salam panjang.
 
 
@@ -324,6 +336,18 @@ PROMPT;
 
 
 
+    private function interpreterPromptExtra(bool $on): string
+    {
+        if (!$on) {
+            return '';
+        }
+        return <<<'TXT'
+
+- Pertanyaan sudah diterjemahkan (bagian MAKNA PERTANYAAN); data sudah diambil dari database (bagian DATA DATABASE). Gabungkan keduanya dalam jawaban natural.
+- Untuk pertanyaan "adakah ada...": jawab ya/tidak di awal, lalu 2–3 contoh paket jika ada; sebut jumlah paket jika tercantum.
+TXT;
+    }
+
     private function fallbackAnswer(string $question, Throwable $e): ?string
     {
         if (MatadataBotProfile::isMetaQuestion($question)) {
@@ -335,7 +359,7 @@ PROMPT;
         }
 
         $router = new RealisasiQuestionRouter($this->pdo);
-        $ctx = $router->buildContext($question);
+        $ctx = $router->buildContext($question, null);
 
         return RealisasiFallbackFormatter::format($question, $ctx);
     }
