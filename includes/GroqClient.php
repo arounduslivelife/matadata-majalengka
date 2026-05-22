@@ -8,6 +8,14 @@ class GroqClient
 
     public function chat(string $systemPrompt, string $userMessage, array $options = []): string
     {
+        return $this->chatWithHistory($systemPrompt, [], $userMessage, $options);
+    }
+
+    /**
+     * @param list<array{role:string,content:string}> $history
+     */
+    public function chatWithHistory(string $systemPrompt, array $history, string $userMessage, array $options = []): string
+    {
         $keys = AppConfig::groqKeys();
         if (empty($keys)) {
             throw new RuntimeException('GROQ_API_KEYS belum dikonfigurasi di config.json');
@@ -18,12 +26,19 @@ class GroqClient
         $maxTokens = (int) ($options['max_tokens'] ?? $tg['max_tokens'] ?? 400);
         $temperature = (float) ($options['temperature'] ?? 0.2);
 
+        $messages = [['role' => 'system', 'content' => $systemPrompt]];
+        foreach ($history as $turn) {
+            if (empty($turn['role']) || !isset($turn['content'])) {
+                continue;
+            }
+            $role = $turn['role'] === 'assistant' ? 'assistant' : 'user';
+            $messages[] = ['role' => $role, 'content' => (string) $turn['content']];
+        }
+        $messages[] = ['role' => 'user', 'content' => $userMessage];
+
         $payload = [
             'model' => $model,
-            'messages' => [
-                ['role' => 'system', 'content' => $systemPrompt],
-                ['role' => 'user', 'content' => $userMessage],
-            ],
+            'messages' => $messages,
             'temperature' => $temperature,
             'max_tokens' => $maxTokens,
         ];

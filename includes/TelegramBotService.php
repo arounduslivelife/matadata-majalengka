@@ -13,6 +13,7 @@ require_once __DIR__ . '/MatadataContextBuilder.php';
 require_once __DIR__ . '/RealisasiQuestionRouter.php';
 require_once __DIR__ . '/MatadataBotProfile.php';
 require_once __DIR__ . '/RealisasiFallbackFormatter.php';
+require_once __DIR__ . '/TelegramChatMemory.php';
 
 
 
@@ -100,7 +101,19 @@ class TelegramBotService
 
             $years = implode(' & ', MatadataContextBuilder::defaultFocusYears());
 
-            $this->sendMessage($chatId, "Perintah:\n/start — sapaan\n/help — bantuan\n/about — tentang Matadata\n\nData realisasi fokus: {$years}.\n\nContoh:\n• Vendor paling banyak proyek 2026?\n• Siapa yang membuat Matadata?\n• Tujuan website ini apa?");
+            $this->sendMessage($chatId, "Perintah:\n/start — sapaan\n/help — bantuan\n/about — tentang Matadata\n/reset — hapus memori obrolan (3 pesan terakhir)\n\nData realisasi fokus: {$years}.\nMemori: 3 tanya-jawab per chat Telegram (tidak dicampur antar user).\n\nContoh:\n• Adakah proyek terkait makanan tamu?\n• Vendor paling banyak proyek 2026?");
+
+            return;
+
+        }
+
+
+
+        if (preg_match('/^\/reset\b/i', $text)) {
+
+            (new TelegramChatMemory())->clear($chatId);
+
+            $this->sendMessage($chatId, '🔄 Memori obrolan untuk chat ini dihapus. Silakan tanya lagi.');
 
             return;
 
@@ -144,7 +157,7 @@ class TelegramBotService
 
         try {
 
-            $answer = $this->answerQuestion($text);
+            $answer = $this->answerQuestion($text, $chatId);
 
             $this->sendMessage($chatId, $answer);
 
@@ -180,7 +193,7 @@ class TelegramBotService
 
 
 
-    public function answerQuestion(string $question): string
+    public function answerQuestion(string $question, ?string $chatId = null): string
 
     {
 
@@ -212,9 +225,41 @@ class TelegramBotService
 
 
 
-        $raw = $groq->chat($system, $user);
+        $history = [];
 
-        return $this->trimAnswer($raw);
+        $memory = null;
+
+        if ($chatId !== null && $chatId !== '') {
+
+            $memory = new TelegramChatMemory();
+
+            $history = $memory->getMessages($chatId);
+
+            if (count($history) > 0) {
+
+                $user .= "\n\n(Riwayat obrolan di chat ini disertakan di pesan sebelumnya — gunakan hanya jika relevan dengan pertanyaan terbaru.)";
+
+            }
+
+        }
+
+
+
+        $raw = $groq->chatWithHistory($system, $history, $user);
+
+        $answer = $this->trimAnswer($raw);
+
+
+
+        if ($memory !== null) {
+
+            $memory->append($chatId, $question, $answer);
+
+        }
+
+
+
+        return $answer;
 
     }
 
@@ -262,6 +307,10 @@ ATURAN JAWABAN (WAJIB):
 - Sebut tahun (2025/2026) bila relevan.
 
 - Jika hasil query kosong, katakan "data tidak tersedia di sistem untuk pertanyaan ini".
+
+- Jika ada blok [Pencarian] dengan jumlah paket > 0, jawab ya/ada dan sebut contoh paket; jika 0 paket cocok, jawab tidak ada.
+
+- Memori obrolan: maks 3 tanya-jawab sebelumnya **hanya untuk chat Telegram yang sama**; jangan campur dengan user lain.
 
 - Tanpa salam panjang.
 

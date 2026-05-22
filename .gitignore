@@ -17,6 +17,7 @@ uploads/*
 
 # Local Progress & Meta
 progress.json
+data/telegram_chat_memory.json
 .antigravity/
 .gemini/
 

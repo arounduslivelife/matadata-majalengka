@@ -105,7 +105,15 @@ class RealisasiQuestionRouter
             $intents[] = 'by_status';
         }
 
-        if (preg_match('/paket|proyek|belanja|pekerjaan|kegiatan/ui', $q)) {
+        if (preg_match(
+            '/adakah|apakah\s+ada|ada\s+tidak|adanya|terkait\s+|mengenai\s+|seputar\s+|'
+            . 'soal\s+|berkaitan\s+dengan|cari\s+(paket|proyek)|nama\s+paket/iu',
+            $q
+        )) {
+            $intents[] = 'search_text';
+        }
+
+        if (preg_match('/paket|proyek|belanja|pekerjaan|kegiatan|makanan|jamuan|jasa/ui', $q)) {
             if (preg_match('/terbesar|tertinggi|paling\s+besar|top\s*\d*|nominal\s+tertinggi/ui', $q)) {
                 $intents[] = 'top_packages';
             }
@@ -296,24 +304,30 @@ class RealisasiQuestionRouter
     {
         $keywords = $this->extractSearchKeywords($question);
         if (count($keywords) === 0) {
-            return '';
+            return "[Pencarian]\nTidak dapat mengekstrak kata kunci dari pertanyaan. Coba: \"cari paket makanan tamu 2026\".";
         }
         $lines = ['[Pencarian teks di nama paket/vendor/satker]'];
+        $anyHit = false;
         foreach ($years as $year) {
             foreach ($keywords as $kw) {
-                $rows = $this->db->searchPackages($year, $kw, 6);
-                if (count($rows) === 0) {
+                $cnt = $this->db->countSearchPackages($year, $kw);
+                $lines[] = "--- TA {$year}, kata kunci \"{$kw}\" — {$cnt} paket cocok ---";
+                if ($cnt === 0) {
                     continue;
                 }
-                $lines[] = "--- TA {$year}, kata kunci \"{$kw}\" ---";
+                $anyHit = true;
+                $rows = $this->db->searchPackagesFlexible($year, $kw, 8);
                 foreach ($rows as $row) {
                     $lines[] = '- ' . mb_substr($row['nama_paket'], 0, 90);
                     $lines[] = '  ' . formatRupiah($row['total_nilai'])
-                        . " | {$row['kecamatan']} | {$row['vendor']}";
+                        . " | {$row['kecamatan']} | {$row['vendor']} | {$row['status']}";
                 }
             }
         }
-        return count($lines) > 1 ? implode("\n", $lines) : '';
+        if (!$anyHit) {
+            $lines[] = 'Tidak ada paket yang cocok di database untuk kata kunci di atas (tahun ' . implode(', ', $years) . ').';
+        }
+        return implode("\n", $lines);
     }
 
     /** @param int[] $years */
@@ -427,21 +441,34 @@ class RealisasiQuestionRouter
             return [trim($m[1])];
         }
 
+        if (preg_match('/(?:terkait|mengenai|seputar|soal|tentang|berkaitan dengan)\s+(.+?)[\?\.!,]*$/iu', $question, $m)) {
+            return [trim($m[1])];
+        }
+
+        $q = mb_strtolower($question);
+        $q = preg_replace('/^(adakah|apakah|ada\s+tidak|adanya|tolong|bisa)\s+/u', '', $q);
+        $q = preg_replace('/\b(proyek|paket|pekerjaan|kegiatan|realisasi)\b\s*(yang\s+)?(terkait|mengenai)?\s*/u', '', $q);
+        $q = trim($q, " \t\n\r\0\x0B?.,!");
+        if (mb_strlen($q) >= 4) {
+            return [$q];
+        }
+
         $stop = [
-            'yang', 'mana', 'berapa', 'siapa', 'apa', 'bagaimana', 'kenapa', 'mengapa',
-            'di', 'pada', 'tahun', 'realisasi', 'paket', 'proyek', 'data', 'sistem',
-            'matadata', 'majalengka', 'kabupaten', 'tolong', 'cari', 'tentang', 'untuk',
-            'dengan', 'dari', 'adalah', 'ada', 'tidak', 'paling', 'terbesar', 'tertinggi',
-            'banyak', 'jumlah',             'vendor', 'penyedia', 'kecamatan', '2025', '2026', 'dapat', 'siapa',
-            'paling', 'proyek', 'dalam', 'yg', 'yang', 'dan', 'atau',
+            'yang', 'mana', 'berapa', 'siapa', 'apa', 'bagaimana', 'di', 'pada', 'tahun',
+            'data', 'sistem', 'matadata', 'majalengka', 'kabupaten', 'tolong', 'cari',
+            'dengan', 'dari', 'adalah', 'ada', 'tidak', 'vendor', 'penyedia', 'kecamatan',
+            '2025', '2026', 'adakah', 'apakah', 'proyek', 'paket', 'dan', 'atau', 'yg',
         ];
         $words = preg_split('/\s+/u', mb_strtolower($question)) ?: [];
         $out = [];
         foreach ($words as $w) {
             $w = trim($w, '.,?!;:');
-            if (mb_strlen($w) >= 5 && !in_array($w, $stop, true)) {
+            if (mb_strlen($w) >= 4 && !in_array($w, $stop, true)) {
                 $out[] = $w;
             }
+        }
+        if (count($out) >= 2) {
+            return [implode(' ', array_slice($out, 0, 4))];
         }
         return array_slice(array_unique($out), 0, 3);
     }

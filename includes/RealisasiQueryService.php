@@ -171,13 +171,107 @@ class RealisasiQueryService
     {
         $like = '%' . $keyword . '%';
         $stmt = $this->pdo->prepare("
-            SELECT nama_paket, kecamatan, vendor, total_nilai, status
+            SELECT nama_paket, kecamatan, vendor, total_nilai, status, tahun
             FROM realizations
             WHERE tahun = ? AND (nama_paket LIKE ? OR vendor LIKE ? OR satker LIKE ?)
             ORDER BY {$this->nilai} DESC LIMIT " . (int) $limit
         );
         $stmt->execute([$year, $like, $like, $like]);
         return $stmt->fetchAll(PDO::FETCH_ASSOC) ?: [];
+    }
+
+    public function countSearchPackages(int $year, string $keyword): int
+    {
+        $phrase = trim($keyword);
+        $like = '%' . $phrase . '%';
+        $stmt = $this->pdo->prepare("
+            SELECT COUNT(*) FROM realizations
+            WHERE tahun = ? AND (nama_paket LIKE ? OR vendor LIKE ? OR satker LIKE ?)
+        ");
+        $stmt->execute([$year, $like, $like, $like]);
+        $cnt = (int) $stmt->fetchColumn();
+
+        $words = array_values(array_filter(
+            preg_split('/\s+/u', mb_strtolower($phrase)) ?: [],
+            fn ($w) => mb_strlen(trim($w)) >= 3
+        ));
+        if (count($words) >= 2) {
+            $conds = ['tahun = ?'];
+            $params = [$year];
+            foreach ($words as $w) {
+                $conds[] = 'LOWER(nama_paket) LIKE ?';
+                $params[] = '%' . $w . '%';
+            }
+            $stmt = $this->pdo->prepare('SELECT COUNT(*) FROM realizations WHERE ' . implode(' AND ', $conds));
+            $stmt->execute($params);
+            $cnt = max($cnt, (int) $stmt->fetchColumn());
+        }
+
+        return $cnt;
+    }
+
+    /**
+     * Frasa lengkap dulu, lalu kata-kata (AND di nama_paket) agar "makanan tamu" cocok ke "Jamuan tamu".
+     *
+     * @return list<array>
+     */
+    public function searchPackagesFlexible(int $year, string $phrase, int $limit = 10): array
+    {
+        $phrase = trim($phrase);
+        if ($phrase === '') {
+            return [];
+        }
+
+        $seen = [];
+        $out = [];
+
+        $merge = function (array $rows) use (&$seen, &$out, $limit) {
+            foreach ($rows as $row) {
+                $key = ($row['nama_paket'] ?? '') . '|' . ($row['total_nilai'] ?? '');
+                if (isset($seen[$key])) {
+                    continue;
+                }
+                $seen[$key] = true;
+                $out[] = $row;
+                if (count($out) >= $limit) {
+                    return;
+                }
+            }
+        };
+
+        $merge($this->searchPackages($year, $phrase, $limit));
+
+        $words = array_values(array_filter(
+            preg_split('/\s+/u', mb_strtolower($phrase)) ?: [],
+            fn ($w) => mb_strlen(trim($w)) >= 3
+        ));
+
+        if (count($words) >= 2) {
+            $conds = ['tahun = ?'];
+            $params = [$year];
+            foreach ($words as $w) {
+                $conds[] = 'LOWER(nama_paket) LIKE ?';
+                $params[] = '%' . $w . '%';
+            }
+            $sql = "
+                SELECT nama_paket, kecamatan, vendor, total_nilai, status, tahun
+                FROM realizations
+                WHERE " . implode(' AND ', $conds) . "
+                ORDER BY {$this->nilai} DESC
+                LIMIT " . (int) $limit;
+            $stmt = $this->pdo->prepare($sql);
+            $stmt->execute($params);
+            $merge($stmt->fetchAll(PDO::FETCH_ASSOC) ?: []);
+        }
+
+        foreach ($words as $w) {
+            if (count($out) >= $limit) {
+                break;
+            }
+            $merge($this->searchPackages($year, $w, $limit));
+        }
+
+        return $out;
     }
 
     /** @return list<string> */
