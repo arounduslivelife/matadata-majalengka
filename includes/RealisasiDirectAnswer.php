@@ -20,10 +20,10 @@ class RealisasiDirectAnswer
 
     private static function fromSearchKecamatan(string $ctx): ?string
     {
-        if (!preg_match('/Kecamatan:\s*(.+)$/mu', $ctx, $km)) {
+        $kec = self::extractKecamatanFromContext($ctx);
+        if ($kec === null) {
             return null;
         }
-        $kec = trim($km[1]);
         $years = '2026';
         if (preg_match('/Tahun di-query:\s*([0-9,\s]+)/u', $ctx, $ym)) {
             $years = trim($ym[1]);
@@ -49,8 +49,8 @@ class RealisasiDirectAnswer
         )) {
             foreach ($rows as $row) {
                 $c = (int) $row[3];
-                if ($c > 0) {
-                    $count += $c;
+                if ($c > $count) {
+                    $count = $c;
                     $theme = $row[2];
                 }
             }
@@ -110,5 +110,19 @@ class RealisasiDirectAnswer
         }
         return "Paket nilai terbesar untuk \"{$theme}\" di tahun {$year}: {$nama}"
             . ($nilai !== '' ? " ({$nilai})" : '') . '.';
+    }
+
+    private static function extractKecamatanFromContext(string $ctx): ?string
+    {
+        if (preg_match('/Kecamatan:\s*([^\n]+)/u', $ctx, $km)) {
+            $kec = normalizeScalarString(trim($km[1]));
+            if ($kec !== null && strcasecmp($kec, 'array') !== 0) {
+                return $kec;
+            }
+        }
+        if (preg_match('/--- TA \d{4}, kecamatan ([^,]+), tema /u', $ctx, $m)) {
+            return normalizeScalarString(trim($m[1]));
+        }
+        return null;
     }
 }

@@ -441,13 +441,11 @@ class RealisasiQuestionRouter
 
     private function resolveKecamatanName(string $question): ?string
     {
-        if (!empty($this->interpretation['kecamatan'])) {
-            $k = trim((string) $this->interpretation['kecamatan']);
-            if ($k !== '') {
-                return $k;
-            }
+        $fromQuestion = $this->matchKecamatan($question);
+        if ($fromQuestion !== null) {
+            return $fromQuestion;
         }
-        return $this->matchKecamatan($question);
+        return normalizeScalarString($this->interpretation['kecamatan'] ?? null);
     }
 
     /** @return string[] */
@@ -462,10 +460,10 @@ class RealisasiQuestionRouter
                 }
             }
             if (count($kw) > 0) {
-                return $kw;
+                return expandRealisasiThemeKeywords($kw);
             }
         }
-        return $this->extractSearchKeywords($question);
+        return expandRealisasiThemeKeywords($this->extractSearchKeywords($question));
     }
 
     /** @param int[] $years */

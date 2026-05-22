@@ -44,7 +44,7 @@ Output HANYA satu objek JSON valid (tanpa markdown, tanpa teks lain):
   "tahun": [2026],
   "intents": ["search_packages"],
   "keywords": ["makanan tamu", "jamuan tamu"],
-  "kecamatan": null,
+  "kecamatan": "Bantarujeg atau null (string, bukan array)",
   "vendor": null,
   "jawaban_yang_diharapkan": "ya_tidak_dengan_contoh | ranking | angka_total | penjelasan_umum"
 }
@@ -163,8 +163,8 @@ PROMPT;
         }
 
         $intents = $this->refineIntents($intents, $keywords, $question);
-        $kecamatan = !empty($data['kecamatan']) ? trim((string) $data['kecamatan']) : null;
-        if ($kecamatan === null || $kecamatan === '') {
+        $kecamatan = normalizeScalarString($data['kecamatan'] ?? null);
+        if ($kecamatan === null) {
             $kecamatan = $this->guessKecamatanFromQuestion($question);
         }
         if ($kecamatan !== null && $kecamatan !== '' && count($keywords) > 0) {
@@ -180,7 +180,7 @@ PROMPT;
             'intents' => array_values(array_unique($intents)),
             'keywords' => array_values(array_unique($keywords)),
             'kecamatan' => ($kecamatan !== null && $kecamatan !== '') ? $kecamatan : null,
-            'vendor' => !empty($data['vendor']) ? trim((string) $data['vendor']) : null,
+            'vendor' => normalizeScalarString($data['vendor'] ?? null),
             'jawaban_yang_diharapkan' => trim((string) ($data['jawaban_yang_diharapkan'] ?? '')),
         ];
     }
