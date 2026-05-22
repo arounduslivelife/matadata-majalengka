@@ -85,10 +85,11 @@
                 <div class="insight-rank-list" id="insight-kec-list"></div>
                 <button type="button" class="insight-expand-btn" id="insight-kec-expand" style="display:none;" onclick="toggleKecInsightExpand()">Tampilkan semua kecamatan</button>
             </div>
-        <div id="realisasi-detail-view" style="display: none;">
-            <!-- Kecamatan Detail View (Spider-style) -->
         </div>
-    </div>
+
+        <div id="realisasi-detail-view" style="display: none;" aria-live="polite">
+            <!-- Daftar vendor / paket per kecamatan (diisi JS) -->
+        </div>
     </div>
 
     <div id="sidebar-danadesa" style="display: none;">

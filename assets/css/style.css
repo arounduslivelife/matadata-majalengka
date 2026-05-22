@@ -205,6 +205,12 @@
         #insight-chrome {
             margin-bottom: 1rem;
         }
+        #realisasi-detail-view {
+            margin-top: 0.25rem;
+            max-height: min(70vh, 520px);
+            overflow-y: auto;
+            -webkit-overflow-scrolling: touch;
+        }
         .insight-tabs {
             display: flex;
             gap: 6px;

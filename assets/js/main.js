@@ -1727,7 +1727,7 @@ function loadMapData() {
                     layer.on('mouseout', function () { this.setStyle({ fillOpacity: 0.6, weight: this === activeLayer ? 4 : 1, color: this === activeLayer ? '#ffffff' : 'rgba(255,255,255,0.1)' }); });
                     layer.on('click', function () {
                         currentOpenPopupKec = name;
-                        if (currentMode === 'realisasi') {
+                        if (currentMode === 'sirup' || currentMode === 'realisasi') {
                             showKecamatanVendors(name);
                         } else if (currentMode === 'audit' && activeQA) {
                             showKecamatanQADetail(name);
@@ -2220,6 +2220,7 @@ function resetRealisasiSidebar() {
     }
     restoreSearchBar();
 }
+window.resetRealisasiSidebar = resetRealisasiSidebar;
 
 function showVendorPackets(vName, kecName) {
     currentVendorName = vName;
@@ -2269,50 +2270,49 @@ function showVendorPackets(vName, kecName) {
     html += '</div>';
     detailView.innerHTML = html;
 }
+window.showVendorPackets = showVendorPackets;
 
 function showKecamatanVendors(kecName) {
     currentKecName = kecName;
-    currentVendorName = null; // Back to vendor list
+    currentVendorName = null;
     openSidebar();
     if (typeof setInsightChromeVisible === 'function') setInsightChromeVisible(false);
     const detailView = document.getElementById('realisasi-detail-view');
+    if (!detailView) return;
     detailView.style.display = 'block';
 
-    console.log("🔍 Sidebar Vendor List Triggered for:", kecName, "Year:", activeYear);
-    console.log("📊 Total Audits available in memory:", allAudits.length);
-
-    // Filter and group by vendor for active year
     const projects = allAudits.filter(p => {
         const pKec = (p.kecamatan || '').trim().toLowerCase();
         const searchKec = (kecName || '').trim().toLowerCase();
-        return pKec === searchKec && p.tahun == activeYear;
+        return pKec === searchKec && String(p.tahun) === String(activeYear);
     });
     const vendors = {};
     projects.forEach(p => {
         const vName = p.vendor || 'Swakelola/Tidak Terdata';
         if (!vendors[vName]) vendors[vName] = { count: 0, total: 0 };
         vendors[vName].count++;
-        vendors[vName].total += parseFloat(p.pagu || 0);
+        vendors[vName].total += parseFloat(p.pagu || p.total_nilai || 0);
     });
-    console.log("🏗️ Grouped Vendors Found:", Object.keys(vendors).length);
 
-    // Sort by total value
     const sortedVendors = Object.keys(vendors).sort((a, b) => vendors[b].total - vendors[a].total);
+    const safeKecAttr = String(kecName || '').replace(/'/g, "\\'");
 
     let html = `
-            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1.5rem;">
-                <h3 style="margin:0; font-size:1rem;">🏢 Vendor: ${kecName}</h3>
-                <button onclick="resetRealisasiSidebar()" style="background:rgba(255,255,255,0.05); border:none; color:white; padding:5px 10px; border-radius:5px; cursor:pointer; font-size:0.7rem;">← Kembali</button>
+            <div style="display:flex; justify-content:space-between; align-items:center; margin-bottom:1rem;">
+                <h3 style="margin:0; font-size:1rem;">🏢 Vendor · ${escapeHTML(kecName)}</h3>
+                <button type="button" onclick="resetRealisasiSidebar()" style="background:rgba(255,255,255,0.06); border:none; color:#94a3b8; padding:6px 10px; border-radius:8px; cursor:pointer; font-size:0.7rem;">← Kembali</button>
             </div>
-            <div style="font-size:0.75rem; opacity:0.6; margin-bottom:10px;">Menampilkan penyedia tertinggi di T.A ${activeYear}</div>
+            <div style="font-size:0.75rem; opacity:0.6; margin-bottom:12px;">${projects.length} paket · T.A ${activeYear}</div>
             <div class="vendor-list" style="display:flex; flex-direction:column; gap:8px;">
         `;
 
-    sortedVendors.forEach(v => {
-        const safeV = v.replace(/'/g, "\\'");
-        const safeKec = kecName.replace(/'/g, "\\'");
-        html += `
-                <div class="vendor-card" onclick="showVendorPackets('${safeV}', '${safeKec}')" style="background:rgba(255,255,255,0.03); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.05); cursor:pointer;">
+    if (sortedVendors.length === 0) {
+        html += `<p style="text-align:center; opacity:0.55; font-size:0.85rem; padding:1rem 0;">Tidak ada data vendor untuk kecamatan ini pada tahun ${activeYear}.</p>`;
+    } else {
+        sortedVendors.forEach(v => {
+            const safeV = v.replace(/'/g, "\\'");
+            html += `
+                <div class="vendor-card" onclick="showVendorPackets('${safeV}', '${safeKecAttr}')" style="background:rgba(255,255,255,0.03); padding:12px; border-radius:10px; border:1px solid rgba(255,255,255,0.05); cursor:pointer;">
                     <div style="font-weight:600; color:var(--accent); font-size:0.85rem;">${escapeHTML(v)}</div>
                     <div style="display:flex; justify-content:space-between; margin-top:5px; font-size:0.8rem;">
                         <span style="opacity:0.6;">${vendors[v].count} Paket</span>
@@ -2320,14 +2320,15 @@ function showKecamatanVendors(kecName) {
                     </div>
                 </div>
             `;
-    });
+        });
+    }
 
     html += '</div>';
     detailView.innerHTML = html;
-
-    // Spider Mapping for the kecamatan if it's 2026 (or all data has lat/lng)
+    detailView.scrollTop = 0;
     renderVendorSpiderLayer(projects);
 }
+window.showKecamatanVendors = showKecamatanVendors;
 
 function renderVendorSpiderLayer(projects) {
     if (vendorSpiderLayer) map.removeLayer(vendorSpiderLayer);
