@@ -13,6 +13,7 @@ class QuestionInterpreter
     private const ALLOWED_INTENTS = [
         'search_packages',
         'search_kecamatan',
+        'theme_total_kecamatan',
         'search_top_package',
         'vendor_by_count',
         'vendor_by_value',
@@ -52,6 +53,7 @@ Output HANYA satu objek JSON valid (tanpa markdown, tanpa teks lain):
 intents (pilih yang relevan, bisa lebih dari satu):
 - search_packages: cek ada/tidak ada paket, cari tema (makanan tamu, jalan, dll) tanpa filter kecamatan
 - search_kecamatan: tema + satu kecamatan (isi kecamatan + keywords). Contoh: "makanan rapat di Bantarujeg 2026" → search_kecamatan, JANGAN search_packages global
+- theme_total_kecamatan: total nilai paket tema di satu kecamatan (lanjutan "berapa total nilainya?" setelah tanya paket di kecamatan)
 - search_top_package: paket NILAI TERBESAR di dalam tema/kata kunci (bukan top seluruh database). Contoh: "makanan tamu paling besar 2026" → search_top_package + keywords, JANGAN top_packages
 - vendor_by_count: vendor paling banyak paket/proyek
 - vendor_by_value: vendor nilai realisasi terbesar

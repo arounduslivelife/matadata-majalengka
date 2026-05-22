@@ -390,6 +390,31 @@ class RealisasiQueryService
         return $out;
     }
 
+    /** @return array{cnt:int,total:float,keyword:string} */
+    public function sumSearchPackagesInKecamatan(int $year, string $keyword, string $kecamatan): array
+    {
+        $keyword = trim($keyword);
+        $variants = expandRealisasiThemeKeywords([$keyword]);
+        $best = ['cnt' => 0, 'total' => 0.0, 'keyword' => $keyword];
+
+        foreach ($variants as $kw) {
+            $cnt = $this->countSearchPackagesInKecamatan($year, $kw, $kecamatan);
+            if ($cnt === 0) {
+                continue;
+            }
+            $rows = $this->searchPackagesFlexibleInKecamatan($year, $kw, $kecamatan, min(500, $cnt));
+            $total = 0.0;
+            foreach ($rows as $row) {
+                $total += (float) preg_replace('/[^0-9.-]/', '', (string) ($row['total_nilai'] ?? '0'));
+            }
+            if ($cnt > $best['cnt'] || ($cnt === $best['cnt'] && $total > $best['total'])) {
+                $best = ['cnt' => $cnt, 'total' => $total, 'keyword' => $kw];
+            }
+        }
+
+        return $best;
+    }
+
     /** @return list<string> */
     public function listKecamatanNames(): array
     {

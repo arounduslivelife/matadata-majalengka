@@ -9,6 +9,9 @@ class RealisasiDirectAnswer
 {
     public static function tryAnswer(string $dbContext): ?string
     {
+        if (str_contains($dbContext, '[Total nilai tema + kecamatan')) {
+            return self::fromThemeTotalKecamatan($dbContext);
+        }
         if (str_contains($dbContext, '[Pencarian tema + kecamatan')) {
             return self::fromSearchKecamatan($dbContext);
         }
@@ -16,6 +19,34 @@ class RealisasiDirectAnswer
             return self::fromSearchTop($dbContext);
         }
         return null;
+    }
+
+    private static function fromThemeTotalKecamatan(string $ctx): ?string
+    {
+        $kec = self::extractKecamatanFromContext($ctx);
+        if ($kec === null) {
+            return null;
+        }
+        if (!preg_match_all(
+            '/TA (\d{4}), tema "([^"]+)", kecamatan [^:]+: (\d+) paket, total nilai (Rp[^\n]+)/u',
+            $ctx,
+            $rows,
+            PREG_SET_ORDER
+        )) {
+            return null;
+        }
+        $parts = [];
+        foreach ($rows as $row) {
+            if ((int) $row[3] > 0) {
+                $parts[] = 'TA ' . $row[1] . ' (' . $row[2] . '): ' . $row[3] . ' paket, total ' . trim($row[4]);
+            }
+        }
+        if (count($parts) === 0) {
+            return "Tidak ada paket yang cocok di Kecamatan {$kec} untuk tema dari percakapan sebelumnya.";
+        }
+        return 'Total nilai paket dari pertanyaan sebelumnya di Kecamatan ' . $kec . ":\n"
+            . implode("\n", $parts)
+            . "\n\n(Data dari database realisasi; bukan total seluruh kabupaten.)";
     }
 
     private static function fromSearchKecamatan(string $ctx): ?string

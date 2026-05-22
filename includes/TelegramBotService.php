@@ -15,6 +15,7 @@ require_once __DIR__ . '/MatadataBotProfile.php';
 require_once __DIR__ . '/RealisasiFallbackFormatter.php';
 require_once __DIR__ . '/TelegramChatMemory.php';
 require_once __DIR__ . '/TelegramActivityLog.php';
+require_once __DIR__ . '/TelegramSessionContext.php';
 require_once __DIR__ . '/QuestionInterpreter.php';
 
 
@@ -257,17 +258,42 @@ class TelegramBotService
 
         $isMeta = MatadataBotProfile::isMetaQuestion($question);
 
+        $memory = null;
+        $history = [];
+        if ($chatId !== null && $chatId !== '') {
+            $memory = new TelegramChatMemory();
+            $history = $memory->getMessages($chatId);
+        }
+
+        $session = null;
+        if (!$isMeta && $memory !== null && TelegramSessionContext::isFollowUp($question)) {
+            $session = TelegramSessionContext::deriveFromHistory($history);
+        }
+
         $interpretation = null;
         $interpretationBlock = '';
+        $interpretInput = $question;
+        if ($session !== null) {
+            $interpretInput = TelegramSessionContext::enrichQuestionForInterpreter($question, $session);
+        }
 
         if (!$isMeta && !empty($this->tg['use_interpreter'])) {
             try {
                 $interpreter = new QuestionInterpreter();
-                $interpretation = $interpreter->interpret($question);
+                $interpretation = $interpreter->interpret($interpretInput);
+                if ($session !== null) {
+                    $interpretation = TelegramSessionContext::mergeIntoInterpretation(
+                        $interpretation,
+                        $session,
+                        $question
+                    );
+                }
                 $interpretationBlock = $interpreter->formatForPrompt($interpretation);
             } catch (Throwable $e) {
                 error_log('QuestionInterpreter: ' . $e->getMessage());
             }
+        } elseif ($session !== null) {
+            $interpretation = TelegramSessionContext::mergeIntoInterpretation(null, $session, $question);
         }
 
         $router = new RealisasiQuestionRouter($this->pdo);
@@ -277,8 +303,8 @@ class TelegramBotService
             require_once __DIR__ . '/RealisasiDirectAnswer.php';
             $direct = RealisasiDirectAnswer::tryAnswer($dbContext);
             if ($direct !== null) {
-                if ($chatId !== null && $chatId !== '') {
-                    (new TelegramChatMemory())->append($chatId, $question, $direct);
+                if ($memory !== null) {
+                    $memory->append($chatId, $question, $direct);
                 }
                 return $direct;
             }
@@ -306,22 +332,12 @@ class TelegramBotService
 
 
 
-        $history = [];
-
-        $memory = null;
-
-        if ($chatId !== null && $chatId !== '') {
-
-            $memory = new TelegramChatMemory();
-
-            $history = $memory->getMessages($chatId);
-
-            if (count($history) > 0) {
-
-                $user .= "\n\n(Riwayat obrolan di chat ini disertakan di pesan sebelumnya — gunakan hanya jika relevan dengan pertanyaan terbaru.)";
-
-            }
-
+        if ($session !== null) {
+            $user .= "\n\n(Konteks sesi: pertanyaan ini melanjutkan obrolan tentang \""
+                . mb_substr((string) ($session['source_question'] ?? ''), 0, 150)
+                . "\" — jawab sesuai DATA DATABASE untuk lanjutan ini, bukan total kabupaten umum.)";
+        } elseif (count($history) > 0) {
+            $user .= "\n\n(Riwayat obrolan di chat ini disertakan di pesan sebelumnya — gunakan hanya jika relevan dengan pertanyaan terbaru.)";
         }
 
 
@@ -390,6 +406,7 @@ ATURAN JAWABAN (WAJIB):
 
 - Jika ada blok [Pencarian] dengan jumlah paket > 0, jawab ya/ada dan sebut contoh paket; jika 0 paket cocok, jawab tidak ada.
 - Jika riwayat obrolan bertentangan dengan DATA DATABASE, percayai DATA DATABASE.
+- Pertanyaan lanjutan (berapa total nilainya, vendornya, dll.): gunakan konteks sesi + blok query yang sesuai, jangan total seluruh kabupaten kecuali ditanya.
 
 - Memori obrolan: maks 3 tanya-jawab sebelumnya **hanya untuk chat Telegram yang sama**; jangan campur dengan user lain.
 {$interpRules}
@@ -416,6 +433,7 @@ PROMPT;
 - Untuk pertanyaan "adakah ada...": jawab ya/tidak di awal, lalu 2–3 contoh paket jika ada; sebut jumlah paket jika tercantum.
 - Jika ada blok [Paket nilai TERBESAR dalam tema/kata kunci], itu jawaban utama — jangan pakai top paket seluruh database.
 - Jika ada blok [Pencarian tema + kecamatan]: jawab ya/tidak hanya untuk paket di kecamatan tersebut; jangan sebut jumlah paket nasional/kabupaten dari pencarian lain.
+- Jika ada blok [Total nilai tema + kecamatan]: itu jawaban untuk "berapa total nilainya" — sebut jumlah paket dan total Rupiah dari blok itu saja.
 TXT;
     }
 

@@ -48,12 +48,18 @@ class RealisasiQuestionRouter
                 ['search_kecamatan']
             )));
         }
+        if (in_array('theme_total_kecamatan', $intents, true)) {
+            $intents = ['theme_total_kecamatan'];
+        }
         $lines = [
             '=== HASIL QUERY DATABASE (realisasi belanja — jawab HANYA dari data ini) ===',
             'Pertanyaan asli: ' . $question,
         ];
         if ($interpretation !== null && !empty($interpretation['ringkasan_maksud'])) {
             $lines[] = 'Makna pertanyaan (terjemahan sistem): ' . $interpretation['ringkasan_maksud'];
+        }
+        if (!empty($interpretation['_session'])) {
+            $lines[] = 'Catatan: pertanyaan lanjutan — memakai tema/lokasi/tahun dari percakapan sebelumnya.';
         }
         $lines[] = 'Tahun di-query: ' . implode(', ', $years);
         $lines[] = '';
@@ -237,6 +243,7 @@ class RealisasiQuestionRouter
             'search_text', 'search_packages' => $this->blockSearch($question, $years),
             'search_top_package' => $this->blockSearchTopPackage($question, $years),
             'search_kecamatan' => $this->blockSearchKecamatan($question, $years),
+            'theme_total_kecamatan' => $this->blockThemeTotalKecamatan($question, $years),
             'kecamatan_detail' => $this->blockKecamatanDetail($question, $years),
             'vendor_detail' => $this->blockVendorDetail($question, $years),
             'general_realisasi' => $this->blockGeneral($years),
@@ -383,6 +390,37 @@ class RealisasiQuestionRouter
     private function blockSearch(string $question, array $years): string
     {
         return $this->blockSearchWithKeywords($this->resolveSearchKeywords($question), $years);
+    }
+
+    /** @param int[] $years */
+    private function blockThemeTotalKecamatan(string $question, array $years): string
+    {
+        $kec = $this->resolveKecamatanName($question);
+        $keywords = $this->resolveSearchKeywords($question);
+        if ($kec === null || count($keywords) === 0) {
+            return '';
+        }
+
+        $lines = [
+            '[Total nilai tema + kecamatan — jawab HANYA angka dari blok ini, bukan total kabupaten]',
+            "Kecamatan: {$kec}",
+        ];
+        foreach ($years as $year) {
+            $best = ['cnt' => 0, 'total' => 0.0, 'keyword' => ''];
+            foreach ($keywords as $kw) {
+                $row = $this->db->sumSearchPackagesInKecamatan($year, $kw, $kec);
+                if ($row['cnt'] > $best['cnt'] || ($row['cnt'] === $best['cnt'] && $row['total'] > $best['total'])) {
+                    $best = $row;
+                }
+            }
+            if ($best['cnt'] === 0) {
+                $lines[] = "TA {$year}: tidak ada paket cocok untuk tema di kecamatan ini.";
+                continue;
+            }
+            $lines[] = "TA {$year}, tema \"{$best['keyword']}\", kecamatan {$kec}: "
+                . $best['cnt'] . ' paket, total nilai ' . formatRupiah($best['total']);
+        }
+        return implode("\n", $lines);
     }
 
     /** @param int[] $years */
