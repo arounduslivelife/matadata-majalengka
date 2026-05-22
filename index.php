@@ -180,6 +180,40 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
 
     <div id="map" style="height: 100vh !important; width: 100vw !important; background: #020617; position: absolute; inset: 0; z-index: 1;"></div>
 
+    <div id="gpsOverlay" class="gps-blur-overlay<?= (!empty($user['gps_granted']) || !empty($_SESSION['gps_limited_ack'])) ? ' hidden' : '' ?>" aria-modal="true" role="dialog" aria-labelledby="gpsWelcomeTitle">
+        <div class="gps-prompt">
+            <div style="font-size:2.5rem; margin-bottom:0.5rem;">📍</div>
+            <h2 id="gpsWelcomeTitle">Verifikasi lokasi pengunjung</h2>
+            <p>Matadata mencatat lokasi akses (dengan izin Anda) untuk jejak audit transparansi dashboard publik, sesuai kebijakan privasi.</p>
+            <ul class="gps-benefits">
+                <li>Akses penuh ke <strong>semua layer</strong> peta</li>
+                <li>Tanpa izin: hanya layer <strong>Realisasi</strong></li>
+            </ul>
+            <button type="button" class="gps-btn" onclick="requestGPS()">Izinkan lokasi</button>
+            <button type="button" class="gps-btn-secondary" onclick="continueWithoutGps()">Lanjut tanpa GPS — Realisasi saja</button>
+        </div>
+    </div>
+
+    <div id="gpsLockSheet" class="gps-lock-sheet" hidden aria-modal="true" role="dialog">
+        <div class="gps-lock-sheet-backdrop" onclick="closeGpsLockSheet()"></div>
+        <div class="gps-lock-sheet-panel">
+            <div class="gps-lock-icon">🔒</div>
+            <h3 id="gpsLockTitle">Layer terkunci</h3>
+            <p id="gpsLockDesc">Aktifkan lokasi untuk membuka layer ini.</p>
+            <button type="button" class="gps-btn" onclick="requestGPSFromLock()">Izinkan lokasi</button>
+            <button type="button" class="gps-btn-secondary" onclick="closeGpsLockSheet()">Tetap di Realisasi</button>
+        </div>
+    </div>
+
+    <div id="gpsLimitedBanner" class="gps-limited-banner" hidden>
+        <span>Mode terbatas: hanya <strong>Realisasi</strong>. Layer lain memerlukan izin lokasi.</span>
+        <button type="button" onclick="requestGPS()">Aktifkan</button>
+    </div>
+
+    <button type="button" id="gpsFloatBtn" class="gps-float-btn" onclick="requestGPS()" hidden aria-label="Aktifkan lokasi">
+        <span>📍</span> Aktifkan lokasi
+    </button>
+
     <!-- Desktop Search (Always visible, styled for mobile via CSS) -->
     <div class="search-container">
         <div class="search-wrapper">
@@ -200,14 +234,6 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
                 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
                     <b id="p-pagu" style="font-size: 1.4rem; color: var(--accent);">Rp 0</b>
                 </div>
-                <div style="background: rgba(59,130,246,0.1); padding: 12px; border-radius: 10px; border-left: 3px solid var(--accent); margin-top: 10px;">
-                    <b style="display: block; font-size: 0.75rem; color: var(--accent); margin-bottom: 4px;">💡 PANDUAN CEK DETAIL:</b>
-                    <p style="font-size: 0.75rem; opacity: 0.8; margin: 0; line-height: 1.4;">
-                        1. Klik tombol <b>Lihat Detil</b> di bawah untuk membuka sumber data.<br>
-                        2. Salin <b>ID PAKET</b> (<span id="p-sirup-id-copy" style="font-weight:bold; color:white;">000000</span>).<br>
-                        3. Masukkan (Paste) ID tersebut ke kolom <b>"Pencarian Kode / ID Paket"</b> di web Inaproc.
-                    </p>
-                </div>
             </div>
 
             <div style="display: flex; gap: 10px; flex-direction: column;">
@@ -220,9 +246,11 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
                 <div style="font-size: 0.8rem; opacity: 0.7;">
                     <b>ID PAKET:</b> <span id="p-sirup-id">000000</span>
                 </div>
-                <a id="p-sirup-link" href="https://data.inaproc.id/realisasi?tahun=2025&jenis_klpd=4&instansi=D100" target="_blank" style="background: var(--accent); color: white; text-align: center; padding: 14px; border-radius: 10px; text-decoration: none; font-weight: 600; margin-top: 10px;">
-                    🔍 Lihat Detil di Inaproc ↗
-                </a>
+                <div style="margin-top: 10px; padding: 12px 14px; border-radius: 10px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); font-size: 0.8rem; line-height: 1.55; opacity: 0.9;">
+                    Data ini diolah oleh <b>agungds</b>. Silakan hubungi
+                    <a href="https://wa.me/6285320338575" target="_blank" rel="noopener" style="color: #25d366; font-weight: 600; text-decoration: none;">WA: 085320338575</a>
+                    untuk informasi lebih lanjut terkait sumber datanya.
+                </div>
             </div>
         </div>
     </div>
@@ -266,12 +294,12 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
 
     <!-- Layer Popover (Mobile Above Dock) -->
     <div class="layer-popover" id="layerPopover">
-        <div class="layer-item active" onclick="selectModeFromDock('sirup')">Realisasi</div>
-        <div class="layer-item" onclick="selectModeFromDock('danadesa')">Dana Desa</div>
-        <div class="layer-item" onclick="selectModeFromDock('kemiskinan')">Peta Kemiskinan</div>
-        <div class="layer-item" onclick="selectModeFromDock('infrastruktur')">Infrastruktur</div>
+        <div class="layer-item active" data-mode="sirup" onclick="selectModeFromDock('sirup')">Realisasi</div>
+        <div class="layer-item" data-mode="danadesa" onclick="selectModeFromDock('danadesa')">Dana Desa</div>
+        <div class="layer-item" data-mode="kemiskinan" onclick="selectModeFromDock('kemiskinan')">Peta Kemiskinan</div>
+        <div class="layer-item" data-mode="infrastruktur" onclick="selectModeFromDock('infrastruktur')">Infrastruktur</div>
 
-        <div class="layer-item" onclick="selectModeFromDock('audit')">Audit Intelligence 🤖</div>
+        <div class="layer-item" data-mode="audit" onclick="selectModeFromDock('audit')">Audit Intelligence 🤖</div>
     </div>
 
     <div class="control-dock" id="globalDock">
@@ -293,7 +321,7 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
             <!-- Icon Dynamic -->
         </div>
         <?php if (isAdmin()): ?>
-            <a href="visitors.php" class="dock-item" title="Admin Stats" style="color: #a78bfa;">
+            <a href="admin.php" class="dock-item" title="Panel Admin" style="color: #a78bfa;">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                     <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
                     <circle cx="12" cy="12" r="3"></circle>
@@ -355,10 +383,12 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
     pad_kecamatan: <?= $pad_kecamatan_json ?: '{}' ?>,
     pad_global: <?= $pad_global_json ?: '{}' ?>,
     global_trend_dd: "<?= $global_trend ?>",
-    gps_granted: true
+    gps_granted: <?= !empty($user['gps_granted']) ? 'true' : 'false' ?>,
+    gps_limited_ack: <?= !empty($_SESSION['gps_limited_ack']) ? 'true' : 'false' ?>
 };
 console.log("📦 APP_DATA initialized:", window.APP_DATA);
     </script>
+    <script src="assets/js/insights.js?v=<?= time() ?>"></script>
     <script src="assets/js/main.js?v=<?= time() ?>"></script>
     <!-- FINAL MODALS (HARDCODED FOR STABILITY) -->
     <div id="logicModal" class="modal" onclick="if(event.target == this) this.style.display='none'" style="display:none; position:fixed; inset:0; z-index: 999999; background:rgba(2,6,23,0.85); backdrop-filter:blur(15px); align-items:center; justify-content:center;">
@@ -408,7 +438,7 @@ console.log("📦 APP_DATA initialized:", window.APP_DATA);
     </div>
 
     <?php if (isAdmin()): ?>
-        <a href="visitors.php" class="admin-badge-top" style="position:fixed; top:15px; left:50%; transform:translateX(-50%); z-index:9000; padding:6px 16px; background:rgba(139,92,246,0.2); border:1px solid rgba(139,92,246,0.3); border-radius:10px; color:#a78bfa; text-decoration:none; font-family:'Outfit'; font-size:0.75rem; font-weight:600; backdrop-filter:blur(8px);">👁️ Admin: Visitor Log</a>
+        <a href="admin.php" class="admin-badge-top" style="position:fixed; top:15px; left:50%; transform:translateX(-50%); z-index:9000; padding:6px 16px; background:rgba(139,92,246,0.2); border:1px solid rgba(139,92,246,0.3); border-radius:10px; color:#a78bfa; text-decoration:none; font-family:'Outfit'; font-size:0.75rem; font-weight:600; backdrop-filter:blur(8px);">⚙️ Panel Admin</a>
     <?php endif; ?>
 
 </body>

@@ -6,5 +6,25 @@
   ],
   "AI_PROVIDER": "groq",
   "TARGET_REGION": "KAB. MAJALENGKA",
-  "TARGET_YEAR": 2025
+  "TARGET_YEAR": 2025,
+  "GOOGLE_CLIENT_ID": "",
+  "GOOGLE_CLIENT_SECRET": "",
+  "GOOGLE_REDIRECT_URI": "http://localhost/matadata/callback.php",
+  "ADMIN_EMAILS": ["admin@example.com"],
+  "db": {
+    "host": "localhost",
+    "user": "matadata",
+    "pass": "matadata",
+    "name": "matadata"
+  },
+  "telegram": {
+    "enabled": false,
+    "bot_token": "",
+    "webhook_secret": "ganti-dengan-string-rahasia",
+    "allowed_chat_ids": [],
+    "model": "llama-3.3-70b-versatile",
+    "welcome_message": "Halo! Saya asisten Matadata Majalengka. Tanya data realisasi, dana desa, atau kemiskinan.",
+    "system_extra": "",
+    "max_tokens": 400
+  }
 }

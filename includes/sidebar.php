@@ -11,7 +11,7 @@
             <div class="uname"><?= is_array($user) ? htmlspecialchars($user['name'] ?? 'User') : htmlspecialchars($user) ?></div>
             <div class="uemail"><?= is_array($user) ? htmlspecialchars($user['email'] ?? '') : '' ?></div>
             <?php if(function_exists('isAdmin') && isAdmin()): ?>
-                <a href="visitors.php" style="display:inline-block; margin-top:4px; font-size:0.6rem; color:var(--accent); text-decoration:none; background:rgba(59,130,246,0.1); padding:2px 6px; border-radius:4px;">👁️ Admin Log</a>
+                <a href="admin.php" style="display:inline-block; margin-top:4px; font-size:0.6rem; color:var(--accent); text-decoration:none; background:rgba(59,130,246,0.1); padding:2px 6px; border-radius:4px;">⚙️ Panel Admin</a>
             <?php endif; ?>
         </div>
         <a href="?logout=1" title="Logout" style="font-size: 1.2rem; margin-left: 10px;">✕</a>
@@ -34,6 +34,15 @@
             <div class="year-btn" onclick="switchYear(2026)">2026</div>
         </div>
 
+                <div id="insight-chrome">
+            <div class="insight-tabs" id="insight-tabs" role="tablist" aria-label="Menu insight realisasi">
+                <button type="button" class="insight-tab active" data-tab="ringkasan" role="tab" aria-selected="true" onclick="switchInsightTab('ringkasan')">Ringkas</button>
+                <button type="button" class="insight-tab" data-tab="highlight" role="tab" aria-selected="false" onclick="switchInsightTab('highlight')">Highlight</button>
+                <button type="button" class="insight-tab" data-tab="vendor" role="tab" aria-selected="false" onclick="switchInsightTab('vendor')">Vendor</button>
+                <button type="button" class="insight-tab" data-tab="kec" role="tab" aria-selected="false" onclick="switchInsightTab('kec')">Kecamatan</button>
+            </div>
+
+            <div id="insight-panel-ringkasan" class="insight-panel active" role="tabpanel">
         <div id="realisasi-stats">
             <div class="stat-grid-mobile" style="grid-template-columns: 1fr; gap: 10px;">
                 <div class="stat-card">
@@ -59,10 +68,27 @@
                 </div>
             </div>
         </div>
+            </div>
 
+            <div id="insight-panel-highlight" class="insight-panel" role="tabpanel" hidden>
+                <p class="insight-summary-line" id="insight-summary-line"></p>
+                <div class="insight-highlight-grid" id="insight-highlight-grid"></div>
+            </div>
+
+            <div id="insight-panel-vendor" class="insight-panel" role="tabpanel" hidden>
+                <p class="insight-panel-heading" id="insight-vendor-heading">Top vendor</p>
+                <div class="insight-rank-list" id="insight-vendor-list"></div>
+            </div>
+
+            <div id="insight-panel-kec" class="insight-panel" role="tabpanel" hidden>
+                <p class="insight-panel-heading" id="insight-kec-heading">Ranking kecamatan</p>
+                <div class="insight-rank-list" id="insight-kec-list"></div>
+                <button type="button" class="insight-expand-btn" id="insight-kec-expand" style="display:none;" onclick="toggleKecInsightExpand()">Tampilkan semua kecamatan</button>
+            </div>
         <div id="realisasi-detail-view" style="display: none;">
             <!-- Kecamatan Detail View (Spider-style) -->
         </div>
+    </div>
     </div>
 
     <div id="sidebar-danadesa" style="display: none;">

@@ -1,6 +1,11 @@
 # 🧠 MEMORI PROJECT: Matadata Majalengka Dashboard
-**Terakhir Diperbarui:** 2026-04-28 15:05 (WIB)
-**Status Utama:** Fase Injeksi Data Infrastruktur (Sekolah)
+**Terakhir Diperbarui:** 2026-05-19
+**Status Utama:** Dashboard Realisasi (MySQL) + Insight sidebar; infrastruktur sekolah via GeoJSON
+
+### Arsitektur data (ringkas)
+- **Produksi dashboard**: MySQL (`db.php`, tabel `realizations`). Lihat `SYSTEM_MAP.md`.
+- **Legacy**: `database.sqlite` (landing + skrip import lama), `audit_trail.sqlite` (log kunjungan).
+- **Dokumentasi lama** yang menyebut SQLite sebagai "single source of truth" sudah diperbarui di `SYSTEM_MAP.md`.
 
 ---
 

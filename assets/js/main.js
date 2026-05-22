@@ -76,6 +76,7 @@ function closeSidebar() {
         overlay.style.display = 'none';
     }
     if (pullInd) pullInd.style.display = 'block';
+    restoreSearchBar();
     // Unlock map saat sidebar tertutup
     if (typeof map !== 'undefined' && map) {
         map.dragging.enable();
@@ -177,13 +178,18 @@ function updateModalContent(mode) {
 
 // --- BREADCRUMB & ANOMALY RADAR ---
 
-window.updateBreadcrumb = function (kec, packageId) {
-    // Hide/Show Search based on depth
+function restoreSearchBar() {
     const search = document.querySelector('.search-container');
-    if (search) {
-        search.style.transform = packageId ? 'translateY(-100px)' : 'translateY(0)';
-        search.style.opacity = packageId ? '0' : '1';
-    }
+    if (!search) return;
+    search.style.transform = 'translateY(0)';
+    search.style.opacity = '1';
+    search.style.pointerEvents = 'auto';
+    search.style.visibility = 'visible';
+}
+
+window.updateBreadcrumb = function (kec, packageId) {
+    // Kolom pencarian tetap terlihat agar mudah ditemukan setelah kembali dari detail paket
+    restoreSearchBar();
 };
 
 window.resetMapView = function () {
@@ -282,6 +288,7 @@ async function fetchAudits() {
 
         renderRiskRanking();
         renderAnomalyRadar();
+        if (typeof renderAllInsightPanels === 'function') renderAllInsightPanels();
         updateGlobalAuditFindings();
         if (currentMode === 'audit') loadMapData();
 
@@ -367,7 +374,11 @@ function switchYear(year) {
                 isRefreshingMap = false;
             }
         });
-        renderUnifiedPacketList();
+        if (typeof renderAllInsightPanels === 'function') {
+            renderAllInsightPanels();
+        } else {
+            renderUnifiedPacketList();
+        }
         const yearColors = {
             2022: '#10b981', // Emerald
             2023: '#f59e0b', // Amber
@@ -414,20 +425,23 @@ function renderUnifiedPacketList() {
     const list = document.getElementById('unified-packet-list');
     if (!list) return;
 
-    const matches = allAudits.filter(p => p.tahun == activeYear).sort((a, b) => b.pagu - a.pagu).slice(0, 10);
+    const limit = (typeof isNarrowScreen === 'function' && isNarrowScreen()) ? 5 : 10;
+    const matches = allAudits.filter(p => p.tahun == activeYear).sort((a, b) => b.pagu - a.pagu).slice(0, limit);
 
     let html = '';
     matches.forEach(p => {
         const riskLabel = 'TERCATAT';
         const riskColor = '#334155';
+        const safeKec = typeof escAttr === 'function' ? escAttr(p.kecamatan) : (p.kecamatan || '').replace(/'/g, "\\'");
+        const safeId = String(p.id).replace(/'/g, "\\'");
         html += `
-                <div class="packet-item" onclick="selectPackage('${p.id}', '${p.kecamatan}')">
+                <div class="packet-item" onclick="selectPackage('${safeId}', '${safeKec}')">
                     <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
                         <span class="tag" style="background:${riskColor}; color: rgba(255,255,255,0.6);">${riskLabel}</span>
                         <b style="color: var(--accent); font-family: 'Outfit';">${formatPaguJS(p.pagu)}</b>
                     </div>
-                    <div style="font-weight: 600; color: rgba(255,255,255,0.9);">${p.nama}</div>
-                    <div style="font-size: 0.7rem; opacity: 0.4; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px;">${p.satker}</div>
+                    <div style="font-weight: 600; color: rgba(255,255,255,0.9);">${escapeHTML(p.nama)}</div>
+                    <div style="font-size: 0.7rem; opacity: 0.4; margin-top: 4px; text-transform: uppercase; letter-spacing: 0.5px;">${escapeHTML(p.satker || '')}</div>
                 </div>
             `;
     });
@@ -531,18 +545,185 @@ function updateLegend(mode) {
     legend.innerHTML = html + '<div class="close-legend" onclick="toggleLegend()">&times;</div>';
 }
 
+// --- GPS access: tanpa izin hanya layer Realisasi (sirup) ---
+const GPS_UNLOCKED_MODES = ['sirup'];
+const GPS_MODE_LABELS = {
+    sirup: 'Realisasi',
+    danadesa: 'Dana Desa',
+    kemiskinan: 'Peta Kemiskinan',
+    infrastruktur: 'Infrastruktur',
+    pad: 'Analisis PAD',
+    audit: 'Audit Intelligence'
+};
+
+window.gpsAccessGranted = !!(window.APP_DATA && window.APP_DATA.gps_granted);
+
+function isGpsLimited() {
+    return !window.gpsAccessGranted;
+}
+
+function isModeBlockedWithoutGps(mode) {
+    return isGpsLimited() && !GPS_UNLOCKED_MODES.includes(mode);
+}
+
+function postVisitLog(payload) {
+    return fetch('log_visit.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload || {})
+    }).then(r => r.json()).catch(() => ({}));
+}
+
+function setGpsGrantedState(granted) {
+    window.gpsAccessGranted = !!granted;
+    if (window.APP_DATA) window.APP_DATA.gps_granted = !!granted;
+    updateGpsChrome();
+}
+
+function updateGpsChrome() {
+    const limited = isGpsLimited();
+    const overlay = document.getElementById('gpsOverlay');
+    const banner = document.getElementById('gpsLimitedBanner');
+    const floatBtn = document.getElementById('gpsFloatBtn');
+
+    if (overlay && window.gpsAccessGranted) {
+        overlay.classList.add('hidden');
+    }
+
+    if (banner) banner.hidden = !limited;
+    if (floatBtn) {
+        floatBtn.hidden = !limited;
+        floatBtn.style.display = limited ? 'flex' : 'none';
+    }
+
+    document.querySelectorAll('.layer-item[data-mode]').forEach(item => {
+        const mode = item.dataset.mode;
+        const locked = isModeBlockedWithoutGps(mode);
+        item.classList.toggle('gps-locked', locked);
+        item.classList.toggle('gps-unlocked-badge', mode === 'sirup' && limited);
+        item.setAttribute('aria-disabled', locked ? 'true' : 'false');
+    });
+}
+
+function showGpsWelcome() {
+    const overlay = document.getElementById('gpsOverlay');
+    if (overlay) overlay.classList.remove('hidden', 'minimized');
+}
+
+function hideGpsWelcome() {
+    const overlay = document.getElementById('gpsOverlay');
+    if (overlay) overlay.classList.add('hidden');
+}
+
+window.closeGpsLockSheet = function () {
+    const sheet = document.getElementById('gpsLockSheet');
+    if (sheet) sheet.hidden = true;
+};
+
+window.showGpsLockSheet = function (mode) {
+    const sheet = document.getElementById('gpsLockSheet');
+    const title = document.getElementById('gpsLockTitle');
+    const desc = document.getElementById('gpsLockDesc');
+    const label = GPS_MODE_LABELS[mode] || mode;
+    if (title) title.textContent = `${label} terkunci`;
+    if (desc) desc.textContent = `Untuk membuka layer ${label}, izinkan akses lokasi. Anda tetap dapat memakai layer Realisasi tanpa GPS.`;
+    if (sheet) sheet.hidden = false;
+};
+
+window.requestGPSFromLock = function () {
+    closeGpsLockSheet();
+    requestGPS();
+};
+
+window.requestGPS = function () {
+    if (!navigator.geolocation) {
+        alert('Browser Anda tidak mendukung layanan lokasi.');
+        return;
+    }
+
+    const btn = document.querySelector('#gpsOverlay .gps-btn, #gpsLockSheet .gps-btn');
+    if (btn) {
+        btn.disabled = true;
+        btn.textContent = 'Meminta izin...';
+    }
+
+    navigator.geolocation.getCurrentPosition(
+        (pos) => {
+            postVisitLog({
+                latitude: pos.coords.latitude,
+                longitude: pos.coords.longitude,
+                accuracy: pos.coords.accuracy
+            }).then((data) => {
+                if (data.gps) setGpsGrantedState(true);
+                hideGpsWelcome();
+                closeGpsLockSheet();
+            });
+            if (btn) {
+                btn.disabled = false;
+                btn.textContent = 'Izinkan lokasi';
+            }
+        },
+        () => {
+            if (btn) {
+                btn.disabled = false;
+                btn.textContent = 'Izinkan lokasi';
+            }
+            showGpsLockSheet(currentMode !== 'sirup' ? currentMode : 'danadesa');
+        },
+        { enableHighAccuracy: true, timeout: 12000, maximumAge: 0 }
+    );
+};
+
+window.continueWithoutGps = function () {
+    try { sessionStorage.setItem('matadata_gps_limited', '1'); } catch (e) { /* ignore */ }
+    postVisitLog({ limited_mode: true }).then(() => {
+        setGpsGrantedState(false);
+        hideGpsWelcome();
+        if (currentMode !== 'sirup') switchMode('sirup');
+        updateGpsChrome();
+    });
+};
+
+function initGpsAccessFlow() {
+    if (window.APP_DATA && window.APP_DATA.gps_granted) {
+        setGpsGrantedState(true);
+        logVisitorGPS();
+        return;
+    }
+
+    let dismissed = false;
+    try { dismissed = sessionStorage.getItem('matadata_gps_limited') === '1'; } catch (e) { /* ignore */ }
+    if (dismissed || (window.APP_DATA && window.APP_DATA.gps_limited_ack)) {
+        setGpsGrantedState(false);
+        hideGpsWelcome();
+        postVisitLog({ limited_mode: true });
+        updateGpsChrome();
+        return;
+    }
+
+    showGpsWelcome();
+    updateGpsChrome();
+}
+
 // Mode Switcher Logic
 window.switchMode = function (mode) {
+    if (mode === 'realisasi') {
+        switchYear(2026);
+        mode = 'sirup';
+    }
+
+    if (isModeBlockedWithoutGps(mode)) {
+        showGpsLockSheet(mode);
+        const popover = document.getElementById('layerPopover');
+        if (popover) popover.classList.remove('active');
+        if (currentMode !== 'sirup') switchMode('sirup');
+        return;
+    }
+
     // Force Transparency Briefing for Audit Mode
     if (mode === 'audit') {
         const disc = document.getElementById('auditDisclaimer');
         if (disc) disc.style.display = 'flex';
-    }
-
-    // Redirect legacy realisasi to unified
-    if (mode === 'realisasi') {
-        switchYear(2026);
-        mode = 'sirup';
     } else if (mode === 'pad') {
         const padYear = padKecStats[activeYear] ? activeYear : 2022;
         switchPadYear(padYear);
@@ -616,7 +797,11 @@ window.switchMode = function (mode) {
 
     loadMapData();
     if (mode === 'sirup') {
-        renderUnifiedPacketList();
+        if (typeof renderAllInsightPanels === 'function') {
+            renderAllInsightPanels();
+        } else {
+            renderUnifiedPacketList();
+        }
         renderAnomalyRadar();
     }
     if (mode === 'audit') {
@@ -673,7 +858,7 @@ function handleSearch() {
 
         matchPackages.forEach(p => {
             const yearColor = p.tahun == 2026 ? '#a78bfa' : '#3b82f6';
-            html += `<div class="result-item" onclick="selectPackageFromSearch('${p.id}', '${p.kecamatan}', ${p.tahun})">
+            html += `<div class="result-item" onclick="selectPackageFromSearch('${p.id}', '${(p.kecamatan || '').replace(/'/g, "\\'")}', ${p.tahun})">
                             <div class="type" style="display:flex; justify-content:space-between; align-items:center;">
                                 <span>PAKET</span>
                                 <span style="background:${yearColor}; color:white; padding:1px 6px; border-radius:4px; font-size:0.6rem; font-weight:800;">${p.tahun}</span>
@@ -818,26 +1003,137 @@ function toggleVendorModal() {
 }
 window.toggleVendorModal = toggleVendorModal;
 
-function selectPackage(id, kecamatanName) {
-    const p = allAudits.find(x => x.id === id);
-    if (p) {
-        document.getElementById('p-title').innerText = p.nama;
-        document.getElementById('p-satker').innerText = p.satker;
-        document.getElementById('p-pagu').innerText = formatPaguJS(p.pagu);
+/** ID dari onclick HTML selalu string; data API pakai number — harus dicocokkan longgar */
+function findPackageById(id) {
+    if (id === undefined || id === null || id === '') return null;
+    const key = String(id);
+    return allAudits.find(x => String(x.id) === key) || null;
+}
 
-        document.getElementById('p-sirup-id').innerText = p.id;
-        document.getElementById('p-sirup-id-copy').innerText = p.id;
-        document.getElementById('p-vendor').innerText = p.vendor || 'Bukan Penyedia (Swakelola/Lainnya)';
-        document.getElementById('p-status').innerText = p.status || 'Tercatat';
+let packageHighlightLayer = null;
 
-        const link = document.getElementById('p-sirup-link');
-        // Unified realization link contextually
-        link.href = `https://data.inaproc.id/realisasi?tahun=${p.tahun}&jenis_klpd=4&instansi=D100`;
+function fillPacketModal(p) {
+    if (!p) return;
+    document.getElementById('p-title').innerText = p.nama;
+    document.getElementById('p-satker').innerText = p.satker || '-';
+    document.getElementById('p-pagu').innerText = formatPaguJS(p.pagu);
+    document.getElementById('p-sirup-id').innerText = p.id;
+    document.getElementById('p-vendor').innerText = p.vendor || 'Bukan Penyedia (Swakelola/Lainnya)';
+    document.getElementById('p-status').innerText = p.status || 'Tercatat';
+}
 
-        togglePacketModal();
+function showPackageDetailSidebar(p) {
+    openSidebar();
+    const detailView = document.getElementById('realisasi-detail-view');
+    if (!detailView) return;
+
+    if (typeof setInsightChromeVisible === 'function') {
+        setInsightChromeVisible(false);
     }
-    selectDistrict(kecamatanName);
-    updateBreadcrumb(kecamatanName, id);
+    detailView.style.display = 'block';
+    currentKecName = p.kecamatan;
+    currentVendorName = null;
+
+    const status = (p.status || 'Tercatat').toUpperCase();
+    let statusColor = '#94a3b8';
+    if (status.includes('SELESAI') || status.includes('COMPLETED')) statusColor = '#22c55e';
+    else if (status.includes('PROCESS') || status.includes('PROSES') || status.includes('BERLANGSUNG')) statusColor = '#3b82f6';
+
+    const riskBlock = (p.risk && p.risk !== 'Low')
+        ? `<div style="margin-top:12px; padding:10px; border-radius:10px; background:rgba(239,68,68,0.08); border:1px solid rgba(239,68,68,0.2);">
+                <div style="font-size:0.65rem; color:#f87171; font-weight:700;">SKOR RISIKO: ${escapeHTML(p.risk)}</div>
+                ${p.note ? `<div style="font-size:0.75rem; opacity:0.8; margin-top:6px; line-height:1.4;">${escapeHTML(p.note)}</div>` : ''}
+           </div>`
+        : '';
+
+    const safeVendor = (p.vendor || '').replace(/'/g, "\\'");
+    const safeKec = (p.kecamatan || '').replace(/'/g, "\\'");
+
+    detailView.innerHTML = `
+        <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:10px; margin-bottom:1rem;">
+            <div style="min-width:0;">
+                <div style="font-size:0.65rem; opacity:0.5; text-transform:uppercase; letter-spacing:1px; color:var(--accent);">Detail Paket · ${p.tahun || activeYear}</div>
+                <h3 style="margin:6px 0 0; font-size:1rem; line-height:1.35; color:#fff;">${escapeHTML(p.nama)}</h3>
+            </div>
+            <button type="button" onclick="resetRealisasiSidebar()" style="flex-shrink:0; background:rgba(255,255,255,0.06); border:none; color:#94a3b8; padding:6px 10px; border-radius:8px; cursor:pointer; font-size:0.7rem;">← Ringkasan</button>
+        </div>
+
+        <div style="background:rgba(59,130,246,0.1); padding:14px; border-radius:12px; border-left:3px solid var(--accent); margin-bottom:14px;">
+            <div style="font-size:0.7rem; opacity:0.6;">Total Nilai</div>
+            <div style="font-size:1.5rem; font-weight:800; color:var(--accent);">${formatPaguJS(p.pagu)}</div>
+            <span style="display:inline-block; margin-top:8px; font-size:0.65rem; padding:3px 8px; background:rgba(255,255,255,0.06); border-radius:6px; color:${statusColor}; font-weight:600;">${escapeHTML(status)}</span>
+        </div>
+
+        <div style="display:flex; flex-direction:column; gap:10px; font-size:0.82rem;">
+            <div><span style="opacity:0.5;">Satuan kerja</span><br><b>${escapeHTML(p.satker || '-')}</b></div>
+            <div><span style="opacity:0.5;">Penyedia</span><br><b style="color:#fbbf24;">${escapeHTML(p.vendor || 'Swakelola / tidak terdata')}</b></div>
+            <div><span style="opacity:0.5;">Kecamatan</span><br><b>${escapeHTML(p.kecamatan || '-')}</b></div>
+            <div><span style="opacity:0.5;">ID Paket</span><br><code style="font-size:0.75rem; opacity:0.9;">${escapeHTML(String(p.id))}</code></div>
+        </div>
+
+        ${riskBlock}
+
+        <div style="display:flex; flex-direction:column; gap:8px; margin-top:18px;">
+            <div style="margin-top:0; padding:12px 14px; border-radius:10px; background:rgba(255,255,255,0.04); border:1px solid rgba(255,255,255,0.08); font-size:0.78rem; line-height:1.55; opacity:0.85;">
+                Data ini diolah oleh <b>agungds</b>. Silakan hubungi
+                <a href="https://wa.me/6285320338575" target="_blank" rel="noopener" style="color:#25d366; font-weight:600; text-decoration:none;">WA: 085320338575</a>
+                untuk informasi lebih lanjut terkait sumber datanya.
+            </div>
+            ${p.vendor ? `<button type="button" onclick="showVendorPackets('${safeVendor}', '${safeKec}')" style="padding:10px; background:rgba(139,92,246,0.15); border:1px solid rgba(139,92,246,0.3); color:#c4b5fd; border-radius:10px; cursor:pointer; font-weight:600; font-size:0.8rem;">🏗️ Paket lain dari vendor ini</button>` : ''}
+            <button type="button" onclick="togglePacketModal()" style="padding:10px; background:rgba(255,255,255,0.05); border:1px solid rgba(255,255,255,0.1); color:#94a3b8; border-radius:10px; cursor:pointer; font-size:0.8rem;">↗ Buka kartu layar penuh</button>
+        </div>
+    `;
+
+    detailView.scrollTop = 0;
+}
+
+function focusPackageOnMap(p, kecamatanName) {
+    const kec = kecamatanName || p.kecamatan;
+    if (packageHighlightLayer) {
+        map.removeLayer(packageHighlightLayer);
+        packageHighlightLayer = null;
+    }
+
+    const layer = districtLayers[kec];
+    if (layer) {
+        if (activeLayer) resetHighlight(activeLayer);
+        activeLayer = layer;
+        highlightLayer(layer);
+        if (!p.lat || !p.lng) {
+            map.fitBounds(layer.getBounds(), { padding: [50, 50] });
+        }
+    }
+
+    if (p.lat && p.lng) {
+        map.setView([p.lat, p.lng], 14);
+        packageHighlightLayer = L.circleMarker([p.lat, p.lng], {
+            radius: 9,
+            fillColor: '#a78bfa',
+            color: '#ffffff',
+            weight: 2,
+            fillOpacity: 0.95
+        }).addTo(map);
+        packageHighlightLayer.bindPopup(
+            `<b>${escapeHTML(p.nama)}</b><br><span style="color:#a78bfa">${formatPaguJS(p.pagu)}</span>`
+        ).openPopup();
+    }
+}
+
+function selectPackage(id, kecamatanName) {
+    const p = findPackageById(id);
+    const kec = kecamatanName || (p && p.kecamatan);
+
+    if (p) {
+        fillPacketModal(p);
+        showPackageDetailSidebar(p);
+        focusPackageOnMap(p, kec);
+    } else {
+        console.warn('[selectPackage] Paket tidak ditemukan, id=', id);
+        if (kec) selectDistrict(kec);
+    }
+
+    document.getElementById('searchResults')?.classList.remove('show');
+    updateBreadcrumb(kec, id);
 }
 
 function selectPackageFromSearch(id, kecamatanName, year) {
@@ -1907,15 +2203,31 @@ function renderRealisasiLayer() {
 }
 
 function resetRealisasiSidebar() {
-    document.getElementById('realisasi-stats').style.display = 'block';
     document.getElementById('realisasi-detail-view').style.display = 'none';
+    if (typeof setInsightChromeVisible === 'function') {
+        setInsightChromeVisible(true);
+    }
+    if (typeof switchInsightTab === 'function') {
+        switchInsightTab(activeInsightTab || 'ringkasan');
+    } else {
+        const statsEl = document.getElementById('realisasi-stats');
+        if (statsEl) statsEl.style.display = 'block';
+    }
     if (vendorSpiderLayer) map.removeLayer(vendorSpiderLayer);
+    if (packageHighlightLayer) {
+        map.removeLayer(packageHighlightLayer);
+        packageHighlightLayer = null;
+    }
+    restoreSearchBar();
 }
 
 function showVendorPackets(vName, kecName) {
     currentVendorName = vName;
     currentKecName = kecName;
+    openSidebar();
+    if (typeof setInsightChromeVisible === 'function') setInsightChromeVisible(false);
     const detailView = document.getElementById('realisasi-detail-view');
+    if (detailView) detailView.style.display = 'block';
     const projects = allAudits.filter(p => p.kecamatan === kecName && (p.vendor || 'Swakelola/Tidak Terdata') === vName && p.tahun == activeYear);
 
     // Escape vendor name for safety
@@ -1962,7 +2274,7 @@ function showKecamatanVendors(kecName) {
     currentKecName = kecName;
     currentVendorName = null; // Back to vendor list
     openSidebar();
-    document.getElementById('realisasi-stats').style.display = 'none';
+    if (typeof setInsightChromeVisible === 'function') setInsightChromeVisible(false);
     const detailView = document.getElementById('realisasi-detail-view');
     detailView.style.display = 'block';
 
@@ -2058,7 +2370,7 @@ function showVendorPackages(kecName, vendorName) {
     projects.forEach(p => {
         html += `
                 <div class="package-item">
-                    <div style="font-weight: 600; color: #eee; margin-bottom: 2px;">${p.nama}</div>
+                    <div style="font-weight: 600; color: #eee; margin-bottom: 2px;">${escapeHTML(p.nama)}</div>
                     <div style="font-size: 0.75rem; opacity: 0.6; margin-bottom: 8px;">${p.satker}</div>
                     <div style="display:flex; justify-content:space-between; align-items:center;">
                         <span style="font-size: 0.7rem; color: var(--accent);">${p.status || 'Selesai'}</span>
@@ -2119,31 +2431,18 @@ function focusVendor(vendorName, shouldZoom = true) {
 }
 
 function logVisitorGPS() {
-    if (!navigator.geolocation) {
-        fetch('log_visit.php', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({}) });
-        return;
-    }
+    if (!window.gpsAccessGranted || !navigator.geolocation) return;
 
     navigator.geolocation.getCurrentPosition(
         (pos) => {
-            fetch('log_visit.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    latitude: pos.coords.latitude,
-                    longitude: pos.coords.longitude,
-                    accuracy: pos.coords.accuracy
-                })
+            postVisitLog({
+                latitude: pos.coords.latitude,
+                longitude: pos.coords.longitude,
+                accuracy: pos.coords.accuracy
             });
         },
-        (err) => {
-            fetch('log_visit.php', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({})
-            });
-        },
-        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
+        () => { /* keep session granted from earlier success */ },
+        { enableHighAccuracy: true, timeout: 8000, maximumAge: 60000 }
     );
 }
 
@@ -2151,7 +2450,7 @@ window.onload = () => {
     try { if (window.updateModalContent) window.updateModalContent(currentMode); } catch (e) { }
     try { updateLegend(currentMode); } catch (e) { }
     try { loadMapData(); } catch (e) { }
-    try { logVisitorGPS(); } catch (e) { }
+    try { initGpsAccessFlow(); } catch (e) { console.warn('GPS init:', e); }
 
     // Ensure map renders correctly
     setTimeout(() => {
@@ -2775,7 +3074,7 @@ window.showKecamatanQADetail = function(kecName) {
                     <span class="tag" style="background:rgba(239, 68, 68, 0.2); color: #fca5a5;">${p.status || 'TERCATAT'}</span>
                     <b style="color: #f87171; font-family: 'Outfit';">${formatPaguJS(p.pagu)}</b>
                 </div>
-                <div style="font-weight: 600; color: rgba(255,255,255,0.9); font-size:0.75rem;">${p.nama}</div>
+                <div style="font-weight: 600; color: rgba(255,255,255,0.9); font-size:0.75rem;">${escapeHTML(p.nama)}</div>
                 <div style="font-size: 0.65rem; opacity: 0.4; margin-top: 4px; text-transform: uppercase;">${p.satker}</div>
             </div>
         `;

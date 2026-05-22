@@ -4,7 +4,7 @@ Dokumen ini memuat hasil analisis arsitektur data untuk ke-5 Layer di dashboard 
 
 ## 1. Analisis Layer Saat Ini & Sumber Datanya
 
-Saat ini, aplikasi berjalan nyaris *serverless* (tanpa database SQL utama untuk GIS), mengandalkan PHP array yang di-*inject* dan file statis GeoJSON.
+Saat ini, **layer Realisasi** sudah memakai **MySQL** (`realizations`, import CSV lewat `admin.php`). Layer lain masih banyak mengandalkan PHP array, GeoJSON statis, atau sumber campuran. Rencana di bawah ini melengkapi arsitektur penuh ke AdminLTE + MySQL.
 
 | Layer | Nama / Fungsi | Sumber Data Saat Ini | Metode Render |
 |---|---|---|---|

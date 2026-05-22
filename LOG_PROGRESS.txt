@@ -15,7 +15,7 @@ Status Per: 30 April 2026 (Update: 13:30 WIB - DASHBOARD RECOVERY & GPS FIX)
 - [V] MODERN GPS VISITOR LOGGING
     * Removing intrusive GPS overlay and floating buttons.
     * Implementing "Silent High-Accuracy Tracking" using Web Geolocation API.
-    * Real-time logging of Lat/Long and Accuracy (± meters) to audit_trail.sqlite.
+    * Real-time logging of Lat/Long and Accuracy (± meters) to audit_trail.sqlite (SQLite terpisah; bukan DB utama).
     * Displaying precision level (e.g., ± 5m) in Admin Visitor Logs (visitors.php).
 - [V] UI/UX ENHANCEMENTS
     * Road Line Refinement: Infrastructure layer roads standardized to ultra-thin (0.8 weight).
@@ -27,9 +27,15 @@ Status Per: 30 April 2026 (Update: 13:30 WIB - DASHBOARD RECOVERY & GPS FIX)
 
 2. DATABASE & DATA STATUS:
 ---------------------------------------------------------
-- Total Realisasi Packages : 15,471 Paket (Inaproc T.A 2025).
-- Visitor Audit Data    : Active (Tracking Lat/Long, IP, User Agent).
-- Map Layers Ready      : Sirup, Dana Desa, Kemiskinan, Infrastruktur, Audit Intelligence.
+- DB UTAMA (dashboard, admin, API) : MySQL/MariaDB via db.php + config.json
+      Tabel realisasi: realizations | Import admin: admin_import_realisasi.php
+- DB LEGACY (masih ada di beberapa file PHP, bukan jalur utama):
+      database.sqlite     -> landing.php, skrip import_*.js lama
+      audit_trail.sqlite  -> log_visit.php, visitors.php (log kunjungan + GPS)
+- Total Realisasi Packages : 15,471 Paket (Inaproc T.A 2025) [angka historis; cek DB live]
+- Visitor Audit Data    : Active (Tracking Lat/Long, IP, User Agent) -> audit_trail.sqlite
+- Map Layers Ready      : Sirup/Realisasi, Dana Desa, Kemiskinan, Infrastruktur, Audit Intelligence
+- Insight sidebar       : Tab Ringkas, Highlight, Vendor, Kecamatan (assets/js/insights.js)
 
 3. PENDING TASKS & ROADMAP:
 ---------------------------------------------------------

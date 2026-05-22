@@ -11,6 +11,10 @@ auth.json
 # Dependencies
 node_modules/
 
+# Admin uploads (temporary CSV)
+uploads/*
+!uploads/.htaccess
+
 # Local Progress & Meta
 progress.json
 .antigravity/
