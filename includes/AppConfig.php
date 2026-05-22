@@ -61,6 +61,14 @@ class AppConfig
             'welcome_message' => "Halo! Saya asisten Matadata Majalengka. Data realisasi fokus tahun 2025 & 2026. Tanya realisasi, dana desa, atau kemiskinan — jawaban singkat & berbasis data.",
             'system_extra' => '',
             'max_tokens' => 400,
+            'project_info' => [
+                'nama_proyek' => 'Matadata Majalengka',
+                'nama_bot' => 'Asisten Matadata (bot Telegram)',
+                'pembuat' => 'Tim pengembang dashboard transparansi anggaran Kabupaten Majalengka',
+                'kontak' => 'aroundusplay@gmail.com',
+                'repositori' => 'https://github.com/arounduslivelife/matadata-majalengka',
+                'tujuan' => 'Monitoring dan transparansi anggaran publik Kabupaten Majalengka (realisasi belanja, Dana Desa, kemiskinan/KPM, infrastruktur, audit pengadaan).',
+            ],
         ], is_array($tg) ? $tg : []);
     }
 

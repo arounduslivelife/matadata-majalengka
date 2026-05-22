@@ -168,13 +168,34 @@ try {
 
 $webhookUrl = webhookPublicUrl();
 
-
+$telegramDiagnostics = [];
+if (empty($tg['bot_token'])) {
+    $telegramDiagnostics[] = ['danger', 'Bot token belum disimpan di config.json. Isi token lalu klik Simpan.'];
+} elseif (empty($tg['enabled'])) {
+    $telegramDiagnostics[] = ['warning', 'Token ada tetapi <strong>Bot aktif</strong> belum dicentang — bot tidak akan membalas chat.'];
+}
+if (!empty($tg['bot_token'])) {
+    $installedUrl = $webhookInfo['result']['url'] ?? '';
+    if ($installedUrl === '') {
+        $telegramDiagnostics[] = ['warning', 'Webhook belum terpasang di Telegram. Klik <em>Pasang webhook otomatis</em> (VPS/HTTPS), atau jalankan <code>php cli/telegram_poll.php</code> di localhost.'];
+    } elseif ($installedUrl !== $webhookUrl) {
+        $telegramDiagnostics[] = ['warning', 'URL webhook di Telegram berbeda dari URL yang diharapkan server ini. Pasang ulang webhook dari panel ini.'];
+    }
+    $lastErr = trim($webhookInfo['result']['last_error_message'] ?? '');
+    if ($lastErr !== '') {
+        $telegramDiagnostics[] = ['danger', 'Telegram gagal mengirim ke webhook: ' . htmlspecialchars($lastErr)];
+    }
+}
 
 require_once __DIR__ . '/includes/layout.php';
 
 adminRenderHeader($pageTitle, $activeMenu);
 
 adminRenderAlert($flash, $flashType);
+
+foreach ($telegramDiagnostics as [$diagType, $diagMsg]) {
+    adminRenderAlert($diagMsg, $diagType);
+}
 
 ?>
 
@@ -385,6 +406,20 @@ adminRenderAlert($flash, $flashType);
                             <br><span class="text-muted">URL terpasang:</span><br>
 
                             <code class="small"><?= htmlspecialchars($webhookInfo['result']['url']) ?></code>
+
+                        <?php endif; ?>
+
+                        <?php if (isset($webhookInfo['result']['pending_update_count'])): ?>
+
+                            <br><span class="text-muted">Antrean update:</span> <?= (int) $webhookInfo['result']['pending_update_count'] ?>
+
+                        <?php endif; ?>
+
+                        <?php if (!empty($webhookInfo['result']['last_error_message'])): ?>
+
+                            <br><span class="text-danger">Error terakhir:</span><br>
+
+                            <code class="small text-danger"><?= htmlspecialchars($webhookInfo['result']['last_error_message']) ?></code>
 
                         <?php endif; ?>
 

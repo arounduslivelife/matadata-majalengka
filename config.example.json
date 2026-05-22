@@ -27,6 +27,13 @@
     "model": "llama-3.3-70b-versatile",
     "welcome_message": "Halo! Saya asisten Matadata Majalengka. Data realisasi fokus tahun 2025 & 2026. Tanya realisasi, dana desa, atau kemiskinan.",
     "system_extra": "",
-    "max_tokens": 400
+    "max_tokens": 400,
+    "project_info": {
+      "nama_proyek": "Matadata Majalengka",
+      "pembuat": "Tim pengembang dashboard transparansi anggaran Kabupaten Majalengka",
+      "kontak": "aroundusplay@gmail.com",
+      "repositori": "https://github.com/arounduslivelife/matadata-majalengka",
+      "tujuan": "Monitoring dan transparansi anggaran publik Kabupaten Majalengka."
+    }
   }
 }

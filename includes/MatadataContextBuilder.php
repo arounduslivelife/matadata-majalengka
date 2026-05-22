@@ -72,6 +72,7 @@ class MatadataContextBuilder
         $parts[] = '';
 
         $parts[] = $this->sectionRealisasi();
+        $parts[] = $this->sectionVendor();
         $parts[] = $this->sectionDanaDesa();
         $parts[] = $this->sectionKemiskinan();
         $parts[] = $this->sectionAudit();
@@ -132,6 +133,45 @@ class MatadataContextBuilder
             while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
                 $nama = mb_substr($row['nama_paket'], 0, 90);
                 $lines[] = "- {$nama} | {$row['kecamatan']} | " . formatRupiah($row['total_nilai']);
+            }
+            $lines[] = '';
+        }
+
+        return implode("\n", $lines);
+    }
+
+    private function sectionVendor(): string
+    {
+        $lines = ['## VENDOR / PENYEDIA (tabel realizations, kolom vendor)'];
+        $nilai = sqlRealisasiNilai('total_nilai');
+
+        foreach ($this->focusYears as $year) {
+            $stmt = $this->pdo->prepare("
+                SELECT vendor, COUNT(*) AS cnt, SUM({$nilai}) AS total
+                FROM realizations
+                WHERE tahun = ? AND vendor IS NOT NULL AND TRIM(vendor) != ''
+                GROUP BY vendor ORDER BY cnt DESC LIMIT 12
+            ");
+            $stmt->execute([$year]);
+            $lines[] = "Ranking vendor {$year} — paling banyak paket (jumlah proyek):";
+            $rank = 1;
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $lines[] = "{$rank}. {$row['vendor']}: {$row['cnt']} paket, total " . formatRupiah($row['total']);
+                $rank++;
+            }
+
+            $stmt = $this->pdo->prepare("
+                SELECT vendor, COUNT(*) AS cnt, SUM({$nilai}) AS total
+                FROM realizations
+                WHERE tahun = ? AND vendor IS NOT NULL AND TRIM(vendor) != ''
+                GROUP BY vendor ORDER BY total DESC LIMIT 8
+            ");
+            $stmt->execute([$year]);
+            $lines[] = "Ranking vendor {$year} — nilai realisasi terbesar (bukan jumlah paket):";
+            $rank = 1;
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $lines[] = "{$rank}. {$row['vendor']}: " . formatRupiah($row['total']) . " ({$row['cnt']} paket)";
+                $rank++;
             }
             $lines[] = '';
         }
