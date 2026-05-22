@@ -1,5 +1,11 @@
 <?php
 
+/** Ekspresi SQL: total_nilai disimpan sebagai TEXT, harus di-CAST untuk SUM/ORDER BY numerik. */
+function sqlRealisasiNilai(string $column = 'total_nilai'): string
+{
+    return 'CAST(NULLIF(TRIM(' . $column . "), '') AS DECIMAL(20,2))";
+}
+
 function formatRupiah($amount): string
 {
     $p = (float) $amount;

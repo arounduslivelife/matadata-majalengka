@@ -56,8 +56,9 @@ class AppConfig
             'bot_token' => '',
             'webhook_secret' => '',
             'allowed_chat_ids' => [],
+            'focus_years' => [2025, 2026],
             'model' => 'llama-3.3-70b-versatile',
-            'welcome_message' => "Halo! Saya asisten Matadata Majalengka. Tanya data realisasi, dana desa, atau kemiskinan — jawaban singkat & berbasis data.",
+            'welcome_message' => "Halo! Saya asisten Matadata Majalengka. Data realisasi fokus tahun 2025 & 2026. Tanya realisasi, dana desa, atau kemiskinan — jawaban singkat & berbasis data.",
             'system_extra' => '',
             'max_tokens' => 400,
         ], is_array($tg) ? $tg : []);

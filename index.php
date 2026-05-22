@@ -40,10 +40,12 @@ function publicAsset(string $rel): string
 }
 
 // Unified stats per kecamatan and per year
+require_once __DIR__ . '/includes/format_helpers.php';
+$nilaiSum = sqlRealisasiNilai('total_nilai');
 $stats_query = $pdo->query("
     SELECT tahun, kecamatan, 
            COUNT(*) as total, 
-           SUM(total_nilai) as total_pagu,
+           SUM({$nilaiSum}) as total_pagu,
            SUM(CASE WHEN risk_score IN ('High', 'ABSURD') THEN 1 ELSE 0 END) as high_risk_count
     FROM realizations 
     GROUP BY tahun, kecamatan
@@ -63,7 +65,7 @@ while ($row = $stats_query->fetch()) {
 
 // Global year totals
 $year_totals = [];
-$yt_query = $pdo->query("SELECT tahun, SUM(total_nilai) as total_pagu, COUNT(*) as pkg_count FROM realizations GROUP BY tahun");
+$yt_query = $pdo->query("SELECT tahun, SUM({$nilaiSum}) as total_pagu, COUNT(*) as pkg_count FROM realizations GROUP BY tahun");
 while ($row = $yt_query->fetch()) {
     $year_totals[$row['tahun']] = $row;
 }

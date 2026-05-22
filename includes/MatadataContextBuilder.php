@@ -5,20 +5,69 @@ require_once __DIR__ . '/format_helpers.php';
 class MatadataContextBuilder
 {
     private PDO $pdo;
-    private int $focusYear;
+    /** @var int[] */
+    private array $focusYears;
 
-    public function __construct(PDO $pdo, ?int $focusYear = null)
+    public function __construct(PDO $pdo, ?array $focusYears = null)
     {
         $this->pdo = $pdo;
-        $config = json_decode(file_get_contents(dirname(__DIR__) . '/config.json'), true);
-        $this->focusYear = $focusYear ?? (int) ($config['TARGET_YEAR'] ?? 2025);
+        $this->focusYears = self::normalizeFocusYears($focusYears);
+    }
+
+    /** Tahun yang dipakai bot Telegram & konteks AI (default 2025–2026). */
+    public static function defaultFocusYears(): array
+    {
+        if (!class_exists('AppConfig', false)) {
+            require_once __DIR__ . '/AppConfig.php';
+        }
+        $c = AppConfig::load();
+        $fromTg = $c['telegram']['focus_years'] ?? null;
+        if (is_array($fromTg) && count($fromTg) > 0) {
+            return self::normalizeFocusYears($fromTg);
+        }
+        if (!empty($c['TELEGRAM_FOCUS_YEARS']) && is_array($c['TELEGRAM_FOCUS_YEARS'])) {
+            return self::normalizeFocusYears($c['TELEGRAM_FOCUS_YEARS']);
+        }
+        return [2025, 2026];
+    }
+
+    /** @param int[]|int|null $years */
+    public static function normalizeFocusYears($years): array
+    {
+        if ($years === null) {
+            return self::defaultFocusYears();
+        }
+        if (is_int($years) || is_string($years)) {
+            $years = [(int) $years];
+        }
+        if (!is_array($years)) {
+            return self::defaultFocusYears();
+        }
+        $out = [];
+        foreach ($years as $y) {
+            $y = (int) $y;
+            if ($y >= 2000 && $y <= 2100) {
+                $out[$y] = $y;
+            }
+        }
+        if (count($out) === 0) {
+            return self::defaultFocusYears();
+        }
+        ksort($out);
+        return array_values($out);
+    }
+
+    public function getFocusYears(): array
+    {
+        return $this->focusYears;
     }
 
     public function build(): string
     {
         $parts = [];
         $parts[] = '=== MATADATA KABUPATEN MAJALENGKA (konteks untuk jawaban bot) ===';
-        $parts[] = 'Tahun fokus realisasi: ' . $this->focusYear;
+        $parts[] = 'Tahun fokus realisasi: ' . implode(', ', $this->focusYears);
+        $parts[] = 'Jika pengguna menyebut tahun lain di luar daftar, jelaskan data hanya untuk tahun fokus di atas.';
         $parts[] = 'Waktu generate: ' . date('Y-m-d H:i') . ' WIB';
         $parts[] = '';
 
@@ -37,37 +86,54 @@ class MatadataContextBuilder
     private function sectionRealisasi(): string
     {
         $lines = ['## REALISASI BELANJA (tabel realizations)'];
+        $nilai = sqlRealisasiNilai('total_nilai');
 
-        $stmt = $this->pdo->prepare("
-            SELECT COUNT(*) AS cnt, COALESCE(SUM(total_nilai),0) AS total
-            FROM realizations WHERE tahun = ?
-        ");
-        $stmt->execute([$this->focusYear]);
-        $tot = $stmt->fetch(PDO::FETCH_ASSOC);
-        $lines[] = "Total TA {$this->focusYear}: " . number_format((int) $tot['cnt']) . ' paket, ' . formatRupiah($tot['total']);
+        foreach ($this->focusYears as $year) {
+            $stmt = $this->pdo->prepare("
+                SELECT COUNT(*) AS cnt, COALESCE(SUM({$nilai}), 0) AS total
+                FROM realizations WHERE tahun = ?
+            ");
+            $stmt->execute([$year]);
+            $tot = $stmt->fetch(PDO::FETCH_ASSOC);
+            $lines[] = "Total TA {$year}: " . number_format((int) $tot['cnt']) . ' paket, ' . formatRupiah($tot['total']);
 
-        $stmt = $this->pdo->prepare("
-            SELECT kecamatan, COUNT(*) AS cnt, SUM(total_nilai) AS pagu
-            FROM realizations WHERE tahun = ?
-            GROUP BY kecamatan ORDER BY pagu DESC LIMIT 12
-        ");
-        $stmt->execute([$this->focusYear]);
-        $lines[] = 'Ranking kecamatan (realisasi ' . $this->focusYear . '):';
-        $rank = 1;
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $lines[] = "{$rank}. {$row['kecamatan']}: " . formatRupiah($row['pagu']) . " ({$row['cnt']} paket)";
-            $rank++;
-        }
+            $stmt = $this->pdo->prepare("
+                SELECT nama_paket, kecamatan, total_nilai, vendor, status
+                FROM realizations WHERE tahun = ?
+                ORDER BY {$nilai} DESC LIMIT 1
+            ");
+            $stmt->execute([$year]);
+            $top1 = $stmt->fetch(PDO::FETCH_ASSOC);
+            if ($top1) {
+                $lines[] = "#1 paket terbesar {$year}: {$top1['nama_paket']}";
+                $lines[] = '   Nilai: ' . formatRupiah($top1['total_nilai'])
+                    . " | {$top1['kecamatan']} | vendor: {$top1['vendor']} | status: {$top1['status']}";
+            }
 
-        $stmt = $this->pdo->prepare("
-            SELECT nama_paket, kecamatan, total_nilai, vendor
-            FROM realizations WHERE tahun = ? ORDER BY total_nilai DESC LIMIT 5
-        ");
-        $stmt->execute([$this->focusYear]);
-        $lines[] = 'Top 5 paket terbesar:';
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            $nama = mb_substr($row['nama_paket'], 0, 80);
-            $lines[] = "- {$nama} | {$row['kecamatan']} | " . formatRupiah($row['total_nilai']);
+            $stmt = $this->pdo->prepare("
+                SELECT kecamatan, COUNT(*) AS cnt, SUM({$nilai}) AS pagu
+                FROM realizations WHERE tahun = ?
+                GROUP BY kecamatan ORDER BY pagu DESC LIMIT 8
+            ");
+            $stmt->execute([$year]);
+            $lines[] = "Ranking kecamatan (realisasi {$year}, top 8):";
+            $rank = 1;
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $lines[] = "{$rank}. {$row['kecamatan']}: " . formatRupiah($row['pagu']) . " ({$row['cnt']} paket)";
+                $rank++;
+            }
+
+            $stmt = $this->pdo->prepare("
+                SELECT nama_paket, kecamatan, total_nilai, vendor
+                FROM realizations WHERE tahun = ? ORDER BY {$nilai} DESC LIMIT 5
+            ");
+            $stmt->execute([$year]);
+            $lines[] = "Top 5 paket terbesar {$year} (urutan nilai numerik):";
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                $nama = mb_substr($row['nama_paket'], 0, 90);
+                $lines[] = "- {$nama} | {$row['kecamatan']} | " . formatRupiah($row['total_nilai']);
+            }
+            $lines[] = '';
         }
 
         return implode("\n", $lines);
