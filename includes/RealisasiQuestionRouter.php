@@ -34,6 +34,12 @@ class RealisasiQuestionRouter
 
         $years = $this->resolveYears($question);
         $intents = $this->resolveIntents($question);
+        if (in_array('search_top_package', $intents, true)) {
+            $intents = array_values(array_unique(array_diff(
+                $intents,
+                ['top_packages', 'search_packages', 'search_text']
+            )));
+        }
         $lines = [
             '=== HASIL QUERY DATABASE (realisasi belanja — jawab HANYA dari data ini) ===',
             'Pertanyaan asli: ' . $question,
@@ -77,9 +83,29 @@ class RealisasiQuestionRouter
                 && in_array('search_text', $intents, true)) {
                 $intents[] = 'search_packages';
             }
-            return array_values(array_unique($intents));
+        } else {
+            $intents = $this->detectIntents($question);
         }
-        return $this->detectIntents($question);
+        return $this->postProcessIntents($intents, $question);
+    }
+
+    /** @param string[] $intents @return string[] */
+    private function postProcessIntents(array $intents, string $question): array
+    {
+        $q = mb_strtolower($question);
+        $keywords = $this->interpretation['keywords'] ?? [];
+        $wantsTop = in_array('top_packages', $intents, true)
+            || preg_match('/terbesar|tertinggi|paling\s+besar|nilai\s+terbesar/ui', $q);
+        $hasTheme = count($keywords) > 0
+            || preg_match('/terkait|mengenai|makanan|jamuan|belanja\s+modal|jalan/ui', $q);
+
+        if ($wantsTop && $hasTheme) {
+            $intents = array_values(array_diff($intents, ['top_packages']));
+            if (!in_array('search_top_package', $intents, true)) {
+                $intents[] = 'search_top_package';
+            }
+        }
+        return array_values(array_unique($intents));
     }
 
     /** @return int[] */
@@ -147,8 +173,14 @@ class RealisasiQuestionRouter
             $intents[] = 'search_text';
         }
 
+        if (preg_match('/terkait|mengenai|makanan|jamuan/ui', $q)
+            && preg_match('/terbesar|tertinggi|paling\s+besar|nilai\s+terbesar|paling\s+tinggi/ui', $q)) {
+            $intents[] = 'search_top_package';
+        }
+
         if (preg_match('/paket|proyek|belanja|pekerjaan|kegiatan|makanan|jamuan|jasa/ui', $q)) {
-            if (preg_match('/terbesar|tertinggi|paling\s+besar|top\s*\d*|nominal\s+tertinggi/ui', $q)) {
+            if (preg_match('/terbesar|tertinggi|paling\s+besar|top\s*\d*|nominal\s+tertinggi/ui', $q)
+                && !in_array('search_top_package', $intents, true)) {
                 $intents[] = 'top_packages';
             }
             if (preg_match('/cari|tentang|nama\s+paket|paket\s+(bernama|berjudul)|apakah\s+ada|ada\s+tidak/ui', $q)
@@ -191,6 +223,7 @@ class RealisasiQuestionRouter
             'rank_satker' => $this->blockRankSatker($years),
             'by_status' => $this->blockByStatus($years),
             'search_text', 'search_packages' => $this->blockSearch($question, $years),
+            'search_top_package' => $this->blockSearchTopPackage($question, $years),
             'kecamatan_detail' => $this->blockKecamatanDetail($question, $years),
             'vendor_detail' => $this->blockVendorDetail($question, $years),
             'general_realisasi' => $this->blockGeneral($years),
@@ -336,14 +369,60 @@ class RealisasiQuestionRouter
     /** @param int[] $years */
     private function blockSearch(string $question, array $years): string
     {
-        $keywords = [];
+        return $this->blockSearchWithKeywords($this->resolveSearchKeywords($question), $years);
+    }
+
+    /** @return string[] */
+    private function resolveSearchKeywords(string $question): array
+    {
         if (!empty($this->interpretation['keywords']) && is_array($this->interpretation['keywords'])) {
-            $keywords = $this->interpretation['keywords'];
+            $kw = [];
+            foreach ($this->interpretation['keywords'] as $k) {
+                $k = trim((string) $k);
+                if (mb_strlen($k) >= 2) {
+                    $kw[] = $k;
+                }
+            }
+            if (count($kw) > 0) {
+                return $kw;
+            }
         }
+        return $this->extractSearchKeywords($question);
+    }
+
+    /** @param int[] $years */
+    private function blockSearchTopPackage(string $question, array $years): string
+    {
+        $keywords = $this->resolveSearchKeywords($question);
         if (count($keywords) === 0) {
-            $keywords = $this->extractSearchKeywords($question);
+            return '';
         }
-        return $this->blockSearchWithKeywords($keywords, $years);
+
+        $lines = ['[Paket nilai TERBESAR dalam tema/kata kunci — bukan top seluruh database]'];
+        foreach ($years as $year) {
+            foreach ($keywords as $kw) {
+                $rows = $this->db->searchPackagesFlexible($year, $kw, 5);
+                if (count($rows) === 0) {
+                    $lines[] = "TA {$year}, tema \"{$kw}\": tidak ada paket cocok.";
+                    continue;
+                }
+                $cnt = $this->db->countSearchPackages($year, $kw);
+                $top = $rows[0];
+                $lines[] = "TA {$year}, tema \"{$kw}\" — {$cnt} paket cocok. #1 nilai terbesar:";
+                $lines[] = '- ' . ($top['nama_paket'] ?? '');
+                $lines[] = '  ' . formatRupiah($top['total_nilai'] ?? 0)
+                    . ' | ' . ($top['kecamatan'] ?? '') . ' | ' . ($top['vendor'] ?? '')
+                    . ' | ' . ($top['status'] ?? '');
+                if (count($rows) > 1) {
+                    $lines[] = '  Runner-up:';
+                    foreach (array_slice($rows, 1, 3) as $row) {
+                        $lines[] = '  - ' . mb_substr($row['nama_paket'] ?? '', 0, 70) . ' — '
+                            . formatRupiah($row['total_nilai'] ?? 0);
+                    }
+                }
+            }
+        }
+        return implode("\n", $lines);
     }
 
     /** @param string[] $keywords */
@@ -493,8 +572,17 @@ class RealisasiQuestionRouter
             return [trim($m[1])];
         }
 
-        if (preg_match('/(?:terkait|mengenai|seputar|soal|tentang|berkaitan dengan)\s+(.+?)[\?\.!,]*$/iu', $question, $m)) {
-            return [trim($m[1])];
+        if (preg_match(
+            '/(?:terkait|mengenai|seputar|soal|tentang|berkaitan dengan)\s+(.+?)(?:,|\s+yang|\s+di\s+20|\?|$)/iu',
+            $question,
+            $m
+        )) {
+            $phrase = trim($m[1]);
+            $phrase = preg_replace('/\s+yang\s+.+$/iu', '', $phrase);
+            $phrase = preg_replace('/\s+di\s+20\d{2}$/iu', '', $phrase);
+            if (mb_strlen($phrase) >= 3) {
+                return [$phrase];
+            }
         }
 
         $q = mb_strtolower($question);

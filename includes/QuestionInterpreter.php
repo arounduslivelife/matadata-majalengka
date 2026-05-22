@@ -11,6 +11,7 @@ class QuestionInterpreter
 {
     private const ALLOWED_INTENTS = [
         'search_packages',
+        'search_top_package',
         'vendor_by_count',
         'vendor_by_value',
         'top_packages',
@@ -48,9 +49,10 @@ Output HANYA satu objek JSON valid (tanpa markdown, tanpa teks lain):
 
 intents (pilih yang relevan, bisa lebih dari satu):
 - search_packages: cek ada/tidak ada paket, cari tema (makanan tamu, jalan, dll)
+- search_top_package: paket NILAI TERBESAR di dalam tema/kata kunci (bukan top seluruh database). Contoh: "makanan tamu paling besar 2026" → search_top_package + keywords, JANGAN top_packages
 - vendor_by_count: vendor paling banyak paket/proyek
 - vendor_by_value: vendor nilai realisasi terbesar
-- top_packages: paket nilai terbesar
+- top_packages: paket nilai terbesar SELURUH tahun (tanpa filter tema)
 - rank_kecamatan: peringkat kecamatan
 - year_summary: total paket/nilai satu tahun
 - compare_years: bandingkan 2025 vs 2026
@@ -153,6 +155,11 @@ PROMPT;
                 }
             }
         }
+        if (count($keywords) === 0) {
+            $keywords = $this->guessKeywordsFromQuestion($question);
+        }
+
+        $intents = $this->refineIntents($intents, $keywords, $question);
 
         return [
             'ringkasan_maksud' => trim((string) ($data['ringkasan_maksud'] ?? 'Pertanyaan tentang data realisasi anggaran.')),
@@ -163,5 +170,38 @@ PROMPT;
             'vendor' => !empty($data['vendor']) ? trim((string) $data['vendor']) : null,
             'jawaban_yang_diharapkan' => trim((string) ($data['jawaban_yang_diharapkan'] ?? '')),
         ];
+    }
+
+    /** @param string[] $intents @param string[] $keywords @return string[] */
+    private function refineIntents(array $intents, array $keywords, string $question): array
+    {
+        $q = mb_strtolower($question);
+        $wantsTop = in_array('top_packages', $intents, true)
+            || preg_match('/terbesar|tertinggi|paling\s+besar|nilai\s+terbesar|paling\s+tinggi/ui', $q);
+        $hasTheme = count($keywords) > 0
+            || preg_match('/terkait|mengenai|seputar|tentang|makanan|jamuan|jalan|belanja/ui', $q);
+
+        if ($wantsTop && $hasTheme) {
+            $intents = array_values(array_diff($intents, ['top_packages', 'general_realisasi']));
+            $intents[] = 'search_top_package';
+            if (!in_array('search_packages', $intents, true)) {
+                $intents[] = 'search_packages';
+            }
+        }
+
+        return array_values(array_unique($intents));
+    }
+
+    /** @return string[] */
+    private function guessKeywordsFromQuestion(string $question): array
+    {
+        if (preg_match('/(?:terkait|mengenai|seputar|tentang)\s+(.+?)(?:,|\s+yang|\s+di\s+|\?|$)/iu', $question, $m)) {
+            $phrase = trim($m[1]);
+            $phrase = preg_replace('/\s+yang\s+.+$/iu', '', $phrase);
+            if (mb_strlen($phrase) >= 4) {
+                return [$phrase];
+            }
+        }
+        return [];
     }
 }
