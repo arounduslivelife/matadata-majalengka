@@ -11,6 +11,7 @@ class QuestionInterpreter
 {
     private const ALLOWED_INTENTS = [
         'search_packages',
+        'search_kecamatan',
         'search_top_package',
         'vendor_by_count',
         'vendor_by_value',
@@ -48,7 +49,8 @@ Output HANYA satu objek JSON valid (tanpa markdown, tanpa teks lain):
 }
 
 intents (pilih yang relevan, bisa lebih dari satu):
-- search_packages: cek ada/tidak ada paket, cari tema (makanan tamu, jalan, dll)
+- search_packages: cek ada/tidak ada paket, cari tema (makanan tamu, jalan, dll) tanpa filter kecamatan
+- search_kecamatan: tema + satu kecamatan (isi kecamatan + keywords). Contoh: "makanan rapat di Bantarujeg 2026" → search_kecamatan, JANGAN search_packages global
 - search_top_package: paket NILAI TERBESAR di dalam tema/kata kunci (bukan top seluruh database). Contoh: "makanan tamu paling besar 2026" → search_top_package + keywords, JANGAN top_packages
 - vendor_by_count: vendor paling banyak paket/proyek
 - vendor_by_value: vendor nilai realisasi terbesar
@@ -160,13 +162,23 @@ PROMPT;
         }
 
         $intents = $this->refineIntents($intents, $keywords, $question);
+        $kecamatan = !empty($data['kecamatan']) ? trim((string) $data['kecamatan']) : null;
+        if ($kecamatan === null || $kecamatan === '') {
+            $kecamatan = $this->guessKecamatanFromQuestion($question);
+        }
+        if ($kecamatan !== null && $kecamatan !== '' && count($keywords) > 0) {
+            $intents = array_values(array_unique(array_merge(
+                array_diff($intents, ['search_packages', 'search_text', 'kecamatan_detail', 'search_top_package']),
+                ['search_kecamatan']
+            )));
+        }
 
         return [
             'ringkasan_maksud' => trim((string) ($data['ringkasan_maksud'] ?? 'Pertanyaan tentang data realisasi anggaran.')),
             'tahun' => array_values(array_unique($years)),
             'intents' => array_values(array_unique($intents)),
             'keywords' => array_values(array_unique($keywords)),
-            'kecamatan' => !empty($data['kecamatan']) ? trim((string) $data['kecamatan']) : null,
+            'kecamatan' => ($kecamatan !== null && $kecamatan !== '') ? $kecamatan : null,
             'vendor' => !empty($data['vendor']) ? trim((string) $data['vendor']) : null,
             'jawaban_yang_diharapkan' => trim((string) ($data['jawaban_yang_diharapkan'] ?? '')),
         ];
@@ -198,10 +210,33 @@ PROMPT;
         if (preg_match('/(?:terkait|mengenai|seputar|tentang)\s+(.+?)(?:,|\s+yang|\s+di\s+|\?|$)/iu', $question, $m)) {
             $phrase = trim($m[1]);
             $phrase = preg_replace('/\s+yang\s+.+$/iu', '', $phrase);
+            $phrase = preg_replace('/\s+di\s+(?:kecamatan|kec\.?)\s+.+$/iu', '', $phrase);
+            $phrase = preg_replace('/\s+tahun\s+20\d{2}.*$/iu', '', $phrase);
             if (mb_strlen($phrase) >= 4) {
                 return [$phrase];
             }
         }
         return [];
+    }
+
+    private function guessKecamatanFromQuestion(string $question): ?string
+    {
+        $q = mb_strtolower($question);
+        $names = [
+            'Bantarujeg', 'Banjaran', 'Talaga', 'Palasah', 'Malausma', 'Argapura', 'Maja', 'Jatiwangi',
+            'Cigasong', 'Cikijing', 'Cingambul', 'Dawuan', 'Jambu', 'Kadipaten', 'Kasokandel', 'Kertajati',
+            'Lemahsugih', 'Leuwimunding', 'Ligung', 'Panyingkiran', 'Rajagaluh', 'Sindang', 'Sindangwangi',
+            'Sukahaji', 'Sumberjaya', 'Tomo', 'Cikalong',
+        ];
+        usort($names, fn ($a, $b) => mb_strlen($b) - mb_strlen($a));
+        foreach ($names as $name) {
+            if (mb_strpos($q, mb_strtolower($name)) !== false) {
+                return $name;
+            }
+        }
+        if (preg_match('/kecamatan\s+([A-Za-z]+)/iu', $question, $m)) {
+            return ucfirst(strtolower(trim($m[1])));
+        }
+        return null;
     }
 }

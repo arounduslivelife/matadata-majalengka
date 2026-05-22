@@ -40,6 +40,14 @@ class RealisasiQuestionRouter
                 ['top_packages', 'search_packages', 'search_text']
             )));
         }
+        if ($this->shouldSearchKecamatan($question, $intents)) {
+            $intents = array_values(array_unique(array_merge(
+                array_diff($intents, [
+                    'search_packages', 'search_text', 'kecamatan_detail', 'search_top_package', 'rank_kecamatan',
+                ]),
+                ['search_kecamatan']
+            )));
+        }
         $lines = [
             '=== HASIL QUERY DATABASE (realisasi belanja — jawab HANYA dari data ini) ===',
             'Pertanyaan asli: ' . $question,
@@ -196,7 +204,11 @@ class RealisasiQuestionRouter
         }
 
         if ($this->matchKecamatan($question) !== null) {
-            $intents[] = 'kecamatan_detail';
+            if (preg_match('/terkait|mengenai|makanan|rapat|jamuan|cari|ada\s+tidak|adakah|apakah\s+ada/ui', $q)) {
+                $intents[] = 'search_kecamatan';
+            } else {
+                $intents[] = 'kecamatan_detail';
+            }
         }
 
         if ($this->extractVendorNeedle($question) !== null) {
@@ -224,6 +236,7 @@ class RealisasiQuestionRouter
             'by_status' => $this->blockByStatus($years),
             'search_text', 'search_packages' => $this->blockSearch($question, $years),
             'search_top_package' => $this->blockSearchTopPackage($question, $years),
+            'search_kecamatan' => $this->blockSearchKecamatan($question, $years),
             'kecamatan_detail' => $this->blockKecamatanDetail($question, $years),
             'vendor_detail' => $this->blockVendorDetail($question, $years),
             'general_realisasi' => $this->blockGeneral($years),
@@ -372,6 +385,71 @@ class RealisasiQuestionRouter
         return $this->blockSearchWithKeywords($this->resolveSearchKeywords($question), $years);
     }
 
+    /** @param int[] $years */
+    private function blockSearchKecamatan(string $question, array $years): string
+    {
+        $kec = $this->resolveKecamatanName($question);
+        $keywords = $this->resolveSearchKeywords($question);
+        if ($kec === null || count($keywords) === 0) {
+            return '';
+        }
+
+        $lines = [
+            '[Pencarian tema + kecamatan — jawab ya/tidak HANYA dari jumlah paket di kecamatan ini, bukan total kabupaten]',
+            "Kecamatan: {$kec}",
+        ];
+        $anyHit = false;
+        foreach ($years as $year) {
+            foreach ($keywords as $kw) {
+                $cnt = $this->db->countSearchPackagesInKecamatan($year, $kw, $kec);
+                $lines[] = "--- TA {$year}, kecamatan {$kec}, tema \"{$kw}\" — {$cnt} paket cocok ---";
+                if ($cnt === 0) {
+                    continue;
+                }
+                $anyHit = true;
+                $rows = $this->db->searchPackagesFlexibleInKecamatan($year, $kw, $kec, 6);
+                foreach ($rows as $row) {
+                    $lines[] = '- ' . mb_substr($row['nama_paket'] ?? '', 0, 90);
+                    $lines[] = '  ' . formatRupiah($row['total_nilai'] ?? 0)
+                        . ' | ' . ($row['kecamatan'] ?? '') . ' | ' . ($row['vendor'] ?? '')
+                        . ' | ' . ($row['status'] ?? '');
+                }
+            }
+        }
+        if (!$anyHit) {
+            $lines[] = 'Kesimpulan data: tidak ada paket dengan tema tersebut di kecamatan ' . $kec
+                . ' untuk tahun ' . implode(', ', $years) . '.';
+        } else {
+            $lines[] = 'Kesimpulan data: ada paket — gunakan contoh di atas (semua kolom kecamatan = ' . $kec . ').';
+        }
+        return implode("\n", $lines);
+    }
+
+    private function shouldSearchKecamatan(string $question, array $intents): bool
+    {
+        if ($this->resolveKecamatanName($question) === null) {
+            return false;
+        }
+        if (count($this->resolveSearchKeywords($question)) > 0) {
+            return true;
+        }
+        return in_array('search_packages', $intents, true)
+            || in_array('search_text', $intents, true)
+            || in_array('search_top_package', $intents, true)
+            || in_array('search_kecamatan', $intents, true);
+    }
+
+    private function resolveKecamatanName(string $question): ?string
+    {
+        if (!empty($this->interpretation['kecamatan'])) {
+            $k = trim((string) $this->interpretation['kecamatan']);
+            if ($k !== '') {
+                return $k;
+            }
+        }
+        return $this->matchKecamatan($question);
+    }
+
     /** @return string[] */
     private function resolveSearchKeywords(string $question): array
     {
@@ -458,10 +536,7 @@ class RealisasiQuestionRouter
     /** @param int[] $years */
     private function blockKecamatanDetail(string $question, array $years): string
     {
-        $kec = $this->interpretation['kecamatan'] ?? null;
-        if ($kec === null || $kec === '') {
-            $kec = $this->matchKecamatan($question);
-        }
+        $kec = $this->resolveKecamatanName($question);
         if ($kec === null) {
             return '';
         }
@@ -579,7 +654,9 @@ class RealisasiQuestionRouter
         )) {
             $phrase = trim($m[1]);
             $phrase = preg_replace('/\s+yang\s+.+$/iu', '', $phrase);
+            $phrase = preg_replace('/\s+di\s+(?:kecamatan|kec\.?)\s+.+$/iu', '', $phrase);
             $phrase = preg_replace('/\s+di\s+20\d{2}$/iu', '', $phrase);
+            $phrase = preg_replace('/\s+tahun\s+20\d{2}.*$/iu', '', $phrase);
             if (mb_strlen($phrase) >= 3) {
                 return [$phrase];
             }

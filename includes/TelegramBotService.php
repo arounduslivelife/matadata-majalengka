@@ -346,6 +346,7 @@ PROMPT;
 - Pertanyaan sudah diterjemahkan (bagian MAKNA PERTANYAAN); data sudah diambil dari database (bagian DATA DATABASE). Gabungkan keduanya dalam jawaban natural.
 - Untuk pertanyaan "adakah ada...": jawab ya/tidak di awal, lalu 2–3 contoh paket jika ada; sebut jumlah paket jika tercantum.
 - Jika ada blok [Paket nilai TERBESAR dalam tema/kata kunci], itu jawaban utama — jangan pakai top paket seluruh database.
+- Jika ada blok [Pencarian tema + kecamatan]: jawab ya/tidak hanya untuk paket di kecamatan tersebut; jangan sebut jumlah paket nasional/kabupaten dari pencarian lain.
 TXT;
     }
 
