@@ -61,7 +61,7 @@ class RealisasiImporter
             return 'CSV harus memiliki minimal 13 kolom (format Inaproc realisasi).';
         }
 
-        $normalized = array_map(fn($h) => strtolower(trim($h)), $headers);
+        $normalized = array_map(fn($h) => str_replace('_', ' ', strtolower(trim($h))), $headers);
         foreach (self::EXPECTED_HEADERS as $expected) {
             $found = false;
             foreach ($normalized as $h) {
