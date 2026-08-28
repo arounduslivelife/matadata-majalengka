@@ -193,9 +193,8 @@ $pad_global_json = file_exists('data/pad_majalengka.json') ? file_get_contents('
     <div class="sawer-modal" id="sawerModal" onclick="if(event.target == this) toggleSawer(false)">
         <div class="sawer-content">
             <div style="font-size: 2.5rem; margin-bottom: 1rem;">☕</div>
-            <img src="qrsumbangan.jpeg" alt="QR Sumbangan">
             <h2>Dukungan Kopi</h2>
-            <p>Bantu saya untuk mengembangkan project ini, untuk Majalengka yang lebih transparan</p>
+            <p>dukung kami dengan membelikan kami kopi biar kuat begadang cek data,<br><strong>DANA : 085320335275</strong></p>
             <button class="close-sawer" onclick="toggleSawer(false)">Tutup</button>
         </div>
     </div>
