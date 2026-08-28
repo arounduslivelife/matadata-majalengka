@@ -314,7 +314,7 @@ const padGlobalStats = window.APP_DATA.pad_global;
 fetchAudits();
 
 let currentMode = 'sirup';
-let activeYear = 2025;
+let activeYear = 2026;
 let bridgeLayer = null;
 let allBridgeData = null;
 
