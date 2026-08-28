@@ -1319,12 +1319,20 @@ function getSIRUPColor(name) {
     const exists = s[name];
     if (!exists || v === 0) return '#1e293b';
 
-    // Premium Indigo/Violet Scale
-    return v > 10000000000 ? '#4c1d95' :  // > 10M
-        v > 5000000000 ? '#5b21b6' :  // > 5M
-            v > 2000000000 ? '#7c3aed' :  // > 2M
-                v > 500000000 ? '#a78bfa' :  // > 500jt
-                    '#ddd6fe';                     // < 500jt
+    // Premium Indigo/Violet Scale for 2026, Blue Scale for 2025
+    if (activeYear == 2026) {
+        return v > 10000000000 ? '#4c1d95' :  // > 10M
+            v > 5000000000 ? '#5b21b6' :  // > 5M
+                v > 2000000000 ? '#7c3aed' :  // > 2M
+                    v > 500000000 ? '#a78bfa' :  // > 500jt
+                        '#ddd6fe';                     // < 500jt
+    } else {
+        return v > 10000000000 ? '#1e3a8a' :  // > 10M
+            v > 5000000000 ? '#1d4ed8' :  // > 5M
+                v > 2000000000 ? '#2563eb' :  // > 2M
+                    v > 500000000 ? '#3b82f6' :  // > 500jt
+                        '#93c5fd';                     // < 500jt
+    }
 }
 
 function getDDColor(name) {
@@ -1350,11 +1358,20 @@ function getRoadHeatColor(name) {
 function getRealisasiColor(name) {
     const s = getActiveStats();
     const v = s[name] ? s[name].total_pagu : 0;
-    return v > 10000000000 ? '#4c1d95' :  // > 10M
-        v > 5000000000 ? '#5b21b6' :  // > 5M
-            v > 2000000000 ? '#7c3aed' :  // > 2M
-                v > 500000000 ? '#a78bfa' :  // > 500jt
-                    v > 0 ? '#ddd6fe' : '#1e293b';
+    
+    if (activeYear == 2026) {
+        return v > 10000000000 ? '#4c1d95' :  // > 10M
+            v > 5000000000 ? '#5b21b6' :  // > 5M
+                v > 2000000000 ? '#7c3aed' :  // > 2M
+                    v > 500000000 ? '#a78bfa' :  // > 500jt
+                        v > 0 ? '#ddd6fe' : '#1e293b';
+    } else {
+        return v > 10000000000 ? '#1e3a8a' :  // > 10M
+            v > 5000000000 ? '#1d4ed8' :  // > 5M
+                v > 2000000000 ? '#2563eb' :  // > 2M
+                    v > 500000000 ? '#3b82f6' :  // > 500jt
+                        v > 0 ? '#93c5fd' : '#1e293b';
+    }
 }
 
 function switchPadYear(year) {
