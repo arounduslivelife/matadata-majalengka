@@ -416,9 +416,9 @@ function switchYear(year) {
 }
 
 
-// Initial load switch to 2025
+// Initial load switch to 2026
 setTimeout(() => {
-    switchYear(2025);
+    switchYear(2026);
 }, 100);
 
 function renderUnifiedPacketList() {
